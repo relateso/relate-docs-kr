@@ -38,7 +38,7 @@
     },
     {
       "name": "Startup Wiki",
-      "icon": "dictionary",
+      "icon": "journal",
       "url": "wiki"
     },
     {
@@ -82,6 +82,12 @@
           ]
         },
         "setup/register-google-api-allowlist"
+      ]
+    },
+    {
+      "group": "2022",
+      "pages": [
+        "changelog/ui-update-09022022"
       ]
     }
   ],
