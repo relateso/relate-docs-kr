@@ -27,14 +27,24 @@
   },
   "anchors": [
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://www.relate.kr/blog/"
+      "name": "Integrations",
+      "icon": "link",
+      "url": "integrations"
+    },
+    {
+      "name": "Playbook",
+      "icon": "book",
+      "url": "playbook"
+    },
+    {
+      "name": "Startup Wiki",
+      "icon": "dictionary",
+      "url": "wiki"
     },
     {
       "name": "Changelog",
       "icon": "list",
-      "url": "https://changelog.relate.so"
+      "url": "changelog"
     }
   ],
   "navigation": [
