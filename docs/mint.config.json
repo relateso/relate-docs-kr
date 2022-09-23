@@ -87,7 +87,12 @@
     {
       "group": "Changelog",
       "pages": [
-        "changelog/2022/Relate changelog - UI 개선 및 레이아웃 업데이트"
+        {
+          "group": "2022",
+          "pages": [
+            "changelog/2022/ui-update-09022022"
+          ]
+        }
       ]
     }
   ],
