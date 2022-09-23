@@ -33,12 +33,12 @@
     },
     {
       "name": "Playbook",
-      "icon": "book",
+      "icon": "map",
       "url": "playbook"
     },
     {
       "name": "Startup Wiki",
-      "icon": "journal",
+      "icon": "book",
       "url": "wiki"
     },
     {
@@ -87,7 +87,7 @@
     {
       "group": "Changelog",
       "pages": [
-        "changelog/2022/ui-update-09022022"
+        "changelog/2022/Relate changelog - UI 개선 및 레이아웃 업데이트"
       ]
     }
   ],
