@@ -1,0 +1,135 @@
+---
+title: "Zapier 연동 방법"
+---
+
+## Zapier 연동 방법
+
+**필수 사항**
+
+- Zapier 계정 (무료/유료 가능)
+
+  - 일반적으로 팀당 1개의 계정으로 연동이 가능합니다. 대표 이메일 (예: [we@relate.so](mailto:we@relate.so))로 가입하시고 팀 내 모든 Zap들을 한 계정에서 관리하는 것을 권장합니다.
+
+- API Key
+  - [아래 Action 참고](/setup/zapier-integration/how-to-integrate-with-zapier#action)
+
+**자주 쓰이는 Relate 연동 Zap 바로가기**
+
+- [Relate & Slack 연동](https://zapier.com/shared/93e3cbb21d5e2e16b9bb7e3ecdb1e2dfb0f61491) (Relate의 새로운 노트를 슬랙으로 메시지 보내기)
+
+## Quick Demo
+
+Zapier를 통해 Typeform과 Relate을 연동하는 방법에 대한 영상입니다.
+
+<Frame>
+  <div style={{ paddingBottom: "62.5%" }}>
+    <iframe
+      src="https://www.loom.com/embed/1c1bfe52df7648c6ac1ab89d1a3f59ea"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    ></iframe>
+  </div>
+</Frame>
+
+### 1. Relate와 Zapier를 연결하기
+
+먼저 Zapier에 로그인 되어 있는 상태에서 나오는 첫 화면에서 Relate, 그리고 Relate과 연결할 앱을 찾아 선택합니다.
+
+![Connect Relate to Zapier](/images/setup/zapier/connect-relate-to-zapier.png)
+
+### 2. Zap 만들기
+
+Relate은 Trigger와 Action 모두 지원하니 필요한 Use Case에 맞춰서 Zap을 만들 수 있습니다.
+
+**본 가이드에서는 Google Forms 로 받은 Lead 정보를 Relate에서 자동으로 Lead를 생성하고, Deal과 Note도 생성할 수 있는 Use Case를 기반으로 안내해 드립니다.** 이외에 스티비, 메일침프, 캘린들리, 되는시간, 구글 캘린더, 슬랙, 노션 등 다양한 툴들과 연동을 지원하니 자세한 안내는 문의 부탁드려요 :)
+
+### 3. Trigger 세팅하기
+
+먼저 Trigger에서 Google Forms를 검색해서 선택합니다.
+
+![Add Trigger](/images/setup/zapier/add-trigger.png)
+
+Zap을 발동(trigger)하는 조건으로 "새로운 데이터(response) 추가시"를 설정합니다. 버튼을 눌러줍니다.
+
+![New Response In Spreadsheet](/images/setup/zapier/new-response-in-spreadsheet.png)
+
+Google Forms에 로그인 및 연동을 허용합니다.
+
+![Sign into Google forms](/images/setup/zapier/sign-into-google-forms.png)
+
+![Sign into Google forms part two](/images/setup/zapier/sign-into-google-forms-2.png)
+
+내 계정에 있는 Form 중에 Relate과 연결할 Form을 검색하거나 선택합니다. 방금 새로 생성한 Form 일 경우, 하단에 있는 `Load More`버튼을 눌러 새롭게 로드할 수 있습니다.
+
+![Select a form to connect](/images/setup/zapier/select-a-form-to-connect.png)
+
+Worksheet도 같은 방식으로 선택합니다.
+
+`Test Trigger` 를 통해 데이터가 Zapier로 잘 들어오는지 확인합니다.
+
+![Test trigger](/images/setup/zapier/test-trigger.png)
+
+`Continue`를 누른 뒤 Trigger 탭에 ✅표시가 보이면 Trigger까지 연결에 성공한 것입니다.
+
+### 4. Action 세팅하기
+
+Action 탭을 눌러 Relate을 검색한 다음, 선택해줍니다.
+
+![Setting Action](/images/setup/zapier/setting-action.png)
+
+Generate Lead & Contact를 선택하고, 그다음 단계에서 버튼을 누릅니다.
+
+![Select generate lead and contact](/images/setup/zapier/select-generate-lead-and-contact.png)
+
+이때, API Key를 입력하라는 새로운 창이 나타납니다. 이제 Relate으로 가서 연결하고자 하는 워크스페이스의 API 페이지에 들어갑니다.
+
+![Manage API Keys](/images/setup/zapier/manage-api-keys.png)
+
+![Generate API Keys](/images/setup/zapier/generate-api-key.png)
+
+`Generate API Key`를 눌러 새로운 API Key를 생성합니다. Key는 보안을 위해 다시 보이지 않기 때문에 키를 복사하신 다음 `I stored this key`를 눌러서 저장합니다.
+
+![Copy Key](/images/setup/zapier/copy-key.png)
+
+복사한 Key를 Zapier에서 새롭게 나타난 API Key 입력창에 붙여넣고 를 누르면 Relate API 연결이 완료됩니다.
+
+![Paste Key](/images/setup/zapier/paste-key.png)
+
+아래와 같이 Relate Lead/Contact/Deal/Note에 들어갈 정보를 Google Form의 데이터로 채웁니다.
+
+이때, 필수 정보를 입력하셔야 다음 단계로 넘어갑니다. 필수 정보는 다음과 같습니다.
+
+- Lead Name (Company Name)
+
+- Contact Name
+
+- Contact Email
+
+Good Practice 중 하나는 Note 란에 들어오는 모든 데이터를 넣어두시면, 당장 Relate Lead/Contact 정보로 넣지 못하더라도 Relate CRM에서 데이터를 볼 수 있게 됩니다.
+
+또한, Note는 Inbox로도 새롭게 들어오게 되기 때문에 일종의 리마인더 (새로운 Lead가 생성되었다는 리마인더)나 To-Do 아이템으로 쓰시기에 좋습니다.
+
+Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니다. 만약 Lead 및 Contact이 생성됨에 따라 Deal도 같이 생성하고자 하신다면 Deal 관련 칸에 정보를 입력하시면 됩니다 (예: Deal Assignee, Deal Status 등)
+
+![Deals data](/images/setup/zapier/deals-data.png)
+
+![Deals data part two](/images/setup/zapier/deals-data-2.png)
+
+`Continue`를 누르면 Action에서도 Test를 먼저 해보실 수 있는 단계가 나옵니다. 해당 Test는 실제 데이터를 Relate으로 보내는 Data이니 필요시 이후 삭제해주시면 됩니다.
+
+테스트가 성공했다면, Relate에서 해당 데이터를 확인해보실 수 있습니다.
+
+![Check data in relate](/images/setup/zapier/check-data-relate.png)
+
+![Publish Zap](/images/setup/zapier/publish-zap.png)
+
+이제 `Publish Zap`을 눌러 Zap을 활성화합니다. 마지막으로 상단 왼쪽에서 Zap의 제목을 알아보기 쉽게 변경할 수 있습니다.

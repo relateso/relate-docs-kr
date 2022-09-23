@@ -1,0 +1,84 @@
+{
+  "name": "Relate",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#145AFF",
+    "light": "#1890FF",
+    "dark": "#003ED0",
+    "ultraLight": "#EBF3FE",
+    "ultraDark": "#00298B"
+  },
+  "topbarLinks": [
+    {
+      "name": "Blog",
+      "url": "https://www.relate.kr/blog/"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "얼리 액세스 신청하기",
+    "url": "https://relateso.typeform.com/relate-korea"
+  },
+  "topAnchor": {
+    "name": "Product Guide"
+  },
+  "anchors": [
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://www.relate.kr/blog/"
+    },
+    {
+      "name": "Changelog",
+      "icon": "list",
+      "url": "https://changelog.relate.so"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Home",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "📚 Fundamentals",
+      "pages": [
+        "fundamentals/leads-and-contacts",
+        "fundamentals/deal-pipeline",
+        "fundamentals/customer-communication",
+        "fundamentals/shortcuts"
+      ]
+    },
+    {
+      "group": "💻 Setup",
+      "pages": [
+        "setup/workspace-setting",
+        "setup/lead-contact-deal-import",
+        {
+          "group": "이메일 연동하기",
+          "pages": [
+            "setup/email-integration/google-outlook-etc",
+            "setup/email-integration/naverworks-lineworks"
+          ]
+        },
+        {
+          "group": "Zapier 연동하기",
+          "pages": [
+            "setup/zapier-integration/what-is-zapier",
+            "setup/zapier-integration/how-to-integrate-with-zapier",
+            "setup/zapier-integration/relate-x-zapier-integration-rules"
+          ]
+        },
+        "setup/register-google-api-allowlist"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "facebook": "https://www.facebook.com/relate.so",
+    "linkedin": "https://www.linkedin.com/company/relatecrm/",
+    "twitter": "https://twitter.com/relatecrm",
+    "instagram": "https://instagram.com/relate_kr"
+  }
+}
