@@ -16,6 +16,10 @@
     {
       "name": "Blog",
       "url": "https://www.relate.kr/blog/"
+    },
+    {
+      "name": "Relate 둘러보기",
+      "url": "https://www.relate.kr/"
     }
   ],
   "topbarCtaButton": {
