@@ -94,9 +94,11 @@
         {
           "group": "2022",
           "pages": [
-            "changelog/2022/ui-update-09022022",
-            "changelog/2022/email-send-link-sharing-07212022",
-            "changelog/2022/data-views-061022"
+            "changelog/2022/09022022",
+            "changelog/2022/07212022",
+            "changelog/2022/061022",
+            "changelog/2022/050222",
+            "changelog/2022/032922"
           ]
         }
       ]
