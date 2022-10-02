@@ -1,4 +1,9 @@
 {
+  "analytics": {
+    "fathom": {
+      "siteId": "XVXWXNQZ"
+    }
+  },
   "name": "Relate",
   "logo": {
     "light": "/logo/light.svg",
@@ -11,6 +16,24 @@
     "dark": "#003ED0",
     "ultraLight": "#EBF3FE",
     "ultraDark": "#00298B"
+  },
+  "metadata": {
+    "charset": "utf-8",
+    "description": "B2B 영업과 마케팅, 그리고 B2B 스타트업에 대한 플레이북과 Relate CRM 가이드를 제공합니다.",
+    "og:site_name": "릴레잇 Relate | B2B 플레이북 & CRM 프로덕트 가이드",
+    "og:type": "website",
+    "og:title": "Relate B2B 플레이북 & CRM 프로덕트 가이드",
+    "og:description": "B2B 영업과 마케팅, 그리고 B2B 스타트업에 대한 플레이북과 Relate CRM 가이드를 제공합니다.",
+    "og:url": "https://docs.relate.kr/",
+    "og:image": "https://github.com/relateso/relate-docs-kr/blob/main/docs/images/og-image-docs.png",
+    "article:publisher": "https://www.facebook.com/groups/relatecrm/",
+    "twitter:title": "Relate B2B 플레이북 & CRM 프로덕트 가이드",
+    "twitter:description": "B2B 영업과 마케팅, 그리고 B2B 스타트업에 대한 플레이북과 Relate CRM 가이드를 제공합니다.",
+    "twitter:url": "https://docs.relate.kr/",
+    "twitter:image": "https://github.com/relateso/relate-docs-kr/blob/main/docs/images/og-image-docs.png",
+    "twitter:site": "@relate_so",
+    "og:image:width": "2000",
+    "og:image:height": "1050"
   },
   "topbarLinks": [
     {
