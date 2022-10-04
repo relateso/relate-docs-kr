@@ -5,9 +5,10 @@
     }
   },
   "name": "Relate",
+  "basePath": "/docs",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/docs/logo/light.svg",
+    "dark": "/docs/logo/dark.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
@@ -131,10 +132,7 @@
         },
         {
           "group": "2021",
-          "pages": [
-            "changelog/2021/122721",
-            "changelog/2021/112321"
-          ]
+          "pages": ["changelog/2021/122721", "changelog/2021/112321"]
         }
       ]
     }
