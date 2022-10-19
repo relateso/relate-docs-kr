@@ -115,8 +115,20 @@
     {
       "group": "Startup Wiki",
       "pages": [
-        "wiki/SaaS/ARR",
-        "wiki/SaaS/MRR"
+        {
+          "group": "SaaS",
+          "pages": [
+            "wiki/SaaS/ARR",
+            "wiki/SaaS/MRR"
+          ]
+        },
+        {
+          "group": "Sales",
+          "pages": [
+            "wiki/Sales/Lead Qualification",
+            "wiki/Sales/BANT"
+          ]
+        }
       ]
     },
     {
