@@ -81,6 +81,24 @@
       "pages": ["introduction"]
     },
     {
+      "group": "Onboarding",
+      "pages": [
+        {
+          "group": "시작하기",
+          "pages": [
+            {
+              "group": "이메일 연동하기",
+              "pages": [
+                "setup/email-integration/google-outlook-etc",
+                "setup/email-integration/naverworks-lineworks"
+              ]
+            }
+            
+          ]
+        }
+      ]
+    },
+    {
       "group": "📚 Fundamentals",
       "pages": [
         "fundamentals/leads-and-contacts",
