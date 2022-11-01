@@ -1,0 +1,104 @@
+---
+title: "Apollo.io + Relate"
+description: "이 가이드는 효과적인 프로스펙팅을 위해 사용하면 좋은 Apollo.io와 Relate을 연동하는 방법에 대해 설명합니다."
+sidebarTitle: "Apollo.io"
+"og:title": "Apollo.io + Relate 연동하기 | Relate Startup Wiki"
+"og:description": "이 가이드는 효과적인 프로스펙팅을 위해 사용하면 좋은 Apollo.io와 Relate을 연동하는 방법에 대해 설명합니다."
+"article:tag": "Integration"
+"twitter:title": "Apollo.io + Relate 연동하기 | Relate Startup Wiki"
+"twitter:description": "이 가이드는 효과적인 프로스펙팅을 위해 사용하면 좋은 Apollo.io와 Relate을 연동하는 방법에 대해 설명합니다."
+---
+
+영업 프로스펙팅 툴인 아폴로(Apollo.io)와 Relate를 연동해서 아웃바운드 영업의 초기 단계이자 가장 중요한 프로스펙팅을 훨씬 효율적으로 할 수 있습니다. 또한 Apollo + Relate 연동을 통해 프로스펙팅하는 단계에서부터 어떤 고객과 어떤 내용으로 연락했었는지, 아웃바운드 캠페인의 결과는 어땠는지 등을 관리할 수 있습니다. 
+
+## Apollo.io란?
+
+![apollo_0](/docs/images/integrations/apollo_0.png)
+
+아폴로(Apollo.io)는 B2B 영업세일즈팀이 잠재고객에 대해 검색하고, 연락처를 확보한 뒤, 자동으로 콜드 아웃바운드 이메일을 보내도록 도와주는 무료 툴입니다.
+
+**Apollo + Relate 연동 바로가기**
+
+<script type="module" src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"></script>
+<link rel="stylesheet" href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"/>
+<zapier-zap-templates
+  ids="1123407"
+  limit="5"
+  link-target="new-tab"
+  presentation="row"
+  use-this-zap="show"
+  theme="auto"
+></zapier-zap-templates>
+
+## 1. Apollo + Relate 선택하기
+
+먼저 Zapier에 로그인된 있는 상태에서 나오는 첫 화면에서 Apollo, 그리고 Relate를 찾아 선택합니다. 그리고 밑에 칸에서 New Contact와 Generate Lead & Contact를 차례대로 선택합니다. 
+
+이렇게 하면 Apollo에서 새로운 연락처를 저장할 때마다 Relate에 Lead & Contact로 저장하는 워크플로우를 만들 수 있습니다. 
+
+다 선택하셨다면 Try it 버튼을 클릭해서 다음 화면으로 넘어가면 됩니다. 
+
+![apollo_1](/docs/images/integrations/apollo_1.png)
+
+## 2. API Key 입력하기
+
+
+### Apollo API Key 입력하기
+
+![apollo_2](/docs/images/integrations/apollo_2.png)
+
+다음 단계로 넘어가면 위의 스크린샷 화면이 나옵니다. 첫 번째 박스에 Apollo API Key를 입력하면 됩니다. Apollo API Key는 여기서 찾을 수 있습니다. 
+
+두 번째 박스에는 연동하는 Apollo 계정의 이름을 입력해주시면 됩니다. (예: Won’s Apollo)
+
+### Find your Relate API Key
+
+![apollo_3](/docs/images/integrations/apollo_3.png)
+
+다음은 Relate API Key를 입력하면 됩니다. Relate API Key는 [Admin Page](https://app.relate.so/) → Integrations → Zapier로 들어가면 찾을 수 있습니다. 
+
+![apollo_4](/docs/images/integrations/apollo_4.png)
+
+![apollo_5](/docs/images/integrations/apollo_5.png)
+
+**Generate API Key**를 눌러 새로운 **API Key**를 생성합니다. Key는 보안을 위해 다시 보이지 않기 때문에 키를 복사하신 다음 **I stored this key**를 눌러서 저장합니다.
+
+## 3. Trigger와 Action 설정하기
+
+![apollo_6](/docs/images/integrations/apollo_6.png)
+
+API 연결이 끝나면 위의 스크린샷과 같은 Edit 페이지로 이동하게 됩니다. Trigger에서는 Apollo 계정이 잘 연결되어 있는지 확인을 위해 Test trigger 버튼을 눌러 테스트하면 됩니다. 연결이 잘 되었다면 Action으로 넘어가면 됩니다. 
+
+![apollo_7](/docs/images/integrations/apollo_7.png)
+
+다음 Action에서는 우선 Relate와 잘 연동이 되었는지 확인한 뒤 Set up action에서 Relate에 고객 정보를 생성할 때 들어갈 정보와 매칭하면 됩니다. 
+
+이때, 필수 정보를 입력하셔야 다음 단계로 넘어갑니다. 필수 정보는 다음과 같습니다. 
+- Company Name
+- Contact Name
+- Contact Email
+
+Good Practice 중 하나는 Note 란에 들어오는 모든 데이터를 넣어두시면, 당장 Relate Lead/Contact 정보로 넣지 못하더라도 Relate CRM에서 데이터를 볼 수 있게 됩니다.
+
+또한, Note는 Inbox로도 새롭게 들어오게 되기 때문에 일종의 리마인더 (새로운 Lead가 생성되었다는 리마인더)나 To-Do 아이템으로 쓰시기에 좋습니다.
+
+Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니다. 만약 Lead 및 Contact이 생성됨에 따라 Deal도 같이 생성하고자 하신다면 Deal 관련 칸에 정보를 입력하시면 됩니다 (예: Deal Assignee, Deal Status 등)
+
+![apollo_8](/docs/images/integrations/apollo_8.png)
+
+마지막으로 Test action 버튼을 눌러 Test를 완료한 뒤 Publish 하면 Apollo + Relate Zap 연동이 마무리됩니다. 마지막으로 상단 왼쪽에서 Zap의 제목을 알아보기 쉽게 변경할 수 있습니다.
+
+---
+
+### 많이 쓰이는 Relate 연동 템플릿
+<script type="module" src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"></script>
+<link rel="stylesheet" href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"/>
+<zapier-zap-templates
+  apps="relate"
+  create-without-template="hide"
+  limit="5"
+  use-this-zap="show"
+  theme="light"
+></zapier-zap-templates>
+
+
