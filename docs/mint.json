@@ -149,9 +149,9 @@
           {
             "group": "Sales",
             "pages": [
-              "wiki/Sales/Lead Qualification",
+              "wiki/Sales/Lead-Qualification",
               "wiki/Sales/BANT",
-              "wiki/Sales/Inbound Sales"
+              "wiki/Sales/Inbound-Sales"
             ]
           }
       ]
