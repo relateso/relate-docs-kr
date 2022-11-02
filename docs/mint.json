@@ -86,14 +86,15 @@
         {
           "group": "시작하기",
           "pages": [
-            {
-              "group": "이메일 연동하기",
-              "pages": [
-                "setup/email-integration/google-outlook-etc",
-                "setup/email-integration/naverworks-lineworks"
-              ]
-            }
-            
+              "setup/getting-started",
+              {
+                "group": "이메일 연동하기",
+                "pages": [
+                  "setup/email-integration/google-outlook-etc",
+                  "setup/email-integration/naverworks-lineworks"
+                ]
+              },
+              "setup/import"
           ]
         }
       ]
@@ -111,7 +112,7 @@
       "group": "💻 Setup",
       "pages": [
         "setup/workspace-setting",
-        "setup/lead-contact-deal-import",
+        "setup/import",
         {
           "group": "이메일 연동하기",
           "pages": [
