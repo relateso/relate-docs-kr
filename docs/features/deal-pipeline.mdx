@@ -1,0 +1,159 @@
+---
+title: "Deal Pipeline"
+description: "Deal Pipeline 을 통해 현재 우리 회사의 영업 현황을 한 눈에 조망할 수 있습니다. 누가 어떤 고객을 담당하고 있고, 각 Deal 은 어느 단계에 머물러 있는지 빠르게 파악하고 적절한 action을 취할 수 있습니다."
+---
+
+![Deal Pipeline](/docs/images/features/deal-pipeline.png)
+
+## 파이프라인 관리(Pipeline management)
+
+![Pipeline Management](/docs/images/features/pipeline-management.png)
+
+Drag & Drop으로 손쉽게 단계를 이동할 수 있습니다.
+
+### Pipeline이란?
+
+Deal Pipeline은 우리 회사 영업 현황의 Source of Truth 입니다. 단계(status)별로 몇 개, 그리고 어느 정도 가치의 Deal들이 진행 중인지 파악할 수 있고, 해당 Deal은 우리 중 누가 담당하고 있는지, 장애물은 없는지 확인할 수 있습니다.
+
+- 현재 진행 중인 Deal을 파악할 수 있습니다.
+
+- 각 영업담당자들은 어떤 액션을 취해야 다음 단계로 넘어갈 것인지 알 수 있습니다.
+
+- 각 단계에 머물고 있는 Deal들의 가치(Value)가 얼마인지 알 수 있습니다.
+
+#### Deal \<> Lead 연결성
+
+Deal 카드 오른쪽 상단에 마우스를 올리면, 아래와 같이 두개의 버튼이 나타납니다. 왼쪽은 Deal 정보를 더 자세하게 확인할 수 있는 버튼이고, 오른쪽은 Deal과 연결되어 있는 고객사 페이지로 이동하는 버튼입니다.
+
+고객사 페이지에서도 마찬가지로 오른쪽 상단에 마우스를 올려서 Pipeline으로 이동할 수 있습니다.
+
+![Go to contacts page](/docs/images/features/deal-connection.png)
+
+---
+
+## Deal 추가하기
+
+### Deal이란?
+
+Deal이란 고객사를 대상으로 한 영업 기회를 말합니다. Deal 1개의 단위는 1번의 영업 기회로 볼 수 있습니다. 따라서, 고객사를 대상으로 1개 이상의 Deal을 만들어 관리할 수도 있습니다.
+
+![What is a deal](/docs/images/features/what-is-deal.png)
+
+Deal은 위와 같은 카드 형태로 1개의 Deal이 1개의 카드로 표시됩니다.
+
+### Deal 추가하는 법
+
+![Adding a deal](/docs/images/features/how-to-add-deals.png)
+
+Deal을 추가하는 방법은 3가지가 있습니다.
+
+1. Pipeline에서 `+Deal` 버튼을 눌러 신규 Deal 생성
+
+2. Pipeline에서 각 Status 칼럼에 있는 `+` 를 눌러 신규 Deal 생성 (이 때, Status는 변경할 수 없습니다)
+
+3. Lead 페이지 왼쪽 Deal 탭에 있는 `+` 를 눌러 신규 Deal 생성 (이 때, Company는 해당 Lead로 설정됩니다)
+
+Deal에는 기본적으로 아래와 같은 정보를 추가하게 되어 있습니다.
+
+- Company: 영업 대상 고객사
+
+- Contact: 영업 대상 고객사에 속한 고객사측 담당자 (대표담당자 1명)
+
+- Value: 영업 기회의 가치
+
+- Status: 영업 파이프라인 단계
+
+- Assignee: 영업담당자
+
+- Notes: 간단하게 적는 해당 영업기회에 대한 메모란
+
+이중, Company와 Status는 필수 정보이며 나머지는 공백으로 둘 수 있습니다.
+
+<Note>
+
+이 글 맨 아래로 가시면, Deal 카드에 Custom Field 를 만들 수 있는 방법을 안내드립니다.
+
+</Note>
+
+## Deal status 관리
+
+우리 회사의 영업 프로세스에 맞게 각 단계를 만들고 관리할 수 있습니다.
+
+![Manage deal status](/docs/images/features/manage-deal-status.png)
+
+Deal Status 설정을 위해서는 Relate 앱내에서 워크스페이스 일립시스(⋅⋅⋅)를 누르면 나오는 메뉴 중 `Manage deal statuses` 를 클릭합니다.
+
+![Manage deal statuses](/docs/images/features/manage-deal-statuses.png)
+
+화살표를 눌러 순서 변경을 할 수 있고, `Edit` 을 눌러 각 단계의 이름을 변경할 수 있습니다. `Delete`을 누르면 해당 단계가 삭제됩니다. 단, 삭제를 위해서는 삭제하려는 단계에 Deal이 없어야 합니다 (0).
+
+Deal Status는 3가지 종류로 구분됩니다.
+
+- Active: 진행 중인 Deal
+
+- Won: 수주에 성공한 Deal
+
+- Lost: 수주에 실패한 Deal
+
+<Note>
+
+Deal Status 수정 사항을 바로 반영해서 보려면 Relate 앱을 새로 실행하거나, 이미 실행 중이라면 Ctrl+Shift+R (macOS: Cmd+Shift+R)를 눌러 새로고침을 하면 됩니다.
+
+</Note>
+
+## Deal filtering
+
+Deal Pipeline 페이지 오른쪽 상단에 `Filter` 버튼을 눌러 Deal 파이프라인에 여러가지 조건(condition)을 적용해서 내가 확인해야 하는 Deal을 추릴 수 있습니다.
+
+각 영업담당자들이 담당하는 Deal 을 보거나, 이번 달 진행한 Deal 을 보는 것이 좋은 예시입니다. 이 리스트를 추리기 위해서는 아래와 같이 Filter를 만들 수 있습니다.
+
+- `Updated at` \+ `is after` \+ 이번 주 월요일
+
+![Deal filtering](/docs/images/features/deal-filtering.png)
+
+#### 여러가지 Filter를 동시 적용하기
+
+1개 이상의 Filter를 적용할 경우, `And` 와 `Or` 중 필요한 조건을 적용할 수 있습니다.
+
+- `And`: Filter A와 Filter B에 모두 해당되는 Lead/contact
+
+- `Or`: Filter A와 Filter B 둘중 하나라도 해당되는 Lead/contact
+
+## Deal Custom Field
+
+![Deal custom field](/docs/images/features/deal-custom-field.png)
+
+위 스크린샷 처럼 Deal Pipeline 페이지에서 각 Deal 내에 다양한 형식의 custom field들을 추가할 수 있습니다.
+
+Custom Field 설정은 Relate 앱내에서 워크스페이스 일립시스(⋅⋅⋅)를 누르면 나오는 메뉴에서 `Manage custom fields` 에 들어가서 하실 수 있습니다. (아래 스크린샷 참고)
+
+![Deal custom field](/docs/images/features/manage-custom-fields.png)
+
+아래는 Custom Fields 세팅 화면 예시입니다.
+
+![Deal custom field](/docs/images/features/setting-custom-fields.png)
+
+### Custom Field 종류
+
+| Field Data Type    | Note                                                                                                                                                                                               |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text               | 일반 텍스트 형식을 지원합니다. 한 줄짜리 짧은 설명을 남기기에 좋습니다.                                                                                                                            |
+| Multi-line text    | 한 줄 이상의 텍스트 형식을 지원합니다. 긴 설명을 남기기에 적합합니다.                                                                                                                              |
+| Number             | 숫자 형식입니다.                                                                                                                                                                                   |
+| Date               | 날짜를 표시할 수 있습니다.                                                                                                                                                                         |
+| Datetime           | 날짜와 시간을 표시할 수 있습니다.                                                                                                                                                                  |
+| Select             | 데이터 입력시 드롭다운에서 선택할 옵션을 입력할 수 있습니다. 데이터는 쉼표(,)로 구분합니다.<br /><br />데이터 입력시 드롭다운에서 선택할 옵션을 입력할 수 있습니다. 데이터는 쉼표(,)로 구분합니다. |
+| Resource: Users    | 우리 워크스페이스의 유저를 연결할 수 있습니다. 담당자를 지정하는데 적합합니다.                                                                                                                     |
+| Resource: Contacts | 해당 고객사에 소속되어 있는 컨택을 추가할 수 있습니다.                                                                                                                                             |
+
+<Note>
+
+Custom Field를 잘 활용하면, 우리 회사가 관리하고자 하는 다양한 고객의 정보를 수집하고 관리할 수 있게 됩니다. 이후 Lead/Contact, URL이나 이메일 주소와 같은 Field도 추가될 예정입니다.
+
+</Note>
+
+<Note>
+
+Custom Field 수정 사항을 바로 반영해서 보려면 Relate 앱을 새로 실행하거나, 이미 실행 중이라면 Ctrl+Shift+R (macOS: Cmd+Shift+R)를 눌러 새로고침을 하면 됩니다.
+
+</Note>

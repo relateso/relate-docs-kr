@@ -96,16 +96,31 @@
               },
               "setup/import"
           ]
+        },
+        {
+          "group": "Relate 기능 배우기",
+          "pages": [
+            "features/organizations",
+            "features/people",
+            "features/deal-pipeline",
+            "features/custom-fields",
+            "features/filtering-views",
+            "features/inbox",
+            "features/shortcuts"
+          ]
         }
       ]
     },
     {
-      "group": "📚 Fundamentals",
+      "group": "📚 Features",
       "pages": [
-        "fundamentals/leads-and-contacts",
-        "fundamentals/deal-pipeline",
-        "fundamentals/customer-communication",
-        "fundamentals/shortcuts"
+        "features/organizations",
+        "features/people",
+        "features/deal-pipeline",
+        "features/custom-fields",
+        "features/filtering-views",
+        "features/inbox",
+        "features/shortcuts"
       ]
     },
     {
