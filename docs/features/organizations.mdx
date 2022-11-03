@@ -35,6 +35,8 @@ Relate에서는 Organization을 추가할 수 있습니다. 먼저 아래 스크
 
 ## Organization Detail Page
 
+Organization 디테일 페이지에서 해당 회사와의 모든 커뮤니케이션 내역, 내부에서 공유한 노트/댓글, 그리고 진행한 모든 Deal 히스토리까지 모아서 볼 수 있습니다.
+
 ### Organization Detail
 
 ![Organization Detail Page](/docs/images/features/org-detail.png)
@@ -51,9 +53,9 @@ Relate에서는 Organization을 추가할 수 있습니다. 먼저 아래 스크
 
 ![Commenting](/docs/images/features/commenting.png)
 
-### 고객에게 이메일 보내기
+## 고객에게 이메일 보내기
 
-#### 신규 이메일 보내기
+### 1. 신규 이메일 보내기
 
 ![Compose email](/docs/images/features/compose-email.png)
 
@@ -65,7 +67,7 @@ Relate에서는 고객에게 신규 이메일을 보낼 수 있습니다.
 
 <Tip>이메일을 보내기 위해서는 먼저 Relate내에 [이메일을 연동](https://relate.kr/docs/setup/email-integration/google-outlook-etc)해야 합니다.</Tip>
 
-#### 받은 이메일에 답장, 전체답장, 포워드하기
+### 2. 받은 이메일에 답장, 전체답장, 포워드하기
 
 ![Reply Button](/docs/images/features/reply-email-button.png)
 
@@ -73,7 +75,7 @@ Relate에서는 고객에게 신규 이메일을 보낼 수 있습니다.
 
 ![Reply](/docs/images/features/reply-email.png)
 
-### 노트 생성하기
+## 노트 생성하기
 
 ![Create new note](/docs/images/features/create-note.png)
 
@@ -92,7 +94,7 @@ Note에는 4가지 종류가 있습니다.
 
 ![Markdown notes](/docs/images/features/markdown.png)
 
-#### 생성한 노트 공유하기
+## 생성한 노트 공유하기
 
 이렇게 생성한 노트를 다른 사람들과 쉽게 공유할 수 있습니다.
 
@@ -102,7 +104,7 @@ Note에는 4가지 종류가 있습니다.
 
 ![Public note](/docs/images/features/public-note.png)
 
-#### 생성한 노트 슬랙으로 공유하기
+### 생성한 노트 슬랙으로 공유하기
 
 [Zapier](https://relate.kr/docs/setup/zapier-integration/what-is-zapier)(무료)를 통해 슬랙이나 디스코드, 노션 등과 같은 채널로 미팅 노트를 공유할 수도 있습니다.
 
@@ -110,16 +112,17 @@ Note에는 4가지 종류가 있습니다.
 
 ![slack integration](/docs/images/features/slack-integration.png)
 
-Relate 팀의 경우, 아래 템플릿을 활용하여 팀 슬랙 채널내 #log-sales 채널을 만들어두고, `note` 키워드가 있는 모든 Relate 노트를 공유하고 있습니다.
+Relate 팀의 경우, 아래 템플릿을 활용하여 팀 슬랙 채널내 `#log-sales` 채널을 만들어두고, `note` 키워드가 있는 모든 Relate 노트를 공유하고 있습니다.
 
 **Relate + Slack 연동 Zapier 템플릿**
+
 <script type="module" src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"></script>
 <link rel="stylesheet" href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"/>
 <zapier-zap-templates
   ids="1025541"
   limit="5"
   use-this-zap="show"
-  theme="auto"
+  theme="light"
 ></zapier-zap-templates>
 
-<Tip>모든 노트를 Slack 등에 바로 공유하게끔 Zapier를 설정할 수도 있지만, 특정 키워드 (e.g., "미팅노트")를 입력했을 때만 공유가 되도록 설정할 수도 있습니다.</Tip>
+모든 노트를 Slack 등에 바로 공유하게끔 Zapier를 설정할 수도 있지만, 특정 키워드 (e.g., "미팅노트")를 입력했을 때만 공유가 되도록 설정할 수도 있습니다.
