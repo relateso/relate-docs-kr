@@ -90,6 +90,7 @@
               {
                 "group": "이메일 연동하기",
                 "pages": [
+                  "setup/register-google-api-allowlist",
                   "setup/email-integration/google-outlook-etc",
                   "setup/email-integration/naverworks-lineworks"
                 ]
