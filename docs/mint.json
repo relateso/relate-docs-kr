@@ -156,6 +156,20 @@
       ]
     },
     {
+      "group": "Playbook",
+      "pages": [
+        {
+          "group": "Automation",
+          "pages": [
+            "playbook/automation",
+            "playbook/inbound-automation",
+            "playbook/outbound-automation",
+            "playbook/collaborative-sales-automation"
+          ]
+        }
+      ]
+    },
+    {
       "group": "Startup Wiki",
       "pages": [
           {
