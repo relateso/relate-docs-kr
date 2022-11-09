@@ -152,7 +152,9 @@
     {
       "group": "Integrations",
       "pages": [
-        "integrations/Apollo.io"
+            "integrations/Apollo.io",
+            "integrations/Typeform",
+            "integrations/slack"
       ]
     },
     {
