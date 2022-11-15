@@ -161,12 +161,24 @@
       "group": "Playbook",
       "pages": [
         {
-          "group": "Automation",
+          "group": "CRM Playbook",
           "pages": [
             "playbook/automation",
             "playbook/inbound-automation",
             "playbook/outbound-automation",
             "playbook/collaborative-sales-automation"
+          ]
+        },
+        {
+          "group": "B2B Startup Playbook",
+          "pages": [
+            {
+              "group": "Go-to-Market",
+              "pages": [
+                "playbook/distribution",
+                "playbook/post-launch"
+              ]
+            }
           ]
         }
       ]
