@@ -1,0 +1,50 @@
+---
+title: "Organization Assignees: 고객사 담당자 지정하기"
+description: "이제 Organization에 담당자를 지정할 수 있습니다."
+sidebarTitle: "November 18"
+"og:title": "Organization Assignees: 고객사 담당자 지정하기 | Relate Changelog"
+"og:description": "이제 Organization에 담당자를 지정할 수 있습니다."
+"og:url": "https://docs.relate.kr/changelog/2022/100122"
+"og:image": "https://docs.relate.kr/docs/images/changelog/100122-changelog-1.png"
+"article:tag": "Changelog"
+"twitter:title": "Organization Assignees: 고객사 담당자 지정하기 | Relate Changelog"
+"twitter:description": "이제 Organization에 담당자를 지정할 수 있습니다."
+"twitter:url": "https://docs.relate.kr/changelog/2022/100122"
+"twitter:image": "https://docs.relate.kr/docs/images/changelog/100122-changelog-1.png"
+"og:image:width": "2240"
+"og:image:height": "1260"
+---
+
+![organization-assignee](/docs/images/changelog/organization-assignee.png)
+
+## Organization Assignee 지정
+
+이제 Organization에 담당자를 지정할 수 있습니다.
+
+Relate 팀에서는 [스티브 잡스와 애플](https://hbr.org/2011/08/the-hidden-in-plain-sight-lega)이 처음 적용했던 DRI — Directly Responsible Individual, 즉 최종책임자를 명확하게 하는 것을 중요하게 생각합니다.
+
+B2B 세일즈에서 DRI를 명확하게 한다는 것은 각 어카운트, 즉 고객사나 Prospect에 대한 명확한 최종책임자를 임명하는 것입니다. 이번에 추가 된 Organization Assignee 지정 기능을 통해 각 어카운트에 대한 최종책임자를 지정하실 수 있습니다.
+
+각 Organization에는 1명의 담당자를 지정하실 수 있습니다. 간혹 1명 이상의 담당자를 지정해야 하는 경우도 있지만, 그렇다 하더라도 최종책임자를 1명 지정하고, 다른 인원은 Support 역할을 하는 것이 좋습니다.
+
+팀원을 Organization 담당자로 지정하기 위해서는 Organization 디테일 페이지에 들어가서 `Assignee` 필드를 수정하면 됩니다.
+
+## Zapier 개선
+
+이제 Zapier trigger 옵션으로 `Deal Status Updated` 와 `Deal Assignee Updated`를 활용하실 수 있습니다.
+
+## Fixes and Improvements
+
+- 전반적인 UX/UI 이슈 개선
+- People Detail Page 제거
+- 신규 Organization & Person 생성시 전화번호 필드 저장되지 않는 이슈 해결
+- 윈도우에서 최신 버전을 다운로드하는 앱 링크가 작동하지 않는 이슈 해결
+- Stripe 연동페이지에서 Intercom이 보이는 이슈 해결
+- Organization내 웹사이트 필드에 아무것도 없는 상태에서 변경된 Organization 정보가 저장이 되지 않는 이슈 해결
+- 이메일이 무한적으로 로딩하는 이슈 해결
+- macOS에서 Relate 앱 실행시 나오는 JavaScript 에러 해결
+- Trigger 생성 시 Relate account 선택 드랍박스에서 api 생성자 email과 name이 `{{ email }} - {{ name }}` 으로 나오던 이슈 해결
+
+---
+
+Last updated: November 18, 2022
