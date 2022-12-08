@@ -166,7 +166,8 @@
             "playbook/automation",
             "playbook/inbound-automation",
             "playbook/outbound-automation",
-            "playbook/collaborative-sales-automation"
+            "playbook/collaborative-sales-automation",
+            "playbook/how-to-write-sales-notes"
           ]
         },
         {
@@ -192,6 +193,7 @@
             "pages": [
               "wiki/SaaS/ARR",
               "wiki/SaaS/MRR",
+              "wiki/net-revenue-retention",
               "wiki/acv"
             ]
           },
