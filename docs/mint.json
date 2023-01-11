@@ -73,6 +73,16 @@
       "name": "Changelog",
       "icon": "list",
       "url": "changelog"
+    },
+    {
+      "name": "블로그",
+      "icon": "blog",
+      "url": "https://www.relate.kr/blog/"
+    },
+    {
+      "name": "SaaS 리스트",
+      "icon": "map-pin",
+      "url": "https://saas.relate.kr/"
     }
   ],
   "navigation": [
