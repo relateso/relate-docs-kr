@@ -1,0 +1,56 @@
+---
+title: "Organization Status"
+description: "Relate의 Organization Status 기능을 통해 고객과의 현재 관계 및 진행상황을 관리할 수 있습니다."
+sidebarTitle: "December 28"
+"og:title": "Organization Status | Relate Changelog"
+"og:description": "Relate의 Organization Status 기능을 통해 고객과의 현재 관계 및 진행상황을 관리할 수 있습니다."
+"og:url": "https://www.relate.kr/docs/changelog/2022/122822"
+"og:image": "https://github.com/relateso/relate-docs-kr/blob/main/docs/images/changelog/organization-status.png"
+"article:tag": "Changelog"
+"twitter:title": "Organization Status | Relate Changelog"
+"twitter:description": "Relate의 Organization Status 기능을 통해 고객과의 현재 관계 및 진행상황을 관리할 수 있습니다."
+"twitter:url": "https://www.relate.kr/docs/changelog/2022/122822"
+"twitter:image": "https://github.com/relateso/relate-docs-kr/blob/main/docs/images/changelog/organization-status.png"
+"og:image:width": "2240"
+"og:image:height": "1260"
+---
+
+![organization-status](/docs/images/changelog/organization-status.png)
+
+## Overview
+0.13.0 업데이트에서는 다음과 같은 개선과 기능 추가가 있었습니다.
+- Organization Status 기능
+- "Is Not", "Does Not Contain" 필터 추가
+- Zapier에서 Organization Assignee 를 세팅할 수 있도록 개선
+
+## Organization Status
+
+Organization Status는 특정 고객(잠재 고객, 현재 고객, 이전 고객 등)과의 현재 관계와 진행상황을 관리할 수 있는 기능입니다.
+
+Organization Status는 디폴트값으로 아래와 같이 설정되어 있습니다.
+
+- **Unidentified**: 아직 어떠한 관계도 시작되지 않은 잠재 고객들
+- **Potential**: 영업 가능성이 있다고 판단되어 영업 담당자가 Fit을 확인해야 하는 잠재 고객들
+- **Qualifying**: 세일즈 콜/미팅을 통해 구매 의사를 확인하는 중인 잠재 고객들
+- **Closing**: 구매 의사가 있다고 판단되어 본격적인 영업활동을 진행하는 잠재 고객들
+- **Customer**: 계약이 성공적으로 마무리되어 비용을 지불하고 제품을 사용 중인 고객들
+- **Nurturing**: Fit은 맞는다고 판단 되지만 여러 가지 이유로 당장 세일즈하기 어려운 잠재 고객들
+- **Bad Fit**: Fit이 맞지 않는 잠재 고객들
+- **Churned**: 비용을 지불하고 제품을 사용하다 그만둔 고객들
+
+이렇게 Organization Status를 보면서 영업 담당자들은 해당 조직과 우리 팀의 관계를 빠르게 이해하고 어떤 일을 해야 할지 결정할 수 있습니다.
+
+Organization Status는 기본 "default" 필드이며, status의 값은 임의로 수정할 수 없습니다.
+
+Organization Status를 효과적으로 활용하는 방법은 아래를 눌러 확인해보실 수 있습니다.
+
+<Tip>[Organization Status 관리하는 법](https://www.relate.kr/docs/features/how-to-manage-organization-status)</Tip>
+
+## Fixes and Improvements
+- 이제 Zapier에서 Organization의 상태를 관리하는 `Organization Status`와 담당자를 지정, 관리하는 `Organization Assignee`를 사용할 수 있습니다.
+- Filter에 "is not", "does not contain" 추가했습니다.
+- Organization Detail Page에서 나오는 Organization Status와 Assignee 값이 라벨과 함께 잘 보이도록 UX를 개선하였습니다.
+
+---
+
+Last updated: December 28, 2022
