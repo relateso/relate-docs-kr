@@ -135,7 +135,14 @@
             "features/how-to-manage-organization-assignee"
           ]
         },
-        "features/deal-pipeline",
+        {
+          "group": "Deals",
+          "pages": [
+            "features/deal-pipeline",
+            "features/how-to-manage-deal-assignee",
+            "features/how-to-manage-expected-close-date"
+          ]
+        },
         "features/custom-fields",
         "features/filtering-views",
         "features/inbox",
