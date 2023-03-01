@@ -226,6 +226,12 @@
             ]
           },
           {
+            "group": "Go-to-Market",
+            "pages": [
+              "wiki/icp"
+            ]
+          },
+          {
             "group": "Sales",
             "pages": [
               "wiki/Sales/BANT",
