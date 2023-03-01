@@ -4,6 +4,9 @@
       "siteId": "XVXWXNQZ"
     }
   },
+  "integrations": {
+    "intercom": "e0ne5yt8"
+  },
   "name": "Relate",
   "basePath": "/docs",
   "logo": {
@@ -239,6 +242,7 @@
         {
           "group": "2023",
           "pages": [
+            "changelog/2023/022723",
             "changelog/2023/013023"
           ]
         },

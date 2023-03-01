@@ -1,0 +1,70 @@
+---
+title: "멀티 파이프라인, 이메일 파일 첨부"
+description: "이제 Relate에서 멀티 파이프라인을 활용할 수 있고, 이메일에 파일 첨부를 할 수 있습니다."
+sidebarTitle: "February 27"
+"og:title": "멀티 파이프라인, 이메일 파일 첨부 | Relate Changelog"
+"og:description": "이제 Relate에서 멀티 파이프라인을 활용할 수 있고, 이메일에 파일 첨부를 할 수 있습니다."
+"og:url": "https://www.relate.kr/docs/changelog/2023/022723"
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/changelog/file-attachment-email.png"
+"article:tag": "Changelog"
+"twitter:title": "멀티 파이프라인, 이메일 파일 첨부 | Relate Changelog"
+"twitter:description": "이제 Relate에서 멀티 파이프라인을 활용할 수 있고, 이메일에 파일 첨부를 할 수 있습니다."
+"twitter:url": "https://www.relate.kr/docs/changelog/2023/022723"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/changelog/file-attachment-email.png"
+"og:image:width": "2240"
+"og:image:height": "1260"
+---
+
+## Overview
+오늘 업데이트에서는 다음과 같은 개선과 기능 추가가 있었습니다.
+
+* 멀티 파이프라인
+* 이메일 파일 첨부 기능
+* 리포팅 바로가기
+
+## 멀티 파이프라인
+
+![multi-pipeline](/docs/images/changelog/multi-pipeline.png)
+
+이제 여러 개의 파이프라인을 만들어서 관리할 수 있습니다. 멀티 파이프라인은 이럴 때 가장 유용합니다.
+
+- 멀티 프로덕트를 영업할 때, 서로 다른 세일즈 프로세스를 갖고 있는 경우;
+- 새로운 세일즈 프로세스를 실험해보고자 하는 경우;
+- 고객에게 제품을 포함해서 서비스를 제공하는 경우 (컨설팅, 온보딩 서비스 등의 경우 기존 세일즈 프로세스보다도 더 길 수 있습니다)
+
+그러나 아래와 같은 경우에는 1개의 파이프라인을 유지하는 것을 권장합니다.
+
+- 지역, 산업, 규모 등으로 파이프라인을 나누고자 하는 경우 👉 [**커스텀 필드**](https://www.relate.kr/docs/features/custom-fields)를 활용할 것을 권장합니다.
+- 영업 담당자별로 파이프라인을 나누고자 하는 경우 👉 Relate에서는 각 [**Deal에 담당자를 지정**](https://www.relate.kr/docs/features/deal-pipeline)할 수 있습니다. 만약 담당자별로 구분해서 보고 싶다면, [**Data Views**](https://www.relate.kr/docs/features/filtering-views#data-views)를 활용할 것을 권장합니다.
+
+### File Attachment (이메일 파일 첨부)
+
+![file-attachment-email](/docs/images/changelog/file-attachment-email.png)
+
+이제 Relate 에서 이메일을 보낼 때 파일을 첨부할 수 있습니다. 여느 이메일 클라이언트와 동일하게 이메일 Draft 작성시 `Attach file` 버튼을 눌러서 파일을 첨부할 수 있습니다.
+
+주의할 것은, 파일당 최대 25MB의 용량만 가능합니다. 대용량 첨부 파일을 사용하고자 한다면, Dropbox나 Google Drive 등에 업로드한 다음, 공유 링크를 이메일에 추가하는 방식으로 해결할 수 있습니다.
+
+추가로 아웃바운드 캠페인 진행시 파일 첨부는 하지 않는 것이 좋습니다 ([플레이북 참고](https://www.relate.kr/docs/playbook/outbound-sales#)) 일반적으로, 콜드 아웃바운드 이메일 캠페인을 운영할 때는 파일 첨부(File Attachment)는 도메인 평판(sender’s reputation)과 수신율(deliverability)에 대한 리스크가 있습니다.
+
+### Reporting 페이지 바로가기
+
+![reporting-link](/docs/images/changelog/reporting-link.png)
+
+이제 Relate의 workspace에서 Reporting 페이지로 바로 이동할 수 있습니다. 현재 제공하고 있는 [Reporting 페이지](https://www.relate.kr/docs/features/reporting)에서는 간단하지만 초기 B2B 영업을 운영하는데 중요한 세일즈 인사이트를 분석할 수 있습니다.
+
+<Tip>Reporting 페이지는 별도의 기능으로 곧 개편 및 개선 예정될 예정입니다.</Tip>
+
+
+## Fixes & Improvements
+- Improved: Relate 앱 사이즈 수정 후 다시 실행했을 때 이전에 설정했던 사이즈 유지 가능
+- Fixed: Deal 리스트 뷰에서 Deal detail modal 안뜨는 이슈 해결
+- Fixed: 특정 시점 이후로 이메일 싱크가 누락됬던 이슈 해결
+- Fixed: 이메일 스레드 내부에서 해당 Organization에 등록된 Person의 이메일이 안보이는 이슈 해결
+- Fixed: Relate 앱내에서 외부 링크를 클릭하면 in-app 링크로 열리는 문제 해결
+- Fixed: 가입 절차를 완료하지 않은 사용자가 있는 경우 태스크 설정이 동작하지 않는 이슈 해결
+- Fixed: Zapier 훅으로 미팅 노트 슬랙 알림이 오지 않는 문제 해결
+
+---
+
+Last updated: February 27, 2023
