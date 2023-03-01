@@ -206,7 +206,8 @@
                 "playbook/distribution",
                 "playbook/post-launch",
                 "playbook/outbound-sales",
-                "playbook/how-to-qualify-leads"           
+                "playbook/how-to-qualify-leads",
+                "playbook/lead-types"           
               ]
             }
           ]
