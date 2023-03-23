@@ -194,7 +194,8 @@
             "playbook/inbound-automation",
             "playbook/outbound-automation",
             "playbook/collaborative-sales-automation",
-            "playbook/how-to-write-sales-notes"
+            "playbook/how-to-write-sales-notes",
+            "playbook/handoff"
           ]
         },
         {
