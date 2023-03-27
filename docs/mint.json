@@ -239,7 +239,9 @@
               "wiki/Sales/Inbound-Sales",
               "wiki/sales-roles",
               "wiki/upsell-cross-sell",
-              "wiki/pql"
+              "wiki/mql",
+              "wiki/pql",
+              "wiki/sql"
             ]
           }
       ]
