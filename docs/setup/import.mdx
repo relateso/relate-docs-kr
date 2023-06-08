@@ -13,9 +13,9 @@ sidebarTitle: "Data Import 하기"
 
 [Admin 페이지](https://app.relate.so) 내에서 Import Data 메뉴를 클릭하신 뒤, 아래 스크린샷에 보이는 템플릿을 다운받으시면 됩니다.
 
-Relate으로 고객 정보를 Import하실 때는 리드와 컨택은 같이, 딜은 따로 Import하시면 됩니다. 템플릿이 나눠져 있으니 참고하시면 됩니다.
+Relate으로 고객 정보를 Import하실 때는 Organization과 People은 같이, Deal은 따로 Import하시면 됩니다. 템플릿이 나눠져 있으니 참고하시면 됩니다.
 
-![Download leads](/docs/images/setup/lead-contact-deal-import/download-leads.png)
+![Download leads](/docs/images/setup/lead-contact-deal-import/download-organization-people-template.png)
 
 ## Import 준비하기
 
@@ -25,19 +25,23 @@ Relate으로 고객 정보를 Import하실 때는 리드와 컨택은 같이, �
 
 템플릿의 첫 두 줄은 추가하시는 고객 정보를 Relate 내에서 어디에 추가할지 결정하는 역할을 합니다.
 
-- 첫 번째 줄은 각 열에 (Column) 추가되는 정보가 리드와 관련된 정보인지, 컨택과 관련된 정보인지 결정합니다. 추가되는 정보가 기본적으로 제공하는 데이터 필드에 추가될지, 새로 만드는 커스텀 필드에 추가할지 결정합니다.
+- 첫 번째 줄은 각 열에 (Column) 추가되는 정보가 Organization과 관련된 정보인지, People과 관련된 정보인지 결정합니다. 추가되는 정보가 기본적으로 제공하는 데이터 필드에 추가될지, 새로 만드는 커스텀 필드에 추가할지 결정합니다.
 
-- 두 번째 줄은 각 열에 (Column) 추가되는 정보가 어떤 리드/컨택 내에서 어떤 데이터 필드로 들어갈지 결정합니다.
+- 두 번째 줄은 각 열에 (Column) 추가되는 정보가 어떤 Organization/People 내에서 어떤 데이터 필드로 들어갈지 결정합니다.
 
 ### 예시:
 
-예를 들어, A1은 lead/name으로, A 열에 추가되는 정보가 리드와 관련된 정보이고, 또 기본으로 제공하는 데이터 필드인 Lead Name으로 추가된다는 것을 의미합니다.
+예를 들어, A1은 organization/name으로, A 열에 추가되는 정보가 Organization과 관련된 정보이고, 또 기본으로 제공하는 데이터 필드인 Organization Name으로 추가된다는 것을 의미합니다.
 
-그리고 A2의 Lead Name (required)는, A 열에 추가되는 정보가 Lead Name이라는 이름을 가진 데이터 필드로 들어가는 것을 의미합니다. 가로 안에 있는 (required)는 데이터 생성을 위해 항목이라는 것을 의미하고, Lead Name이 없는 데이터는 추가되지 않게 됩니다.
+그리고 A2의 Organization Name (required)는, A 열에 추가되는 정보가 Organization Name이라는 이름을 가진 데이터 필드로 들어가는 것을 의미합니다. 가로 안에 있는 (required)는 데이터 생성을 위해 항목이라는 것을 의미하고, Organization Name이 없는 데이터는 추가되지 않게 됩니다.
 
-그리고 D1의 lead/custom_field/1은 D 열에 추가되는 정보가 리드와 관련된 정보이고, 또 새롭게 추가한 커스텀 필드라는 것을 의미합니다.
+Assignee Email은 우리 팀 영업 담당자 중 한 명의 이메일을 추가하면 됩니다.
 
-D2의 \[Field Name\]은 새롭게 추가할 커스텀 필드의 이름입니다. 예를 들어 리드에 추가하고 싶은 커스텀 필드가 "Industry" 라면 \[Field Name\]을 지우고 Industry로 바꿔주시면 됩니다. Industry를 입력하실 때는 대괄호 없이 입력하시면 됩니다.
+![Prepare imports](/docs/images/setup/lead-contact-deal-import/import-assignee.png)
+
+그리고 D1의 organization/custom_field/1은 D 열에 추가되는 정보가 Organization과 관련된 정보이고, 또 새롭게 추가한 커스텀 필드라는 것을 의미합니다.
+
+D2의 \[Field Name\]은 새롭게 추가할 커스텀 필드의 이름입니다. 예를 들어 Organization에 추가하고 싶은 커스텀 필드가 "Industry" 라면 \[Field Name\]을 지우고 Industry로 바꿔주시면 됩니다. Industry를 입력하실 때는 대괄호 없이 입력하시면 됩니다.
 
 ![Prepare imports](/docs/images/setup/lead-contact-deal-import/custom-field.png)
 
