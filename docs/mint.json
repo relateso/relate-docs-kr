@@ -75,7 +75,7 @@
     {
       "name": "Changelog",
       "icon": "list",
-      "url": "changelog"
+      "url": "https://www.relate.kr/changelog/"
     },
     {
       "name": "블로그",
@@ -247,45 +247,6 @@
               "wiki/sql"
             ]
           }
-      ]
-    },
-    {
-      "group": "Changelog",
-      "pages": [
-        {
-          "group": "2023",
-          "pages": [
-            "changelog/2023/070623",
-            "changelog/2023/062223",
-            "changelog/2023/050723",
-            "changelog/2023/040323",
-            "changelog/2023/032323",
-            "changelog/2023/022723",
-            "changelog/2023/013023"
-          ]
-        },
-        {
-          "group": "2022",
-          "pages": [
-            "changelog/2022/122822",
-            "changelog/2022/120822",
-            "changelog/2022/111822",
-            "changelog/2022/100122",
-            "changelog/2022/090222",
-            "changelog/2022/072122",
-            "changelog/2022/061022",
-            "changelog/2022/050222",
-            "changelog/2022/032922",
-            "changelog/2022/032222",
-            "changelog/2022/022022",
-            "changelog/2022/012222",
-            "changelog/2022/010622"
-          ]
-        },
-        {
-          "group": "2021",
-          "pages": ["changelog/2021/122721", "changelog/2021/112321"]
-        }
       ]
     }
   ],
