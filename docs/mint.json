@@ -120,6 +120,7 @@
             "features/custom-fields",
             "features/filtering-views",
             "features/inbox",
+            "features/tasks",
             "features/reporting",
             "features/shortcuts"
           ]
