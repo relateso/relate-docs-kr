@@ -120,6 +120,7 @@
             "features/custom-fields",
             "features/filtering-views",
             "features/inbox",
+            "features/tasks",
             "features/reporting",
             "features/shortcuts"
           ]
@@ -134,7 +135,7 @@
           "pages": [
             "features/organizations",
             "features/people",
-            "features/how-to-manage-organization-status",
+            "features/how-to-manage-prospect-status",
             "features/how-to-manage-organization-assignee"
           ]
         },
