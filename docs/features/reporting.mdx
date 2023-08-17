@@ -13,72 +13,72 @@ sidebarTitle: "Reporting & Analytics"
 
 ## Overview
 
-Relate에서는 간단하지만 초기 B2B 영업을 운영하는데 중요한 세일즈 인사이트를 분석할 수 있습니다.
+Relate에서는 간단하지만, 초기 B2B 영업을 운영하는 데 중요한 세일즈 인사이트를 분석할 수 있습니다.
 
-Relate에서는 모든 데이터를 전부 보여주는 것보다는 정말 필요한 데이터를 잘 보여주는 것이 중요하다고 생각하고 있습니다.
+현재 Reporting은 5가지의 기본 템플릿을 제공합니다. 
 
-Relate Reporting & Analytics는 현재 2가지 데이터 인사이트를 보여줍니다.
-
-1. Deal Conversion
-2. Deal Performance
+1. Newly booked revenue
+2. Annual contract value
+3. Win rate
+4. New opportunities by pipeline stage
+5. New opportunities by time
 
 ### Reporting 페이지 진입하기
 
-현재 Reporting 페이지는 링크로만 진입이 가능합니다. 아래 링크를 복사/붙여넣기 하거나 [Reporting 페이지](https://admin.relate.so/reporting)를 직접 방문하시면 됩니다.
+Reporting 페이지는 왼쪽 상단 워크스페이스를 클릭하면 나오는 메뉴 가장 밑에 있는 Reporting 버튼을 클릭하면 진입이 가능합니다.
 
-```
-https://admin.relate.so/reporting
-```
+![Reporting](/docs/images/features/enter-reporting.png)
 
+## Newly booked revenue
 
-## Deal Conversion
+![Reporting](/docs/images/features/newly-booked-revenue.png)
 
-Deal Conversion(전환율)은 파이프라인내 Deal 전체 숫자에서 특정 단계에서 다음 단계로 넘어갈 때, 혹은 Active -> Closed (Won/Lost) 상태로 변경이 되는 숫자를 계산합니다.
+Newly booked revenue에서는 월별로 매출이 얼마나 발생했는지 보여줍니다. 
 
-### Win Rate
-세일즈 측정할 때 가장 중요한 것은 우리가 파이프라인내에 있는 모든 영업 기회 중에 실제로 몇 개를 수주에 성공하는가? 입니다. 이것을 Win Rate라고 부르는데요.
+만약 월별이 아닌 연간으로 확인하고 싶거나, 데이터를 수정 및 추가하고 싶다면 오른쪽 끝에 있는 Ellipsis(⋅⋅⋅) 버튼을 눌러 수정할 수 있습니다. 
 
-Win Rate를 알면 자연스럽게 파이프라인에 몇 개의 Deal을 추가해야 하는지도 알 수 있습니다.
+## Annual contract value
 
-![Win Rate](/docs/images/features/win-rate.png)
+![Reporting](/docs/images/features/annual-contract-value.png)
 
-위 예시를 보면 총 8개의 Deal이 파이프라인에 있고, 그 중에 4개의 Deal을 성공시켰으니, Win rate는 50%가 됩니다.
+[Annual contract value](https://www.relate.kr/docs/wiki/acv)는 고객 계약당 연간 기대 평균 수익을 의미하며 B2B 영업팀이 확인하는 중요한 재무 지표 중 하나입니다. 
+​
+## Win rate
 
-이 데이터를 바탕으로 우리는 1개의 Deal을 수주하기 위해서는 2개의 Deal이 파이프라인에 있어야 함을 알 수 있습니다.
+![Reporting](/docs/images/features/win-rate.png)
 
-### Conversion Rate by Status
+Win rate는 검증된 영업 기회 중 영업 팀이 성공적으로 클로즈한 비율을 의미하며 영업팀이 확인하는 중요한 영업 지표 중 하나입니다. 
 
-![Conversion Rate](/docs/images/features/conversion-rate.png)
+[검증된 영업 기회](https://www.relate.kr/docs/wiki/sql)란, [프로스펙팅 과정](https://www.relate.kr/blog/how-to-qualify-leads/)을 통해 제품과 Fit을 확인하고 당장의 영업 기회가 있는 곳들을 의미합니다. 
 
-파이프라인 단계별 전환율도 확인할 수 있습니다. 마우스를 그래프에 올리시면 전환율이 몇 퍼센트인지도 알 수 있습니다.
+더욱 정확한 Win rate 측정을 위해 Relate의 [Prospect](https://www.relate.kr/docs/features/how-to-manage-prospect-status#prospect-status) 기능과 함께 사용할 것을 추천해 드리며, 꼭 검증된 영업 기회만 파이프라인에 추가해야 합니다. 
 
-### Duration of each status
+Win rate를 알면 자연스럽게 파이프라인에 몇 개의 Deal을 추가해야 하는지도 알 수 있습니다. 예를 들어, win rate이 50%라면, 4개의 딜을 클로즈하기 위해서는 총 8개의 딜이 파이프라인에 있어야 함을 알 수 있습니다. 
 
-![Sales duration](/docs/images/features/duration.png)
+## New opportunities by pipeline stage
 
-파이프라인 각 단계에 Deal들이 평균적으로 며칠이나 머무는지 파악할 수 있습니다.
+![Reporting](/docs/images/features/new-opportunities-by-pipeline-stage.png)
 
-## Deal Performance
-Deal Performance 페이지는 파이프라인 현황을 각종 그래프로 보여주는 기능입니다.
+New opportunities by pipeline stage에서 새로 생성된 검증된 영업 기회가 몇 개인지, 각 파이프라인 스테이지에 몇 개씩 생성되어 있는지 확인할 수 있습니다. 
 
-![Deal Performance](/docs/images/features/deal-performance.png)
+Relate를 사용하기 시작한 시점부터 새로 생성된 모든 영업 기회를 보여주기 때문에 특정 시간대에 생성된 영업 기회를 확인하고 싶다면 필터를 적용하면 됩니다. 필터는 오른쪽 끝에 있는 Ellipsis(⋅⋅⋅) 버튼을 눌러 추가할 수 있습니다. 
 
-### Total Deals
+![Reporting](/docs/images/features/ellipsis.png)
 
-Total deals shows the number of active and closed deals in each status.
+## New opportunities by time
 
-![Total deals](/docs/images/features/total-deals.png)
+![Reporting](/docs/images/features/new-opportunities-by-time.png)
 
-Total Deals 섹션은 현재 파이프라인에서 진행 중인 모든 Active 와 Closed (Won/Lost) Deal을 상태별로, 타입별로, 그리고 value period 별로 (one time, monthly, annual) 보여줍니다.
+New opportunities by time에서 검증된 영업 기회가 월별로 몇 개씩 추가되었는지 확인할 수 있습니다. 
 
-### Closed Deals
+B2B 영업 팀이 파이프라인에 새로운 영업 기회를 꾸준히 추가하는 것은 지속적으로 매출을 만들어 내고 성장하는 데 가장 중요한 부분입니다. 
 
-![Closed deals](/docs/images/features/closed-deals.png)
+## 새로운 리포트를 추가하기
 
-Closed deals는 파이프라인내 Won 과 Lost 상태인 deal 숫자의 트렌드를 보여줍니다.
+만약 기본적으로 제공되는 리포트 외에 다른 리포트를 추가하고 싶다면 가장 밑에 있는 "Select Template"이나 "+ Add View" 버튼을 누르면 됩니다. "Select Template"는 이미 만들어진 템플릿을 활용하는 것이고, "+ Add View" 아예 처음부터 만드는 방식입니다. 
 
-### Newly Added Deals
+![Reporting](/docs/images/features/add-new-reports.png)
 
-![Newly added deals](/docs/images/features/new-deals.png)
+새로운 리포트를 만들 때는 활용하고 싶은 데이터와 차트나 테이블 등을 활용할 수 있습니다. 
 
-Newly added deals는 파이프라인내 새롭게 추가된 Deal의 숫자를 시간대별로 보여줍니다.
+![Reporting](/docs/images/features/add-new-reports2.png)
