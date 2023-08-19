@@ -1,0 +1,157 @@
+---
+title: "Prospect"
+description: "Prospect 기능을 통해 잠재 고객을 관리할 수 있습니다."
+sidebarTitle: "Prospect feature"
+"og:title": "Prospect | Relate Product Guide"
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/prospect-enabled.png"
+"og:description": "Prospect 기능을 통해 잠재 고객을 관리할 수 있습니다."
+"article:tag": "Product Guide"
+"twitter:title": "Prospect | Relate Product Guide"
+"twitter:description": "Prospect 기능을 통해 잠재 고객을 관리할 수 있습니다."
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/prospect-enabled.png"
+---
+
+![prospect-enabled.png](/docs/images/features/prospect-enabled.png)
+
+## Overview
+
+잠재 고객 기능은 잠재 고객과 소통하고, 자격을 부여하고, 영업 파이프라인으로 넘길 수 있는 곳입니다. 일반적으로 [SDR 역할](https://www.relate.so/docs/wiki/sales-roles#sales-development-representative-sdr-and-business-development-representative-bdr)을 맡은 사람이 이 기능을 사용합니다.
+
+
+Prospect 기능을 통해 잠재 고객을 관리할 수 있습니다. Prospect 기능에 내장된 잠재고객 단계를 통해 고객을 검증하고 영업 파이프라인으로 넘길 수 있습니다. 
+
+일반적으로 Prospect는 [SDR 역할](https://www.relate.kr/docs/wiki/sales-roles#sales-development-representative-sdr-and-business-development-representative-bdr)을 맡은 사람이 가장 많이 사용하게 되는 기능입니다.
+
+
+## Configure
+
+Prospect를 사용하려면 [Relate admin page](https://admin.relate.so/)로 이동하여 기능을 활성화합니다.
+
+![prospect-enabled.png](/docs/images/features/prospect-enabled.png)
+
+Prospect 기능이 만약 활성화 되지 않으면 `⌘+R`(Windows의 경우 `Ctrl+R`)을 눌러 새로고침하세요.
+
+## Basics
+
+### Prospect Status 관리하기
+
+Prospect에 있는 Deal은 시작부터 파이프라인으로의 핸드오프까지 각 잠재 고객(=리드)의 순서와 진행 상황을 정의하는 상태(Prospect Status)가 있습니다.
+
+Prospect Status는 수정되지 않으며 잠재 고객은 아래 단계를 거칩니다.
+- Potential
+- Working
+- Nurturing
+- Bad Fit
+- Qualified
+
+<Tip>[Prospect Status](/features/prospect-status) 가이드에서 더욱더 자세한 설명과 활용 방법을 확인해주세요.</Tip>
+
+### 워크플로우 자동화
+
+Prospect Status를 설정하면, 그에 따라 각 Status 목록으로 해당 Deal이 자동으로 이동하도록 설계되어 있습니다.
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/855855665?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture" title="potential-to-working"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+For example, if you set a prospect status from `Potential` to `Working`, then the prospect will move to the Working list and you'll no longer see the prospect in the Potential list.
+
+예를 들어 Prospect Status를 'Potential'에서 'Working'으로 설정하면 해당 Deal이 Working 리스트로 이동하고 Potential 리스트에서는 사라지게 됩니다.
+
+### 신규 Organization은 자동으로 Potential에 추가됩니다.
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/855838420?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture" title="potential-to-working"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+Relate에 새로운 Organization이 추가되면, 자동으로 Potential 리스트에 해당 고객이 추가 됩니다. 이를 통해 잠재 고객 리스트를 작성하고 관리하는 시간을 절약할 수 있습니다.
+
+### Prospect Status 설정하기
+
+각 Deal에 대해 Prospect Status를 설정하는 여러가지 방법이 있습니다.
+
+![set-prospect-status1](/docs/images/features/setprospectstatus1.png)
+
+The easiest way is to set them directly from the grid view. You can also set them on the Organization detail page.
+
+If you want to bulk edit statuses for multiple prospects, you can select the desired prospect(s) and use the modal at the bottom of the screen to set the statuses.
+
+가장 쉬운 방법은 그리드 뷰에서 직접 상태를 설정하는 것입니다. 또한 Organization Detail 페이지에서 설정할 수도 있습니다.
+
+여러 잠재 고객의 상태를 일괄 업데이트하려는 경우, 원하는 잠재 고객을 선택하고 화면 하단의 모달을 사용하여 상태를 설정할 수 있습니다.
+
+![set-prospect-status-3](/docs/images/features/setprospectstatus3.png)
+
+### 수주 실패한 Deal에 다시 세일즈 프로세스 시작하기
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/855855681?h=004276a045&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture" title="potential-to-working"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+Losing a deal does not mean you cannot sell to the same customer again later. Many times customers come back if situations change. 
+
+In Relate, you can create multiple sales processes to track new deals. To start a new sales process for a lost deal, go to the Organization page and select the organization linked to that lost deal. Click `Start sales process` on the bottom of the page. This will create a new prospect so that you can track the opportunity as a separate deal.
+
+Deal이 Lost 되었다고 해서 나중에 같은 고객에게 다시 영업할 수 없다는 의미는 아닙니다. 상황이 바뀌면 고객이 다시 찾아오는 경우가 많습니다. 
+
+Relate에서는 여러 영업 프로세스를 생성하여 새로운 Deal을 별도로 추적할 수 있습니다. Lost 된 Deal에 대한 새로운 세일즈 프로세스를 시작하려면 Organization 그리드 뷰로 이동하여 해당 Organization을 선택하고, 페이지 하단의 'Start sales process'을 클릭합니다. 그러면 새 Deal이 생성되어 해당 기회를 별도의 Deal로 추적할 수 있습니다.

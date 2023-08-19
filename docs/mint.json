@@ -140,6 +140,13 @@
           ]
         },
         {
+          "group": "Prospect",
+          "pages": [
+            "features/prospect",
+            "features/prospect-status"
+          ]
+        },
+        {
           "group": "Deals",
           "pages": [
             "features/deal-pipeline",
