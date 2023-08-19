@@ -135,7 +135,6 @@
           "pages": [
             "features/organizations",
             "features/people",
-            "features/how-to-manage-prospect-status",
             "features/how-to-manage-organization-assignee"
           ]
         },
