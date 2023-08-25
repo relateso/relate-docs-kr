@@ -99,16 +99,16 @@
         {
           "group": "시작하기",
           "pages": [
-              "setup/getting-started",
-              {
-                "group": "이메일 연동하기",
-                "pages": [
-                  "setup/register-google-api-allowlist",
-                  "setup/email-integration/google-outlook-etc",
-                  "setup/email-integration/naverworks-lineworks"
-                ]
-              },
-              "setup/import"
+            "setup/getting-started",
+            {
+              "group": "이메일 연동하기",
+              "pages": [
+                "setup/register-google-api-allowlist",
+                "setup/email-integration/google-outlook-etc",
+                "setup/email-integration/naverworks-lineworks"
+              ]
+            },
+            "setup/import"
           ]
         },
         {
@@ -140,10 +140,7 @@
         },
         {
           "group": "Prospect",
-          "pages": [
-            "features/prospect",
-            "features/prospect-status"
-          ]
+          "pages": ["features/prospect", "features/prospect-status"]
         },
         {
           "group": "Deals",
@@ -186,9 +183,9 @@
     {
       "group": "Integrations",
       "pages": [
-            "integrations/Apollo.io",
-            "integrations/Typeform",
-            "integrations/slack"
+        "integrations/Apollo.io",
+        "integrations/Typeform",
+        "integrations/slack"
       ]
     },
     {
@@ -215,7 +212,7 @@
                 "playbook/distribution",
                 "playbook/post-launch",
                 "playbook/outbound-sales",
-                "playbook/lead-types"           
+                "playbook/lead-types"
               ]
             }
           ]
@@ -225,35 +222,33 @@
     {
       "group": "Startup Wiki",
       "pages": [
-          {
-            "group": "SaaS",
-            "pages": [
-              "wiki/SaaS/ARR",
-              "wiki/SaaS/MRR",
-              "wiki/net-revenue-retention",
-              "wiki/acv",
-              "wiki/cac",
-              "wiki/ltv"
-            ]
-          },
-          {
-            "group": "Go-to-Market",
-            "pages": [
-              "wiki/icp"
-            ]
-          },
-          {
-            "group": "Sales",
-            "pages": [
-              "wiki/Sales/BANT",
-              "wiki/Sales/Inbound-Sales",
-              "wiki/sales-roles",
-              "wiki/upsell-cross-sell",
-              "wiki/mql",
-              "wiki/pql",
-              "wiki/sql"
-            ]
-          }
+        {
+          "group": "SaaS",
+          "pages": [
+            "wiki/SaaS/ARR",
+            "wiki/SaaS/MRR",
+            "wiki/net-revenue-retention",
+            "wiki/acv",
+            "wiki/cac",
+            "wiki/ltv"
+          ]
+        },
+        {
+          "group": "Go-to-Market",
+          "pages": ["wiki/icp"]
+        },
+        {
+          "group": "Sales",
+          "pages": [
+            "wiki/Sales/BANT",
+            "wiki/Sales/Inbound-Sales",
+            "wiki/sales-roles",
+            "wiki/upsell-cross-sell",
+            "wiki/mql",
+            "wiki/pql",
+            "wiki/sql"
+          ]
+        }
       ]
     }
   ],

@@ -10,7 +10,9 @@ description: "Relate 온보딩에 앞서 사전에 Google Workspace에서 Relate
 </Note>
 
 <Warning>
-  **Google Mail을 사용하시는 사용자 분들은 Relate과 연동하기 전에 Google API Allowlist에 Relate을 추가해주셔야 합니다. 이 가이드는 해당 절차를 안내합니다.**
+  **Google Mail을 사용하시는 사용자 분들은 Relate과 연동하기 전에 Google API
+  Allowlist에 Relate을 추가해주셔야 합니다. 이 가이드는 해당 절차를
+  안내합니다.**
 </Warning>
 
 ## 1. 계정 권한 확인하기
@@ -21,11 +23,11 @@ description: "Relate 온보딩에 앞서 사전에 Google Workspace에서 Relate
 
 1.2. 좌측의 **Directory > Users** 페이지로 접근하신 뒤, 현재 접속한 본인 계정(e.g. Arthur Kim) 을 확인하시고, 이름을 눌러 디테일 페이지로 접근해주세요.
 
-![Directory Users](/docs/images/setup/directory-users.png)
+![Directory Users](/images/setup/directory-users.png)
 
 1.3. 페이지 내 **Admin roles and privileges** 항목에서, 권한이 **Super Admin** 인지 확인해주세요.
 
-![Super Admin](/docs/images/setup/super-admin.png)
+![Super Admin](/images/setup/super-admin.png)
 
 1.4. Super Admin 이 맞다면 하단의 **ii) API 권한 설정하기** 항목을 진행해주세요.
 
@@ -35,15 +37,15 @@ description: "Relate 온보딩에 앞서 사전에 Google Workspace에서 Relate
 
 2.1. 좌측 메뉴에서 **Security > Access and Data Control > API controls** 페이지로 접근해주세요. 해당 메뉴가 보이지 않는 경우, 하단의 더보기(Show More)를 눌러 접근하실 수 있습니다.
 
-![Add Relate to API Allowlist](/docs/images/setup/add-relate-to-api-allowlist.png)
+![Add Relate to API Allowlist](/images/setup/add-relate-to-api-allowlist.png)
 
 2.2. **App access control** 항목 우측 하단의 `MANAGE THIRD-PARTY APP ACCESS` 페이지로 접속해주세요.
 
-![Manage Third Party App Access](/docs/images/setup/app-access-control.png)
+![Manage Third Party App Access](/images/setup/app-access-control.png)
 
 2.3. 현재 팀의 Workspace 에서 연결하여 사용중인 3rdparty 앱의 목록을 보실 수 있습니다. **Configured apps** 표 상단의 **Add app** 을 누른 뒤, **OAuth App Name or Client ID** 를 선택해주세요.
 
-![OAuth App name](/docs/images/setup/oauth-app-name.png)
+![OAuth App name](/images/setup/oauth-app-name.png)
 
 2.4. 아래 **Client ID** 를 복사한 뒤 검색창에서 **Search** 를 누르시면, Relate 앱을 확인하실 수 있습니다. Relate 앱을 선택하신 뒤 **Select** 를 눌러 다음 페이지로 이동해주세요.
 
@@ -51,16 +53,16 @@ description: "Relate 온보딩에 앞서 사전에 Google Workspace에서 Relate
 896496487864-0bq252frk3u80q051aucqabr6t92jr7c
 ```
 
-![Copy relate client ID](/docs/images/setup/copy-relate-client-id.png)
+![Copy relate client ID](/images/setup/copy-relate-client-id.png)
 
 2.5. OAuth Client ID에 체크해주시고, **Select** 를 눌러 다음 페이지로 이동해주세요.
 
-![SELECT](/docs/images/setup/select.png)
+![SELECT](/images/setup/select.png)
 
 2.6. Relate 앱이 Google Services 에 접근할 수 있도록 Trusted 를 선택하고 **Configure** 를 눌러 권한을 부여해주세요.
 
-![CONFIGURE](/docs/images/setup/configure.png)
+![CONFIGURE](/images/setup/configure.png)
 
 2.7. 연결된 앱 목록에서 Relate 이 다음과 같이 보인다면 정상적으로 권한이 부여된 것입니다. 축하드립니다!
 
-![Check Identical list](/docs/images/setup/identical-list.png)
+![Check Identical list](/images/setup/identical-list.png)
