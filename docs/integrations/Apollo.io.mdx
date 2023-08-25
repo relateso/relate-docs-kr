@@ -8,13 +8,20 @@ sidebarTitle: "Apollo.io"
 "twitter:title": "Apollo.io + Relate 연동하기 | Relate Product Guide"
 "twitter:description": "이 가이드는 효과적인 프로스펙팅을 위해 사용하면 좋은 Apollo.io와 Relate을 연동하는 방법에 대해 설명합니다."
 ---
-<script type="module" src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"></script>
-<link rel="stylesheet" href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"/>
 
+<script
+  type="module"
+  src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"
+></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"
+/>
 
 ## Overview
 
-영업 프로스펙팅 툴인 아폴로(Apollo.io)와 Relate를 연동해서 아웃바운드 영업의 초기 단계이자 가장 중요한 프로스펙팅을 훨씬 효율적으로 할 수 있습니다. 또한 Apollo + Relate 연동을 통해 프로스펙팅하는 단계에서부터 어떤 고객과 어떤 내용으로 연락했었는지, 아웃바운드 캠페인의 결과는 어땠는지 등을 관리할 수 있습니다. 
+영업 프로스펙팅 툴인 아폴로(Apollo.io)와 Relate를 연동해서 아웃바운드 영업의 초기 단계이자 가장 중요한 프로스펙팅을 훨씬 효율적으로 할 수 있습니다. 또한 Apollo + Relate 연동을 통해 프로스펙팅하는 단계에서부터 어떤 고객과 어떤 내용으로 연락했었는지, 아웃바운드 캠페인의 결과는 어땠는지 등을 관리할 수 있습니다.
 
 B2B 아웃바운드 프로스펙팅에 대해서는 [이 포스트](https://www.relate.kr/blog/how-to-run-an-effective-outbound-sales-process)에서 자세히 설명해두었습니다.
 
@@ -45,122 +52,123 @@ Apollo.io + Relate 연동은 Zapier를 사용합니다. (링크: [Zapier 가이�
   ></iframe>
 </div>
 
-
 ## Apollo.io란?
 
-![apollo_0](/docs/images/integrations/apollo_0.png)
+![apollo_0](/images/integrations/apollo_0.png)
 
 아폴로(Apollo.io)는 B2B 영업세일즈팀이 잠재고객에 대해 검색하고, 연락처를 확보한 뒤, 자동으로 콜드 아웃바운드 이메일을 보내도록 도와주는 무료 툴입니다.
 
 [Apollo + Relate 연동 바로가기](https://zapier.com/app/editor/template/1123407)
 
 <zapier-zap-templates
-  ids="1123407"
-  limit="5"
-  link-target="new-tab"
-  presentation="row"
-  use-this-zap="show"
-  theme="auto"
-></zapier-zap-templates>
+ids="1123407"
+limit="5"
+link-target="new-tab"
+presentation="row"
+use-this-zap="show"
+theme="auto"
+
+> </zapier-zap-templates>
 
 ## 1. Zap 생성하기
 
-Apollo와 Relate를 연동하기 위해 가장 먼저 해야 하는 것은 Zapier에서 Apollo와 Relate를 선택하는 것입니다. Zapier에서 직접 선택하실 수도 있고, Relate Admin Page에서 선택할 수 있습니다. 
+Apollo와 Relate를 연동하기 위해 가장 먼저 해야 하는 것은 Zapier에서 Apollo와 Relate를 선택하는 것입니다. Zapier에서 직접 선택하실 수도 있고, Relate Admin Page에서 선택할 수 있습니다.
 
-Zapier에서 직접 선택할 경우, 첫 화면에 나오는 "Make a Zap", 또는 왼쪽 상단에 있는 "+" 버튼을 선택하면 됩니다. 
+Zapier에서 직접 선택할 경우, 첫 화면에 나오는 "Make a Zap", 또는 왼쪽 상단에 있는 "+" 버튼을 선택하면 됩니다.
 
-![apollo_1](/docs/images/integrations/zapier_main.png)
+![apollo_1](/images/integrations/zapier_main.png)
 
-그리고 차례대로 Apollo와 Relate를 찾아 선택합니다. 그리고 밑에 칸에서 New Contact와 Generate Lead & Contact를 차례대로 선택합니다. 
+그리고 차례대로 Apollo와 Relate를 찾아 선택합니다. 그리고 밑에 칸에서 New Contact와 Generate Lead & Contact를 차례대로 선택합니다.
 
-![apollo_1](/docs/images/integrations/apollo_1.png)
+![apollo_1](/images/integrations/apollo_1.png)
 
-[Relate Admin Page](https://admin.relate.so)에서 할 경우 Integrations에서 Zapier를 선택하면 됩니다. 
+[Relate Admin Page](https://admin.relate.so)에서 할 경우 Integrations에서 Zapier를 선택하면 됩니다.
 
-![apollo_1](/docs/images/integrations/relate_zapier_integration.png)
+![apollo_1](/images/integrations/relate_zapier_integration.png)
 
-Zapier 연동 페이지에서 "Create Zap" 버튼을 눌러 Apollo와 Relate를 선택하면 됩니다. 
+Zapier 연동 페이지에서 "Create Zap" 버튼을 눌러 Apollo와 Relate를 선택하면 됩니다.
 
-![apollo_1](/docs/images/integrations/relate_zapier_create.png)
+![apollo_1](/images/integrations/relate_zapier_create.png)
 
-또는, 하단으로 스크롤하면 Relate과 자주 연동하는 목록에서 이미 생성된 Apollo + Relate 템플릿을 사용할 수 있습니다. 
+또는, 하단으로 스크롤하면 Relate과 자주 연동하는 목록에서 이미 생성된 Apollo + Relate 템플릿을 사용할 수 있습니다.
 
-![apollo_1](/docs/images/integrations/relate_zapier_apollo.png)
+![apollo_1](/images/integrations/relate_zapier_apollo.png)
 
 ## 2. Trigger 선택 및 연결하기
 
-Trigger는 원하는 Action이 자동으로 발생하는 발생 조건을 의미합니다. Apollo에서 새로운 고객을 저장했을 때가 Trigger이고, 새로운 고객 정보가 Relate에 자동으로 추가되는 것이 Action입니다. 
+Trigger는 원하는 Action이 자동으로 발생하는 발생 조건을 의미합니다. Apollo에서 새로운 고객을 저장했을 때가 Trigger이고, 새로운 고객 정보가 Relate에 자동으로 추가되는 것이 Action입니다.
 
-먼저 Trigger에서 Apollo를 검색한 뒤 선택합니다. 
+먼저 Trigger에서 Apollo를 검색한 뒤 선택합니다.
 
-![apollo_1](/docs/images/integrations/zapier_apollo_trigger_search.png)
+![apollo_1](/images/integrations/zapier_apollo_trigger_search.png)
 
 그리고 Apollo Event로는 New Contact (새로운 고객 정보)를 선택하고 Continue 버튼을 눌러줍니다.
 
-![apollo_1](/docs/images/integrations/zapier_apollo_event.png) 
+![apollo_1](/images/integrations/zapier_apollo_event.png)
 
-처음 연동할 경우에는 새로운 Apollo 계정을 연결해줘야 합니다. 
+처음 연동할 경우에는 새로운 Apollo 계정을 연결해줘야 합니다.
 
-![apollo_1](/docs/images/integrations/zapier_apollo_create_account.png)
+![apollo_1](/images/integrations/zapier_apollo_create_account.png)
 
-"+ Connect a New Account" 버튼을 누르면 아래와 같은 화면이 나옵니다. 
+"+ Connect a New Account" 버튼을 누르면 아래와 같은 화면이 나옵니다.
 
-![apollo_2](/docs/images/integrations/zapier_apollo_apikey.png)
+![apollo_2](/images/integrations/zapier_apollo_apikey.png)
 
-여기서는 Apollo API Key를 입력하고, API Key의 이름을 입력해주면 됩니다. Apollo API Key는 [여기서](https://developer.apollo.io/keys/) 찾을 수 있습니다. 
+여기서는 Apollo API Key를 입력하고, API Key의 이름을 입력해주면 됩니다. Apollo API Key는 [여기서](https://developer.apollo.io/keys/) 찾을 수 있습니다.
 
-![apollo_2](/docs/images/integrations/apollo_create_apikey.png)
+![apollo_2](/images/integrations/apollo_create_apikey.png)
 
-Apollo API Key를 생성하는 화면에서 "Create New Key" 버튼을 클릭한 뒤 새로운 API Key를 만들면 됩니다. API Key 유형은 Master Key로 설정하면 됩니다. 
+Apollo API Key를 생성하는 화면에서 "Create New Key" 버튼을 클릭한 뒤 새로운 API Key를 만들면 됩니다. API Key 유형은 Master Key로 설정하면 됩니다.
 
-![apollo_2](/docs/images/integrations/apollo_apikey.png)
+![apollo_2](/images/integrations/apollo_apikey.png)
 
-새로운 API Key를 생성했으면 다시 Zapier 연동 화면으로 돌아가서 API Key 값과 이름을 입력하면 됩니다. 
+새로운 API Key를 생성했으면 다시 Zapier 연동 화면으로 돌아가서 API Key 값과 이름을 입력하면 됩니다.
 
-![apollo_2](/docs/images/integrations/zapier_apollo_apikey2.png)
+![apollo_2](/images/integrations/zapier_apollo_apikey2.png)
 
-새로 연결한 계정을 선택한 이후 "Continue" 버튼을 눌러 Apollo 연결이 잘 됐는지 확인하는 Test 단계로 넘어가면 됩니다. 
+새로 연결한 계정을 선택한 이후 "Continue" 버튼을 눌러 Apollo 연결이 잘 됐는지 확인하는 Test 단계로 넘어가면 됩니다.
 
-![apollo_2](/docs/images/integrations/zapier_apollo_connect_account.png)
+![apollo_2](/images/integrations/zapier_apollo_connect_account.png)
 
-만약 Apollo에서 고객 정보를 저장한 적이 한 번도 없다면 연결이 잘 되어 있어도 에러 메세지가 나올 수 있습니다. 그때는 Skip 해주셔도 됩니다. 이전에 고객 정보를 저장한 적이 있다면 아래의 이미지처럼 연결이 잘 됐다는 메세지가 나옵니다. 
+만약 Apollo에서 고객 정보를 저장한 적이 한 번도 없다면 연결이 잘 되어 있어도 에러 메세지가 나올 수 있습니다. 그때는 Skip 해주셔도 됩니다. 이전에 고객 정보를 저장한 적이 있다면 아래의 이미지처럼 연결이 잘 됐다는 메세지가 나옵니다.
 
-![apollo_2](/docs/images/integrations/zapier_apollo_test_trigger_successful.png)
+![apollo_2](/images/integrations/zapier_apollo_test_trigger_successful.png)
 
 ## 3. Action 선택 및 연결하기
 
-Trigger 연결이 끝나면 Action을 선택해야 합니다. Relate을 검색하신 후 선택하면 됩니다. 
+Trigger 연결이 끝나면 Action을 선택해야 합니다. Relate을 검색하신 후 선택하면 됩니다.
 
-![apollo_2](/docs/images/integrations/zapier_relate.png)
+![apollo_2](/images/integrations/zapier_relate.png)
 
-Event로는 "Generate Lead & Contact"를 선택하고 "Continue" 버튼을 누르면 됩니다. 
+Event로는 "Generate Lead & Contact"를 선택하고 "Continue" 버튼을 누르면 됩니다.
 
-![apollo_2](/docs/images/integrations/zapier_relate_action.png)
+![apollo_2](/images/integrations/zapier_relate_action.png)
 
-다음 화면에서는 Apollo와 마찬가지로 Relate API Key를 통해 Relate을 Zapier와 연결해야 합니다. 이미 Relate과 Zapier를 연결해두었다면, 만들어진 계정을 선택하면 되고, 새로 만들어야 하는 경우 아래 스크린샷처럼 "+ Connect a New Account" 버튼을 누르면 됩니다. 
+다음 화면에서는 Apollo와 마찬가지로 Relate API Key를 통해 Relate을 Zapier와 연결해야 합니다. 이미 Relate과 Zapier를 연결해두었다면, 만들어진 계정을 선택하면 되고, 새로 만들어야 하는 경우 아래 스크린샷처럼 "+ Connect a New Account" 버튼을 누르면 됩니다.
 
-![apollo_2](/docs/images/integrations/zapier_relate_apikey_connect.png)
+![apollo_2](/images/integrations/zapier_relate_apikey_connect.png)
 
-Relate API Key는 [Admin Page](https://admin.relate.so/) Integrations → Zapier → API Keys로 들어가면 찾을 수 있습니다. 새로운 API Key를 생성해주시면 됩니다. 
+Relate API Key는 [Admin Page](https://admin.relate.so/) Integrations → Zapier → API Keys로 들어가면 찾을 수 있습니다. 새로운 API Key를 생성해주시면 됩니다.
 
-![apollo_3](/docs/images/integrations/relate_apikey_generate.png)
+![apollo_3](/images/integrations/relate_apikey_generate.png)
 
 Key는 보안을 위해 다시 보이지 않기 때문에 키를 복사하신 다음 "I stored this key"를 눌러서 저장합니다.
 
-![apollo_3](/docs/images/integrations/relate_apikey_generate2.png)
+![apollo_3](/images/integrations/relate_apikey_generate2.png)
 
-다시 Zapier 화면으로 돌아가서 Relate API Key를 입력하면 됩니다. 
+다시 Zapier 화면으로 돌아가서 Relate API Key를 입력하면 됩니다.
 
-![apollo_3](/docs/images/integrations/zapier_relate_api_connect.png)
+![apollo_3](/images/integrations/zapier_relate_api_connect.png)
 
-Relate 연결이 끝나면 Apollo에서 확보한 정보를 Relate에 어떻게 추가할 것인지 정해야 합니다. 가장 중요한 것은, Zapier를 통해 Relate에 고객 정보를 자동으로 추가하기 위해서는 3가지 데이터가 필요합니다. 
+Relate 연결이 끝나면 Apollo에서 확보한 정보를 Relate에 어떻게 추가할 것인지 정해야 합니다. 가장 중요한 것은, Zapier를 통해 Relate에 고객 정보를 자동으로 추가하기 위해서는 3가지 데이터가 필요합니다.
+
 - Company Name
 - Contact Name
 - Contact Email
 
-![apollo_3](/docs/images/integrations/zapier_relate_action_setups.png)
+![apollo_3](/images/integrations/zapier_relate_action_setups.png)
 
-3가지 필수 정보에 해당하는 것들의 위의 스크린샷처럼 선택해주면 됩니다. 그 이외에 필요한 정보들도 각 데이터 필드에 선택하면 됩니다. 
+3가지 필수 정보에 해당하는 것들의 위의 스크린샷처럼 선택해주면 됩니다. 그 이외에 필요한 정보들도 각 데이터 필드에 선택하면 됩니다.
 
 Good Practice 중 하나는 Note 란에 들어오는 모든 데이터를 넣어두시면, 당장 Relate Lead/Contact 정보로 넣지 못하더라도 Relate CRM에서 데이터를 볼 수 있게 됩니다.
 
@@ -168,11 +176,11 @@ Good Practice 중 하나는 Note 란에 들어오는 모든 데이터를 넣어�
 
 Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니다. 만약 Lead 및 Contact이 생성됨에 따라 Deal도 같이 생성하고자 하신다면 Deal 관련 칸에 정보를 입력하시면 됩니다. (예: Deal Assignee, Deal Status 등)
 
-![apollo_8](/docs/images/integrations/zapier_relate_action_setups2.png)
+![apollo_8](/images/integrations/zapier_relate_action_setups2.png)
 
-"Test action" 버튼을 눌러 Test를 진행하면 됩니다. Trigger Test와 마찬가지로 Apollo에서 저장한 고객이 하나도 없다면, "Skip Test" 버튼을 눌러 넘어가도 됩니다. 
+"Test action" 버튼을 눌러 Test를 진행하면 됩니다. Trigger Test와 마찬가지로 Apollo에서 저장한 고객이 하나도 없다면, "Skip Test" 버튼을 눌러 넘어가도 됩니다.
 
-![apollo_8](/docs/images/integrations/apollo_8.png)
+![apollo_8](/images/integrations/apollo_8.png)
 
 그 이후 Publish 하면 Apollo + Relate Zap 연동이 마무리됩니다.
 
@@ -181,9 +189,10 @@ Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니�
 ### 많이 쓰이는 Relate 연동 템플릿
 
 <zapier-zap-templates
-  apps="relate"
-  create-without-template="hide"
-  limit="5"
-  use-this-zap="show"
-  theme="light"
-></zapier-zap-templates>
+apps="relate"
+create-without-template="hide"
+limit="5"
+use-this-zap="show"
+theme="light"
+
+> </zapier-zap-templates>

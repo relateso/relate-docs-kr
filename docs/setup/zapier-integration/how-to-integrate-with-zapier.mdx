@@ -44,7 +44,7 @@ Zapier를 통해 Typeform과 Relate을 연동하는 방법에 대한 영상입�
 
 먼저 Zapier에 로그인 되어 있는 상태에서 나오는 첫 화면에서 Relate, 그리고 Relate과 연결할 앱을 찾아 선택합니다.
 
-![Connect Relate to Zapier](/docs/images/setup/zapier/connect-relate-to-zapier.png)
+![Connect Relate to Zapier](/images/setup/zapier/connect-relate-to-zapier.png)
 
 ### 2. Zap 만들기
 
@@ -56,27 +56,27 @@ Relate은 Trigger와 Action 모두 지원하니 필요한 Use Case에 맞춰서 
 
 먼저 Trigger에서 Google Forms를 검색해서 선택합니다.
 
-![Add Trigger](/docs/images/setup/zapier/add-trigger.png)
+![Add Trigger](/images/setup/zapier/add-trigger.png)
 
 Zap을 발동(trigger)하는 조건으로 "새로운 데이터(response) 추가시"를 설정합니다. 버튼을 눌러줍니다.
 
-![New Response In Spreadsheet](/docs/images/setup/zapier/new-response-in-spreadsheet.png)
+![New Response In Spreadsheet](/images/setup/zapier/new-response-in-spreadsheet.png)
 
 Google Forms에 로그인 및 연동을 허용합니다.
 
-![Sign into Google forms](/docs/images/setup/zapier/sign-into-google-forms.png)
+![Sign into Google forms](/images/setup/zapier/sign-into-google-forms.png)
 
-![Sign into Google forms part two](/docs/images/setup/zapier/sign-into-google-forms-2.png)
+![Sign into Google forms part two](/images/setup/zapier/sign-into-google-forms-2.png)
 
 내 계정에 있는 Form 중에 Relate과 연결할 Form을 검색하거나 선택합니다. 방금 새로 생성한 Form 일 경우, 하단에 있는 `Load More`버튼을 눌러 새롭게 로드할 수 있습니다.
 
-![Select a form to connect](/docs/images/setup/zapier/select-a-form-to-connect.png)
+![Select a form to connect](/images/setup/zapier/select-a-form-to-connect.png)
 
 Worksheet도 같은 방식으로 선택합니다.
 
 `Test Trigger` 를 통해 데이터가 Zapier로 잘 들어오는지 확인합니다.
 
-![Test trigger](/docs/images/setup/zapier/test-trigger.png)
+![Test trigger](/images/setup/zapier/test-trigger.png)
 
 `Continue`를 누른 뒤 Trigger 탭에 ✅표시가 보이면 Trigger까지 연결에 성공한 것입니다.
 
@@ -84,25 +84,25 @@ Worksheet도 같은 방식으로 선택합니다.
 
 Action 탭을 눌러 Relate을 검색한 다음, 선택해줍니다.
 
-![Setting Action](/docs/images/setup/zapier/setting-action.png)
+![Setting Action](/images/setup/zapier/setting-action.png)
 
 Generate Lead & Contact를 선택하고, 그다음 단계에서 버튼을 누릅니다.
 
-![Select generate lead and contact](/docs/images/setup/zapier/select-generate-lead-and-contact.png)
+![Select generate lead and contact](/images/setup/zapier/select-generate-lead-and-contact.png)
 
 이때, API Key를 입력하라는 새로운 창이 나타납니다. 이제 Relate으로 가서 연결하고자 하는 워크스페이스의 API 페이지에 들어갑니다.
 
-![Manage API Keys](/docs/images/setup/zapier/manage-api-keys.png)
+![Manage API Keys](/images/setup/zapier/manage-api-keys.png)
 
-![Generate API Keys](/docs/images/setup/zapier/generate-api-key.png)
+![Generate API Keys](/images/setup/zapier/generate-api-key.png)
 
 `Generate API Key`를 눌러 새로운 API Key를 생성합니다. Key는 보안을 위해 다시 보이지 않기 때문에 키를 복사하신 다음 `I stored this key`를 눌러서 저장합니다.
 
-![Copy Key](/docs/images/setup/zapier/copy-key.png)
+![Copy Key](/images/setup/zapier/copy-key.png)
 
 복사한 Key를 Zapier에서 새롭게 나타난 API Key 입력창에 붙여넣고 를 누르면 Relate API 연결이 완료됩니다.
 
-![Paste Key](/docs/images/setup/zapier/paste-key.png)
+![Paste Key](/images/setup/zapier/paste-key.png)
 
 아래와 같이 Relate Lead/Contact/Deal/Note에 들어갈 정보를 Google Form의 데이터로 채웁니다.
 
@@ -120,16 +120,16 @@ Good Practice 중 하나는 Note 란에 들어오는 모든 데이터를 넣어�
 
 Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니다. 만약 Lead 및 Contact이 생성됨에 따라 Deal도 같이 생성하고자 하신다면 Deal 관련 칸에 정보를 입력하시면 됩니다 (예: Deal Assignee, Deal Status 등)
 
-![Deals data](/docs/images/setup/zapier/deals-data.png)
+![Deals data](/images/setup/zapier/deals-data.png)
 
-![Deals data part two](/docs/images/setup/zapier/deals-data-2.png)
+![Deals data part two](/images/setup/zapier/deals-data-2.png)
 
 `Continue`를 누르면 Action에서도 Test를 먼저 해보실 수 있는 단계가 나옵니다. 해당 Test는 실제 데이터를 Relate으로 보내는 Data이니 필요시 이후 삭제해주시면 됩니다.
 
 테스트가 성공했다면, Relate에서 해당 데이터를 확인해보실 수 있습니다.
 
-![Check data in relate](/docs/images/setup/zapier/check-data-relate.png)
+![Check data in relate](/images/setup/zapier/check-data-relate.png)
 
-![Publish Zap](/docs/images/setup/zapier/publish-zap.png)
+![Publish Zap](/images/setup/zapier/publish-zap.png)
 
 이제 `Publish Zap`을 눌러 Zap을 활성화합니다. 마지막으로 상단 왼쪽에서 Zap의 제목을 알아보기 쉽게 변경할 수 있습니다.
