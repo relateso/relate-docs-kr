@@ -91,41 +91,7 @@
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction"]
-    },
-    {
-      "group": "Onboarding",
-      "pages": [
-        {
-          "group": "시작하기",
-          "pages": [
-            "setup/getting-started",
-            {
-              "group": "이메일 연동하기",
-              "pages": [
-                "setup/register-google-api-allowlist",
-                "setup/email-integration/google-outlook-etc",
-                "setup/email-integration/naverworks-lineworks"
-              ]
-            },
-            "setup/import"
-          ]
-        },
-        {
-          "group": "Relate 기능 배우기",
-          "pages": [
-            "features/organizations",
-            "features/people",
-            "features/deal-pipeline",
-            "features/custom-fields",
-            "features/filtering-views",
-            "features/inbox",
-            "features/tasks",
-            "features/reporting",
-            "features/shortcuts"
-          ]
-        }
-      ]
+      "pages": ["intro", "onboarding"]
     },
     {
       "group": "📚 Features",
@@ -134,8 +100,7 @@
           "group": "Organizations & People",
           "pages": [
             "features/organizations",
-            "features/people",
-            "features/how-to-manage-organization-assignee"
+            "features/people"
           ]
         },
         {
@@ -145,16 +110,23 @@
         {
           "group": "Deals",
           "pages": [
-            "features/deal-pipeline",
-            "features/how-to-manage-deal-assignee",
-            "features/how-to-manage-expected-close-date"
+            "features/deals"
           ]
         },
+        {
+          "group": "Reporting",
+          "pages": [
+              "features/reporting"
+          ]
+        },
+        "features/inbox",
+        "features/shortcuts",
         "features/custom-fields",
         "features/filtering-views",
-        "features/inbox",
-        "features/reporting",
-        "features/shortcuts"
+        "features/tasks",
+        "features/how-to-manage-deal-assignee",
+        "features/how-to-manage-expected-close-date",
+        "features/how-to-manage-organization-assignee"
       ]
     },
     {
@@ -250,6 +222,16 @@
           ]
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/introduction/",
+      "destination": "/intro/"
+    },
+    {
+      "source": "/deal-pipeline/",
+      "destination": "/deals/"
     }
   ],
   "footerSocials": {
