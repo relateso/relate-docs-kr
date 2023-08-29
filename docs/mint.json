@@ -230,7 +230,7 @@
       "destination": "/intro/"
     },
     {
-      "source": "/features/deal-pipeline/",
+      "source": "/features/deal-pipeline",
       "destination": "/features/deals/"
     }
   ],
