@@ -1,0 +1,68 @@
+---
+title: "Relate 모델 배우기"
+description: "Relate의 세일즈 프로세스 모델을 설명합니다."
+sidebarTitle: "Relate 모델 배우기"
+"og:title": "Relate 모델 배우기 | Relate CRM 가이드"
+"og:description": "Relate의 세일즈 프로세스 모델을 설명합니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs/main/docs/images/relate-pipeline.png"
+"article:tag": "Setup"
+"twitter:title": "Relate 모델 배우기 | Relate CRM 가이드"
+"twitter:description": "Relate의 세일즈 프로세스 모델을 설명합니다."
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs/main/docs/images/relate-pipeline.png"
+---
+
+![Relate Main](/images/relate-pipeline.png)
+
+## Basic concepts
+릴레잇(Relate)은 여러 개의 멀티 워크스페이스를 지원하고 여러 명이 함께 사용하는 멀티 유저 CRM 플랫폼입니다. 각 **워크스페이스**에는 별도의 [Organization](/features/organizations), [People](/features/people), [Deal](/features/deals/)들을 가지고 있습니다.
+
+### Organizations/People
+Organization은 영업 대상의 조직(=회사)입니다. Organization은 잠재고객이 될 수도 있고, 현재 고객, 또는 이전 고객이 될 수도 있습니다.
+
+Person(People)은 Organization에 소속되어 있습니다. Relate에서 People에 해당 사람의 연락처, 이메일 주소, 타이틀, 포지션 등의 정보를 추가하고 관리할 수 있습니다.
+
+### Deals/Pipeline
+**Relate에서는 Deal을 통해 현재 진행하고 있는 모든 영업 현황을 관리하고 추적합니다.** Organization이나 People과 같은 모델들은 모두 Deal과 연결되어 있으며 '거래'를 뜻하는 Deal의 대상이 누군지를 파악하게 해줍니다.
+
+따라서 각 Deal은 1개의 영업 기회를 뜻합니다. 즉, 한 Organization내에 여러 개의 Deal이 있을 수 있습니다.
+
+또한, Deal은 항상 Organization과 연결되어 있어야 합니다.
+
+영업 팀과 특정 Deal에 대한 논의가 필요할 때 쉽게 논의하고 관리할 수 있도록 각 Deal에는 지정 ID (예: `DEAL-1234`)가 있습니다.
+
+마지막으로, 각 Deal은 잠재 고객 상태를 관리하는 Prospect Status를 따르며, Deal이 `Qualified`으로 표시되면 자동으로 파이프라인에 추가됩니다.
+
+<Tip>현재 파이프라인에서 직접 Deal을 생성할 수도 있습니다. 이렇게 하면 파이프라인에서 자동으로 `Qualified`으로 표시되어 클로징할 준비가 됩니다.</Tip>
+
+아래 다이어그램을 참조하세요.
+
+![Relate Sales Process](/images/relate-sales-process.png)
+
+#### Prospect(프로스펙트)
+Prospect란 '잠재고객'이란 뜻으로, 아직은 검증되지 않은 상태의 영업 기회입니다. 영업팀은 잠재 고객이 우리 ICP (Ideal Customer Profile)에 맞는지 Fit을 확인하고 검증합니다.
+
+Deal에 대한 Prospect Status를 업데이트하면 왼쪽 메뉴에 표시된 각 상태 목록으로 거래가 이동합니다.
+
+Prospect Status는 아래 중 하나를 가질 수 있습니다:
+- Potential (잠재)
+- Working (작업 중)
+- Nurturing (육성 중)
+- Bad Fit (비적합)
+- Qualified (검증된 잠재 고객)
+
+검증된 잠재 고객은 자동으로 파이프라인으로 넘어가게 됩니다.
+
+잠재 고객 기능에 대해 자세히 알아보려면 이 [가이드](/features/prospect)를 참조하세요.
+
+#### Pipeline(파이프라인)
+영업 기회를 성사시키기 위해 노력할 때 각 Deal은 파이프라인을 통해 이동합니다. 파이프라인을 통해 현재 각 Deal의 영업 기회 진행상황을 관리하고 추적할 수 있습니다.
+
+파이프라인에서 각 거래 카드를 클릭하면 거래(및 고객)에 대한 자세한 정보를 확인할 수 있습니다.
+
+<Info>
+Relate에 있는 모델들의 구조를 요약하면 다음과 같습니다:
+
+- Organization = 판매 대상 회사. 잠재 고객일 수도 있고 현재 고객일 수도 있습니다.
+- People = 판매 대상 회사에서 일하는 사람.
+- Deal = 영업 기회
+</Info>

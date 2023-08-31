@@ -91,7 +91,16 @@
   "navigation": [
     {
       "group": "Home",
-      "pages": ["intro", "onboarding"]
+      "pages": ["intro"]
+    },
+    {
+      "group": "Relate 시작하기",
+      "pages": [
+        "onboarding",
+        "what-is-relate",
+        "setup/get-the-app",
+        "learn-the-model"
+      ]
     },
     {
       "group": "📚 Features",
