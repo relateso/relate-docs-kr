@@ -1,0 +1,68 @@
+---
+title: "Notes"
+description: "Relate에서 노트를 생성하고 관리하는 방법을 소개합니다."
+sidebarTitle: "노트(Notes)"
+"og:title": "노트(Notes) | Relate CRM 가이드"
+"og:description": "Relate에서 노트를 생성하고 관리하는 방법을 소개합니다."
+"article:tag": "Product Guide"
+"twitter:title": "노트(Notes) | Relate CRM 가이드"
+"twitter:description": "Relate에서 노트를 생성하고 관리하는 방법을 소개합니다."
+---
+## 노트 생성하기
+
+![Create new note](/images/features/create-note.png)
+
+B2B 영업을 잘하는 가장 기본적인 방법은 고객의 정보를 항상 최신으로 유지하도록 노력하는 것입니다. 고객의 정보 중에 가장 우리 회사가 영업하는데 도움이 되는 정보는 역시 고객과의 미팅인데요. 노트 기능은 미팅을 진행한 후에 미팅 요약을 남기거나, 고객의 현재 상황 등에 대해서 남길 수 있는 기능입니다.
+
+Note에는 4가지 종류가 있습니다.
+
+- **Meeting Note:** 대면 미팅을 다녀와서 작성하는 노트
+- **Phone Call Note:** 전화 미팅 노트
+- **Zoom Call Note:** Zoom 및 영상을 통해 진행한 미팅 노트
+- **Other Note:** 그외 영업 기회 업데이트 사항 및 고객 정보를 적을 수 있는 미팅 노트
+
+어디에다 남겨도 작동 방식은 동일하지만, 추후 Relate에서 어떤 영업활동이 가장 효율/효과적인지 파악할 수 있는 기능이 추가되었을 때 해당 구분을 사용할 예정입니다.
+
+노트는 마크다운 기반으로 빠르게 포맷을 하실 수 있습니다.
+
+![Markdown notes](/images/features/markdown.png)
+
+## 생성한 노트 공유하기
+
+이렇게 생성한 노트를 다른 사람들과 쉽게 공유할 수 있습니다.
+
+![Link Sharing](/images/features/link-sharing.png)
+
+각 노트마다 있는 `Share` 버튼을 누른 다음, `Share to public` 토글을 켜서 공유 가능한 상태로 변경합니다. 그 다음, `Copy link` 버튼을 눌러서 공유 가능한 링크를 복사합니다.
+
+![Public note](/images/features/public-note.png)
+
+### 생성한 노트 슬랙으로 공유하기
+
+[Zapier](https://relate.kr/docs/setup/zapier-integration/what-is-zapier)(무료)를 통해 슬랙이나 디스코드, 노션 등과 같은 채널로 미팅 노트를 공유할 수도 있습니다.
+
+노트를 생성하면, Zapier를 통해 자동으로 특정 슬랙 채널에 공유가 되게끔 설정할 수 있습니다.
+
+![slack integration](/images/features/slack-integration.png)
+
+Relate 팀의 경우, 아래 템플릿을 활용하여 팀 슬랙 채널내 `#log-sales` 채널을 만들어두고, `note` 키워드가 있는 모든 Relate 노트를 공유하고 있습니다.
+
+**Relate + Slack 연동 Zapier 템플릿**
+
+<script
+  type="module"
+  src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"
+></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"
+/>
+<zapier-zap-templates
+  ids="1025541"
+  limit="5"
+  use-this-zap="show"
+  theme="light"
+></zapier-zap-templates>
+
+모든 노트를 Slack 등에 바로 공유하게끔 Zapier를 설정할 수도 있지만, 특정 키워드 (e.g., "미팅노트")를 입력했을 때만 공유가 되도록 설정할 수도 있습니다.

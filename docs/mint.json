@@ -103,36 +103,81 @@
       ]
     },
     {
-      "group": "📚 Features",
+      "group": "Organizations & People",
       "pages": [
-        {
-          "group": "Organizations & People",
-          "pages": [
             "features/organizations",
             "features/people"
-          ]
-        },
+      ]
+    },
+    {
+      "group": "Deals & Pipelines",
+      "pages": [
+        "features/deals",
         {
           "group": "Prospect",
-          "pages": ["features/prospect", "features/prospect-status"]
-        },
-        {
-          "group": "Deals",
           "pages": [
-            "features/deals"
+            "features/prospect",
+            "features/prospect-status"
           ]
         },
         {
-          "group": "Reporting",
+          "group": "Close",
           "pages": [
-              "features/reporting"
+            "features/pipelines"
           ]
-        },
-        "features/inbox",
-        "features/shortcuts",
-        "features/custom-fields",
-        "features/filtering-views",
+        }
+      ]
+    },
+    {
+      "group": "Email and Collaboration",
+      "pages": [
+        "features/email",
         "features/tasks",
+        "features/notes"
+      ]
+    },
+    {
+      "group": "Inbox and Notifications",
+      "pages": [
+        "features/inbox"
+      ]
+    },
+    {
+      "group": "Reporting",
+      "pages": [
+          "features/reporting"
+      ]
+    },
+    {
+      "group": "Find and Filter",
+      "pages": [
+        "features/filtering-views"
+      ]
+    },
+    {
+      "group": "연동",
+      "pages": [
+        {
+          "group": "이메일 연동하기",
+          "pages": [
+            "setup/email-integration",
+            "setup/naverworks-lineworks"
+          ]
+        },
+        {
+          "group": "Zapier integration",
+          "pages": [
+            "setup/zapier-integration/what-is-zapier",
+            "setup/zapier-integration/how-to-integrate-with-zapier",
+            "setup/zapier-integration/relate-x-zapier-integration-rules"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Other bits",
+      "pages": [
+        "features/shortcuts",
         "features/how-to-manage-deal-assignee",
         "features/how-to-manage-expected-close-date",
         "features/how-to-manage-organization-assignee"
@@ -141,15 +186,10 @@
     {
       "group": "💻 Setup",
       "pages": [
-        "setup/workspace-setting",
+        "setup/admin",
         "setup/import",
-        {
-          "group": "이메일 연동하기",
-          "pages": [
-            "setup/email-integration/google-outlook-etc",
-            "setup/email-integration/naverworks-lineworks"
-          ]
-        },
+        "setup/export",
+        "features/custom-fields",
         {
           "group": "Zapier 연동하기",
           "pages": [
@@ -241,6 +281,18 @@
     {
       "source": "/features/deal-pipeline",
       "destination": "/features/deals"
+    },
+    {
+      "source": "setup/workspace-setting",
+      "destination": "setup/admin"
+    },
+    {
+      "source": "/setup/google-outlook-etc",
+      "destination": "/setup/email-integration"
+    },
+    {
+      "source": "setup/email-integration/naverworks-lineworks",
+      "destination": "setup/naverworks-lineworks"
     }
   ],
   "footerSocials": {
