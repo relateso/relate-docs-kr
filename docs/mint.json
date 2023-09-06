@@ -291,6 +291,10 @@
       "destination": "/setup/email-integration"
     },
     {
+      "source": "/setup/email-integration/google-outlook-etc",
+      "destination": "/setup/email-integration"
+    },
+    {
       "source": "setup/email-integration/naverworks-lineworks",
       "destination": "setup/naverworks-lineworks"
     }
