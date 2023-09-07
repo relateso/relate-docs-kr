@@ -1,11 +1,142 @@
 ---
-title: "Workspace 세팅하기"
+title: "관리자 세팅(Admin settings)"
+description: "Relate 워크스페이스를 관리하는 방법을 소개합니다."
+sidebarTitle: "관리자 세팅(Admin settings)"
+"og:title": "관리자 세팅(Admin settings) | Relate CRM 가이드"
+"og:description": "Relate 워크스페이스를 관리하는 방법을 소개합니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/admin.png"
+"article:tag": "Setup"
+"twitter:title": "관리자 세팅(Admin settings) | Relate CRM 가이드"
+"twitter:description": "Relate 워크스페이스를 관리하는 방법을 소개합니다."
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/admin.png"
 ---
+![admins](/images/setup/admin.png)
 
-<Warning>
-  
-**준비 중인 페이지입니다!**
+## Overview
+Relate은 별도의 어드민 페이지를 갖고 있습니다. 어드민 페이지에서는 어드민 권한을 가진 사용자만이 변경 사항을 적용할 수 있습니다.
 
-이 가이드 페이지를 열심히 만들고 있습니다. 조금만 기다려주세요! 해당 내용 관련해서 궁금하신 점 있으시면 인터콤이나 이메일 [we@relate.so](mailto:we@relate.so)로 보내주시면 팔로업하겠습니다.
+Relate 어드민 페이지 접근 방법:
+- 앱에서 워크스페이스를 누르고 [Workspace settings](https://admin.relate.so/)로 이동.
+- 브라우저에서 [admin.relate.so](https://admin.relate.so/)로 이동.
 
-</Warning>
+## Basics
+아래 권한별 탭을 눌러 각 그룹이 (Admin, Members, Guests) 어드민 페이지에서 무엇을 할 수 있는지 확인하세요.
+<Tabs>
+<Tab title="Admins">
+  **Admin 사용자의 권한:**
+    - 워크스페이스 이름과 로고를 업데이트합니다.
+    - 워크스페이스 기본 통화를 업데이트합니다.
+    - Prospect 기능을 활성화/비활성화합니다.
+    - 새 멤버를 워크스페이스에 초대합니다.
+    - 멤버십을 관리합니다.
+    - 이메일을 연결합니다.
+    - 다른 소프트웨어 앱과 연동합니다.
+    - Zapier에 사용되는 API 키를 관리합니다.
+    - Relate로 데이터를 임포트할 수 있습니다.
+    - 새 파이프라인 관리 및 생성할 수 있습니다.
+    - 파이프라인 단계를 관리할 수 있습니다.
+    - 워크스페이스에서 사용되는 커스텀 필드를 관리할 수 있습니다.
+</Tab>
+<Tab title="Members">
+  **Member 사용자의 권한:**
+    - 워크스페이스 멤버를 확인할 수 있습니다.
+    - 이메일을 연결할 수 있습니다.
+    - 다른 소프트웨어 앱과 연동합니다.
+    - Zapier에 사용되는 API 키를 관리합니다.
+    - Relate로 데이터를 임포트할 수 있습니다.
+    - 파이프라인 단계와 파이프라인의 목록을 볼 수 있습니다.
+    - 커스텀 필드 목록을 볼 수 있습니다.
+</Tab>
+<Tab title="Guests">
+  **Guest 사용자의 권한:**
+    - 워크스페이스 멤버를 볼 수 있습니다.
+    - 파이프라인 목록을 볼 수 있습니다.
+    - 파이프라인 단계를 볼 수 있습니다.
+    - 커스텀 필드 목록을 볼 수 있습니다.
+</Tab>
+</Tabs>
+
+## Settings
+
+### 멤버 관리하기 (Manage members)
+멤버 관리 페이지 가이드를 참조하세요.
+<Card
+  title="멤버 관리하기"
+  icon="user"
+  iconType="duotone"
+  href="/setup/manage-members/"
+>
+</Card>
+
+### 연동 (Integrations)
+See integrations guide:
+<CardGroup cols={3}>
+  <Card title="Zapier 연동하기"
+        icon="bolt" color="#3B82F6"
+        iconType="duotone"
+        href="/setup/how-to-integrate-with-zapier">
+  </Card>
+  <Card title="이메일 연동하기" icon="envelope" iconType="duotone" color="#3B82F6" href="/setup/email-integration-google-outlook-etc">
+  </Card>
+  <Card title="아폴로와 연동하기"
+        icon="magnifying-glass-dollar" color="#3B82F6"
+        iconType="duotone"
+        href="/integrations/apollo">
+  </Card>
+</CardGroup>
+
+### 데이터 임포트하기(Import data)
+데이터 임포트 가이드:
+<Card
+  title=".CSV 파일로 데이터 임포트하기"
+  icon="cloud-arrow-up"
+  iconType="duotone"
+  color="#3B82F6"
+  href="/setup/import/"
+>
+</Card>
+
+## 커스터마이제이션(Customize)
+### 파이프라인(Pipelines)
+파이프라인 커스터마이제이션 가이드를 참조하세요:
+<Card
+  title="멀티 파이프라인 관리"
+  icon="handshake"
+  iconType="duotone"
+  color="#3B82F6"
+  href="/features/pipelines#multiple-pipelines"
+>
+</Card>
+### 파이프라인 스테이지(Pipeline stages)
+<Card
+  title="파이프라인 스테이지"
+  icon="handshake"
+  iconType="duotone"
+  color="#3B82F6"
+  href="/features/pipelines#pipeline-stages"
+>
+</Card>
+### 커스텀 필드(Custom fields)
+커스텀 필드 가이드를 참조하세요:
+<Card
+  title="커스텀 필드"
+  icon="diagram-cells"
+  iconType="duotone"
+  color="#3B82F6"
+  href="/features/custom-fields/"
+>
+</Card>
+
+## 자주 묻는 질문(FAQ)
+
+<AccordionGroup>
+<Accordion title="워크스페이스를 삭제하려면 어떻게 해야 하나요?">
+    we@relate.so로 이메일 주시면, 삭제를 처리해드리도록 하겠습니다.
+  </Accordion>
+  <Accordion title="1개 이상의 워크스페이스를 만들 수 있나요?">
+    네. we@relate.so로 연락주시면, 새로운 워크스페이스를 만들어 드리겠습니다.
+  </Accordion>
+  <Accordion title="데이터 익스포트는 어떻게 하나요?">
+    이 [가이드](/setup/export/)를 참조해주세요.
+  </Accordion>
+</AccordionGroup>

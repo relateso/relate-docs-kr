@@ -160,7 +160,7 @@
         {
           "group": "이메일 연동하기",
           "pages": [
-            "setup/email-integration",
+            "setup/email-sync",
             "setup/naverworks-lineworks"
           ]
         },
@@ -187,6 +187,7 @@
       "group": "💻 Setup",
       "pages": [
         "setup/admin",
+        "setup/manage-members",
         "setup/import",
         "setup/export",
         "features/custom-fields",
@@ -297,6 +298,10 @@
     {
       "source": "setup/email-integration/naverworks-lineworks",
       "destination": "setup/naverworks-lineworks"
+    },
+    {
+      "source": "/setup/email-integration",
+      "destination": "/setup/email-sync"
     }
   ],
   "footerSocials": {
