@@ -1,111 +1,95 @@
 ---
 title: "이메일 연동"
-description: "이 가이드는 Relate에서 이메일을 연동하는 절차를 안내드립니다."
+description: "이메일 연동을 통해 고객과 주고 받은 모든 이메일을 자동으로 싱크할 수 있습니다."
+sidebarTitle: "이메일 연동"
+"og:title": "Email sync | Relate CRM 가이드"
+"og:description": "이메일 연동을 통해 고객과 주고 받은 모든 이메일을 자동으로 싱크할 수 있습니다."
+"og:image": ""
+"article:tag": "Setup"
+"twitter:title": "Email sync | Relate CRM 가이드"
+"twitter:description": "이메일 연동을 통해 고객과 주고 받은 모든 이메일을 자동으로 싱크할 수 있습니다."
+"twitter:image": ""
 ---
 
-<Warning>
+## Overview
+Relate supports a full, bi-directional email sync between Relate and your choice of email service, such as Google Mail, Outlook, etc.
 
-구글 메일을 사용하신다면, [이 가이드 페이지](https://relate.kr/docs/setup/register-google-api-allowlist)를 먼저 방문해서 Relate을 구글 워크스페이스 Allowlist에 등록해주세요.
+This means that you can send and receive emails directly from Relate, and all emails sent and received from your email service will be synced to Relate.
 
-</Warning>
+Relate은 이메일 서비스(예: Google 메일, Outlook 등)와 Relate간의 완전한 양방향 이메일 동기화를 지원합니다.
 
-## 1. 이메일 연결하기
+즉, Relate에서 직접 이메일을 주고받을 수 있으며, 이메일 서비스에서 주고받은 모든 이메일이 Relate에 동기화됩니다.
 
-Relate에서 이메일을 연동하기 위해서는 [먼저 이메일 연동 페이지](https://admin.relate.so/services)에 방문합니다.
+## Get started
+
+### 1. 이메일 연결하기
+이메일 서비스를 Relate에 연결하려면 관리자 페이지의 [User connected accounts](https://admin.relate.so/services) 페이지로 이동합니다.
 
 ![Connect email](/images/setup/connect-email.png)
 
-**Add an Email Account** 버튼을 누르시고, 연결을 원하시는 이메일 주소를 입력한 다음, 사용하는 이메일 서비스 연동 페이지로 바로 이동하지 않을 경우, 사용하시는 이메일 서비스를 선택해주세요 (Google, Office365, Outlook Exchange, 그리고 그 외 모든 서비스는 Other를 선택하시면 됩니다).
+이곳에서 `Add an Email account`를 클릭합니다. 연결할 이메일 주소를 입력하고 사용 중인 이메일 서비스(예: 구글, Office365, 아웃룩 익스체인지 등)를 선택합니다.
 
-1. 구글(Google Workspace)을 사용하시는 경우, 이메일 서비스 선택없이 바로 구글 이메일 연동페이지로 이동합니다 (아래 스크린샷 참조)
+<Info>
+**1. 구글 워크스페이스를 사용하는 경우 이메일 서비스를 선택하지 않아도 구글 이메일 링크 페이지로 이동합니다. (아래 스크린샷 참조)**
 
-2. Other (e.g., 네이버웍스 등)를 선택하신 경우 [1.1 IMAP/SMTP 연결하기](/setup/email-integration/google-outlook-etc#1-1-imap-smtp-google-outlook-skip) 절차를 따라주세요.
+**2. 기타(예: 야후 등)를 선택한 경우 IMAP/SMTP 연결 절차를 따르세요.**
+</Info>
 
-각 이메일 서비스 연동 페이지에서 안내 받으신 절차를 따라서 완료해주세요. 그 다음, [2. 워크스페이스별 Connection 생성하기](/setup/email-integration/google-outlook-etc#2-connection) 안내를 따라주시면 됩니다.
+이제 페이지에 안내된 절차에 따라 완료하세요. 그런 다음 [3. 컨넥션 생성하기](/setup/email-sync#3)를 따르세요.
 
-![Google Account](/images/setup/google-account-access.png)
+![googleauth](/images/setup/google-auth.png)
 
-<Check>
-  💡경고창이 보인다면, Google Workspace 이메일 사용시 Relate을 allowlist에
-  등록하셨는지 확인해주세요.
-</Check>
-
-**이메일 연동 상태 확인하기**
-
-아래 스크린샷과 같이 보인다면 다음 단계로 진행하실 수 있습니다.
-
-![Email Status](/images/setup/email-status.png)
-
-### 1.1 IMAP/SMTP 연결하기 (Google/Outlook 사용자는 Skip)
+### 2. IMAP/SMTP Connection
 
 <Warning>
-**Google, Outlook 등을 통해 이미 이메일을 연결하셨다면, 이 절차는 Skip 하시고[2. 워크스페이스 별 Connection 생성하기](/setup/email-integration/google-outlook-etc#2-connection)로 이동하시면 됩니다.**
-
-\*네이버웍스를 사용하시는 경우, [네이버웍스 사전 준비](/setup/email-integration/naverworks-lineworks)절차를 먼저 완료해주세요.
-
+  이미 Google과 Outlook을 통해 이메일을 연결한 경우, 이 단계를 건너뛰고 [3. 컨넥션 생성하기](/setup/email-integration#3)로 이동하세요.
 </Warning>
 
-#### 1.1.1. 이메일 주소/비밀번호 입력하기
+#### 2.1 이메일 주소/비밀번호 입력하기
 
-아래와 같이 연결하실 이메일 주소와 비밀번호를 입력해주세요.
+아래와 같이 이메일 주소와 비밀번호를 입력하여 연결하세요.
 
 ![Sign in](/images/setup/sign-in.png)
 
-#### 1.1.2. IMAP/SMTP 정보 입력하기
-
-IMAP과 SMPT 호스트 주소와 Port/SSL 번호는 사용하시는 이메일 서비스마다 고유값이 정해져 있습니다. 일반적으로 Admin 페이지에 해당 정보가 있거나, 이메일 서비스 고객센터/고객지원 문서에 있습니다.
-
-본 가이드에서는 **네이버웍스**의 IMAP/SMTP 정보를 사용합니다.
+#### 2.2 IMAP/SMTP 정보 입력하기
+IMAP 및 SMPT 호스트 주소와 포트/SSL 번호는 사용하는 이메일 서비스마다 고유한 값을 가집니다. 이 정보는 일반적으로 관리자 페이지 또는 이메일 서비스 고객센터/지원 문서에 나와 있습니다.
 
 ![IMAP/SMTP](/images/setup/imap-smtp-info.png)
 
 정보를 입력한 후, **Sign in** 버튼을 눌러서 연결을 완료합니다.
 
-Relate 페이지에서 아래처럼 **Connected** 로 변경이 되어 있으면, 이메일 연동에 성공한 것입니다. 이제, 각 워크스페이스에 이메일을 연결할 수 있도록 Connection 을 생성해주셔야 합니다.[2. 워크스페이스 별 Connection 생성하기](/setup/email-integration/google-outlook-etc#2-connection)로 이동해주세요.
+Relate 페이지에서 아래처럼 **Connected** 로 변경이 되어 있으면, 이메일 연동에 성공한 것입니다. 이제, 각 워크스페이스에 이메일을 연결할 수 있도록 Connection 을 생성해주셔야 합니다.[3.  컨넥션 생성하기](/setup/email-sync#3)로 이동해주세요.
 
-![Email Connect](/images/setup/email-connected.png)
+<Tip>
+현재 이메일 계정에 Two-factor Authentication (2FA 혹은 MFA)이 설정되어
+있으신 경우 일시로 해제하시고 해당 절차를 완료해주세요.
+</Tip>
 
-<Note>
-  💡 현재 이메일 계정에 Two-factor Authentication (2FA 혹은 MFA)이 설정되어
-  있으신 경우 일시로 해제하시고 해당 절차를 완료해주세요.
-</Note>
+## 3. 컨넥션 생성하기
 
-## 2\. 워크스페이스 별 Connection 생성하기
+이제 연결한 이메일을 워크스페이스와도 연결해야 합니다.
 
-이메일 연동 페이지 왼쪽 상단에 있는 **Choose a Workspace** 에서 이메일 연결을 원하시는 워크스페이스를 선택해주세요.
+[Admin](https://admin.relate.so/) > [Integrations](https://admin.relate.so/workspaces/integrations) > [Email](https://admin.relate.so/workspaces/integrations/email) 로 가서 연결하고자 하는 워크스페이스를 지정한 다음, `Connect to workspace` 버튼을 누릅니다.
 
-![Creating Connection](/images/setup/creating-connections-workspaces.png)
+## Advanced
 
-그 이후 `Integrations` 탭을 눌러 이동한 다음, `Email` 버튼을 눌러주세요.
+### 1. 이메일 비밀번호를 변경하면 이메일 연동 상태가 해제됩니다.
+If you change your email account password, your email connection will be disconnected. If you changed your email account password, you can reconnect your email by following the steps above.
 
-![Email Workspace Connect](/images/setup/email-workspace-connect.png)
 
-그다음, `Connect to workspace` 버튼을 눌러 해당 워크스페이스와의 Connection을 생성해주세요.
+### 2. 2FA/MFA와 Relate 함께 사용하기
+2단계 인증(2FA/MFA)이 설정되어 있는 경우, Relate에 연결하기 전에 일시적으로 2단계 인증을 비활성화한 다음 다시 연결해야 합니다.
 
-Connection 이 생성되면, 아래와 같이 **Status**가 `Connected to workspace` 로 변경된 것을 확인하실 수 있습니다.
+이메일 서비스(예: Outlook, O365, iCloud, Yahoo! 등)에서 앱 비밀번호(App Password)를 만들 수 있는 경우 기존 비밀번호 대신 앱 비밀번호를 사용할 수 있습니다.
 
-![Connected Users](/images/setup/connected-users.png)
+각 이메일 서비스에 대한 앱 비밀번호 설정 링크는 다음과 같습니다.
+- [Microsoft](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944)
+- [Yahoo!](https://help.yahoo.com/kb/learn-generate-password-sln15241.html)
+- [iCloud](https://support.apple.com/en-us/HT204397)
 
-이제 이메일 연동이 완료되었습니다. Relate 앱으로 돌아가셔서 Lead/contact에 이메일 주소를 등록하시면, 그 이메일 주소와 주고 받은 이메일이 들어오게 됩니다.
-
-<Note>
-  이메일이 바로 들어오지 않는다면, 우선 Ctrl+Shift+R (Cmd+Shift+R) 을 눌러
-  Relate 앱에서 새로고침을 해주세요. 주고 받은 이메일의 양에 따라서, 5분에서
-  최대 3-4시간까지도 걸릴 수 있습니다.
-</Note>
-
-## 3\. 이메일 연동 주의사항
-
-- 이메일 계정 비밀번호 변경시, 이메일 연결이 해제됩니다. 따라서, 다시 이메일 연결을 해주시면 됩니다.
-
-- Two-Factor Authentication (2FA/MFA)를 설정하신 경우
-  - **IMAP/SMTP를 통해서 연결하신 경우**  
-    Two-factor Authentication (2FA/MFA)을 설정하신 경우, Relate과 연결하기 전에 일시적으로 해제를 해주시고, 이후에 다시 연결해주세요.
-  - **Outlook, O365, iCloud, Yahoo! 등을 통해서 연결하신 경우**  
-     _ 각 서비스에서 제공하는 App Password 를 별도로 생성하여 기존 비밀번호 대신 사용할 수 있습니다.  
-     _ Microsoft 관련  
-     _ [Microsoft account help - Using app passwords](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944)  
-     _ Yahoo! 관련  
-     _ [Yahoo - Generate and manage third-party app passwords](https://help.yahoo.com/kb/learn-generate-password-sln15241.html)  
-     _ iCloud 관련  
-     \* [Apple - Using app-specific passwords](https://support.apple.com/en-us/HT204397)
+## Frequently Asked Questions (FAQs)
+<AccordionGroup>
+<Accordion title="이메일을 연결했지만 앱에 이메일이 표시되지 않습니다.">
+먼저 Cmd+Shift+R(Windows의 경우 Ctrl+Shift+R)을 사용하여 앱을 새로 고쳐 보세요. 한 번에 동기화되는 이메일의 양에 따라 이 프로세스는 5분에서 최대 8시간까지 걸릴 수 있습니다.
+</Accordion>
+</AccordionGroup>
