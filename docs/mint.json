@@ -206,7 +206,7 @@
     {
       "group": "Integrations",
       "pages": [
-        "integrations/Apollo.io",
+        "integrations/apollo",
         "integrations/Typeform",
         "integrations/slack"
       ]
