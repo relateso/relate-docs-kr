@@ -151,7 +151,8 @@
     {
       "group": "Find and Filter",
       "pages": [
-        "features/filtering-views"
+        "features/filter-sorter",
+        "features/views"
       ]
     },
     {
@@ -285,7 +286,7 @@
     },
     {
       "source": "setup/workspace-setting",
-      "destination": "setup/admin"
+      "destination": "/setup/admin"
     },
     {
       "source": "/setup/email-integration-google-outlook-etc",
@@ -297,11 +298,15 @@
     },
     {
       "source": "setup/email-integration/naverworks-lineworks",
-      "destination": "setup/naverworks-lineworks"
+      "destination": "/setup/naverworks-lineworks"
     },
     {
       "source": "/setup/email-integration",
       "destination": "/setup/email-sync"
+    },
+    {
+      "source": "/features/filtering-views",
+      "destination": "/features/filter-sorter"
     }
   ],
   "footerSocials": {
