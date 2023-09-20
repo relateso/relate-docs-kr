@@ -1,0 +1,140 @@
+---
+title: "Deals"
+description: "Deal은 Relate에서 영업 기회를 추적하는 핵심 수단입니다."
+sidebarTitle: "Deals"
+"og:title": "Deals | Relate CRM 가이드"
+"og:description": "Deal은 Relate에서 영업 기회를 추적하는 핵심 수단입니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/deals.png"
+"article:tag": "Product Guide"
+"twitter:title": "Deals | Relate CRM 가이드"
+"twitter:description": "Deal은 Relate에서 영업 기회를 추적하는 핵심 수단입니다."
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/deals.png"
+---
+
+![deals](/images/features/deals.png)
+
+## Overview
+거래를 뜻하는 Deal은 Relate에서 영업 기회를 추적하는 핵심 수단입니다. [Organization](/features/organizations/) 및 [People](/features/people/)과 같은 다른 모든 개념은 Deal과 연결되어 있습니다.
+
+각 Deal은 해당 Deal이 연결된 Org에 대한 영업 기회를 나타냅니다. 한번만 영업하는 것이 아니므로, 한 Organization은 여러 개의 Deal을 보유할 수 있습니다.
+
+Deal은 두 개의 섹션으로 구성됩니다: **(1) 프로스펙트(Prospect), 그리고 (2) 파이프라인(Pipeline)** 입니다.
+
+## Concepts
+
+### 프로스펙트(Prospect)
+프로스펙트(Prospect)는 파이프라인으로 전환되기 전 상태로, 잠재고객을 관리하는 섹션입니다.
+
+Relate내에서 잠재 고객은 [Prospect](/features/prospect) 기능을 통해 관리되며, 잠재 고객의 상태를 지정하는 [Prospect Status](/기능/프로스펙트 상태)를 통해 관리됩니다.
+
+### 파이프라인(Close)
+한 잠재 고객(prospect)이 '적격'을 의미하는 `Qualified`로 표시되면 Deal이 자동으로 파이프라인으로 전송되고, 이때부터 클로징 단계인 파이프라인 단계가 시작됩니다.
+
+파이프라인에서는 각 Deal 카드를 드래그&드롭으로 각 단계를 지정할 수 있습니다.
+
+## Basics
+
+### 신규 Deal 만들기
+Deal의 메뉴들인 Prospect와 Close 중 어떤 리스트/보드 뷰에서든 `+ Deal` 버튼을 눌러 새로운 Deal을 만들 수 있습니다.
+
+![Adding a deal](/images/features/how-to-add-deals.png)
+
+또는 고객 상세 페이지 (Organization Detail)에서 새 Deal을 추가할 수도 있습니다. 이렇게 하면 거래를 해당 Org에 직접 연결할 수 있습니다. 거래는 항상 Org에 연결된다는 점에 유의하세요.
+
+각 Deal에는 고유 ID(예: `DEAL-1234`)가 있으므로 팀과 특정 거래에 대해 논의할 때 쉽게 참조할 수 있습니다.
+
+#### Deal에 정보 추가하기
+Deal에서 다음과 같은 정보를 추가할 수 있습니다:
+
+- 조직(Organization): 판매 대상 조직(필수 입력 사항)
+- 사람(People): 조직의 주요 연락 담당자
+- 가치(Value): 영업 기회의 가치
+- 잠재 고객 상태(Prospect Status)(필수 입력 사항)
+- 담당자(Assignee): 팀에서 거래를 주도하는 사람
+- 노트(Notes): 거래에 대한 간단한 설명 또는 진행 상황 업데이트
+
+## 워크플로우(Workflows)
+
+### 자동으로 Deal 생성하기 (Auto-create Deals)
+새 Organization을 생성하면 `Potential` 상태의 새 Deal이 자동으로 생성됩니다. 이렇게 하면 생성하는 각 조직과 연결된 거래(Deal)를 생성하는 시간을 절약할 수 있습니다.
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/855838420?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    title="Relate Reporting"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+### 자동으로 핸드오프하기(Auto-handoffs)
+딜(Deal)을 `Qualified` 상태로 표시하면 딜이 파이프라인인 마감 메뉴로 전송됩니다.
+
+이렇게 하면 SDR -> AE 핸드오프 프로세스가 자동화됩니다. SDR이 영업 가능성이 있는 기회를 발견하면 해당 딜을 AE에게 라우팅하는 프로세스를 자동화하는 것입니다.
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/859611214?h=0ed5909ebb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    title="Relate Reporting"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+<Check>오토 핸드오프 기능은 실험 및 베타 기능입니다. 만약 피드백이나 의견이 있으시다면 이메일(we@relate.so)로 보내주세요.</Check>
+
+<Accordion title="우리 회사에는 AE가 없습니다. SDR도요. 어떻게 할까요?">
+AE, SDR 타이틀을 갖고 있지 않더라도 누군가는 새로운 잠재 고객을 찾아 영업 가능성을 검증한 후 거래를 성사시켜야 합니다. 자동 핸드오프 기능을 사용하면 잠재 고객을 파이프라인에서 검증된 기회로 빠르게 전환할 수 있습니다.
+</Accordion>
+
+## 추가 정보 (More info)
+
+<CardGroup cols={3}>
+  <Card title="프로스펙트 기능 사용하기"
+        icon="magnifying-glass-dollar" color="#3B82F6"
+        iconType="duotone"
+        href="/features/prospect">
+  </Card>
+  <Card title="프로스펙트 단계 관리하기"
+        icon="circle-three-quarters-stroke" color="#3B82F6"
+        iconType="duotone"
+        href="/features/prospect-status">
+  </Card>
+  <Card title="파이프라인 사용하기"
+        icon="handshake" color="#3B82F6"
+        iconType="duotone"
+        href="/features/pipelines">
+  </Card>
+</CardGroup>

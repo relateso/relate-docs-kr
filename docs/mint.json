@@ -10,8 +10,8 @@
   "name": "Relate",
   "basePath": "/docs",
   "logo": {
-    "light": "/docs/logo/light.svg",
-    "dark": "/docs/logo/dark.svg"
+    "light": "logo/light.svg",
+    "dark": "logo/dark.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
@@ -24,7 +24,7 @@
   "metadata": {
     "charset": "utf-8",
     "description": "B2B 영업과 마케팅, 그리고 B2B 스타트업에 대한 플레이북과 Relate CRM 가이드를 제공합니다.",
-    "og:site_name": "릴레잇 Relate | B2B 플레이북 & CRM 프로덕트 가이드",
+    "og:site_name": "릴레잇 Relate 가이드 | B2B 플레이북 & CRM 프로덕트 가이드",
     "og:type": "website",
     "og:title": "Relate B2B 플레이북 & CRM 프로덕트 가이드",
     "og:description": "B2B 영업과 마케팅, 그리고 B2B 스타트업에 대한 플레이북과 Relate CRM 가이드를 제공합니다.",
@@ -91,53 +91,28 @@
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction"]
+      "pages": ["intro"]
     },
     {
-      "group": "Onboarding",
+      "group": "Relate 시작하기",
       "pages": [
-        {
-          "group": "시작하기",
-          "pages": [
-              "setup/getting-started",
-              {
-                "group": "이메일 연동하기",
-                "pages": [
-                  "setup/register-google-api-allowlist",
-                  "setup/email-integration/google-outlook-etc",
-                  "setup/email-integration/naverworks-lineworks"
-                ]
-              },
-              "setup/import"
-          ]
-        },
-        {
-          "group": "Relate 기능 배우기",
-          "pages": [
-            "features/organizations",
-            "features/people",
-            "features/deal-pipeline",
-            "features/custom-fields",
-            "features/filtering-views",
-            "features/inbox",
-            "features/tasks",
-            "features/reporting",
-            "features/shortcuts"
-          ]
-        }
+        "onboarding",
+        "what-is-relate",
+        "setup/get-the-app",
+        "learn-the-model"
       ]
     },
     {
-      "group": "📚 Features",
+      "group": "Organizations & People",
       "pages": [
-        {
-          "group": "Organizations & People",
-          "pages": [
             "features/organizations",
-            "features/people",
-            "features/how-to-manage-organization-assignee"
-          ]
-        },
+            "features/people"
+      ]
+    },
+    {
+      "group": "Deals & Pipelines",
+      "pages": [
+        "features/deals",
         {
           "group": "Prospect",
           "pages": [
@@ -146,32 +121,77 @@
           ]
         },
         {
-          "group": "Deals",
+          "group": "Close",
           "pages": [
-            "features/deal-pipeline",
-            "features/how-to-manage-deal-assignee",
-            "features/how-to-manage-expected-close-date"
+            "features/pipelines"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Email and Collaboration",
+      "pages": [
+        "features/email",
+        "features/tasks",
+        "features/notes"
+      ]
+    },
+    {
+      "group": "Inbox and Notifications",
+      "pages": [
+        "features/inbox"
+      ]
+    },
+    {
+      "group": "Reporting",
+      "pages": [
+          "features/reporting"
+      ]
+    },
+    {
+      "group": "Find and Filter",
+      "pages": [
+        "features/filter-sorter",
+        "features/views"
+      ]
+    },
+    {
+      "group": "연동",
+      "pages": [
+        {
+          "group": "이메일 연동하기",
+          "pages": [
+            "setup/email-sync",
+            "setup/naverworks-lineworks"
           ]
         },
-        "features/custom-fields",
-        "features/filtering-views",
-        "features/inbox",
-        "features/reporting",
-        "features/shortcuts"
+        {
+          "group": "Zapier integration",
+          "pages": [
+            "setup/zapier-integration/what-is-zapier",
+            "setup/zapier-integration/how-to-integrate-with-zapier",
+            "setup/zapier-integration/relate-x-zapier-integration-rules"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Other bits",
+      "pages": [
+        "features/shortcuts",
+        "features/how-to-manage-deal-assignee",
+        "features/how-to-manage-expected-close-date",
+        "features/how-to-manage-organization-assignee"
       ]
     },
     {
       "group": "💻 Setup",
       "pages": [
-        "setup/workspace-setting",
+        "setup/admin",
+        "setup/manage-members",
         "setup/import",
-        {
-          "group": "이메일 연동하기",
-          "pages": [
-            "setup/email-integration/google-outlook-etc",
-            "setup/email-integration/naverworks-lineworks"
-          ]
-        },
+        "setup/export",
+        "features/custom-fields",
         {
           "group": "Zapier 연동하기",
           "pages": [
@@ -186,9 +206,9 @@
     {
       "group": "Integrations",
       "pages": [
-            "integrations/Apollo.io",
-            "integrations/Typeform",
-            "integrations/slack"
+        "integrations/apollo",
+        "integrations/Typeform",
+        "integrations/slack"
       ]
     },
     {
@@ -215,7 +235,7 @@
                 "playbook/distribution",
                 "playbook/post-launch",
                 "playbook/outbound-sales",
-                "playbook/lead-types"           
+                "playbook/lead-types"
               ]
             }
           ]
@@ -225,36 +245,68 @@
     {
       "group": "Startup Wiki",
       "pages": [
-          {
-            "group": "SaaS",
-            "pages": [
-              "wiki/SaaS/ARR",
-              "wiki/SaaS/MRR",
-              "wiki/net-revenue-retention",
-              "wiki/acv",
-              "wiki/cac",
-              "wiki/ltv"
-            ]
-          },
-          {
-            "group": "Go-to-Market",
-            "pages": [
-              "wiki/icp"
-            ]
-          },
-          {
-            "group": "Sales",
-            "pages": [
-              "wiki/Sales/BANT",
-              "wiki/Sales/Inbound-Sales",
-              "wiki/sales-roles",
-              "wiki/upsell-cross-sell",
-              "wiki/mql",
-              "wiki/pql",
-              "wiki/sql"
-            ]
-          }
+        {
+          "group": "SaaS",
+          "pages": [
+            "wiki/SaaS/ARR",
+            "wiki/SaaS/MRR",
+            "wiki/net-revenue-retention",
+            "wiki/acv",
+            "wiki/cac",
+            "wiki/ltv"
+          ]
+        },
+        {
+          "group": "Go-to-Market",
+          "pages": ["wiki/icp"]
+        },
+        {
+          "group": "Sales",
+          "pages": [
+            "wiki/Sales/BANT",
+            "wiki/Sales/Inbound-Sales",
+            "wiki/sales-roles",
+            "wiki/upsell-cross-sell",
+            "wiki/mql",
+            "wiki/pql",
+            "wiki/sql"
+          ]
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/introduction",
+      "destination": "/intro"
+    },
+    {
+      "source": "/features/deal-pipeline",
+      "destination": "/features/deals"
+    },
+    {
+      "source": "setup/workspace-setting",
+      "destination": "/setup/admin"
+    },
+    {
+      "source": "/setup/email-integration-google-outlook-etc",
+      "destination": "/setup/email-integration"
+    },
+    {
+      "source": "/setup/email-integration/google-outlook-etc",
+      "destination": "/setup/email-integration"
+    },
+    {
+      "source": "setup/email-integration/naverworks-lineworks",
+      "destination": "/setup/naverworks-lineworks"
+    },
+    {
+      "source": "/setup/email-integration",
+      "destination": "/setup/email-sync"
+    },
+    {
+      "source": "/features/filtering-views",
+      "destination": "/features/filter-sorter"
     }
   ],
   "footerSocials": {

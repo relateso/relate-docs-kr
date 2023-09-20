@@ -1,0 +1,126 @@
+---
+title: "파이프라인(Pipelines)"
+sidebarTitle: "파이프라인(Pipelines)"
+description: "파이프라인은 현재 우리 회사의 영업 현황을 체크하고 관리하는 곳입니다. 각 영업 기회들은 파이프라인내 여러 단계를 지나게 됩니다."
+"og:title": "Pipelines | Relate CRM 가이드"
+"og:description": "파이프라인은 현재 우리 회사의 영업 현황을 체크하고 관리하는 곳입니다. 각 영업 기회들은 파이프라인내 여러 단계를 지나게 됩니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/relate-pipeline.png"
+"article:tag": "Product Guide"
+"twitter:title": "Pipelines | Relate CRM 가이드"
+"twitter:description": "파이프라인은 현재 우리 회사의 영업 현황을 체크하고 관리하는 곳입니다. 각 영업 기회들은 파이프라인내 여러 단계를 지나게 됩니다."
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/relate-pipeline.png"
+---
+
+![pip](/images/relate-pipeline.png)
+
+## Overview
+각 파이프라인 단계는 구매자의 여정에서 특정 마일스톤을 나타내야 합니다. 따라서 Deal은 파이프라인을 왼쪽에서 오른쪽으로 흐르면서, 궁극적으로는 '거래 성사'를 뜻하는 `Closed Won` 또는 '거래 실패'를 뜻하는 `Closed Lost` 단계에 도달해야 합니다.
+
+## Basics
+To get stared with managing a pipeline, you will need an active, qualified deal.
+
+To create a new deal, see this [Deals](/features/deals/) guide.
+
+Relate에서 세일즈 파이프라인을 관리하기 위해서는 먼저 [Prospect](/features/prospect/)의 영업적합성을 판단하여 검증한 후 파이프라인에 추가해야 합니다.
+
+새 Deal을 만들려면 [Deal](/features/deals/) 가이드를 참조하세요.
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/855484608?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    title="Relate Reporting"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+파이프라인에서는 각 Deal 카드를 열어서 Deal 정보를 수정할 수 있습니다. 또한, Deal 카드를 열면, 상단 메뉴줄에 퀵액션 버튼이 표시되어 Deal의 가치(Value), 영업단계(Stage), 담당자(Person) 등의 거래 정보를 업데이트할 수 있습니다.
+
+### 파이프라인에서 Deal 관리하기
+파이프라인에서 Deal을 관리하는 방법은 간단합니다. Deal을 한 단계(Stage)에서 다른 단계로 드래그하기만 하면 됩니다. 필터와 정렬 기능을 사용하여서 특정 거래 세트를 찾을 수도 있습니다.
+
+또한 각 Deal에 우리 팀의 영업 담당자를 할당하여 책임 계층을 추가하고 판매 목표를 더 쉽게 추적할 수 있습니다.
+
+### 멀티 파이프라인 (Multiple Pipelines)
+Relate에서는 여러 개의 파이프라인을 만들어 관리할 수 있습니다. 그러나 **일반적으로 다음과 같은 경우를 제외하고는 여러 개의 파이프라인을 운영하지 않는 것이 좋습니다**:
+- 판매할 제품 세트가 완전히 다른 경우.
+- PLG, 중소기업, 엔터프라이즈 등의 대상별로 영업 프로세스가 완전히 다른 경우.
+
+여러 개의 파이프라인을 생성하고 관리하려면 Admin > [Pipelines](https://admin.relate.so/workspaces/pipelines)으로 이동하세요.
+
+
+### 파이프라인 단계 관리 (Pipeline Stages)
+기본적으로 Relate는 아래 파이프라인 스테이지를 제공합니다:
+- Opportunities (영업 가능성이 있는 기회들)
+- Meeting scheduled (미팅 예약됨)
+- Closing (영업 중)
+- Closed Won (거래 성사)
+- Closed Lost (거래 실패)
+
+파이프라인 스테이지는 수정하거나, 추가/삭제할 수 있습니다.파이프라인 단계를 사용자 지정하려면 [Admin](https://admin.relate.so/) > [Pipeline Stages](https://admin.relate.so/pipelines/pipeline_stages)로 이동합니다.
+
+<Tip>
+일반적으로 "1차 컨택," "팔로업" 등 세부적인 영업 활동을 추적하기 위해 파이프라인에 단계를 추가하는 것은 권장하지 않습니다.
+
+파이프라인 단계는 각 거래가 성사될 때까지 진행되는 의미 있는 마일스톤을 나타내야 합니다.
+
+세부적인 영업 활동은 대신 Organization 페이지에서 추적이 가능합니다. Org 페이지에서 [Task](/features/tasks/) 기능을 활용할 수 있습니다.
+
+파이프라인에서 각 Deal 연결되어 있는 Org에 빠르게 액세스하려면 각 Deal을 클릭하기만 하면 됩니다.
+</Tip>
+
+### 실패한 Deal 재활용(Recycle)
+거래가 실패했다고 해서 다시 시도할 수 없다는 의미는 아닙니다. 거래가 실패한 경우 고객에게 지금 구매하지 않는 이유를 물어보고 나중에 재활용할 수 있도록 Relate에 메모를 남겨두고, 기회가 다시 오면 판매 프로세스를 다시 시작할 수 있습니다.
+
+#### 판매 프로세스 다시 시작
+실패한 거래를 재활용하려면 먼저 재활용하려는 실패 거래(`Closed Lost`)가 있는 Organization의 디테일 페이지로 이동합니다.
+
+그곳에서 Deal을 새로 추가하고 해당 Deal의 [Prospect Status](/features/prospect-status/)를 적절하게 표시합니다. 만약 검증이 이미 되어 파이프라인으로 바로 보내려면 `Qualified`으로 표시하면 파이프라인에 바로 새 Deal 카드가 생성됩니다.
+
+또는 Organization Grid로 이동하여 영업 프로세스를 다시 시작하려는 조직을 찾을 수도 있습니다. 아래 동영상을 참조하세요:
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/855855681?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    title="Relate Reporting"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
+
+
+
+
+

@@ -1,128 +1,90 @@
 ---
 title: "Organizations"
-description: "Relate의 강력한 Organization 관리 기능을 통해 고객사와 잠재고객사를 관리할 수 있습니다."
+description: "Organization은 잠재 고객과 현/전 고객을 포함한 모든 영업 대상 조직을 관리하는 기능입니다."
 sidebarTitle: "Organizations"
-"og:title": "Organizations | Relate Product Guide"
-"og:description": "Relate의 강력한 Organization 관리 기능을 통해 고객사와 잠재고객사를 관리할 수 있습니다."
+"og:title": "Organizations | Relate CRM 가이드"
+"og:description": "Organization은 잠재 고객과 현/전 고객을 포함한 모든 영업 대상 조직을 관리하는 기능입니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/orgs-main.png"
 "article:tag": "Product Guide"
-"twitter:title": "Organizations | Relate Product Guide"
-"twitter:description": "Relate의 강력한 Organization 관리 기능을 통해 고객사와 잠재고객사를 관리할 수 있습니다."
+"twitter:title": "Organizations | Relate CRM 가이드"
+"twitter:description": "Organization은 잠재 고객과 현/전 고객을 포함한 모든 영업 대상 조직을 관리하는 기능입니다."
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/orgs-main.png"
 ---
 
-## Organizations
+![org-main](/images/features/orgs-main.png)
 
-Relate에서는 고객과의 모든 커뮤니케이션 내역과 노트, 진행 중인 영업 기회 (Deal)을 고객사 별로 모아서 볼 수 있게 되어 있습니다.
+## Overview
+Organization은 Relate에서 가장 중요한 개념 중 하나입니다. Organization은 관계를 구축하고 거래에 참여하는 주체를 의미합니다. Organization은 잠재 고객, 현재 고객, 이탈 고객 및/또는 이탈 고객이 될 수 있습니다.
 
-<Info>
-  
-Relate 용어 알기
+[People](/features/people/)과 [Deal](/features/deals/)는 모두 Organization의 일부입니다. 사람(Person)은 Org에 속하지 않고도 존재할 수 있지만, 거래(Deal)는 Organization 없이는 존재할 수 없습니다.
 
-- Organization = 영업 대상 (고객사, 잠재고객사 등)
-- Person = 영업 대상 개인 (고객사 담당자 등)
-- Deal = 영업 대상과 진행하는 영업 기회
+## Concepts
 
-</Info>
+### 고객 상세 페이지(Organization Detail page)
 
-People과 Deal은 모두 Organization의 소속이 될 수 있습니다. Person은 특정Organization에 소속되어 있지 않아도 존재할 수 있지만, Deal은 특정 Organization에 소속되어 있어야 합니다.
+![odp](/images/features/org-detail-page.png)
 
-## Organization 추가하기
+고객 상세 페이지(Organization Detail)는 고객에 대한 모든 정보와 히스토리를 저장하는 페이지입니다.
 
-![Add Organization](/docs/images/features/add-org.png)
+고객 데이터는 고객의 이름, 연락처, 할 일(Tasks), 이메일 히스토리, 노트, (내부) 코멘트, CRM 활동 내역 등을 포함합니다.
 
-Relate에서는 Organization을 추가할 수 있습니다. 먼저 아래 스크린샷 처럼 Organization 페이지에서 `+Organization` 버튼을 눌러서 신규 Organization을 생성합니다.
+### 고객 리스트 그리드(Organization Grid)
 
-<Tip>Organization 생성할 때, 모달 하단에 있는 `Add contact data`를 눌러서 해당 Organization 소속의 Person을 함께 생성할 수도 있습니다.</Tip>
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "69.74664679582713%",
+    height: 0,
+  }}
+>
+  <iframe
+    video autoplay
+    src="https://player.vimeo.com/video/859554941?h=f285908e2d&amp;badge=0&amp;autoplay=1;player_id=0&amp;app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    title="Relate Reporting"
+    webkitAllowFullScreen
+    mozallowFullScreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  ></iframe>
+</div>
 
-## Organization Detail Page
+Organization Grid는 워크스페이스에 있는 모든 Organization의 목록 보기입니다. 그리드에서 필드를 선택하고 두 번 클릭(또는 `Enter` 또는 `Return`)하여 각 필드를 업데이트할 수 있습니다.
 
-Organization 디테일 페이지에서 해당 회사와의 모든 커뮤니케이션 내역, 내부에서 공유한 노트/댓글, 그리고 진행한 모든 Deal 히스토리까지 모아서 볼 수 있습니다.
+Grid에서 각 고객 상세페이지에 액세스하려면 각 조직에 있는 `열기`를 누르세요.
 
-### Organization Detail
+## Basics
 
-![Organization Detail Page](/docs/images/features/org-detail.png)
+### 신규 Organization 추가하기
+![Add Org](/images/features/add-new-org.png)
 
-왼쪽에는 해당 고객사(Organization)의 정보 (예: 사명, 웹사이트 주소 등)와 현재 진행하고 있는 Deal을 확인할 수 있습니다. 중앙에는 고객사의 담당자 연락처 정보가 있습니다.
+위 스크린샷과 같이 `+ Organization` 버튼을 클릭하여 새 Organization을 추가할 수 있습니다.
 
-### Organization Communication Timeline
+<Tip>
+  새로운 Org를 생성할 때 Person을 함께 생성할 수도 있습니다. Person을 함께 생성하려면, Org 생성 모달 하단에 위치한 `+ Add person data`를 클릭합니다.
+</Tip>
 
-![Organization Detail Timeline](/docs/images/features/org-detail-timeline.png)
+### Organization 필드 수정하기
+Organization Grid로 이동하여 Organization의 필드를 업데이트를 할 수 있고, 또 다른 방법으로는 고객 상세 페이지에서 필드를 두 번 클릭하여 수정할 수 있습니다.
 
-오른쪽에는 해당 고객사에 대해서 내부에서 남긴 노트 (eg., 미팅 노트, 상황 업데이트 등) 및 댓글(1번), 그리고 해당 고객사와 주고 받은 모든 이메일 히스토리를 (2) 타임라인의 형태로 확인할 수 있습니다.
+![edit](/images/features/grid-edit.png)
 
-댓글 기능을 통해 타임라인내에 있는 노트나 이메일 등에 대해서 팀원들과 함께 협업할 수 있습니다.
+### Organization 삭제하기
+Organization을 삭제하려면, 고객 상세 페이지에 있는 `Delete organization` 버튼을 클릭합니다.
 
-![Commenting](/docs/images/features/commenting.png)
+![Delete org](/images/features/delete-org.png)
 
-## 고객에게 이메일 보내기
+## Advanced
 
-### 1. 신규 이메일 보내기
+### 연동을 통해 자동으로 Organization 데이터 생성하기
 
-![Compose email](/docs/images/features/compose-email.png)
+Relate를 Typeform, Apollo 등의 다른 앱과 연결하면 Zapier를 통해 자동으로 새 Organization을 만들 수 있습니다.
 
-Relate에서는 고객에게 신규 이메일을 보낼 수 있습니다.
-
-위 스크린샷 화면처럼, 오른쪽 상단에 있는 `Compose email` 버튼을 눌러서 새로운 draft를 작성하고 `Send`를 누르면 이메일이 보내지게 됩니다.
-
-<Warning>현재 Relate을 통해서 보내지는 이메일은 타임라인에서 보여지지 않고 있습니다만, 실제로는 이메일이 보내진 것이니, 걱정하지 않으셔도 됩니다. 실제로 이메일이 잘 보내졌나 확인하기 위해서는 사용하시는 이메일 본계정으로 들어가셔서 확인해주세요.</Warning>
-
-<Tip>이메일을 보내기 위해서는 먼저 Relate내에 [이메일을 연동](https://relate.kr/docs/setup/email-integration/google-outlook-etc)해야 합니다.</Tip>
-
-### 2. 받은 이메일에 답장, 전체답장, 포워드하기
-
-![Reply Button](/docs/images/features/reply-email-button.png)
-
-답장, 전체답장, 포워드하고자 하는 이메일을 열어서 위 버튼 중 하나를 누르면 됩니다.
-
-![Reply](/docs/images/features/reply-email.png)
-
-## 노트 생성하기
-
-![Create new note](/docs/images/features/create-note.png)
-
-B2B 영업을 잘하는 가장 기본적인 방법은 고객의 정보를 항상 최신으로 유지하도록 노력하는 것입니다. 고객의 정보 중에 가장 우리 회사가 영업하는데 도움이 되는 정보는 역시 고객과의 미팅인데요. 노트 기능은 미팅을 진행한 후에 미팅 요약을 남기거나, 고객의 현재 상황 등에 대해서 남길 수 있는 기능입니다.
-
-Note에는 4가지 종류가 있습니다.
-
-- **Meeting Note:** 대면 미팅을 다녀와서 작성하는 노트
-- **Phone Call Note:** 전화 미팅 노트
-- **Zoom Call Note:** Zoom 및 영상을 통해 진행한 미팅 노트
-- **Other Note:** 그외 영업 기회 업데이트 사항 및 고객 정보를 적을 수 있는 미팅 노트
-
-어디에다 남겨도 작동 방식은 동일하지만, 추후 Relate에서 어떤 영업활동이 가장 효율/효과적인지 파악할 수 있는 기능이 추가되었을 때 해당 구분을 사용할 예정입니다.
-
-노트는 마크다운 기반으로 빠르게 포맷을 하실 수 있습니다.
-
-![Markdown notes](/docs/images/features/markdown.png)
-
-## 생성한 노트 공유하기
-
-이렇게 생성한 노트를 다른 사람들과 쉽게 공유할 수 있습니다.
-
-![Link Sharing](/docs/images/features/link-sharing.png)
-
-각 노트마다 있는 `Share` 버튼을 누른 다음, `Share to public` 토글을 켜서 공유 가능한 상태로 변경합니다. 그 다음, `Copy link` 버튼을 눌러서 공유 가능한 링크를 복사합니다.
-
-![Public note](/docs/images/features/public-note.png)
-
-### 생성한 노트 슬랙으로 공유하기
-
-[Zapier](https://relate.kr/docs/setup/zapier-integration/what-is-zapier)(무료)를 통해 슬랙이나 디스코드, 노션 등과 같은 채널로 미팅 노트를 공유할 수도 있습니다.
-
-노트를 생성하면, Zapier를 통해 자동으로 특정 슬랙 채널에 공유가 되게끔 설정할 수 있습니다.
-
-![slack integration](/docs/images/features/slack-integration.png)
-
-Relate 팀의 경우, 아래 템플릿을 활용하여 팀 슬랙 채널내 `#log-sales` 채널을 만들어두고, `note` 키워드가 있는 모든 Relate 노트를 공유하고 있습니다.
-
-**Relate + Slack 연동 Zapier 템플릿**
-
-<script type="module" src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"></script>
-<link rel="stylesheet" href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"/>
-<zapier-zap-templates
-  ids="1025541"
-  limit="5"
-  use-this-zap="show"
-  theme="light"
-></zapier-zap-templates>
-
-모든 노트를 Slack 등에 바로 공유하게끔 Zapier를 설정할 수도 있지만, 특정 키워드 (e.g., "미팅노트")를 입력했을 때만 공유가 되도록 설정할 수도 있습니다.
+다른 도구와의 연동 방법에 대해 자세히 알아보려면 이 가이드를 참조하세요: [재피어 가이드](/setup/zapier-integration/how-to-integrate-with-zapier)
