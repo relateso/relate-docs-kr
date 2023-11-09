@@ -178,6 +178,7 @@
     {
       "group": "Other bits",
       "pages": [
+        "features/connect",
         "features/shortcuts",
         "features/how-to-manage-deal-assignee",
         "features/how-to-manage-expected-close-date",
