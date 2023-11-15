@@ -1,13 +1,13 @@
 ---
 title: "Relate Sequence 베타"
-description: "이제 Relate Sequence를 통해 반복적으로 보내는 이메일을 자동으로 보낼 수 있습니다."
+description: "이제 Relate Sequence를 사용하여 며칠에 걸쳐 여러 이메일 자동으로 보낼 수 있습니다."
 sidebarTitle: "Relate Sequence"
 "og:title": "Relate Sequence 베타 | Relate Product Guide"
-"og:description": "이제 Relate Sequence를 통해 반복적으로 보내는 이메일을 자동으로 보낼 수 있습니다."
+"og:description": "이제 Relate Sequence를 사용하여 며칠에 걸쳐 여러 이메일 자동으로 보낼 수 있습니다."
 "og:image": "https://raw.githubusercontent.com/relateso/relate-docs/main/docs/images/features/relate-sequence.png"
 "article:tag": "Product Guide"
 "twitter:title": "Relate Sequence 베타 | Relate Product Guide"
-"twitter:description": "이제 Relate Sequence를 통해 반복적으로 보내는 이메일을 자동으로 보낼 수 있습니다."
+"twitter:description": "이제 Relate Sequence를 사용하여 며칠에 걸쳐 여러 이메일 자동으로 보낼 수 있습니다."
 "twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs/main/docs/images/features/relate-sequence.png"
 ---
 
@@ -15,19 +15,14 @@ sidebarTitle: "Relate Sequence"
 
 ## Overview
 
-이제 Relate Sequence를 통해 반복적으로 보내는 이메일을 자동으로 보낼 수 있습니다. Relate Sequence Beta는 아폴로(Apollo.io)와 같은 이메일 자동화 툴이며, Relate 유료 고객들은 바로 사용할 수 있습니다.
+이제 Relate Sequence를 사용하여 며칠에 걸쳐 여러 이메일 자동으로 보낼 수 있습니다. Relate Sequence 베타는 B2B 스타트업을 위해 만들어진 간단한 이메일 자동화 툴로 현재 모든 Relate 유료 사용자가 베타 버전으로 사용할 수 있습니다.
 
-## 주의 사항
+## 베타 업데이트
 
 Relate Sequence 베타 버전은 아직 대량의 콜드 이메일을 보내는 목적이 아닌 소수의 고객에게 자동으로 팔로업 이메일을 보내는 목적으로 사용해 주세요.  예를 들어 다음의 경우에 Relate Sequence 베타 기능을 사용하면 좋습니다. 
 
-- 딜이 진행 중인 고객에게 보내는 팔로업 이메일.
-- 인바운드 문의를 한 잠재 고객과 일정을 잡기 위한 팔로업 이메일. 
-
-다수의 잠재 고객을 쉽게 시퀀스에 추가하거나, 아웃바운드용 이메일로 보낼 수 있는 선택 기능이 없기 때문에 아직 대량의 콜드 이메일을 보내는 용도로 적합하지 않습니다. 특히 주로 사용하는 메인 이메일로 대량의 콜드 이메일을 보내는 것은 도메인 레퓨테이션에 큰 데미지를 줄 수 있습니다. 콜드 이메일 관련 베스트 프랙티스는 Relate Blog를 확인해 주세요. 
-
-- [리드 제너레이션과 콜드 메일 보낼 때 범하는 흔한 6가지 실수](https://www.relate.kr/blog/six-mistakes/)
-- [콜드 이메일 캠페인 운영하는 법](https://www.relate.kr/blog/how-to-run-cold-email-campaign/)
+- 딜이 진행 중인 고객에게 보내는 팔로업 이메일. 
+- 인바운드 문의를 한 잠재 고객과 일정을 잡기 위한 팔로업 이메일.
 
 ## Relate Sequence 사용하는 법
 
@@ -37,36 +32,11 @@ Relate Sequence 베타를 사용하기 위해서는 Relate 메뉴 왼쪽에 있�
 
 그 이후, 시퀀스를 추가하고, 템플릿과 Mail Merge 기능을 활용해서 보낼 이메일을 추가한 뒤, 이메일을 보낼 담당자를 추가하면 됩니다. 
 
-<div
-  style={{
-    position: "relative",
-    paddingBottom: "69.74664679582713%",
-    height: 0,
-  }}
->
-  <iframe
-    src="https://player.vimeo.com/video/882557563?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    title="potential-to-working"
-    webkitAllowFullScreen
-    mozallowFullScreen
-    allowFullScreen
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-    }}
-  ></iframe>
-</div>
-
-### 이메일 커스터마이징 (Mail Merge)
+### Variables 사용하기
 
 ![mail-merge](/images/features/mail-merge.png)
 
-Mail Merge 기능을 활용해 시퀀스에서 보낼 이메일이나, 직접 수동으로 보내는 이메일을 전보다 쉽고 빠르게 보낼 수 있습니다.
+Variables('mail merge'이라고도 함)를 사용하면 시퀀스에서 보낼 이메일이나, 직접 수동으로 보내는 이메일을 전보다 쉽고 빠르게 보낼 수 있습니다. 현재 지원하는 Variables는 다음과 같습니다:
 
 - {{full_name}}: 이름 (이후 버전에서는 성, 이름을 나눌 예정입니다.)
 - {{title}}: 타이틀, 직책
@@ -75,20 +45,17 @@ Mail Merge 기능을 활용해 시퀀스에서 보낼 이메일이나, 직접 �
 - {{organization}}: 회사명
 - {{domain}}: 회사의 URL 주소
 - {{sender_name}}: 보내는 사람 이름
-- {sender_email}}: 보내는 사람 이메일
+- {{sender_email}}: 보내는 사람 이메일
 - {{now_day}}: 오늘 날짜 (예: 11/15일인 경우 "15")
 - {{now_month}}: 이번 달 (예: November)
 - {{now_year}}: 올해 연도 (예: 2023)
 - {{now_weekday}}: 요일 (예: Wednesday)
 
-## 2.0 버전에서 추가될 예정인 기능
+## 이후 업데이트 계획
 
-다음의 기능이 2.0 버전에서 추가될 예정입니다. 
+다음의 기능이 이후 업데이트 버전에서 추가될 예정입니다.
 
-- People 페이지에서 다양한 필터를 적용하여 리스트를 만든 후, 쉽게 시퀀스에 추가할 수 있습니다. 
-- Sequence 기능으로 이메일을 보낼 때 다른 이메일로 보내도록 선택할 수 있습니다. 
-- Email open, bounced, click rate 등을 확인할 수 있습니다. 
-- Sequence에서 보낼 예정인 이메일에 대한 Preview를 제공합니다. 
-- Sequence 기능으로 보낸 이메일의 전체 성과를 확인할 수 있는 리포팅 데이터를 제공합니다. 
-
-이후에는 특정 조건이 맞는 잠재 고객을 자동으로 시퀀스에 추가하는 Workflow 기능과 아웃바운드 세일즈에 필요한 올인원 솔루션을 Relate Engage라는 이름으로 제공할 예정입니다. Relate Engage에 관심있는 분들은 [Relate Engage 얼리 엑세스](https://relateso.typeform.com/to/cBWC0EZJ?typeform-source=www.relate.kr) 신청해 주세요.
+- Organization이나 People 페이지에서 다양한 필터를 적용하여 리스트를 만든 후, 쉽게 시퀀스에 추가할 수 있습니다. 
+- 이메일을 보낼 때 다른 이메일 주소로 보내도록 선택할 수 있습니다. 
+- Open rates, click rates, bounce rates를 확인할 수 있습니다.
+- Sequence에서 보낼 예정인 이메일에 대한 Preview를 제공합니다.
