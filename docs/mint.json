@@ -133,7 +133,8 @@
       "pages": [
         "features/email",
         "features/tasks",
-        "features/notes"
+        "features/notes",
+        "features/sequence"
       ]
     },
     {
