@@ -45,13 +45,13 @@
       "url": "https://www.relate.kr/blog/"
     },
     {
-      "name": "Relate 둘러보기",
-      "url": "https://www.relate.kr/"
+      "name": "Relate 데모 신청",
+      "url": "https://relate.so/cal/relate-team/"
     }
   ],
   "topbarCtaButton": {
-    "name": "얼리 액세스 신청하기",
-    "url": "https://relateso.typeform.com/relate-korea"
+    "name": "Relate 시작하기",
+    "url": "https://www.relate.kr/"
   },
   "topAnchor": {
     "name": "Product Guide"
