@@ -39,6 +39,36 @@
     "og:image:width": "2000",
     "og:image:height": "1050"
   },
+  "primaryTab": 
+  {
+    "name": "Home"
+  },
+  "tabs": [
+    {
+      "name": "CRM",
+      "url": "crm"
+    },
+    {
+      "name": "Engage",
+      "url": "engage"
+    },
+    {
+      "name": "Docs",
+      "url": "docs"
+    },
+    {
+      "name": "Cal",
+      "url": "cal"
+    },
+    {
+      "name": "Wiki",
+      "url": "wiki"
+    },
+    {
+      "name": "Playbook",
+      "url": "playbook"
+    }
+  ],
   "topbarLinks": [
     {
       "name": "Blog",
@@ -105,25 +135,25 @@
     {
       "group": "Organizations & People",
       "pages": [
-            "features/organizations",
-            "features/people"
+            "crm/features/organizations",
+            "crm/features/people"
       ]
     },
     {
       "group": "Deals & Pipelines",
       "pages": [
-        "features/deals",
+        "crm/features/deals",
         {
           "group": "Prospect",
           "pages": [
-            "features/prospect",
-            "features/prospect-status"
+            "crm/features/prospect",
+            "crm/features/prospect-status"
           ]
         },
         {
           "group": "Close",
           "pages": [
-            "features/pipelines"
+            "crm/features/pipelines"
           ]
         }
       ]
@@ -131,29 +161,29 @@
     {
       "group": "Email and Collaboration",
       "pages": [
-        "features/email",
-        "features/tasks",
-        "features/notes",
-        "features/sequence"
+        "crm/features/email",
+        "crm/features/tasks",
+        "crm/features/notes",
+        "crm/features/sequence"
       ]
     },
     {
       "group": "Inbox and Notifications",
       "pages": [
-        "features/inbox"
+        "crm/features/inbox"
       ]
     },
     {
       "group": "Reporting",
       "pages": [
-          "features/reporting"
+          "crm/features/reporting"
       ]
     },
     {
       "group": "Find and Filter",
       "pages": [
-        "features/filter-sorter",
-        "features/views"
+        "crm/features/filter-sorter",
+        "crm/features/views"
       ]
     },
     {
@@ -179,12 +209,12 @@
     {
       "group": "Other bits",
       "pages": [
-        "features/connect",
-        "features/cal",
-        "features/shortcuts",
-        "features/how-to-manage-deal-assignee",
-        "features/how-to-manage-expected-close-date",
-        "features/how-to-manage-organization-assignee"
+        "crm/features/connect",
+        "crm/features/cal",
+        "crm/features/shortcuts",
+        "crm/features/how-to-manage-deal-assignee",
+        "crm/features/how-to-manage-expected-close-date",
+        "crm/features/how-to-manage-organization-assignee"
       ]
     },
     {
@@ -280,16 +310,119 @@
           ]
         }
       ]
+    },
+    {
+      "group": "Relate Engage",
+      "pages": [
+        "engage/intro",
+        "engage/sequence"
+    ]
+    },
+    {
+      "group": "Relate Cal",
+      "pages": [
+          "cal/relate-cal"
+      ]
+    },
+    {
+      "group": "Relate Docs",
+      "pages": [
+          "docs/relate-docs"
+      ]
     }
   ],
   "redirects": [
+    {
+      "source":"/features/cal",
+      "destination":"/crm/features/cal"
+    },
+    {
+      "source":"/features/connect",
+      "destination":"/crm/features/connect"
+    },
+    {
+      "source":"/features/custom-fields",
+      "destination":"/crm/features/custom-fields"
+    },
+    {
+      "source":"/features/deals",
+      "destination":"/crm/features/deals"
+    },
+    {
+      "source":"/features/email",
+      "destination":"/crm/features/email"
+    },
+    {
+      "source":"/features/filter-sorter",
+      "destination":"/crm/features/filter-sorter"
+    },
+    {
+      "source":"/features/how-to-manage-deal-assignee",
+      "destination":"/crm/features/how-to-manage-deal-assignee"
+    },
+    {
+      "source":"/features/how-to-manage-expected-close-date",
+      "destination":"/crm/features/how-to-manage-expected-close-date"
+    },
+    {
+      "source":"/features/how-to-manage-organization-assignee",
+      "destination":"/crm/features/how-to-manage-organization-assignee"
+    },
+    {
+      "source":"/features/inbox",
+      "destination":"/crm/features/inbox"
+    },
+    {
+      "source":"/features/notes",
+      "destination":"/crm/features/notes"
+    },
+    {
+      "source":"/features/organizations",
+      "destination":"/crm/features/organizations"
+    },
+    {
+      "source":"/features/people",
+      "destination":"/crm/features/people"
+    },
+    {
+      "source":"/features/pipelines",
+      "destination":"/crm/features/pipelines"
+    },
+    {
+      "source":"/features/prospect-status",
+      "destination":"/crm/features/prospect-status"
+    },
+    {
+      "source":"/features/prospect",
+      "destination":"/crm/features/prospect"
+    },
+    {
+      "source":"/features/reporting",
+      "destination":"/crm/features/reporting"
+    },
+    {
+      "source":"/features/sequence",
+      "destination":"/crm/features/sequence"
+    },    
+    {
+      "source":"/features/shortcuts",
+      "destination":"/crm/features/shortcuts"
+    },
+    {
+      "source":"/features/tasks",
+      "destination":"/crm/features/tasks"
+    },
+    {
+      "source":"/features/views",
+      "destination":"/crm/features/views"
+    },
     {
       "source": "/introduction",
       "destination": "/intro"
     },
     {
       "source": "/features/deal-pipeline",
-      "destination": "/features/deals"
+      "destination": "/crm/features/deals"
     },
     {
       "source": "setup/workspace-setting",
@@ -313,7 +446,11 @@
     },
     {
       "source": "/features/filtering-views",
-      "destination": "/features/filter-sorter"
+      "destination": "/crm/features/filter-sorter"
+    },
+    {
+      "source": "/features/sequences",
+      "destination": "/engage/intro"
     }
   ],
   "footerSocials": {
