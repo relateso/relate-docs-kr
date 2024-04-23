@@ -11,89 +11,7 @@ sidebarTitle: "익스포트(Export)"
 
 ## Overview
 
-Relate에 저장되어 있는 데이터를 .CSV로 익스포트 할 수 있는 방법을 소개합니다.
-
-## People Export
-Relate에서 가장 쉽게 고객 정보를 Export하는 방법은 People 리스트에서 할 수 있습니다. 
-
-People 리스트에 포함되어 있는 정보는 다음과 같습니다. 
-- Person Name (담당자 이름)
-- Title (직책)
-- Person Email (담당자 이메일)
-- Phone Number (전화번호)
-- Organization Name (소속 회사명)
-- Person Custom Fields (담당자 커스텀 필드들)
-
-People 리스트는 [People List View](https://app.relate.so/contacts)에서 `Download Emails as CSV`를 눌러 받으실 수 있습니다.
-
-## Organization Export
-<Tabs>
-  <Tab title="Organization Export하는 방법">
-    Organization 커스텀 필드 데이터는 현재 we@relate.so로 요청을 주시면 .CSV 파일을 암호화 하여 보내드리고 있습니다.
-
-    커스텀 필드를 제외한 Organization 이름, 웹사이트 주소, 설명과 같은 디폴트 데이터는 아래 Deal Export할 때 같이 Export할 수 있습니다. 이후 리포팅 업데이트부터는 따로 요청 없이 Export할 수 있습니다.
-  </Tab>
-  <Tab title="Custom Field를 보기 편하게 정렬하는 법">
-    Relate 팀으로부터 전달 받은 파일을 열면, 커스텀 필드를 제외한 모든 필드를 바로 보실 수 있습니다. 커스텀 필드들은 디리미티드(Delimited) 형식으로 구성되어 있어서 별도의 리포맷이 필요합니다.
-    
-    ![export1](/images/setup/export1.png)
-    
-    Relate 팀으로부터 전달 받은 .CSV를 열어보면 위와 같이 나오게 됩니다.
-
-    #### 하나의 column에 들어있는 값들을 여러 개의 column으로 분류하기
-
-    먼저, 값이 들어있는 column을 전체 선택 (`Ctrl+Space`)한 다음, 메뉴에 있는 `Data` > `Text to Columns` 를 실행합니다.
-
-    ![export2](/images/setup/export2.png)
-
-    그다음 모달에서 `구분자(Delmited)`를 선택하고 `Next`를 눌러 진행합니다.
-
-    ![export3](/images/setup/export3.png)
-
-    구분자(Delimiters)는 `Others`를 선택한 다음 큰 따옴표 `"` 를 입력합니다.
-
-    ![export4](/images/setup/export4.png)
-
-    그리고 `Finish` 눌러 종료합니다.
-
-    이제 시트에서는 하나의 column에 들어있던 값들이 큰 따옴표(`"`)를 기준으로 여러 개의 column으로 분류됩니다.
-
-    이제 필요없는 column들은 모두 제거해주세요
-  </Tab>
-  <Tab title="무작위로 섞여있는 array에서 reference값을 기준으로 원하는 결과 가져오기">
-    Relate 커스텀 필드를 포맷하기 전에는 필드의 이름이 레퍼런스(Reference) 값으로 저장되어 있습니다 (예: `9a23QQ`).
-
-    필드의 값들을 보면, 대략적으로 어떤 필드를 레퍼런스하는지 유추할 수도 있고, Relate 앱으로 들어가서 어떤 필드인지 확인이 가능합니다.
-
-    커스텀 필드를 순서대로 정리할 수 있도록 다음과 같은 형태로 칼럼을 추가합니다.
-
-    ![export5](/images/setup/export5.png)
-
-    #### Match와 Index 함수 활용하기
-
-    ![export8](/images/setup/export8.png)
-
-    match 함수를 통해 특정 array에서 원하는 값의 위치를 찾아온 다음, Index 함수를 통해 특정 array에서 match로 찾아온 위치에 있는 값을 가져올 수 있습니다.
-
-    아래 함수를 활용하여 모든 Organization row에 적용합니다.
-
-    ```
-    =INDEX($F5:$I5,MATCH(D$1,$F5:$I5,0)+1)
-    ```
-
-    #### N/A 값 일괄 삭제하기
-
-    커스텀 필드 값을 갖고 있지 않은 Organization에는 `#N/A` 값이 나옵니다. 이 값들을 일괄 삭제하려면, **우선 칼럼들을 복사 > 값만 붙혀넣기 (Paste as Values) 한 다음**, Find & Replace로 삭제합니다.
-
-    ![export9](/images/setup/export9.png)
-
-    ### 날짜(Date) 필드의 경우 포맷하기
-
-    날짜(Date) 필드의 경우 셀 형식 변경(`ctrl+1`)을 통해 셀 형식을 `date type`으로 바꿔줍니다.
-
-    ![export10](/images/setup/export10.png)
-  </Tab>
-</Tabs>
+Relate에 저장되어 있는 데이터를 .CSV로 익스포트 할 수 있는 방법을 소개합니다. Relate에서 export는 Reporting 페이지의 Basic Table을 활용해서 할 수 있습니다. 
 
 ## Deal Export
 Deal 관련 정보를 Export하고 싶다면 [Reporting](https://app.relate.so/reporting) 페이지에서 할 수 있습니다. 
@@ -102,8 +20,7 @@ Deal 관련 정보를 Export하고 싶다면 [Reporting](https://app.relate.so/r
 
 Deal Export시 포함되어 있는 정보는 다음과 같습니다. 
 - 딜 카드에 포함되어 있는 모든 정보 (커스텀 필드 포함)
-- Organization Nme, Website, Description, Domain, Created At, Updated At, Last Contacted At
-- Contact Name, Title, Email, Phone, Created At
+- 딜에 붙어있는 모든 Organization, Contact 정보 (커스텀 필드 포함)
 
 Reporting 페이지 진입 후 Basic Table을 새로 만들어 Export하고 싶은 정보를 추가하면 됩니다. 그 이후 CSV 파일로 저장할 수 있습니다.
 
@@ -132,9 +49,21 @@ Reporting 페이지 진입 후 Basic Table을 새로 만들어 Export하고 싶�
   ></iframe>
 </div>
 
+## Organization & Contact Export
+Deal Export와 같은 방법으로 Organization과 People 정보도 Export할 수 있습니다. Data set을 Organization, 또는 Contact으로 바꾸면 됩니다. 
+
+![Reporting-data-set](/images/features/reporting-data-set.png)
+
+Organization Export시 포함되어 있는 정보는 다음과 같습니다. 
+- Organization에 붙어 있는 모든 정보 (커스텀 필드 포함)
+
+Contact Export시 포함되어 있는 정보는 다음과 같습니다. 
+- Contact에 붙어 있는 모든 정보 (커스텀 필드 포함)
+- Contact에 붙어있는 Organization의 기본 정보 (Organization 커스텀 필드 제외)
+
 ## 자주 묻는 질문 (FAQ)
 <Accordion title="Export한 파일에서 한글이 깨집니다. 어떻게 해결할 수 있나요">
-  만약 맥북을 사용 중이라면 Export한 파일을 Microsoft Excel로 열 때 UTF8(유니코드) 인코딩으로 열리지 않아 발생하는 문제입니다. 그런 경우 다음과 같은 방식으로 해결할 수 있습니다. 
+한글이 깨지는 현상은 Export한 파일을 Microsoft Excel로 열 때 UTF8(유니코드) 인코딩으로 열리지 않아 발생하는 문제입니다. 그런 경우 다음과 같은 방식으로 해결할 수 있습니다. 
   
   1. Microsoft Excel의 Data 탭에서 Get Data (Power Query) 클릭
 
