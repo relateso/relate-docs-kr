@@ -45,20 +45,8 @@
   },
   "tabs": [
     {
-      "name": "CRM",
-      "url": "crm"
-    },
-    {
-      "name": "Engage",
-      "url": "engage"
-    },
-    {
-      "name": "Docs",
-      "url": "docs"
-    },
-    {
-      "name": "Cal",
-      "url": "cal"
+      "name": "연동(Integrations)",
+      "url": "integrations"
     },
     {
       "name": "Wiki",
@@ -88,11 +76,6 @@
   },
   "anchors": [
     {
-      "name": "Integrations",
-      "icon": "link",
-      "url": "integrations"
-    },
-    {
       "name": "Playbook",
       "icon": "map",
       "url": "playbook"
@@ -120,7 +103,7 @@
   ],
   "navigation": [
     {
-      "group": "Home",
+      "group": "Start here",
       "pages": ["intro"]
     },
     {
@@ -129,119 +112,143 @@
         "onboarding",
         "what-is-relate",
         "setup/get-the-app",
-        "learn-the-model"
+        "learn-the-model",
+        "personal-plan",
+        "team-plan"
+      ]
+    },
+    {
+      "group": "Platform",
+      "pages": [
+        {
+          "group": "Basics",
+          "pages": [
+            "/features/inbox",
+            "/features/tasks",
+            "/features/notes",
+            "/features/email",
+            "/features/notifications"
+          ]
+        },
+        {
+          "group": "Find, Sort, and Search",
+          "pages": [
+            "/features/search",
+            "/features/filter-sorter",
+            "/features/views"
+          ]
+        },
+        "/features/custom-fields",
+        "/features/data-enrichment",
+        "/features/cal",
+        "/features/shortcuts",
+        "/features/connect"
       ]
     },
     {
       "group": "Organizations & People",
       "pages": [
-            "crm/features/organizations",
-            "crm/features/people"
+        "/features/organizations",
+        "/features/people"
       ]
     },
     {
-      "group": "Deals & Pipelines",
+      "group": "Lists & Processes",
       "pages": [
-        "crm/features/deals",
+        "/features/deals",
         {
           "group": "Prospect",
           "pages": [
-            "crm/features/prospect",
-            "crm/features/prospect-status"
+            "/features/prospect",
+            "/features/prospect-status"
           ]
         },
         {
           "group": "Close",
           "pages": [
-            "crm/features/pipelines"
+            "/features/pipelines"
           ]
         }
       ]
     },
     {
-      "group": "Email and Collaboration",
+      "group": "Engage",
       "pages": [
-        "crm/features/email",
-        "crm/features/tasks",
-        "crm/features/notes",
-        "crm/features/sequence"
+        "engage/intro",
+        "engage/sequence"
       ]
     },
     {
-      "group": "Inbox and Notifications",
+      "group": "Documents",
       "pages": [
-        "crm/features/inbox"
+        "docs/relate-docs"
+      ]
+    },
+    {
+      "group": "Meeting Scheduler",
+      "pages": [
+        "cal/relate-cal"
+      ]
+    },
+    {
+      "group": "Data",
+      "pages": [
+        "data/api",
+        "data/warehouse-sync"
       ]
     },
     {
       "group": "Reporting",
       "pages": [
-          "crm/features/reporting"
-      ]
-    },
-    {
-      "group": "Find and Filter",
-      "pages": [
-        "crm/features/filter-sorter",
-        "crm/features/views"
-      ]
-    },
-    {
-      "group": "연동",
-      "pages": [
-        {
-          "group": "이메일 연동하기",
-          "pages": [
-            "setup/email-sync",
-            "setup/naverworks-lineworks"
-          ]
-        },
-        {
-          "group": "Zapier integration",
-          "pages": [
-            "setup/zapier-integration/what-is-zapier",
-            "setup/zapier-integration/how-to-integrate-with-zapier",
-            "setup/zapier-integration/relate-x-zapier-integration-rules"
-          ]
-        }
+          "/features/reporting"
       ]
     },
     {
       "group": "Other bits",
       "pages": [
-        "crm/features/connect",
-        "crm/features/cal",
-        "crm/features/shortcuts",
-        "crm/features/how-to-manage-deal-assignee",
-        "crm/features/how-to-manage-expected-close-date",
-        "crm/features/how-to-manage-organization-assignee"
+        {
+          "group": "Others",
+          "pages": [
+            "/features/how-to-manage-deal-assignee",
+            "/features/how-to-manage-expected-close-date",
+            "/features/how-to-manage-organization-assignee"
+          ]
+        }
       ]
     },
     {
-      "group": "💻 Setup",
+      "group": "Admin and Settings",
       "pages": [
         "setup/admin",
         "setup/manage-members",
         "setup/import",
         "setup/export",
-        "features/custom-fields",
-        {
-          "group": "Zapier 연동하기",
-          "pages": [
-            "setup/zapier-integration/what-is-zapier",
-            "setup/zapier-integration/how-to-integrate-with-zapier",
-            "setup/zapier-integration/relate-x-zapier-integration-rules"
-          ]
-        },
-        "setup/register-google-api-allowlist"
+        "features/custom-fields"
       ]
     },
     {
       "group": "Integrations",
       "pages": [
+        "integrations/slack",
+        {
+          "group": "Email",
+          "pages": [
+            "integrations/email",
+            "setup/email-sync",
+            "setup/naverworks-lineworks"
+          ]
+        },
+        {
+          "group": "Zapier",
+          "pages": [
+            "integrations/zapier",
+            "setup/zapier-integration/what-is-zapier",
+            "setup/zapier-integration/how-to-integrate-with-zapier",
+            "setup/zapier-integration/relate-x-zapier-integration-rules"
+          ]
+        },
         "integrations/apollo",
-        "integrations/Typeform",
-        "integrations/slack"
+        "integrations/typeform"
       ]
     },
     {
@@ -311,111 +318,92 @@
           ]
         }
       ]
-    },
-    {
-      "group": "Relate Engage",
-      "pages": [
-        "engage/intro",
-        "engage/sequence"
-    ]
-    },
-    {
-      "group": "Relate Cal",
-      "pages": [
-          "cal/relate-cal"
-      ]
-    },
-    {
-      "group": "Relate Docs",
-      "pages": [
-          "docs/relate-docs"
-      ]
     }
   ],
   "redirects": [
     {
-      "source":"/features/cal",
-      "destination":"/crm/features/cal"
+      "source":"/crm/features/cal",
+      "destination":"/features/cal"
     },
     {
-      "source":"/features/connect",
-      "destination":"/crm/features/connect"
+      "source":"/crm/features/connect",
+      "destination":"/features/connect"
     },
     {
-      "source":"/features/custom-fields",
-      "destination":"/crm/features/custom-fields"
+      "source":"/crm/features/custom-fields",
+      "destination":"/features/custom-fields"
     },
     {
-      "source":"/features/deals",
-      "destination":"/crm/features/deals"
+      "source":"/crm/features/deals",
+      "destination":"/features/deals"
     },
     {
-      "source":"/features/email",
-      "destination":"/crm/features/email"
+      "source":"/crm/features/email",
+      "destination":"/features/email"
     },
     {
-      "source":"/features/filter-sorter",
-      "destination":"/crm/features/filter-sorter"
+      "source":"/crm/features/filter-sorter",
+      "destination":"/features/filter-sorter"
     },
     {
-      "source":"/features/how-to-manage-deal-assignee",
-      "destination":"/crm/features/how-to-manage-deal-assignee"
+      "source":"/crm/features/how-to-manage-deal-assignee",
+      "destination":"/features/how-to-manage-deal-assignee"
     },
     {
-      "source":"/features/how-to-manage-expected-close-date",
-      "destination":"/crm/features/how-to-manage-expected-close-date"
+      "source":"/crm/features/how-to-manage-expected-close-date",
+      "destination":"/features/how-to-manage-expected-close-date"
     },
     {
-      "source":"/features/how-to-manage-organization-assignee",
-      "destination":"/crm/features/how-to-manage-organization-assignee"
+      "source":"/crm/features/how-to-manage-organization-assignee",
+      "destination":"/features/how-to-manage-organization-assignee"
     },
     {
-      "source":"/features/inbox",
-      "destination":"/crm/features/inbox"
+      "source":"/crm/features/inbox",
+      "destination":"/features/inbox"
     },
     {
-      "source":"/features/notes",
-      "destination":"/crm/features/notes"
+      "source":"/crm/features/notes",
+      "destination":"/features/notes"
     },
     {
-      "source":"/features/organizations",
-      "destination":"/crm/features/organizations"
+      "source":"/crm/features/organizations",
+      "destination":"/features/organizations"
     },
     {
-      "source":"/features/people",
-      "destination":"/crm/features/people"
+      "source":"/crm/features/people",
+      "destination":"/features/people"
     },
     {
-      "source":"/features/pipelines",
-      "destination":"/crm/features/pipelines"
+      "source":"/crm/features/pipelines",
+      "destination":"/features/pipelines"
     },
     {
-      "source":"/features/prospect-status",
-      "destination":"/crm/features/prospect-status"
+      "source":"/crm/features/prospect-status",
+      "destination":"/features/prospect-status"
     },
     {
-      "source":"/features/prospect",
-      "destination":"/crm/features/prospect"
+      "source":"/crm/features/prospect",
+      "destination":"/features/prospect"
     },
     {
-      "source":"/features/reporting",
-      "destination":"/crm/features/reporting"
+      "source":"/crm/features/reporting",
+      "destination":"/features/reporting"
     },
     {
-      "source":"/features/sequence",
-      "destination":"/crm/features/sequence"
+      "source":"/crm/features/sequence",
+      "destination":"/features/sequence"
     },    
     {
-      "source":"/features/shortcuts",
-      "destination":"/crm/features/shortcuts"
+      "source":"/crm/features/shortcuts",
+      "destination":"/features/shortcuts"
     },
     {
-      "source":"/features/tasks",
-      "destination":"/crm/features/tasks"
+      "source":"/crm/features/tasks",
+      "destination":"/features/tasks"
     },
     {
-      "source":"/features/views",
-      "destination":"/crm/features/views"
+      "source":"/crm/features/views",
+      "destination":"/features/views"
     },
     {
       "source": "/introduction",
@@ -423,10 +411,10 @@
     },
     {
       "source": "/features/deal-pipeline",
-      "destination": "/crm/features/deals"
+      "destination": "/features/deals"
     },
     {
-      "source": "setup/workspace-setting",
+      "source": "/setup/workspace-setting",
       "destination": "/setup/admin"
     },
     {
@@ -434,11 +422,7 @@
       "destination": "/setup/email-integration"
     },
     {
-      "source": "/setup/email-integration/google-outlook-etc",
-      "destination": "/setup/email-integration"
-    },
-    {
-      "source": "setup/email-integration/naverworks-lineworks",
+      "source": "/setup/email-integration/naverworks-lineworks",
       "destination": "/setup/naverworks-lineworks"
     },
     {
@@ -452,6 +436,10 @@
     {
       "source": "/features/sequences",
       "destination": "/engage/intro"
+    },
+    {
+      "source": "/setup/email-sync",
+      "destination": "/integrations/email"
     }
   ],
   "footerSocials": {
