@@ -1,6 +1,50 @@
 ---
-title: "Zapier 연동 방법"
+title: "Zapier"
+description: "4,000개가 넘는 애플리케이션들 사이에서 데이터를 자동으로 연동해주는 Zapier와 Relate 연동에 대해 소개합니다."
 ---
+
+### Zapier 101
+
+![Zapier 101](/images/setup/zapier/zapier-101.png)
+
+Zapier는 SaaS 애플리케이션 간에 데이터 연동을 코딩없이 손쉽게 구현할 수 있는 툴입니다. 5개의 연동(Zap)을 할 수 있는 무료 계정을 지원하고, 6개부터는 월 $19.99를 내면 20개까지 사용할 수 있습니다.
+
+Relate은 Zapier를 통해 약 4,000개의 애플리케이션과 연동을 할 수 있습니다. 예를 들어 Google Forms, Google Sheet, Typeform, Webflow, Mailchimp, 스티비, 캘린들리, 되는시간, 채널톡, 심지어 사용하고 계시는 인터널 툴(어드민 등)과도 모두 연동을 지원합니다.
+
+Zapier는 크게 Trigger와 Action으로 구성되어 있고 엑셀에서 IF/THEN (IF function)과 기본적으로 같은 로직에 기반합니다 (Trigger = IF, Action = THEN).
+
+예를 들어 Facebook 광고를 통해 Lead가 새로 수집되었다면(IF), 슬랙으로 메시지를 보내 팀원들에게 알린다(THEN) - 식의 구조로 애플리케이션들끼리의 데이터를 연동하는 것입니다.
+
+#### Trigger 예시 (출처: Zapier)
+
+![Trigger Example](/images/setup/zapier/trigger-example.png)
+
+#### Action 예시 (출처: Zapier)
+
+![Action Example](/images/setup/zapier/action-example.png)
+
+### 멀티 스텝 지원
+
+Zapier는 단순한 IF/THEN에서 한 발자국 더 나가서 멀티 스텝 Zap을 지원합니다.
+
+![Multi-Step](/images/setup/zapier/multi-step.png)
+
+### 추가 로직
+
+Zapier에서는 시간 지연(Delay), 조건 설정(Filter), 포맷(Format), 이메일 전송 등 다양한 로직을 자체적으로도 지원합니다.
+
+![Additional Logic](/images/setup/zapier/additional-logic.png)
+
+### 유용한 링크
+
+Zapier에 대해 좀더 자세하게 배울 수 있는 유용한 자료 모음
+
+- [Zapier "How it Works"](https://zapier.com/how-it-works)
+
+- [일잘러에게 필요한 단 하나의 툴, Zapier](https://brunch.co.kr/@seoup5024/80)
+
+- [Zapier 가이드 문서 (영문)](https://zapier.com/help/create/basics/learn-key-concepts-in-zapier)
+
 
 ## Zapier 연동 방법
 
@@ -133,3 +177,26 @@ Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니�
 ![Publish Zap](/images/setup/zapier/publish-zap.png)
 
 이제 `Publish Zap`을 눌러 Zap을 활성화합니다. 마지막으로 상단 왼쪽에서 Zap의 제목을 알아보기 쉽게 변경할 수 있습니다.
+
+## Zapier 연동 규칙
+
+### Trigger
+
+현재 Relate Trigger는 Lead, Contact, Deal, Note의 생성(Created), 업데이트(Updated), 그리고 삭제(Deleted)를 지원합니다.
+
+### Action
+
+현재 Relate Action은 Lead와 Contact를 생성하는 Action과 그에 따른 Note와 Deal을 생성하는 Action을 지원합니다.
+
+### 커스텀 웹훅(Custom Webhook) 사용
+
+스티비나 채널톡 등 (특히) 국내 소프트웨어 애플리케이션의 경우 Zapier를 바로 지원하고 있지는 않습니다만, 연결하고자 하는 애플리케이션에 API가 있다면, Zapier의 커스텀 웹훅 기능을 활용해서 연결하실 수 있습니다.
+
+관련 문의는 [we@relate.so](mailto:we@relate.so) 나 인터콤 채팅을 통해 알려주세요 :)
+
+<Warning>
+  **주의 사항** - 중복 Lead/Contact이 Zapier 통해서 Relate에 새로운 데이터로
+  들어오는 경우, Zapier에서 가 발생했다고 이메일을 보내드립니다. 현재
+  Relate에서는 중복 데이터를 허용하지 않고 있습니다. 이 경우 무시하시거나 (이미
+  데이터가 있으니), 필요한 데이터를 예외적으로 직접 Relate에 추가하시면 됩니다.
+</Warning>

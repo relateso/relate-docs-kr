@@ -113,8 +113,13 @@
         "what-is-relate",
         "setup/get-the-app",
         "learn-the-model",
-        "personal-plan",
-        "team-plan"
+        {
+          "group": "Plans",
+          "pages": [
+            "personal-plan",
+            "team-plan"
+          ]
+        }
       ]
     },
     {
@@ -140,7 +145,6 @@
         },
         "/features/custom-fields",
         "/features/data-enrichment",
-        "/features/cal",
         "/features/shortcuts",
         "/features/connect"
       ]
@@ -230,23 +234,8 @@
       "group": "Integrations",
       "pages": [
         "integrations/slack",
-        {
-          "group": "Email",
-          "pages": [
-            "integrations/email",
-            "setup/email-sync",
-            "setup/naverworks-lineworks"
-          ]
-        },
-        {
-          "group": "Zapier",
-          "pages": [
-            "integrations/zapier",
-            "setup/zapier-integration/what-is-zapier",
-            "setup/zapier-integration/how-to-integrate-with-zapier",
-            "setup/zapier-integration/relate-x-zapier-integration-rules"
-          ]
-        },
+        "integrations/email",
+        "integrations/zapier",
         "integrations/apollo",
         "integrations/typeform"
       ]
@@ -423,11 +412,15 @@
     },
     {
       "source": "/setup/email-integration/naverworks-lineworks",
-      "destination": "/setup/naverworks-lineworks"
+      "destination": "/integrations/email"
+    },
+    {
+      "source": "/setup/naverworks-lineworks",
+      "destination": "/integrations/email"
     },
     {
       "source": "/setup/email-integration",
-      "destination": "/setup/email-sync"
+      "destination": "/integrations/email"
     },
     {
       "source": "/features/filtering-views",
@@ -440,6 +433,18 @@
     {
       "source": "/setup/email-sync",
       "destination": "/integrations/email"
+    },
+    {
+      "source": "setup/zapier-integration/what-is-zapier",
+      "destination": "/integrations/zapier"
+    },
+    {
+      "source": "setup/zapier-integration/how-to-integrate-with-zapier",
+      "destination": "/integrations/zapier"
+    },
+    {
+      "source": "setup/zapier-integration/relate-x-zapier-integration-rules",
+      "destination": "/integrations/zapier"
     }
   ],
   "footerSocials": {
