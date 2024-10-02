@@ -1,112 +1,32 @@
 ---
-title: "Notifications and Reminders "
+title: "알림 & 리마인더 (Notifications & Reminders)"
 description: "Relate에서 고객이 보내는 이메일을 수신하고 고객에게 새로운 이메일을 보낼 수 있습니다."
-sidebarTitle: "Notifications and Reminders"
-"og:title": "이메일(Email) | Relate CRM 가이드"
+sidebarTitle: "알림 & 리마인더 (Notifications & Reminders)"
+"og:title": "알림 & 리마인더 (Notifications & Reminders) | Relate CRM 가이드"
 "og:description": "Relate에서 고객이 보내는 이메일을 수신하고 고객에게 새로운 이메일을 보낼 수 있습니다."
-"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/email-compose.png"
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/notifications.png"
 "article:tag": "Product Guide"
-"twitter:title": "이메일(Email) | Relate CRM 가이드"
+"twitter:title": "알림 & 리마인더 (Notifications & Reminders) | Relate CRM 가이드"
 "twitter:description": "Relate에서 고객이 보내는 이메일을 수신하고 고객에게 새로운 이메일을 보낼 수 있습니다."
-"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/email-compose.png"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/notifications.png"
 ---
 
-![email-compose](/images/features/email-compose.png)
-
 ## Overview
-Relate에서 고객과 이메일을 주고받을 수 있습니다. 모든 이메일은 **양방향**으로 동기화되므로 원래 이메일 서비스에 표시되는 내용이 Relate에도 표시되며, 그 반대의 경우도 마찬가지입니다.
 
-## 새로운 이메일 보내기 (Sending a new email)
-Relate에서 새로운 이메일 보내기 위해서는 (또한 수신하기 위해서는) 먼저 Relate과 이메일을 [연결해야 합니다.](/setup/email-sync)
+Relate에서는 다음과 같은 알림 및 리마인더 기능을 제공합니다.
 
-Relate에서는 여러가지 방법으로 이메일을 보낼 수 있습니다. 그중 가장 간편한 방법은 왼쪽 내비게이션 메뉴에 있는 `Emails`에서 새로운 이메일을 작성하는 것입니다.
+- 노트(Note)
+- 이메일(Email)
+- 태스크(Task)
 
-<div
-  style={{
-    position: "relative",
-    paddingBottom: "69.74664679582713%",
-    height: 0,
-  }}
->
-  <iframe
-    src="https://player.vimeo.com/video/861825777?title=1&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=1&loop=1"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    title="Relate Reporting"
-    webkitAllowFullScreen
-    mozallowFullScreen
-    allowFullScreen
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-    }}
-  ></iframe>
-</div>
+## How it works
+리마인더 기능은 노트, 이메일, 태스크에서 우측 상단에 있는 `...` 을 클릭해서 설정할 수 있습니다. 노트, 이메일, 태스크가 있는 화면 어디에서든 리마인더를 설정할 수 있습니다.
 
-이 이메일 섹션에서는 내가 지금 작성 중에 있는 모든 Draft들이 정리되어 있고, 여기서 새로운 이메일 템플릿을 만들고 관리할 수도 있습니다.
+![reminder](/images/features/reminder.png)
 
-이메일을 작성하는 또 다른 방법은 고객상세페이지로 가서 오른쪽에 위치해 있는 `Compose email` 버튼을 클릭하는 것입니다.
+리마인더는 1시간 뒤, 내일, 다음주, 한달 뒤를 바로 설정할 수 있고, 특정 리마인더 일정이 필요한 경우 `Custom...`을 클릭해서 설정할 수 있습니다.
 
-### 이메일 드래프트 팝아웃(pop-out)하기
+![custom-reminder](/images/features/reminder2.png)
 
-Relate의 다른 페이지를 보면서 동시에 이메일 초안을 작성하려면 초안을 팝업하고 원하는 위치로 이동하면 됩니다.
-
-<div
-  style={{
-    position: "relative",
-    paddingBottom: "69.74664679582713%",
-    height: 0,
-  }}
->
-  <iframe
-    src="https://player.vimeo.com/video/861827850?title=1&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=1&loop=1"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    title="Relate Reporting"
-    webkitAllowFullScreen
-    mozallowFullScreen
-    allowFullScreen
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-    }}
-  ></iframe>
-</div>
-
-### 이메일 답장 및 포워드하기 (Reply/Forward)
-이메일을 포워드, 답장 또는 전체 답장하려면 해당 스레드를 열고 오른쪽 상단 모서리에 있는 포워드/답장 버튼을 찾으면 됩니다.
-
-![reply-email-button](/images/features/reply-email-button.png)
-
-## 이메일 수신하기 (Receiving emails)
-수신된 새 이메일은 즉시 동기화되며 고객상세페이지에 있는 커뮤니케이션 타임라인에 표시됩니다.
-
-이메일을 수신한 경우, [Inbox](/features/inbox/)와 [Organization](/features/organizations/) 상세페이지에서 모두 확인할 수 있습니다.
-
-## Frequently Asked Questions (FAQ)
-
-<AccordionGroup>
-	<Accordion title="Relate에서 보낸 이메일이 보이지 않습니다. 어떻게 해야 하나요?">
-	현재 Relate에서 직접 보낸 새 이메일은 릴레이트에 실시간으로 표시되지 않습니다.
-
-	**이메일은 전송되었지만** 바로 표시되지 않을 뿐입니다. 이메일이 전송되었는지 다시 확인하려면 원래 이메일 서비스로 이동하여 발송편지함 폴더를 확인하세요.
-  </Accordion>
-  <Accordion title="특정 중복 스레드가 있습니다. 어떻게 해야 하나요?">
-    현재 Relate은 각 사용자에게 보낸 이메일에 대해 별도의 스레드를 만듭니다. 예를 들어, 누군가 사용자 A와 사용자 B(CC/BCC 또는 여러 수신자)에게 이메일을 보내는 경우 Relate는 각 사용자에 대해 두 개의 스레드를 만듭니다.
-
-    이 경우 사용자는 자신이 소유하고 있는 스레드에만 댓글을 달 수 있습니다. 즉, 팀의 다른 팀원이 소유한 토론글에는 댓글/전달 버튼이 표시되지 않습니다.
-
-    곧 단일 스레드로 병합될 예정이니 안심하세요.
-  </Accordion>
-  <Accordion title="일부 스레드에 답장/포워드 버튼이 없는 이유는 무엇인가요?">
-  지금 보고 있는 스레드가 내가 소유하고 있는 스레드가 아니라, 다른 사용자가 소유하고 있는 스레드일 가능성이 높습니다.
-
-  스레드의 오른쪽에는 소유자를 나타내는 사용자 이름이 있습니다. 이 사용자가 팀의 다른 팀원이라면, 나는 그 스레드에 댓글을 달 수 없습니다.
-  </Accordion>
-  </AccordionGroup>
+## 슬랙(Slack) 알림 설정
+슬랙을 활용해서 Relate에서 발생하는 이벤트를 알림으로 받을 수 있습니다. 슬랙 알림 설정 방법은 [슬랙 연동 안내 페이지](https://www.relate.kr/docs/integrations/slack)를 확인해주세요.
