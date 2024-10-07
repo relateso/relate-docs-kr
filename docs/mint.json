@@ -112,6 +112,7 @@
         "onboarding",
         "what-is-relate",
         "setup/get-the-app",
+        "setup/mobile-view",
         "learn-the-model",
         {
           "group": "Plans",
@@ -128,49 +129,49 @@
         {
           "group": "Basics",
           "pages": [
-            "/features/inbox",
-            "/features/tasks",
-            "/features/notes",
-            "/features/email",
-            "/features/notifications"
+            "features/inbox",
+            "features/tasks",
+            "features/notes",
+            "features/email",
+            "features/notifications"
           ]
         },
         {
           "group": "Find, Sort, and Search",
           "pages": [
-            "/features/search",
-            "/features/filter-sorter",
-            "/features/views"
+            "features/search",
+            "features/filter-sorter",
+            "features/views"
           ]
         },
-        "/features/custom-fields",
-        "/features/data-enrichment",
-        "/features/shortcuts",
-        "/features/connect"
+        "features/custom-fields",
+        "features/data-enrichment",
+        "features/shortcuts",
+        "features/connect"
       ]
     },
     {
       "group": "Organizations & People",
       "pages": [
-        "/features/organizations",
-        "/features/people"
+        "features/organizations",
+        "features/people"
       ]
     },
     {
       "group": "Lists & Processes",
       "pages": [
-        "/features/deals",
+        "features/deals",
         {
           "group": "Prospect",
           "pages": [
-            "/features/prospect",
-            "/features/prospect-status"
+            "features/prospect",
+            "features/prospect-status"
           ]
         },
         {
           "group": "Close",
           "pages": [
-            "/features/pipelines"
+            "features/pipelines"
           ]
         }
       ]
@@ -204,7 +205,7 @@
     {
       "group": "Reporting",
       "pages": [
-          "/features/reporting"
+          "features/reporting"
       ]
     },
     {
@@ -213,9 +214,9 @@
         {
           "group": "Others",
           "pages": [
-            "/features/how-to-manage-deal-assignee",
-            "/features/how-to-manage-expected-close-date",
-            "/features/how-to-manage-organization-assignee"
+            "features/how-to-manage-deal-assignee",
+            "features/how-to-manage-expected-close-date",
+            "features/how-to-manage-organization-assignee"
           ]
         }
       ]
@@ -311,6 +312,10 @@
   ],
   "redirects": [
     {
+      "source":"/crm/features/inbox",
+      "destination":"/features/inbox"
+    },
+    {
       "source":"/crm/features/cal",
       "destination":"/features/cal"
     },
@@ -345,10 +350,6 @@
     {
       "source":"/crm/features/how-to-manage-organization-assignee",
       "destination":"/features/how-to-manage-organization-assignee"
-    },
-    {
-      "source":"/crm/features/inbox",
-      "destination":"/features/inbox"
     },
     {
       "source":"/crm/features/notes",
