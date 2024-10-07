@@ -189,6 +189,13 @@
       ]
     },
     {
+      "group": "Campaign",
+      "pages": [
+        "campaign/relate-campaign",
+        "campaign/dns-setting"
+      ]
+    },
+    {
       "group": "Meeting Scheduler",
       "pages": [
         "cal/relate-cal"
