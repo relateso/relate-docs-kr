@@ -1,12 +1,85 @@
 ---
-title: "Relate Campaign"
-description: "Relate Campaign을 통해 잠재고객과 고객들에게 쉽고 빠르게 회사 소식을 전할 수 있습니다."
-sidebarTitle: "미팅 스케줄러"
-"og:title": "Relate Campaign | Relate Product Guide"
-"og:description": "Relate Campaign을 통해 잠재고객과 고객들에게 쉽고 빠르게 회사 소식을 전할 수 있습니다."
-"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/products/cal/c1.png"
+title: "도메인 레코드 설정 가이드"
+description: "Relate Marketing에 있는 이메일 캠페인으로 이메일을 보내기 전 필수적인 도메인 레코드 설정 방법을 안내합니다."
+sidebarTitle: "도메인 레코드 설정 가이드"
+"og:title": "도메인 레코드 설정 가이드 | Relate Product Guide"
+"og:description": "Relate Marketing에 있는 이메일 캠페인으로 이메일을 보내기 전 필수적인 도메인 레코드 설정 방법을 안내합니다."
+"og:image": 
 "article:tag": "Product Guide"
-"twitter:title": "Relate Campaign | Relate Product Guide"
-"twitter:description": "Relate Campaign을 통해 잠재고객과 고객들에게 쉽고 빠르게 회사 소식을 전할 수 있습니다."
-"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/products/cal/c1.png"
+"twitter:title": "도메인 레코드 설정 가이드 | Relate Product Guide"
+"twitter:description": "Relate Marketing에 있는 이메일 캠페인으로 이메일을 보내기 전 필수적인 도메인 레코드 설정 방법을 안내합니다."
+"twitter:image": 
 ---
+
+이메일 마케팅을 시작하기 전 필수적인 도메인 레코드 설정 방법을 안내합니다. 이 과정을 통해 발신자 신뢰도를 높이고 스팸 분류 가능성을 줄일 수 있습니다.
+
+Relate Campaign으로 이메일을 보내기 위해 도메인 레코드 설정을 꼭 먼저 해야 합니다. 
+
+## Step 1: 도메인 레코드 설정 페이지로 이동
+
+워크스페이스 세팅 페이지(앱에서 왼쪽 상단에 있는 워크스페이스 로고를 누르면 나오는 메뉴에서 Settings 클릭 or Cmd + ,)로 이동합니다. 
+
+![relate-settings](/images/features/relate-settings.png)
+
+Products 섹션 밑에 있는 Campaigns를 클릭하면 도메인 레코드 설정이 가능합니다. 
+
+### 도메인 레코드 설정 페이지에서 확인할 수 있는 것들
+
+![relate-domain-settings](/images/features/relate-domain-settings.png)
+
+**보내는 도메인**
+가장 상단에 `senderdomain.com`으로 표시됩니다. (스크린샷 예시에서는 relatemail.xyz)
+
+도메인을 변경하려면 오른쪽 설정 버튼 클릭 후 `Update domain`에서 할 수 있습니다.
+
+**도메인 레코드**
+MX 레코드, SPF & DMARC 레코드, DKIM 레코드 확인이 가능하며, 클립보드 아이콘을 클릭하여 레코드를 복사해서 Namechep, Google Domains, AWS, GoDaddy 등의 도메인 등록 기관 내부의 도메인 영역 편집기에 붙여 넣으면 됩니다. 
+
+**도메인 설정 여부**
+레코드 설정 후 하단에 `Verify records` 버튼을 클릭해서 올바르게 설정됐는지 확인할 수 있습니다. 
+
+## Step 2: 도메인 레코드 설정하기
+
+MX, SPF & DMARC, DKIM 레코드를 하나씩 복사하여 사용 중인 도메인 등록 기관에 붙여 넣습니다.
+
+<Accordion title="Cloudflare">
+DNS 레코드는 웹사이트 내 `DNS` 페이지에서 추가할 수 있습니다.
+
+`Add record`를 클릭한 뒤, `Type`을 (TXT, MX 또는 CNAME)을 선택한 다음 Relate 도메인 설정 페이지에 있은 `Name` 및 `Value` 값을 붙여 넣습니다.
+
+[Cloudflare DNS 레코드 가이드 읽기 (영어 원문)](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/#create-dns-records)
+
+CNAME 레코드에 대해 프록시를 `DNS 전용`으로 설정해야 합니다.
+</Accordion>
+<Accordion title="Google Domains>
+Google 도메인을 포함한 대부분의 도메인 등록 기관은 메일 서버와 우선순위를 함께 입력하도록 요구합니다.
+
+도메인 설정 중 다음과 같은 오류가 발생하면 다음 형식으로 입력하세요: `10 feedback-smtp.us-east-1.amazonses.com"
+
+![relate-google-domains](/images/features/relate-google-domains-1.png)
+
+Google 도메인에서 일부 레코드 이름에 따옴표(" ")가 자동으로 추가되는 것은 정상이며 기능에 영향을 주지 않습니다.
+</Accordion>
+<Accordion title="Namecheap">
+먼저 `Advanced DNS` 페이지로 이동합니다. 
+
+Namecheap과 Gmail/Gsuite 자동 연동을 사용하는 경우 자동 연동을 먼저 해제한 뒤, `Mail Settings`에서 Custom MX로 변경해야 합니다. 
+
+Gsuite 레코드가 이미 검증된 경우, [이 문서](https://support.google.com/a/answer/174125)에서 적절한 MX 레코드를 확인해야 합니다. 
+
+`Mail Settings` 섹션에서 `Add new record` 클릭한 뒤, MX record Type으로 Relate 도메인 설정 페이지에서 제공하는 값을 복사해서 붙여 넣으면 됩니다. 
+
+![relate-namecheap](/images/features/relate-namecheap-1.png)
+
+`호스트 레코드` 섹션에서 새 레코드 추가를 클릭하여 TXT 및 CNAME 레코드를 추가합니다.
+
+![relate-namecheap](/images/features/relate-namecheap-2.png)
+</Accordion>
+
+## Step 3: 레코드 설정 확인하기
+
+레코드 설정을 완료했다면, Relate 도메인 설정 페이지 하단에서 `Verify records` 버튼을 눌러 설정이 잘 됐는지 확인해야 합니다. 
+
+레코드 설정 확인은 최대 1시간까지 소요될 수 있습니다.
+
+설정 확인이 완료되면 각 레코드 섹션 옆에 녹색으로 `Verified`가 표시됩니다.
