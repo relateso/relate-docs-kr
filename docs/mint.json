@@ -190,10 +190,10 @@
       ]
     },
     {
-      "group": "Campaign",
+      "group": "Marketing",
       "pages": [
-        "campaign/relate-campaign",
-        "campaign/dns-setting"
+        "marketing/marketing",
+        "marketing/dns-records"
       ]
     },
     {
@@ -245,7 +245,7 @@
         "integrations/email",
         "integrations/zapier",
         "integrations/apollo",
-        "integrations/typeform"
+        "integrations/Typeform"
       ]
     },
     {
