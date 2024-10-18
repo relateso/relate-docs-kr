@@ -41,23 +41,56 @@ Relate은 심플하지만 세일즈 데이터를 분석하고 인사이트를 �
 </div>
 
 ## 1. 리포팅 페이지 진입하기
-
-![Reporting1](/images/features/reporting.png)
-
+![Reporting2](/images/features/reporting-enter.png)
 Click the workspace logo in the top left corner in your workspace. Then click `Reporting` at the bottom of the list.
 
 워크스페이스의 왼쪽 상단 모서리에 있는 워크스페이스 이름을 클릭합니다. 그런 다음 목록 하단의 `Reporting`을 클릭합니다.
 
-![Reporting2](/images/features/enter-reporting.png)
+## 2. 기본 리포트
+![Reporting11](/images/features/reporting3.png)
+Relate에서는 기본으로 위와 같은 리포트를 제공합니다.
+현재 버전에서는 시간대별, 파이프라인별, 담당자별로 필터하는 것을 지원하지 않습니다.
 
-## 2. 대시보드에 커스텀 차트 추가하기
+### 2-1/ Qualification Rate, Win Rate, Average Lead Time
+![Reporting12](/images/features/reporting2.png)
+### Qualification Rate (검증률)
+프로스펙트 (prospests)에서 파이프라인 (pipeline)으로 넘어가는 비율입니다.
+즉, 잠재 고객 중 검증된 영업 기회로 만들어지는 비율을 의미합니다.
+
+### Win Rate (수주율)
+딜 성사율로서, 파이프라인에 추가된 검증 영업 기회 중 closed won으로 끝난 비율을 의미합니다.
+만약 파이프라인이 여러 개라면, 모든 파이프라인의 평균이 Win Rate가 됩니다.
+
+### Average Lead Time (평균 영업 사이클)
+파이프라인에 추가된 검증 영업 기회 중 close (won or lost)가 되기까지 걸리는 평균 시간을 의미합니다.
+이 역시 파이프라이이 여러 개라면 모든 파이프라인의 평균이 Average Lead Time이 됩니다.
+
+
+### 2-2/ Funnel, Lead Times
+![Reporting13](/images/features/reporting-funnel-lead.png)
+딜 카운트와 전환율을 막대 그래프 및 선 그래프로 나누어 보는 것은 지원하지 않습니다.
+
+### Funnel (파이프라인 단계)
+파이프라인 단계(funnel)별로 딜 카운트와 전환율을 확인할 수 있습니다.
+만약 파이프라인이 여러 개일 경우, 파이프라인별로도 확인이 가능합니다.
+
+이때, 전환율은 바로 직전 단계에서 전환되는 비율을 의미합니다.
+Won/Lost 단계의 전환율이 상단에 위치한 Win Rate와 다른 이유는 가장 마지막 active 단계 (스크린샷 기준 5. Contract sent)에서 전환되는 비율이기 때문입니다.
+
+### Lead Times (영업 사이클)
+영업 사이클은 각 단계에서 머무는 평균적인 기간을 의미합니다.
+
+모든 단계의 Lead time 합과 Average lead time에 차이가 있습니다.
+그 이유는 Average lead time은 모든 단계를 거치지 않더라도 close 되면 끝나기 때문입니다.
+
+## 3. 대시보드에 커스텀 차트 추가하기
 기본 차트 5종 외에 새로운 차트를 추가하려면 하단의 `Select Template` 또는 `+ Add View` 버튼을 클릭합니다. `Select Template`은 미리 만들어진 템플릿을 사용하며 `+ Add View`는 처음부터 새로운 템플릿을 생성합니다.
 
-![Reporting9](/images/features/add-new-reports.png)
+![Reporting9](/images/features/reporting-add.png)
 
 ![Reporting10](/images/features/add-new-reports2.png)
 
-## 3. 기본 5가지 차트
+## 4. 기본 5가지 차트
 Relate에서는 기본 5가지 차트를 제공합니다.
 
 - [Newly booked revenue](/features/reporting#newly-booked-revenue)
