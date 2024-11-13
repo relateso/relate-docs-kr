@@ -316,7 +316,10 @@
         },
         {
           "group": "Marketing",
-          "pages": ["wiki/dkim"]
+          "pages": [
+            "wiki/spf",
+            "wiki/dkim"
+            ]
         }
       ]
     }
