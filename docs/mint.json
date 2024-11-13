@@ -313,6 +313,10 @@
             "wiki/sales-enablement",
             "wiki/champion"
           ]
+        },
+        {
+          "group": "Marketing",
+          "pages": ["wiki/dkim"]
         }
       ]
     }
