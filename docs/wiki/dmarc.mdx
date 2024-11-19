@@ -1,0 +1,74 @@
+---
+title: "DMARC"
+description: "성공적인 이메일 마케팅과 세일즈를 위한 시작, DMARC에 대해 알아보세요"
+sidebarTitle: "DMARC"
+"og:title": "DMARC | Relate Startup Wiki"
+"og:description": "성공적인 이메일 마케팅과 세일즈를 위한 시작, DMARC에 대해 알아보세요"
+"article:tag": "Wiki"
+"twitter:title": "DMARC | Relate Startup Wiki"
+"twitter:description": "성공적인 이메일 마케팅과 세일즈를 위한 시작, DMARC에 대해 알아보세요"
+---
+
+## Overview
+
+이메일 마케팅이나 세일즈 업무의 담당자는 누구나 이메일이 스팸으로 분류되지 않고 고객의 받은편지함에 제대로 전달되길 바랍니다. DMARC (Domain-based Message Authentication, Reporting & Conformance)는 안전한 이메일 커뮤니케이션을 도와주는 대표적인 인증 절차로 도메인 도용을 방지하고 이메일 전달률을 높여줍니다. DMARC를 잘 활용하면 이메일 도메인의 신뢰를 지키면서 목표한 대상에게 원하는 메시지를 안정적으로 전달할 수 있습니다.
+
+## DMARC는 무엇일까요?
+
+DMARC는 이메일 도메인의 무단 사용을 방지함으로써 보안을 강화하고, 발신자와 수신자 양쪽을 보호합니다.
+
+DMARC는 [SPF (Sender Policy Framework)](/wiki/spf)와 [DKIM (DomainKeys Identified Mail)](/wiki/dkim)이라는 두 가지 이메일 인증 방법을 통합하여, 이메일이 전송된 출처와 메시지의 진위성을 보장합니다. DMARC는 SPF와 DKIM 검증을 통과하지 못한 이메일에 대한 처리 정책을 통해 부적합한 이메일에 대해 적절한 조치를 취할 수 있게 합니다.
+
+### DMARC는 어떻게 동작하나요?
+
+SPF와 DKIM이 이메일의 신뢰성을 테스트한다면 DMARC는 검증을 통과하지 못한 메시지의 처리 방식을 정의합니다. DMARC는 검증에 실패한 이메일을 수신 서버에서 허용, 격리, 혹은 거부할 수 있는 옵션을 제공합니다.
+
+#### DMARC 정책 종류
+
+- **None**: 가장 낮은 단계의 제한으로, 수신 서버는 DMARC 결과만 보고하고 아무런 조처를 하지 않습니다.
+- **Quarantine**: 검증에 실패하면 의심스러운 이메일로 분류되어 스팸 또는 정크 폴더로 이동합니다. 
+- **Reject**: 가장 강력한 옵션으로 DMARC 검증에 실패한 이메일은 수신 서버에서 완전히 차단하여 전송되지 않습니다.
+
+<Note>처음에는 “none" 옵션으로 시작하여 모니터링 후 점차 엄격한 옵션을 적용하는 것을 권장합니다.</Note>
+
+
+## DMARC는 왜 중요할까요?
+마케터들은 고객과의 효과적인 이메일 커뮤니케이션을 원하며, 이메일이 스팸이나 프로모션 폴더로 전달되는 것을 원하지 않습니다. DMARC는 다음과 같은 이유로 이메일 참여를 높일 수 있는 필수 도구입니다.
+
+- **브랜드 이미지 보호**: DMARC는 공격자가 브랜드의 도메인을 도용하여 피싱을 시도하는 행위인 이메일 스푸핑을 방지하여, 브랜드의 평판을 유지하고 고객이 해당 도메인에서 수신하는 이메일을 신뢰할 수 있게 해줍니다.
+- **이메일 전달률 향상**: DMARC 설정을 통해 더 많은 이메일이 스팸으로 분류되는 대신 고객의 받은편지함에 안전하게 도달할 수 있습니다.
+- **도메인 평판 보호**: DMARC는 도메인의 평판을 보호하여 고객과의 신뢰 관계를 유지하는 데 중요한 역할을 합니다.
+- **주기적 모니터링 가능**: DMARC가 제공하는 유용한 보고 기능을 통해 이메일 도메인의 상태를 모니터링하고 잠재적인 공격이나 도메인의 무단 사용을 빠르게 파악할 수 있습니다.
+
+DMARC를 잘 활용하는 것은 고객과의 신뢰를 구축하고, 성공적인 이메일 캠페인의 가능성을 높이며, 도메인 평판을 유지할 수 있는 좋은 방법입니다.
+
+
+## DMARC 레코드 설정하기
+
+
+### 1. SPF, DKIM 설정
+DMARC 레코드를 만들기 전에 SPF와 DKIM 설정을 완료합니다. SPF와 DKIM은 DMARC와 함께 종합적인 이메일 인증 프로세스를 구성합니다.
+
+### 2. DMARC 레코드 생성
+SPF와 DKIM 설정이 끝나면 DMARC 레코드를 생성합니다. 도메인의 DNS 설정에서 TXT 레코드를 추가할 수 있으며, 기본 형식은 다음과 같습니다.
+
+```
+_dmarc.example.com IN TXT "v=DMARC1; p=none; rua=mailto:dmarc-reports@example.com"
+```
+- `example.com`을 사용 중인 도메인으로 변경하세요.
+- DMARC 정책(`p=none`)을 원하는 보안 수준에 따라 "none," "quarantine," 또는 "reject"로 설정하세요. 처음에는 “none”으로 설정하고 모니터링 후 정책을 강화하면 이메일 전달률에 미치는 영향을 최소화할 수 있습니다.
+- `dmarc-reports@example.com`을 DMARC 보고서를 받아보고 싶은 이메일 주소로 변경하세요. 필수 태그는 아니지만 모니터링 목적으로 설정하는 것을 권장합니다.
+
+
+### 3. DMARC 레코드 테스트
+
+레코드를 생성한 후, DMARC, SPF, DKIM 설정이 제대로 되어 있는지 [확인하세요](https://www.learndmarc.com/?ref=relate.kr). 모든 설정을 완료하면 도메인을 스푸핑으로부터 보호하고 이메일 전달률을 최적화할 수 있습니다.
+
+주기적인 DMARC 모니터링을 통해 이메일 참여도를 높이세요. DMARC 설정 관리에 어려움을 느낀다면 [Relate Marketing](https://www.relate.kr/products/marketing)이 도움을 드릴 수 있습니다.
+
+## Quick Recap
+
+- DMARC는 도메인의 무단 사용을 방지하며, 이메일 마케팅과 세일즈에 필수적인 설정입니다.
+- DMARC는 SPF와 DKIM을 기반으로 한 인증 프로토콜로 수신 이메일 서버가 인증에 실패한 이메일을 어떻게 처리할지에 대한 명확한 지침을 제공합니다.
+- “none” 정책으로 설정을 시작하여 이메일 전달률에 영향을 주지 않고 DMARC 인증 현황을 모니터링하세요.
+- [Relate Marketing](https://www.relate.kr/products/marketing)은 복잡한 DMARC 설정을 자동으로 관리하여 도메인 평판을 유지하고 이메일이 목적지에 도달하도록 지원합니다.
