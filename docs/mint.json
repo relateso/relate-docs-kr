@@ -241,11 +241,12 @@
     {
       "group": "Integrations",
       "pages": [
+        "integrations/zapier",
         "integrations/slack",
         "integrations/email",
-        "integrations/zapier",
         "integrations/apollo",
-        "integrations/Typeform"
+        "integrations/Typeform",
+        "integrations/remember"
       ]
     },
     {

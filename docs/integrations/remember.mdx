@@ -1,7 +1,7 @@
 ---
 title: "리멤버(Remember) + Relate"
 description: "이 가이드는 Remember와 Relate을 연동하는 방법에 대해 설명합니다."
-sidebarTitle: "remember"
+sidebarTitle: "Remember"
 "og:title": "Remember + Relate 연동하기 | Relate Product Guide"
 "og:description": "이 가이드는 Remember와 Relate을 연동하는 방법에 대해 설명합니다."
 "article:tag": "Integration"
@@ -14,20 +14,17 @@ sidebarTitle: "remember"
 
 ## Overview
 
-Survey 툴인 Typeform을 활용해서 Relate로 신규 Lead 정보를 보내고, Relate에서는 신규 Lead를 생성할 수 있습니다.
+명함 저장 서비스인 Remember를 활용해서 신규 Lead 정보를 보내고, Relate에서는 신규 Lead를 생성할 수 있습니다.
 
-[인바운드 영업 프로세스 자동화하는 법](https://www.relate.kr/blog/how-to-start-inbound-sales/)은 이 포스트에 자세히 설명해 두었습니다
+Remember + Relate 연동은 Google Contacts과 Zapier를 사용합니다. (링크: [Zapier 가이드](/integrations/zapier))
 
-Typeform + Relate 연동은 Zapier를 사용합니다. (링크: [Zapier 가이드](/setup/zapier-integration/what-is-zapier))
-
-[Typeform + Relate 연동 템플릿 바로가기](https://zapier.com/app/editor/template/1025547)
+[Remember + Relate 연동 템플릿 바로가기](https://zapier.com/shared/f1ba9b5786b69694ab1b127d257870972298c739)
 
 <zapier-zap-templates
-ids="1025547"
+ids="231605126"
 limit="5"
 use-this-zap="show"
 theme="auto"
-
 > </zapier-zap-templates>
 
 ## Quick Demo
@@ -53,107 +50,18 @@ Zapier를 통해 Typeform과 Relate을 연동하는 방법에 대한 영상입�
   </div>
 </Frame>
 
-## Typeform란?
+## 1. 리멤버 - 구글 주소록(구글 컨택)에 자동 저장
 
-![typeform_0](/images/integrations/typeform_0.png)
+* 리멤버 앱/웹 모두 가능합니다.
 
-타입폼(Typeform)은 응답자 중심의 깔끔하고 인터랙티브한 설문조사 툴로 고객 정보를 확보하는 데 사용할 수 있습니다.
+1. 웹(PC)에서 연동하기
 
-## 1. Zap 생성하기
+자주 사용하는 소셜 계정 혹은 이메일로 회원가입 후 로그인 해주세요.
 
-Typeform과 Relate를 연동하기 위해 가장 먼저 해야 하는 것은 Zapier에서 Typeform과 Relate를 선택하는 것입니다. Zapier에서 직접 선택하실 수도 있고, Relate Admin Page에서 선택할 수 있습니다.
+우측 상단 프로필을 눌러 **[설정]에서 [구글 주소록 자동저장]**을 눌러서 계정을 연동해주세요.
 
-Zapier에서 직접 선택할 경우, 첫 화면에 나오는 "Make a Zap", 또는 왼쪽 상단에 있는 "+" 버튼을 선택하면 됩니다.
-
-![tpyefomr_1](/images/integrations/zapier_main.png)
-
-그리고 차례대로 Typeform과 Relate를 찾아 선택합니다. 그리고 밑에 칸에서 New Contact와 Generate Lead & Contact를 차례대로 선택합니다.
-
-![typeform_1](/images/integrations/typeform_1.png)
-
-[Relate Admin Page](https://admin.relate.so)에서 할 경우 Integrations에서 Zapier를 선택하면 됩니다.
-
-![typeform_1](/images/integrations/relate_zapier_integration.png)
-
-Zapier 연동 페이지에서 "Create Zap" 버튼을 눌러 Typeform과 Relate를 선택하면 됩니다.
-
-![typeform_1](/images/integrations/relate_zapier_create.png)
-
-또는, 하단으로 스크롤 하면 Relate와 자주 연동하는 목록에서 이미 생성된 Apollo + Relate 템플릿을 사용할 수 있습니다.
-
-![typeform_1](/images/integrations/relate_zapier_typeform.png)
-
-## 2. Trigger 선택 및 연결하기
-
-Trigger는 원하는 Action이 자동으로 발생하는 발생 조건을 의미합니다. Typeform에서 새로운 잠재 고객이 정보를 남길 때가 Trigger이고, 그 정보가 Relate에 자동으로 추가되는 것이 Action입니다.
-
-먼저 처음 연동할 경우에는 Trigger에서 새로운 Typeform 계정을 연결해야 합니다. "+ Connect a New Account" 버튼을 누르면 아래와 같은 화면이 나옵니다.
-
-![typeform_2](/images/integrations/zapier_typeform_account.png)
-
-"+ Connect a New Account" 버튼을 누르면 아래와 같은 화면이 나옵니다.
-
-![typeform_2](/images/integrations/zapier_typeform_login.png)
-
-사용하실 Typeform 계정으로 로그인하시면 아래와 같은 화면이 나오고 "Accept" 버튼을 눌러주시면 됩니다.
-
-![typeform_2](/images/integrations/zapier_typeform_login2.png)
-
-새로 연결한 계정을 선택한 이후 "Continue" 버튼을 눌러 Apollo 연결이 잘 됐는지 확인하는 Test 단계로 넘어가면 됩니다.
-
-![typeform_2](/images/integrations/zapier_typeform_account2.png)
-
-다음으로는 미리 Typeform에서 만들어 주신 설문조사 양식 중 하나를 선택하고 "Continue" 버튼을 누르면 됩니다.
-
-![typeform_2](/images/integrations/zapier_typeform_select_form.png)
-
-만약 선택한 설문조사 양식에 입력된 정보가 없다면 연결이 잘 되어 있어도 에러 메세지가 나올 수 있습니다. 그때는 Skip 해주셔도 됩니다. 이전에 입력된 고객 정보가 있다면 아래의 이미지처럼 연결이 잘 됐다는 메세지가 나옵니다.
-
-![typeform_2](/images/integrations/zapier_typeform_test_trigger_successful.png)
-
-## 3. Action 선택 및 연결하기
-
-다음 화면에서는 Typeform과 마찬가지로 Relate 계정을 연결해야 합니다. Relate를 연결할 때는 API Key를 활용해야 합니다. 만약 이미 Relate와 Zapier를 연결해 두었다면, 만들어진 계정을 선택하면 되고, 새로 만들어야 하는 경우 아래 스크린샷처럼 "+ Connect a New Account" 버튼을 누르면 됩니다.
-
-![typeform_3](/images/integrations/zapier_relate_apikey_connect.png)
-
-Relate API Key는 [Admin Page](https://admin.relate.so/) Integrations → Zapier → API Keys로 들어가면 찾을 수 있습니다. 새로운 API Key를 생성하면 됩니다.
-
-![typeform_3](/images/integrations/relate_apikey_generate.png)
-
-Key는 보안을 위해 다시 보이지 않기 때문에 키를 복사하신 다음 "I stored this key"를 눌러서 저장합니다.
-
-![typeform_3](/images/integrations/relate_apikey_generate2.png)
-
-다시 Zapier 화면으로 돌아가서 Relate API Key를 입력하면 됩니다.
-
-![typeform_3](/images/integrations/zapier_relate_api_connect.png)
-
-Relate 연결이 끝나면 Typeform에서 확보한 정보를 Relate에 어떻게 추가할 것인지 정해야 합니다. 가장 중요한 것은, Zapier를 통해 Relate에 고객 정보를 자동으로 추가하기 위해서는 3가지 데이터가 필요합니다.
-
-- Company Name
-- Contact Name
-- Contact Email
-
-![typeform_3](/images/integrations/zapier_relate_action_setups3.png)
-
-3가지 필수 정보에 해당하는 것들의 위의 스크린샷처럼 선택해주면 됩니다. 그 이외에 필요한 정보들도 각 데이터 필드에 선택하면 됩니다.
-
-Good Practice 중 하나는 Note 란에 들어오는 모든 데이터를 넣어두시면, 당장 Relate Lead/Contact 정보로 넣지 못하더라도 Relate CRM에서 데이터를 볼 수 있게 됩니다.
-
-또한, Note는 Inbox로도 새롭게 들어오게 되기 때문에 일종의 리마인더 (새로운 Lead가 생성되었다는 리마인더)나 To-Do 아이템으로 쓰시기에 좋습니다.
-
-Deal의 경우 빈칸으로 두시면 새롭게 Deal이 생성되지 않습니다. 만약 Lead 및 Contact이 생성됨에 따라 Deal도 같이 생성하고자 하신다면 Deal 관련 칸에 정보를 입력하시면 됩니다. (예: Deal Assignee, Deal Status 등)
-
-![typeform_3](/images/integrations/zapier_relate_action_setups4.png)
-
-"Test action" 버튼을 눌러 Test를 진행하면 됩니다. Trigger Test와 마찬가지로 Typeform에 아무런 답변이 없다면, "Skip Test" 버튼을 눌러 넘어가도 됩니다.
-
-![typeform_3](/images/integrations/apollo_8.png)
-
-그 이후 Publish 하면 Typeform + Relate Zap 연동이 마무리됩니다.
-
----
+* 연동하는 계정은 로그인한 계정과 달라고 괜찮습니다.
+* 이 기능을 사용하시면 리멤버에 저장한 명함 정보가 구글 연락처에 자동 추가되며, 명함 정보를 수정할 때에도 연락처가 자동 갱신됩니다.
 
 ### 많이 쓰이는 Relate 연동 템플릿
 
