@@ -14,7 +14,7 @@ sidebarTitle: "Remember"
 
 ## Overview
 
-명함 저장 서비스인 Remember를 활용해서 신규 Lead 정보를 보내고, Relate에서는 신규 Lead를 생성할 수 있습니다.
+명함 저장 서비스인 Remember를 활용해서 신규 Lead 정보를 보내고, Relate에서는 신규 Lead를 생성할 수 있습니다. 리멤버 앱/웹 모두 가능합니다.
 
 Remember + Relate 연동은 Google Contacts과 Zapier를 사용합니다. (링크: [Zapier 가이드](/integrations/zapier))
 
@@ -52,102 +52,119 @@ Zapier를 통해 Typeform과 Relate을 연동하는 방법에 대한 영상입�
 
 ## 1. 리멤버 - 구글 주소록(구글 컨택)에 자동 저장
 
-* 리멤버 앱/웹 모두 가능합니다.
-
 ### 웹(PC)에서 연동하기
 
-![remember 1](/images/integrations/remember 0.png)
+![remember 1](/images/integrations/remember-1.png)
 
 자주 사용하는 소셜 계정 혹은 이메일로 회원가입 후 로그인 해주세요.
 
-![remember 2](/images/integrations/remember 0-1.png)
+![remember 2](/images/integrations/remember-2.png)
 
-우측 상단 프로필을 눌러 **[설정]에서 [구글 주소록 자동저장]**을 눌러서 계정을 연동해주세요.
+우측 상단 프로필을 누르고, **설정-구글 주소록 자동저장**을 선택해 계정을 연동해주세요.
 
-* 연동하는 계정은 로그인한 계정과 달라도 괜찮습니다.
-* 이 기능을 사용하시면 리멤버에 저장한 명함 정보가 구글 연락처에 자동 추가되며, 명함 정보를 수정할 때에도 연락처가 자동 갱신됩니다.
+- 연동하는 계정은 로그인한 계정과 달라도 괜찮습니다.
+- 이 기능을 사용하시면 리멤버에 저장한 명함 정보가 구글 연락처에 자동 추가되며, 명함 정보를 수정할 때에도 연락처가 자동 갱신됩니다.
 
-![remember 3](/images/integrations/remember 0-2.png)
+![remember 3](/images/integrations/remember-3.png)
 
 원하는 부가 옵션을 설정한 뒤 확인을 누르면 연동이 완료됩니다.
-연락처에 저장되는 이름은 '이름'만 설정해두어야 Relate Contact에 이름이 들어가니 유의해주세요.
+연락처에 저장되는 이름은 `이름만` 설정해두어야 Relate Contact에 이름이 들어가니 유의해주세요.
 
 ### 앱(모바일)에서 연동하기
 
-![remember 4](/images/integrations/remember 0-3.png)
-![remember 5](/images/integrations/remember 0-4.png)
-
 자주 사용하는 소셜 계정 혹은 이메일로 회원가입 후 로그인 해주세요.
 
-![remember 6](/images/integrations/remember 0-5.png)
-![remember 7](/images/integrations/remember 7.png)
+![remember 6](/images/integrations/remember-6.png)
+![remember 7](/images/integrations/remember-7.png)
 
-오른쪽 상단 [더보기] 버튼을 누르고, 설정 버튼을 선택합니다.
+메인 화면의 오른쪽 상단 **더보기**를 누르고, **설정**을 선택합니다.
 
-![remember 8](/images/integrations/remember 8.png)
+![remember 8](/images/integrations/remember-8.png)
 
-[휴대폰 연락처에 저장] 버튼을 누릅니다.
+**휴대폰 연락처에 저장**을 누릅니다.
 
-![remember 9](/images/integrations/remember 8-1.png)
-![remember 10](/images/integrations/remember 8-2.png)
+![remember 9](/images/integrations/remember-9.png)
 
-[구글 주소록]을 선택 후, [구글 주소록에 자동 저장] 버튼을 눌러 켭니다.
+**구글 주소록**을 누른 후, **구글 주소록에 자동 저장**을 켭니다.
 
-![remember 11](/images/integrations/remember 8-3.png)
-![remember 12](/images/integrations/remember 8-4.png)
+![remember 11](/images/integrations/remember-11.png)
+![remember 12](/images/integrations/remember-12.png)
 
-연동된 연락처 계정을 확인하고, [저장 옵션 설정] 버튼을 눌러 연동 설정을 완료합니다.
+연동된 연락처 계정을 확인하고, **저장 옵션 설정**을 눌러 연동 설정을 완료합니다.
 
 ## 2. Zapier로 구글 주소록(구글 컨택) - Relate 연결
 
-먼저, Zapier에 로그인 되어 있는 상태에서 왼쪽 상단의 + Create 버튼을 누릅니다.
+![remember 13](/images/integrations/remember-13.png)
+
+먼저, Zapier에 로그인 되어 있는 상태에서 왼쪽 상단의 `+ Create`을 누릅니다.
 이때, Zaps를 선택해야 합니다.
 
-Trigger에서 Google Contact을, Action에서 Relate을 찾아 선택합니다.
+![remember 14](/images/integrations/remember-14.png)
 
-Trigger에서 New Contact or Updated Contact를 누르면, 리멤버에서 등록한 명함이 구글 컨택에 자동으로 등록되거나 연락처가 업데이트 되는 경우 작동한다는 의미입니다.
+### Trigger
 
-Continue를 눌러 다음으로 넘어갑니다.
+- **App**: Google Contacts을 선택합니다.
+- **Trigger event**: New Contact or Updated Contact를 선택합니다. 리멤버에서 등록한 명함이 구글 컨택에 자동으로 등록되거나 연락처가 업데이트 되는 경우 작동한다는 의미입니다.
+- **Account**: 리멤버와 연동한 구글 컨택 계정을 선택합니다.
 
-리멤버와 연동한 구글 컨택 계정을 선택합니다. Continue를 눌러 다음으로 넘어갑니다.
+![remember 15](/images/integrations/remember-15.png)
 
-다음은 Action에서 Event는 Create Org & Contact & Deal & Note를 누르면, 새로운 연락처가 등록될 때 새로운 회사/연락처/딜/노트를 동시에 생성할 수 있습니다.
+### Action
 
-Continue를 눌러 다음으로 넘어갑니다.
+- **App**: Relate을 찾아 선택합니다.
+- **Action event**: Create Org & Contact & Deal & Note를 선택합니다. 새로운 연락처가 등록될 때 새로운 회사/연락처/딜/노트를 동시에 생성할 수 있습니다.
+- **Account**: Relate에서 사용하는 계정을 선택해 연결합니다.
 
-Relate에서 사용하는 계정을 선택해 연결합니다.
-* 여기서 API 키가 없는 경우에는, 아래 가이드라인에 따라 API Key를 생성해주세요.
+(여기서 API Key가 없는 경우에는 아래의 [가이드라인](/integrations/remember#api-key)에 따라 API Key를 생성해주세요.)
 
-### API Key 생성하는 방법
+모든 선택을 완료했다면, Continue 버튼을 누릅니다.
 
-사용하는 워크스페이스에서 왼쪽 상단 로고를 눌러 Workspace Settings를 누릅니다.
+![remember 16](/images/integrations/remember-16.png)
 
-Integrations를 누르고 Zapier를 눌러주세요.
-
-API Key가 없는 경우에는 Create a new API Key를 눌러 생성합니다.
-
-API Key 이름을 작성해 Generate 버튼을 누릅니다.
-
-API 키를 Copy 버튼을 눌러 복사합니다. 그리고 I stored this key를 눌러 저장해주세요.
-저장을 안 하고 나가는 경우, Key를 사용할 수 없습니다.
-
-Zapier로 돌아와 API Key를 붙여넣습니다.
-
-Action에서는 필수로 받아야 하는 정보의 구글 컨택 데이터를 선택합니다.
+다음 단계에서, **필수로 받아야 하는 정보의 구글 컨택 데이터**를 선택합니다.
 
 구글 컨택에 데이터가 있는 경우에 예시로 데이터가 나오니, 1개의 테스트할 명함을 리멤버에 추가한 후 진행해주세요.
 
-테스트 데이터로 테스트를 진행해 Relate과 연동이 되는지 확인합니다.
+![remember 17](/images/integrations/remember-17.png)
 
-새로운 Organization과 Contact이 생성된 것을 확인할 수 있습니다.
-이미 있는 이메일은 중복으로 생성되지 않으니 유의해주세요.
+Continue를 눌러 테스트로 넘어갑니다. 테스트 데이터로 테스트를 진행해 Relate과 연동이 되는지 확인합니다.
 
-연동이 확인되었다면 Publish 버튼을 눌러 배포해주시면 연동이 완료됩니다.
-버전명을 설정해 수정/업데이트를 관리하시면 됩니다.
+![remember 18](/images/integrations/remember-18.png)
+
+새로운 Organization과 Contact이 생성된 것을 확인할 수 있습니다. 이때, 이미 있는 이메일은 중복으로 생성되지 않으니 유의해주세요.
+
+연동이 확인되었다면 `Publish` 버튼을 눌러 배포해주시면 연동이 완료됩니다. 버전명을 설정해 수정/업데이트를 관리하시면 됩니다.
+
+### API Key 생성하기
+
+![remember 16](/images/integrations/remember-api-19.png)
+
+사용하는 워크스페이스에서 왼쪽 상단 로고를 눌러 `Workspace Settings`를 선택합니다.
+
+![remember 17](/images/integrations/remember-api-20.png)
+
+Integrations를 누르고 Zapier를 선택해주세요.
+
+![remember 18](/images/integrations/remember-api-21.png)
+
+API Key가 없는 경우에는 `Create a new API Key`를 눌러 생성합니다.
+
+![remember 19](/images/integrations/remember-api-22.png)
+
+API Key 이름을 작성해 `Generate`을 누릅니다.
+
+![remember 20](/images/integrations/remember-api-23.png)
+
+API 키는 `Copy`를 눌러 복사합니다. 그리고 `I stored this key`를 선택해 저장합니다.
+저장을 안 하고 나가는 경우, Key를 사용할 수 없습니다.
+
+![remember 21](/images/integrations/remember-api-24.png)
+
+Zapier로 돌아와 API Key를 붙여넣습니다.
 
 ---
 
-### 많이 쓰이는 Relate 연동 템플릿
+## 많이 쓰이는 Relate 연동 템플릿
 
 <zapier-zap-templates
 apps="relate"
