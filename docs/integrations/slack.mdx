@@ -1,30 +1,58 @@
 ---
-title: "슬랙(Slack) + Relate"
-description: "이 가이드는 Slack과 Relate을 연동하는 방법에 대해 설명합니다."
+title: "Relate + Slack 연동"
+description: "Relate 워크스페이스의 알림을 Slack에서 실시간으로 받아보고 업무 효율 높이기"
 sidebarTitle: "Slack"
-"og:title": "Slack + Relate 연동하기 | Relate Product Guide"
-"og:description": "이 가이드는 Slack과 Relate을 연동하는 방법에 대해 설명합니다."
+"og:title": "Relate + Slack 연동 | Relate Product Guide"
+"og:description": "Relate 워크스페이스의 알림을 Slack에서 실시간으로 받아보고 업무 효율 높이기"
 "article:tag": "Integration"
-"twitter:title": "Slack + Relate 연동하기 | Relate Product Guide"
-"twitter:description": "이 가이드는 Slack과 Relate을 연동하는 방법에 대해 설명합니다."
+"twitter:title": "Relate + Slack 연동 | Relate Product Guide"
+"twitter:description": "Relate 워크스페이스의 알림을 Slack에서 실시간으로 받아보고 업무 효율 높이기"
 ---
 
-<script type="module" src="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js"></script>
-<link rel="stylesheet" href="https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css"/>
+![slack](/images/integrations/slack.png)
 
 ## Overview
 
-Relate에 남긴 미팅 노트를 자동으로 슬랙으로 공유할 수 있습니다.
+[Relate](https://www.relate.so/)와 Slack을 연동하면 [Organizations](/features/organizations), [Deals](/features/deals), [Notes](features/notes) 등과 관련된 중요한 알림 사항을 실시간으로 Slack 채널로 보낼 수 있습니다. Slack에서 팀과 협업하며 Relate에서 CRM 활동을 관리하고 있다면, 두 툴의 연동을 통해 모든 업데이트를 한 곳에서 확인하세요.
 
-## How it works
+Relate + Slack 연동의 장점
 
-Slack + Relate 연동은 Zapier를 사용합니다. (링크: [Zapier 가이드](/integrations/zapier))
+- Slack으로 주요 업데이트 사항을 실시간으로 받아 보고, 알림을 클릭해 해당 내용을 Relate에서 바로 확인할 수 있어 Relate를 더욱 효율적으로 활용할 수 있어요.
+- Relate 알림 내용을 기반으로 Slack에서 바로 팀과 대화하고 협업할 수 있어요.
 
-[Slack + Relate 연동 재피어 템플릿 사용하기](https://zapier.com/app/editor/template/1025541)
+## 연동하기
 
-<zapier-zap-templates
-  ids="1025541"
-  limit="5"
-  use-this-zap="show"
-  theme="auto"
-></zapier-zap-templates>
+1. Slack과 연결하려는 Relate 워크스페이스에 접속하세요. 최초 연동을 위해서는 Relate 워크스페이스의 Admin이어야 합니다.
+2. Relate 앱 왼쪽 상단의 워크스페이스 이름을 클릭하세요.
+3. 드롭다운 메뉴에서 **Manage workspace > Integrations > Slack**으로 이동하면 브라우저에서 Slack 연동 페이지가 열립니다.
+
+<Tip>**Settings >** **Team notifications**(퍼스널 워크스페이스일 경우 **Notifications**)에서 `Connect` 버튼을 클릭해도 같은 페이지로 이동합니다.</Tip>
+
+4. `Connect` 버튼을 클릭하고 연동을 시작하세요.
+5. 연결하고 싶은 Slack 워크스페이스를 선택하세요. 연결 권한이 없는 경우, Slack 워크스페이스 소유자에게 문의하세요.
+6. `Allow` 버튼을 클릭하고 연동을 위한 액세스 권한을 승인하세요.
+7. 연동이 완료되면 Relate 워크스페이스의 알림이 지정된 Slack 채널에 전송되고, Slack에서 Relate의 관련 콘텐츠로 바로 이동할 수도 있습니다.
+
+## 알림 유형
+
+Relate + Slack 연동은 팀의 니즈에 따라 업무 효율을 높일 수 있는 두 가지 알림 유형을 제공합니다.
+
+### Team Notifications
+
+![Team Notifications](/images/integrations/teamnotifications.png)
+
+Relate의 업데이트를 정해진 Slack 채널로 전송하여 팀의 업무 진행 상황을 파악할 수 있도록 도와줍니다.
+
+- 특징: 모든 워크스페이스 멤버에게 설정이 적용되며 팀 전체의 업데이트, 딜 진행 상황, 혹은 중요한 노트를 공유하는 데 적합합니다.
+- 장점: 팀원들이 중요한 정보를 놓치지 않도록 알릴 수 있고, 업무의 투명성을 강화합니다.
+
+### Personal Notifications
+
+![Personal Notifications](/images/integrations/personalnotifications.png)
+
+워크스페이스의 각 멤버는 Personal notifications 설정으로 개인에게 중요한 사항을 Slack 다이렉트 메시지로 따로 받아볼 수 있습니다.
+
+- 특징: 개인 업무나 논의 중인 코멘트 스레드에 대한 내용을 알림으로 받아보는 데 적합합니다.
+- 장점: 각자의 업무나 우선순위에 집중할 수 있도록 해줍니다.
+
+Slack과 [Relate](https://www.relate.so/)을 연동하고 팀의 필요에 따른 알림을 설정하여 더 효율적으로, 원활하게 협업하세요.
