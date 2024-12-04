@@ -1,49 +1,114 @@
 ---
 title: "Custom Fields"
-description: "Relate에서 커스텀 필드 사용하는 방법"
+description: "Relate에서 커스텀 필드를 생성하고 관리하는 방법을 소개합니다."
 sidebarTitle: "Custom Fields"
 "og:title": "Custom Fields | Relate Product Guide"
-"og:description": "Relate에서 커스텀 필드 사용하는 방법"
+"og:description": "Relate에서 커스텀 필드를 생성하고 관리하는 방법을 소개합니다."
 "article:tag": "Product Guide"
 "twitter:title": "Custom Fields | Relate Product Guide"
-"twitter:description": "Relate에서 커스텀 필드 사용하는 방법"
+"twitter:description": "Relate에서 커스텀 필드를 생성하고 관리하는 방법을 소개합니다."
 ---
 
-## Custom Field
+## Overview
+
+Relate에서는 기본적으로 제공하는 필드 외에도 커스텀 필드를 생성하여 사용할 수 있습니다. 커스텀 필드는 고객에 대한 다양한 정보를 수집하고 관리하는데 도움을 줍니다.
+
+## Custom Field 만들기
 
 ![Add Contact Custom Field](/images/features/add-contact-custom-field.png)
 
-위 스크린샷 처럼 Organization (Lead), People (Contact), Deal 페이지에서 다양한 형식의 custom field들을 추가할 수 있습니다.
+커스텀 필드를 만들기 위해서는 먼저 Relate 앱에서 세팅페이지로 진입해야 합니다. 세팅페이지에서는 Workspace > Settings > Records 메뉴에 들어가서 커스텀 필드를 생성할 수 있고, 앱내에서 단축키 `Cmd+,` (macOS) 또는 `Ctrl+,` (Windows)를 눌러 세팅페이지로 바로 이동할 수 있습니다.
 
-Custom Field 설정은 Relate 앱내에서 워크스페이스 일립시스(⋅⋅⋅)를 누르면 나오는 메뉴에서 `Custom fields` 에 들어가서 하실 수 있습니다.
+Relate에서는 총 3가지 타입의 커스텀 필드를 생성하고 관리할 수 있습니다.
 
-![Custom fields](/images/features/custom-field.png)
+1. Organization
+2. Contacts
+3. Processes
+4. Lists
 
-Custom Field 설정 페이지 진입은 브라우저에서 세팅 페이지로 바로 가셔도 보입니다.
+Organization과 Contacts는 기본으로 제공되는 Record Type이며, Processes와 Lists는 Organization과 Contacts를 프로세스나 리스트를 통해 관리할 수 있도록 도와주는 기능으로 Process와 List에 커스텀 필드를 만들기 위해서는 먼저 Process나 List를 생성해야 합니다.
 
-![Manage Custom Fields in Company](/images/features/manage-custom-fields-in-company.png)
+### Organization/Contacts 커스텀 필드
+
+![Organization Custom Field](/images/features/organization-custom-field.png)
+
+### Processes/Lists 커스텀 필드
+
+![Process Custom Field](/images/features/process-custom-field.png)
+
+Process와 List를 만든 후, `Custom fields` 버튼을 눌러 커스텀 필드를 생성할 수 있습니다.
+
+## Custom Field 관리하기
+
+### 디폴트 필드(Default Fields)
+
+Relate에는 각 Record Type에 따라 기본적으로 제공되는 필드들이 있습니다. 이러한 필드들은 커스텀 필드를 생성하는 과정에서 디폴트로 제공되는 필드들이며, 삭제할 수 없습니다.
+
+<AccordionGroup>
+  <Accordion title="Organization">
+    | Name        | Type | Description                                                      |
+    |-------------|------|------------------------------------------------------------------|
+    | Name        | Text | Organization의 이름                                               |
+    | Domain      | Text | Organization의 URL 도메인 주소로, 1개 이상 등록 가능                |
+    | Description | Text | Organization의 설명으로, 다중 라인 텍스트 형식으로 입력 가능        |
+    | Manager     | User | Organization의 담당자로, 우리 워크스페이스의 유저를 연결할 수 있습니다. |
+
+  </Accordion>
+
+  <Accordion title="Contact">
+    | Name        | Type | Description                                                      |
+    |-------------|------|------------------------------------------------------------------|
+    | Name        | Text | Contact의 이름                                               |
+    | Email       | Text | Contact의 이메일 주소              |
+    | Title       | Text | Contact의 직책으로, 한 줄 텍스트 형식으로 입력 가능        |
+    | Phone number | Text | Contact의 전화번호로, 한 줄 텍스트 형식으로 입력 가능        |
+  </Accordion>
+
+  <Accordion title="Processes & Lists">
+    프로세스와 리스트는 디폴트 필드가 없습니다.
+  </Accordion>
+</AccordionGroup>
 
 ## Custom Field 종류
 
-| Field Data Type    | Note                                                                                                                                                                              |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Text               | 일반 텍스트 형식을 지원합니다. 한 줄짜리 짧은 설명을 남기기에 좋습니다.                                                                                                           |
-| Multi-line text    | 한 줄 이상의 텍스트 형식을 지원합니다. 긴 설명을 남기기에 적합합니다.                                                                                                             |
-| Number             | 숫자 형식입니다.                                                                                                                                                                  |
-| Date               | 날짜를 표시할 수 있습니다.                                                                                                                                                        |
-| Datetime           | 날짜와 시간을 표시할 수 있습니다.                                                                                                                                                 |
-| Select             | 데이터 입력시 드롭다운에서 선택할 옵션을 입력할 수 있습니다. 데이터는 쉼표(,)로 구분합니다.<br /><br />1개 이상의 옵션 선택을 원할시에는 `Accept multiple values`에 체크해주세요. |
-| Resource: Users    | 우리 워크스페이스의 유저를 연결할 수 있습니다. 담당자를 지정하는데 적합합니다.                                                                                                    |
-| Resource: Contacts | 해당 고객사에 소속되어 있는 컨택을 추가할 수 있습니다.                                                                                                                            |
+| Name     | Note                                                                                    |
+|--------------------|---------------------------------------------------------------------------------------|
+| Text               | 일반 텍스트 형식을 지원합니다. 한 줄짜리 짧은 설명을 남기기에 좋습니다.                |
+| Multi-line text    | 한 줄 이상의 텍스트 형식을 지원합니다. 긴 설명을 남기기에 적합합니다.                  |
+| Number             | 숫자 형식입니다.                                                                        |
+| URL                | URL 형식입니다.                                                                        |
+| Date               | 날짜를 표시할 수 있습니다.                                                              |
+| Datetime           | 날짜와 시간을 표시할 수 있습니다.                                                       |
+| Select             | 데이터 입력시 드롭다운에서 선택할 옵션을 입력할 수 있습니다. 여러개를 선택할 수 있도록 할 수도 있습니다. |
+| User               | 우리 워크스페이스의 유저를 연결할 수 있습니다. 담당자를 지정하는데 적합합니다.         | 
 
-<Note>
-  Custom Field를 잘 활용하면, 우리 회사가 관리하고자 하는 다양한 고객의 정보를
-  수집하고 관리할 수 있게 됩니다. 이후 Deal, URL이나 이메일 주소와 같은 Field도
-  추가될 예정입니다.
-</Note>
+## Custom Field 사용 예시
 
-<Note>
-  Custom Field 수정 사항을 바로 반영해서 보려면 Relate 앱을 새로 실행하거나,
-  이미 실행 중이라면 Ctrl+Shift+R (macOS: Cmd+Shift+R)를 눌러 새로고침을 하면
-  됩니다.
-</Note>
+Custom Field를 잘 활용하면, 우리 회사가 관리하고자 하는 다양한 고객의 정보를 수집하고 관리할 수 있게 됩니다. 특히 고객과의 미팅을 통해 얻는 정보를 기록하고, 이를 통해 영업 기회로 이어지도록 만들 수 있습니다. 예를 들어, [BANT](https://www.relate.kr/docs/wiki/Sales/BANT) 혹은 [MEDDIC](https://www.relate.kr/blog/what-is-meddic/) 프레임워크에 맞는 Custom Field를 만들어 놓으면, 영업 미팅을 진행하면서 파악하는 정보를 빠르게 CRM에 기록할 수 있습니다.
+
+BANT 프레임워크를 예시로 사용해보겠습니다.
+
+BANT에는 Budget, Authority, Need, Time 4가지 요소가 있습니다. 이를 커스텀 필드로 만들어 놓으면, 영업 미팅 시 파악한 정보를 빠르게 기록할 수 있습니다.
+
+- Budget (예산): 이 잠재 고객에게 우리 제품을 구매할 만한 예산이 충분한가?
+- Authority (의사결정 권한): 이 잠재 고객이 다른 이해관계자의 승인 없이도 구매를 결정할 수 있는 권한이 있는가?
+- Need (필요): 이 잠재 고객의 필요(needs)는 무엇인가? 우리 제품으로 해결할 수 있는 문제인가?
+- Timeframe (시기): 지금 도입하는 것이 적절한가?
+
+이에 맞게 커스텀 필드를 아래와 같이 만들어 볼 수 있습니다.
+
+| Field Name | Type | Options                           |
+| -------- | ------------------------------------- |
+| Budget     | Select | `₩0`, `<100만원`, `100-1000만원`, `1000만원+` |
+| Authority      | Text | 의사결정 권한 정보를 입력합니다. |
+| Need   | Select | `정보 취합이 어려움`, `파이프라인 관리`, `아웃바운드 콜드메일`, `마케팅 이메일 대량발송`, `세일즈 팀원 생산성 문제`, `기타 Need` |
+| Other Needs   | Multi-line text | 그외 니즈에 대한 정보 입력 |
+| Timeframe   | Select | `지금 당장 필요`, `1-3개월 내`, `3-6개월 내`, `6개월 이후` |
+
+그외에도 아래와 같은 세팅으로 커스텀 필드 관리를 시작할 수 있습니다.
+
+- Team size: 1-5, 6-10, 11-50, 51-100, 100+
+- Company stage: Startup, SMB, Mid-market, Enterprise
+- Pain point: 비즈니스가 해결해주는 페인포인트로 구성  (multi-select)
+- ICP Fit: Strong, Moderate, Weak
+- Lead type: Outbound, Inbound, Marketing, Product (multi-select)
