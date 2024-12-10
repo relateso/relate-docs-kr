@@ -147,7 +147,8 @@
         "features/custom-fields",
         "features/data-enrichment",
         "features/shortcuts",
-        "features/connect"
+        "features/connect",
+        "features/ai-suggestions"
       ]
     },
     {
