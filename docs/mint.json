@@ -141,8 +141,7 @@
           "pages": [
             "features/search",
             "features/filter-sorter",
-            "features/views",
-            "features/keyboard-shortcuts"
+            "features/views"
           ]
         },
         "features/custom-fields",
