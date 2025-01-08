@@ -453,20 +453,20 @@
       "destination": "/integrations/email"
     },
     {
-      "source": "setup/zapier-integration/what-is-zapier",
+      "source": "/setup/zapier-integration/what-is-zapier",
       "destination": "/integrations/zapier"
     },
     {
-      "source": "setup/zapier-integration/how-to-integrate-with-zapier",
+      "source": "/setup/zapier-integration/how-to-integrate-with-zapier",
       "destination": "/integrations/zapier"
     },
     {
-      "source": "setup/zapier-integration/relate-x-zapier-integration-rules",
+      "source": "/setup/zapier-integration/relate-x-zapier-integration-rules",
       "destination": "/integrations/zapier"
     },
     {
-      "source": "cal/relate-cal",
-      "destination": "features/calendar"
+      "source": "/cal/relate-cal",
+      "destination": "/features/calendar"
     }
   ],
   "footerSocials": {
