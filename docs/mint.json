@@ -466,7 +466,7 @@
     },
     {
       "source": "cal/relate-cal",
-      "destination": "/features/calendar"
+      "destination": "features/calendar"
     }
   ],
   "footerSocials": {
