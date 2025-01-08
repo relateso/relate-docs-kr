@@ -200,7 +200,7 @@
     {
       "group": "Meeting Scheduler",
       "pages": [
-        "cal/relate-cal"
+        "features/calendar"
       ]
     },
     {
@@ -463,6 +463,10 @@
     {
       "source": "setup/zapier-integration/relate-x-zapier-integration-rules",
       "destination": "/integrations/zapier"
+    },
+    {
+      "source": "cal/relate-cal",
+      "destination": "/features/calendar"
     }
   ],
   "footerSocials": {
