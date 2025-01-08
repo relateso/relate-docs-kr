@@ -11,24 +11,29 @@ sidebarTitle: "캠페인(Campaigns)"
 "twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/features/relatecampaigns.png"
 ---
 
-![relate-campaign](/images/features/relatecampaigns.png)
+![relate-campaign 1](/images/features/relatecampaigns.png)
 ## Overview
 
-Relate 캠페인(Campaigns)은 B2B 마케팅 팀을 위한 심플한 이메일 마케팅 솔루션입니다. 캠페인(Campaigns)을 활용해서 잠재 고객과 고객에게 마케팅 이메일을 보내거나, 회사 소식을 공유할 수 있습니다. 캠페인의 핵심 기능은, 노션(Notion)처럼 이메일을 작성할 수 있다는 점입니다. 빠르게 이메일을 노션에서 글을 작성하듯 만들고, 스타일링할 수 있습니다.
+Relate 캠페인(Campaigns)은 B2B 마케팅 팀을 위한 심플한 이메일 마케팅 솔루션입니다.
+캠페인(Campaigns)을 활용해서 잠재 고객과 고객에게 마케팅 이메일을 보내거나, 회사 소식을 공유할 수 있습니다.
+캠페인의 핵심 기능은 노션(Notion)처럼 빠르게 이메일을 작성하고 스타일링할 수 있다는 점입니다.
 
-<Info>현재 Relate 캠페인은 베타 버전으로 제공하고 있습니다. 얼리액세스를 원하실 경우, `we@relate.so`로 문의해주세요.</Info>
+<Note>
+    현재 Relate 캠페인은 베타 버전으로 제공하고 있습니다. **얼리 액세스**(Early access)를 원하실 경우, [여기](https://relate.so/forms/2sm1jd1krxmjgkc8)에서 신청해주세요.
+</Note>
 
-Relate 캠페인의 가장 큰 우선순위는 이메일 전달률(Email Deliverability)입니다. 고객과 사용자들에게 내가 보낸 이메일이 스팸으로 가지 않고, 안전하게 받은편지함에 전달될 수 있도록 모든 테크니컬 셋업을 확인하고 도와드리고 있습니다.
+Relate 캠페인의 가장 큰 우선순위는 이메일 전달률(Email Deliverability)입니다. 고객과 사용자에게 내가 보낸 이메일이 스팸으로 가지 않고, 안전하게 받은편지함(Inbox)에 전달될 수 있도록 모든 테크니컬 셋업을 확인하고 도와드리고 있습니다.
 
 현재 캠페인(Campaigns)은 베타 버전으로 다음의 기능을 갖추고 있습니다. 
 - SPF, DKIM, DMARC, MX 레코드 설정 및 확인을 통한 안정적인 이메일 전달률 확보
 - 커스텀 도메인
-- 이메일 에디터: 마크다운 기반으로 빠르게 이메일을 작성 및 스타이링
+- 프리뷰 (Preview) 텍스트 작성
+- 이메일 에디터: 마크다운 기반으로 빠르게 이메일을 작성 및 스타일링
 - 테스트 발송
 - 리스트를 활용한 대용량 이메일 발송
 - 이메일 캠페인 성과 측정
 
-베타 버전 이후 자동화 기능을 포함한 다양한 기능을 추가할 예정입니다. 
+이후 자동화 기능을 포함한 다양한 기능을 추가할 예정입니다. 
 
 ## How it works
 
@@ -39,63 +44,107 @@ Relate 캠페인의 가장 큰 우선순위는 이메일 전달률(Email Deliver
 
 ### 새로운 캠페인 만들기 (Create a new campaign)
 
-![relate-campaign](/images/features/add-new-campaign.png)
+![relate-campaign 2](/images/features/add-new-campaign.png)
 
-앱내 왼쪽 메뉴 하단에서 `Campaigns`를 클릭해서 캠페인 페이지 진입이 가능합니다. 
+앱내 왼쪽 메뉴 하단에서 `Campaigns`를 통해 캠페인 페이지에 진입합니다. 이후, 상단의 `+ Campaign`을 누르면 새로운 캠페인을 만들 수 있습니다.
 
-상단에 `+ Campaign`을 눌러 새로운 캠페인을 만들 수 있습니다.
+### 이메일 작성하기 (Compose an email)
+#### 프리뷰 텍스트 작성
+![relate-campaign](/images/features/campaign-preview-text.png)
+프리뷰 텍스트는 고객의 받은 편지함에서 제목 다음으로 보이는 한 줄 설명입니다. 이메일 내용을 요약하거나 핵심 주제나 혜택을 강조하는 등의 내용을 작성할 수 있습니다.
+이는 선택 사항이며, 작성하지 않더라도 캠페인을 발송할 수 있습니다.
 
-### 이메일 작성하기 (Composing an email)
+프리뷰 텍스트 작성 여부에 따라 고객의 받은 편지함에 보이는 형태가 조금씩 다릅니다.
 
-![relate-campaign](/images/features/email-editor.png)
+- 작성한 경우: 이메일 **제목 옆에 프리뷰 텍스트**가 표시됩니다.
+    
+    (e.g. Relate 업데이트 소식 안내 - 이번 update를 통해 Relate의 경험이 개선되었습니다.)
 
-캠페인에는 이메일을 작성할 수 있는 에디터가 있습니다. 여기에서 노션(Notion)처럼 이메일을 작성할 수 있습니다. 이메일 에디터 상단에 있는 툴바를 사용해서 텍스트에 다양한 스타일 적용이 가능하고, 이미지 추가, 이미지 리사이징, 이미지 위치 조정도 가능합니다. 이메일을 작성하면서 스타일링 및 버튼/이미지 추가를 하기 위해서는 `/`를 입력하면 메뉴를 확인할 수 있습니다.
+- 작성하지 않은 경우: 이메일 **제목 옆에 이메일 내용의 첫 번째 줄**이 표시됩니다.
+    
+    (e.g. Relate 업데이트 소식 안내 - Hey! Relate 팀 Chris 입니다. 이번 업데이...)
 
-마지막으로 버튼을 활용해서 Call-to-action(CTA) 요소를 추가할 수도 있습니다. 만약 버튼이나 별도의 하이퍼링크 및 링크가 이메일에 포함되는 경우 링크 클릭 여부 확인이 가능합니다. 
 
-### 발송 이메일 주소 및 이름 지정하기 (Specifying sender email address and name)
+#### 이메일 내용 작성
+![relate-campaign 3](/images/features/email-editor.png)
 
-![relate-campaign](/images/features/sender-identification.png)
+캠페인에는 노션(Notion)처럼 이메일을 작성할 수 있는 에디터가 있습니다. 에디터 상단에 있는 툴바를 사용해서 텍스트에 다양한 스타일 적용이 가능하고, 이미지 추가/리사이징/위치 조정도 가능합니다.
+툴바를 직접 선택하지 않더라도, 에디터에서 `/`를 입력하면 텍스트 스타일링, 버튼 및 이미지 추가 메뉴를 확인할 수 있습니다.
 
-이메일을 보내기 전에 발송하는 사람의 이메일 주소와 이름, 그리고 답장을 받을 때의 이메일 주소를 설정해야 합니다.
+마지막으로, 버튼을 활용해 Call-to-action(CTA) 요소도 추가할 수 있습니다. 만약 버튼이나 별도의 하이퍼링크 및 링크가 포함된 경우, 발송 후 metrics 탭에서 이메일 오픈 및 링크별 클릭 여부 확인이 가능합니다. 
 
-### 이메일 Footer 내용 설정하기
-
-Relate 캠페인에서는 모든 이메일에 기본적으로 Footer 를 붙여서 보내게 됩니다. Footer에 들어가야 하는 정보는 다음과 같습니다.
+#### 이메일 Footer 내용 설정
+Relate 캠페인에서는 모든 이메일에 기본적으로 Footer 를 붙여서 보냅니다. Footer에 들어가야 하는 정보는 다음과 같습니다.
 
 1. 구독자가 이 이메일을 수신한 경로 및 이유
 2. 회사 이름
 3. 회사 주소
 4. 구독자가 직접 수신거부 및 구독취소를 할 수 있는 Unsubscribe 버튼
 
-현재 Relate에서는 회사 이름과 회사 주소 등을 자유형식으로 입력하게끔 되어 있습니다. 일반적으로는 회사 이름, 회사 주소 순의 형식을 따릅니다. 아래 예시를 참고해주세요.
+![relate-campaign 4](/images/features/email-footer.png)
 
-![footer-example](/images/features/email-footer.png)
-
+현재 Relate에서는 자유 형식으로 회사 이름과 회사 주소 등을 입력하게 되어 있습니다. 일반적으로, 회사 이름 > 회사 주소 순서를 따릅니다. 위의 예시를 참고해주세요.
 
 #### `Powered by Relate` 버튼 제거하는 방법
+`Powered by Relate`는 유료 plan과 Enterprise Plan에서만 제거가 가능합니다.
+[이곳에서 플랜 변경 및 무료 트라이얼](https://admin.relate.so/workspaces/settings/plans)을 시작하실 수 있습니다.
 
-`Powered by Relate`는 Business Pro와 Enterprise 플랜에서만 제거가 가능합니다. [이곳에서 플랜 변경 및 무료 트라이얼](https://admin.relate.so/workspaces/settings/plans)을 시작하실 수 있습니다.
+### 발송 이메일 주소/이름 및 대상 지정하기 (Specify sender email address, name and recipients)
 
-### 이메일 발송 (Sending an email to recipients)
+![relate-campaign 5](/images/features/sender-identification.png)
 
-이메일 발송하기 전 대상(Recipients)을 선택해야 합니다. 대상은 `Recipients` 밑에 있는 리스트를 선택하면 됩니다. 리스트에 들어 있는 모든 컨택에게 이메일을 보낼 수 있게 됩니다.
+#### 발송 이메일 주소/이름 지정
+이메일을 보내기 전에 발송하는 사람의 이메일 주소와 이름, 그리고 답장을 받을 때의 이메일 주소를 설정해야 합니다.
 
-이메일을 발송할 리스트를 선택했다면 즉시 발송할 것인지(Now), 아니면 미래에 특정 시점에 예약 발송(Later)도 가능합니다. 
+#### 이메일 대상 선택
+Relate에서는 contact list를 기반으로 캠페인을 발송하기 때문에 미리 contact list를 만들어야 합니다.
+List를 만드는 기본적인 방법은 [List를 만드는 방법](https://www.relate.kr/changelog/list-process)에서 확인할 수 있습니다.
 
-#### 테스트 보내보기 (Send a test email)
+이미 가지고 있는 고객 리스트를 Relate에 빠르게 추가하고 싶다면 다음 방법을 참고하시면 됩니다.
+![relate-campaign 6](/images/features/campaign-import-csv.png)
+1. List를 만든 후, `+ Contact` > `+ Import from CSV` 를 선택합니다.
+2. 현재 가지고 있는 고객 CSV 파일을 업로드합니다. CSV 파일을 임포트 하는 자세한 방법은 [임포트 가이드](/setup/import)에서 확인할 수 있습니다.
 
-만약 실제로 이메일을 보냈을 때 의도한 대로 이메일이 발송됐는지 먼저 테스트하고 싶다면 오른쪽 상단에 `Test send`를 눌러 자신, 또는 팀원에게 테스트 이메일을 보낼 수 있습니다. 
+### 이메일 발송하기 (Send an email to recipients)
+Contact list를 만든 다음 `Recipients` 섹션에서 리스트를 선택하면 대상에 추가가 완료되며, 리스트에 들어 있는 모든 컨택에게 이메일이 발송됩니다.
 
-## 캠페인 성과 측정 (Campaign metrics)
+이메일을 발송할 리스트를 선택했다면 즉시 발송할 것인지(Now), 예약 발송(Later)할 것인지 선택 후 오른쪽 상단의 `Send` or `Schedule` 버튼을 누릅니다.
 
-![relate-campaign](/images/features/campaign-metrics.png)
+#### 테스트 보내보기
 
-각 캠페인의 전체 성과 및 개별 담당자 성과 측정이 가능하며, Beta 버전에서 확인할 수 있는 지표는 다음과 같습니다. 
+만약 실제로 이메일을 보냈을 때 의도한 대로 이메일이 발송됐는지 먼저 테스트하고 싶다면 오른쪽 상단에 `Test send`를 눌러 자신, 또는 팀원에게 테스트 이메일을 보낼 수 있습니다.
+
+<Info> 수신 거부(Unsubscribe)는 contact이 없는 테스트 발송(Test send)에서는 사용할 수 없으나, 실제 발송시에는 원활하게 이루어지고 있습니다. 관련한 문의 사항이 있다면 we@relate.so 로 문의해주세요. </Info>
+
+## 캠페인 성과 측정하기 (Campaign metrics)
+
+![relate-campaign 7](/images/features/campaign-metrics.png)
+
+각 캠페인의 전체 성과 및 개별 담당자 성과 측정이 가능하며, 베타 버전에서 확인할 수 있는 지표는 다음과 같습니다. 
 
 - 이메일 발송 개수
-- 캠페인 전체 오픈율, 클릭률, 수신 거부 여부
-- 수신자별 수신 여부 (Delivery Status), 오픈 횟수, 클릭 횟수, 수신 거부 여부
+- 캠페인 전체 오픈율, 수신 거부 여부
+- 링크(URL)별 클릭 횟수
+- 수신자별 수신 여부 (Status), 오픈 횟수, 클릭 횟수, 수신 거부 여부
+
+### 링크별 클릭 횟수 추적
+이메일에 링크를 추가한 경우, Metrics 탭에서 링크별 클릭 횟수를 표로 확인할 수 있습니다.
+
+![relate-campaign 8](/images/features/campaign-link-metrics.png)
+- Links: 링크별로 번호를 매겨 Links 1, 2, 3 와 같이 이름을 부여합니다. 아래 Recipients 표에서도 동일하게 사용 (e.g. Link 1 clicks) 합니다.
+- URL: 이메일에 추가한 링크를 줄여서 보여줍니다. 만약 전체 링크가 궁금한 경우, 링크 위에 마우스를 호버하여 확인할 수 있습니다.
+- Total clicks: 중복을 포함한 클릭 횟수입니다. 이메일을 받은 고객 1명이 5번을 눌렀다면, 5번이 모두 반영되어 보입니다. 따라서, 전체 대상자의 숫자를 초과할 수 있습니다.
+- Unique clicks: 중복을 포함하지 않는 클릭 횟수입니다. 이메일을 받은 고객 1명이 5번을 눌러도, 1번으로 반영합니다. 따라서, 전체 대상자의 숫자를 넘을 수 없습니다.
+
+### 수신자별 metrics를 활용한 필터 및 추가 액션
+![relate-campaign 9](/images/features/campaign-recipients-metrics.png)
+Recipients 표에서 수신자별 수신 여부 (Status), 오픈 횟수, 링크별 클릭 횟수, 수신 거부 여부 등을 확인할 수 있습니다.
+이를 활용하여 필터한 다음, 아래와 같은 추가 액션을 할 수 있습니다.
+
+- Add to sequence: 시퀀스에 추가하기
+- Add to list: 새로운 리스트를 만들어 다른 캠페인 발송하기
+- Add to process: 프로세스에 추가하기
+
 
 ## Relate Marketing 가격 플랜 안내
 
