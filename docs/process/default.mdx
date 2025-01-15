@@ -1,0 +1,83 @@
+---
+title: "Default Process"
+description: "어디에나 사용할 수 있는 가장 기본적인 프로세스로 세일즈뿐만 아니라 다양한 업무에 사용할 수 있습니다."
+sidebarTitle: "Default Process"
+"og:title": "Default Process | Relate Product Guide"
+"og:description": "어디에나 사용할 수 있는 가장 기본적인 프로세스로 세일즈뿐만 아니라 다양한 업무에 사용할 수 있습니다."
+"og:image": ""
+"article:tag": "Product Guide"
+"twitter:title": "Default Process | Relate Product Guide"
+"twitter:description": "어디에나 사용할 수 있는 가장 기본적인 프로세스로 세일즈뿐만 아니라 다양한 업무에 사용할 수 있습니다."
+"twitter:image": ""
+---
+
+![default 01](/images/features/default-default.png)
+## Overview
+프로세스 (Process)는 세일즈를 포함해 다양한 업무 흐름을 체계적으로 관리할 수 있는 기능입니다.
+각 Entry(= 칸반보드의 카드)는 연결된 Organization/Contact에 대한 영업 기회를 나타냅니다. 한번만 영업하는 것이 아니므로, 한 Organization/Contact은 여러 개의 프로세스를 보유할 수 있습니다.
+
+특히, default process는 영업에 한정되지 않고 보편적으로 사용할 수 있는 템플릿입니다.
+이를 사용해 영업 외에 고객 지원, 마케팅 등 다양한 분야에서 업무 프로세스를 관리할 수 있습니다.
+
+<Tip>
+    프로세스에서 **Entry**란 프로세스에 들어가는 데이터를 의미하며, board view에서 카드 하나가 하나의 엔트리라고 볼 수 있습니다.
+</Tip>
+
+## Basics
+### 1. Default 템플릿 살펴보기
+Default process는 Entry type이 정해져 있지 않아, 원하는 고객 유형에 따라 변경할 수 있습니다.
+
+즉, Organization/Contact 모두 default process로 생성이 가능합니다. 하지만 리스트와 마찬가지로 하나의 프로세스에 두 가지 엔트리 타입이 함께 있을 수는 없습니다.
+
+기본적으로 제공되는 status는 다음과 같습니다.
+- Started: 시작
+- In Progress: 진행 중
+- Completed: 종료 (Won)
+- Canceled: 종료 (Lost)
+
+프로세스를 생성한 다음, Status를 변경이나 추가가 가능합니다. Status에 대한 자세한 설명과 관리 방법은 [3. 프로세스 설정하기 > Statuses](/process/default#statuses) 로 이동해 확인하실 수 있습니다.
+
+### 2. 프로세스 페이지 살펴보기
+![default 02](/images/features/default-board.png)
+이름을 입력해서 프로세스를 생성하면, 사진과 같이 status가 컬럼으로 나뉘어 칸반보드 형태로 표시됩니다. Organization/Contact을 프로세스에 추가하면 카드 형식으로 나타나며, 드래그 앤 드롭으로 status를 자유롭게 변경할 수 있습니다.
+만약 리스트 형식으로 보고 싶다면, 상단의 `List` 버튼을 클릭하여 확인할 수 있습니다.
+
+Organization/Contact을 프로세스에 추가하는 방식은 리스트에 추가하는 방식과 동일합니다.
+또한, 해당 프로세스에만 적용되는 커스텀 필드를 만드는 방법도 리스트에 커스텀 필드를 추가하는 방식과 동일합니다. 자세한 방법은 [List 가이드 바로가기](/features/lists)에서 확인하실 수 있습니다.
+
+![default 03](/images/features/default-org-detail.png)
+리스트와 동일한 방법 이외에도 2가지 방법으로 프로세스에 추가할 수 있습니다.
+1. Organization 디테일 페이지 > Process 탭에서 이미 만들어진 프로세스에 `+ Add to process` 버튼을 통해 넣기 (위의 사진 참고)
+2. Organization/People 페이지에서 선택 후, 하단의 `Add to process` 버튼을 통해 넣기
+
+마지막으로, 하나의 Organization/Contact을 여러 개의 프로세스에 넣어 따로 관리할 수 있습니다.
+
+### 3. 프로세스 설정하기
+Settings 페이지로 이동 후, 프로세스를 선택하면 General / Custom fields / Statuses 순서로 설정 페이지가 나오는 것을 확인할 수 있습니다.
+
+#### General
+![default 04](/images/features/default-general.png)
+General 페이지는 프로세스와 관련한 전반적인 정보를 관리하는 곳입니다. 이곳에서는 사이드바에 보여지는 이름 (Name) 설정, 프로세스 아카이브/삭제 등을 할 수 있습니다.
+
+![default 05](/images/features/default-identifier.png)
+1. Entry Label은 organization/contact 이외의 단어를 사용해 라벨링하는 역할입니다.
+예를 들어, Prospects를 관리하는 프로세스의 경우, Entry Label을 'Opportunity'라고 붙여 관리할 수 있습니다.
+
+2. Identifier는 각 프로세스별 식별자로, `Identifier + 숫자` (e.g., Deal-1) 형태로 구분됩니다.
+프로세스의 타이틀과 다른 이름으로 식별자를 변경할 수 있기 때문에, 같은 이름을 가진 프로세스를 만들더라도 식별자를 다르게 설정해 관리할 수 있습니다.
+
+#### Custom fields
+해당 프로세스에만 적용되는 커스텀 필드를 생성하고 관리하는 곳입니다. 예를 들어, 아웃바운드를 진행할 때만 필요한 정보가 있다면, 아웃바운드용 프로세스에 커스텀 필드를 설정하여 관리할 수 있습니다.
+
+커스텀 필드를 만드는 방법은 Organization/Contact에서 커스텀 필드를 만드는 방법과 동일합니다. 자세한 방법은 [커스텀 필드 가이드](docs/features/custom-fields)에서 확인하실 수 있습니다.
+
+#### Statuses
+![default 06](/images/features/default-statuses.png)
+프로세스에서 진행 상황을 관리하기 위해 사용하는 status를 생성하고 관리하는 곳입니다.
+
+`+ Add list status`를 통해 추가할 수 있으며, 이미 Entry(카드)가 있는 상태의 경우 삭제는 불가합니다.
+
+Status의 상태에는 3가지 상태가 있습니다.
+- `Active`: **진행 중인 상황**을 나타내며, 어떤 상태(성공/실패)로든 완료되지 않는 단계라면 Active status를 사용하면 됩니다. Default process에서는 Started와 In Progress가 Active에 해당합니다.
+- `Won`: **완료된 단계 중 성공적으로 마무리된 상황**을 나타냅니다. 제품의 고객이 된 상황, 인재 영입을 완료한 상황 등입니다. Default process에서는 Completed가 Won에 해당합니다.
+- `Lost`: **완료된 단계 중 안 좋은 결과로 마무리된 상황**을 나타냅니다. 제품의 고객이 되지 않은 상황, 인재 영입이 되지 않은 채 종료된 상황 등입니다. Default process에서는 Canceled가 Lost에 해당합니다.
