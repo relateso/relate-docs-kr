@@ -168,12 +168,12 @@
       "group": "Processes",
       "pages": [
         "features/processes",
-        "features/default-processes",
+        "features/default-process",
         {
-          "group": "Sales Processes",
+          "group": "Sales Process",
           "pages": [
-            "features/sales-processes",
-            "features/simple-sales-processes"
+            "features/sales-process",
+            "features/simple-sales-process"
           ]
         },
           "features/other-processes"
