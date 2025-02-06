@@ -14,7 +14,7 @@ sidebarTitle: "Relate 모델 배우기"
 ![Relate Main](/images/relate-pipeline.png)
 
 ## Basic concepts
-릴레잇(Relate)은 여러 개의 멀티 워크스페이스를 지원하고 여러 명이 함께 사용하는 멀티 유저 CRM 플랫폼입니다. 각 **워크스페이스**에는 별도의 [Organization](/features/organizations), [People](/features/people), [Deal](/features/deals/)들을 가지고 있습니다.
+릴레잇(Relate)은 여러 개의 멀티 워크스페이스를 지원하고 여러 명이 함께 사용하는 멀티 유저 CRM 플랫폼입니다. 각 **워크스페이스**에는 별도의 [Organization](/features/organizations), [People](/features/people), [Deal](/features/deals/), [Process](/features/processes), [List](/features/lists)들을 가지고 있습니다.
 
 ### Organizations/People
 Organization은 영업 대상의 조직(=회사)입니다. Organization은 잠재고객이 될 수도 있고, 현재 고객, 또는 이전 고객이 될 수도 있습니다.
@@ -66,3 +66,21 @@ Relate에 있는 모델들의 구조를 요약하면 다음과 같습니다:
 - People = 판매 대상 회사에서 일하는 사람.
 - Deal = 영업 기회
 </Info>
+
+### Process (프로세스)
+프로스펙팅 (Prospecting), 파이프라인 (Pipeline) 뿐만 아니라 다양한 업무 흐름을 체계적으로 관리할 수 있도록 프로세스 기능을 제공합니다.
+
+기존의 Deals/Pipeline에서 관리했던 영업 현황과 더불어 투자 (Fundraising), 인재 영입 (Recruiting) 등 일련의 과정이 있는 모든 업무를 관리하고 추적할 수 있습니다.
+이러한 프로세스는 템플릿을 통해 더욱 편리하고 빠르게 만들 수 있습니다.
+![process](/images/features/process-process.png)
+
+영업 팀과 특정 [엔트리(Entry)](/features/processes#1-entry)에 대한 논의가 필요할 때 쉽게 논의하고 관리할 수 있도록 각 엔트리에는 지정 Identifier (e.g. OPS-52) 가 있습니다.
+기본적으로 Identifier는 프로세스를 생성할 당시 선택했던 템플릿에 따라 부여되지만, 설정을 통해 원하는 것으로 변경이 가능합니다.
+
+마지막으로, Settings > Process > General > Connected lists에서 각기 다른 Process를 연결해서 관리할 수 있습니다. 
+(자세한 설명은 [Process 연결하기](/features/processes#process)에서 확인하실 수 있습니다.)
+
+### List (리스트)
+리스트는 목적에 따라 고객을 세분화하여 관리할 수 있도록 도와주는 고객 목록입니다. 잠재 고객, 현재 고객, 이전 고객과 상관 없이 원하는 분류로 리스트를 생성할 수 있습니다.
+
+하나의 예시로, Relate에서는 [캠페인(Campaigns)](/marketing/marketing)을 발송하기 위해서는 수신자 목록으로 Contact list를 선택해야 합니다. 이때, 타겟으로 하는 캠페인 발송자를 리스트로 만들어 지속적으로 관리할 수 있습니다.
