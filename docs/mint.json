@@ -168,15 +168,15 @@
       "group": "Processes",
       "pages": [
         "features/processes",
-        "features/default-process",
+        "features/default-processes",
         {
-          "group": "Sales Process",
+          "group": "세일즈 프로세스",
           "pages": [
             "features/sales-process",
             "features/simple-sales-process"
           ]
         },
-          "features/other-processes"
+          "features/other-process"
           ]
     },
     {

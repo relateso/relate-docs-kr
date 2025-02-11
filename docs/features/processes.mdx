@@ -1,23 +1,26 @@
 ---
 title: "프로세스 (Processes)"
-description: "세일즈뿐만 아니라 투자, 인재 영입 등 현황을 더 쉽게 관리할 수 있습니다."
+description: "프로세스 기능을 통해 영업 파이프라인 뿐만 아니라 투자, 인재 영입 등 현황을 더 쉽게 관리할 수 있습니다."
 sidebarTitle: "프로세스 (Processes)"
 "og:title": "프로세스 (Processes) | Relate Product Guide"
-"og:description": "세일즈뿐만 아니라 투자, 인재 영입 등 현황을 더 쉽게 관리할 수 있습니다."
+"og:description": "프로세스 기능을 통해 영업 파이프라인 뿐만 아니라 투자, 인재 영입 등 현황을 더 쉽게 관리할 수 있습니다."
 "og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/relate-main.png"
 "article:tag": "Product Guide"
 "twitter:title": "프로세스 (Processes) | Relate Product Guide"
-"twitter:description": "세일즈뿐만 아니라 투자, 인재 영입 등 현황을 더 쉽게 관리할 수 있습니다."
+"twitter:description": "프로세스 기능을 통해 영업 파이프라인 뿐만 아니라 투자, 인재 영입 등 현황을 더 쉽게 관리할 수 있습니다."
 "twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/relate-main.png"
 ---
 ![process 01](/images/features/process-process.png)
 ## Overview
-프로세스(Processes)는 세일즈를 포함해 다양한 업무 흐름을 체계적으로 관리할 수 있는 기능입니다.
+프로세스(Processes)는 영업 파이프라인 관리를 포함해 다양한 업무 흐름을 체계적으로 관리할 수 있는 기능입니다.
 
-각 [엔트리(Entry)](/features/processes#1-entry)는 연결된 Organization/Contact에 대한 영업 기회를 나타냅니다.
-한번만 영업하는 것이 아니므로, 한 Organization/Contact은 여러 개의 프로세스를 보유할 수 있습니다.
+업무 흐름상 Organization 또는 Contact의 상태를 관리해야 할 때 주로 사용할 수 있습니다. 예를 들면, 영업 파이프라인의 경우 여러 영업 기회(Opportunity)들을 한 프로세스에서 관리할 수 있습니다.
 
-또한, 템플릿을 통해 더욱 편리하고 빠르게 프로세스를 만들 수 있습니다.
+각 ["엔트리(Entry)""](/features/processes#1-entry)는 연결된 Organization/Contact에 대한 영업 기회를 나타냅니다.
+
+한번만 영업하는 것이 아니므로, 한 Organization/Contact은 여러 개의 엔트리를 보유할 수 있습니다.
+
+또한, 템플릿을 통해 더욱 편리하고 빠르게 프로세스를 만들 수 있습니다:
 
 <Tip>
 현재 Relate에서 제공하는 프로세스 템플릿은 다음과 같습니다.
@@ -29,21 +32,32 @@ sidebarTitle: "프로세스 (Processes)"
 
 ## Basics
 ### 1. 엔트리 (Entry) 란?
-프로세스에서 **엔트리**(**Entry**)란 프로세스에 들어가는 데이터를 의미하며, Organization/Contact의 정보는 프로세스 내에서 하나의 엔트리로 관리됩니다.
-즉, 프로세스의 board view에서 카드 하나가 하나의 엔트리라고 볼 수 있습니다.
+**엔트리**(**Entry**)란 프로세스에 들어가는 단위를 말하며, Organization/Contact의 정보는 프로세스 내에서 하나의 엔트리로 관리됩니다.
+
+즉, 프로세스의 보드 뷰(Board View)에서 카드 하나가 하나의 엔트리라고 볼 수 있습니다.
+
 ![process 02](/images/features/process-entry.png)
-이들은 Organization/Contact 정보 이외에도 각 프로세스에 특화된 정보 (e.g., Assignee, Value, Status 등) 를 가지고 있기 때문에 엔트리라는 또 다른 형태로 부르고, 관리합니다.
 
-### 2. 프로세스 페이지 살펴보기
+엔트리는 Organization/Contact 정보 이외에도 각 프로세스에 특화된 정보 (e.g., Assignee, Value, Status 등) 를 가지고 있습니다.
+
+각 엔트리마다 고유의 번호가 지정됩니다. (예: OPP-52, OPP-53, OPP-54...) 엔트리 고유 번호 앞에 오는 알파벳은 세팅(단축키: `Cmd+,`)페이지에서 설정할 수 있습니다.
+
+### 2. 프로세스 살펴보기
+
 ![process 03](/images/features/default-board.png)
-프로세스를 생성하면, 사진과 같이 status가 컬럼으로 나뉘어 칸반보드 형태로 표시됩니다. Organization/Contact을 프로세스에 추가하면 카드 형식으로 나타나며, 드래그 앤 드롭으로 status를 자유롭게 변경할 수 있습니다.
-만약 리스트 형식으로 보고 싶다면, 상단의 `List` 버튼을 클릭하여 확인할 수 있습니다.
 
-Organization/Contact을 프로세스에 추가하는 방식은 리스트에 추가하는 방식과 동일합니다.
-또한, 해당 프로세스에만 적용되는 커스텀 필드를 만드는 방법도 리스트에 커스텀 필드를 추가하는 방식과 동일합니다. 자세한 방법은 [List 가이드](/features/lists)에서 확인하실 수 있습니다.
+프로세스를 생성하면, 사진과 같이 Status가 칼럼으로 나뉘어 칸반 보드 형태로 표시됩니다. Organization이나 Contact을 엔트리로 만들어 프로세스에 추가하면 카드 형식으로 나타나며, 드래그 앤 드롭으로 Status를 자유롭게 변경할 수 있습니다.
+
+만약 보드가 아닌 리스트 형식으로 보고 싶다면, 상단의 `List` 버튼을 클릭하여 확인할 수 있습니다.
+
+Organization/Contact 엔트리를 프로세스에 추가하는 방식은 리스트에 추가하는 방식과 동일합니다.
+
+#### 특정 프로세스에만 적용되는 커스텀 필드 만들기
+또한 해당 프로세스에만 적용되는 커스텀 필드를 만드는 방법도 리스트에 커스텀 필드를 추가하는 방식과 동일합니다. 자세한 방법은 [List 가이드](/features/lists)에서 확인하실 수 있습니다.
 
 ![process 04](/images/features/default-org-detail.png)
 리스트와 동일한 방법 이외에도 2가지 방법으로 프로세스에 추가할 수 있습니다.
+
 1. Organization 디테일 페이지 > Process 탭에서 이미 만들어진 프로세스에 `+ Add to process` 버튼을 통해 넣기 (위의 사진 참고)
 2. Organization/People 페이지에서 선택 후, 하단의 `Add to process` 버튼을 통해 넣기
 
@@ -58,15 +72,21 @@ General 페이지는 프로세스와 관련한 전반적인 정보를 관리하�
 
 ![process 06](/images/features/default-identifier.png)
 1. Entry Label은 organization/contact 이외의 단어를 사용해 라벨링하는 역할입니다.
+
 예를 들어, Prospects를 관리하는 프로세스의 경우, Entry Label을 'Opportunity'라고 붙여 관리할 수 있습니다.
 
 2. Identifier는 각 프로세스별 식별자로, `Identifier + 숫자` (e.g., Deal-1) 형태로 구분됩니다.
+
 프로세스의 타이틀과 다른 이름으로 식별자를 변경할 수 있기 때문에, 같은 이름을 가진 프로세스를 만들더라도 식별자를 다르게 설정해 관리할 수 있습니다.
 
 #### Process 연결하기
+
 Process는 Settings > Process > General > Connected lists에서 연결하고 관리할 수 있습니다.
+
 Connected lists는 현재 내가 들어와 있는 프로세스를 기준으로, 이곳에 연결하고자 하는 next lists를 설정하게 됩니다.
+
 ![sales 08](/images/features/sales-connected-next.png)
+
 Next lists의 옆에 있는 `Add connection`을 누르면, 지금 내가 들어와 있는 프로세스의 어떤 status에서 어느 다른 프로세스의 status로 보낼지 선택할 수 있습니다.
 
 또한, 하나의 프로세스에 여러 개의 프로세스를 연결할 수 있습니다. 단, 이미 다른 곳에 연결되어 있는 status를 시작점으로 하거나, 이미 연결된 status를 도착점으로 선택할 수 없습니다.
@@ -74,11 +94,13 @@ Next lists의 옆에 있는 `Add connection`을 누르면, 지금 내가 들어�
 주로, Prospects에서 Qualified가 되었을 때, Pipeline의 첫 단계로 이동시켜 그곳에서 영업을 계속할 수 있도록 하기 위해 사용합니다.
 
 #### Custom fields
+
 해당 프로세스에만 적용되는 커스텀 필드를 생성하고 관리하는 곳입니다. 예를 들어, 아웃바운드를 진행할 때만 필요한 정보가 있다면, 아웃바운드용 프로세스에 커스텀 필드를 설정하여 관리할 수 있습니다.
 
 커스텀 필드를 만드는 방법은 Organization/Contact에서 커스텀 필드를 만드는 방법과 동일합니다. 자세한 방법은 [커스텀 필드 가이드](/features/custom-fields)에서 확인하실 수 있습니다.
 
 #### Statuses
+
 ![process 07](/images/features/default-statuses.png)
 프로세스에서 진행 상황을 관리하기 위해 사용하는 status를 생성하고 관리하는 곳입니다.
 
