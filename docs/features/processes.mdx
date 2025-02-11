@@ -63,6 +63,16 @@ General 페이지는 프로세스와 관련한 전반적인 정보를 관리하�
 2. Identifier는 각 프로세스별 식별자로, `Identifier + 숫자` (e.g., Deal-1) 형태로 구분됩니다.
 프로세스의 타이틀과 다른 이름으로 식별자를 변경할 수 있기 때문에, 같은 이름을 가진 프로세스를 만들더라도 식별자를 다르게 설정해 관리할 수 있습니다.
 
+#### Process 연결하기
+Process는 Settings > Process > General > Connected lists에서 연결하고 관리할 수 있습니다.
+Connected lists는 현재 내가 들어와 있는 프로세스를 기준으로, 이곳에 연결하고자 하는 next lists를 설정하게 됩니다.
+![sales 08](/images/features/sales-connected-next.png)
+Next lists의 옆에 있는 `Add connection`을 누르면, 지금 내가 들어와 있는 프로세스의 어떤 status에서 어느 다른 프로세스의 status로 보낼지 선택할 수 있습니다.
+
+또한, 하나의 프로세스에 여러 개의 프로세스를 연결할 수 있습니다. 단, 이미 다른 곳에 연결되어 있는 status를 시작점으로 하거나, 이미 연결된 status를 도착점으로 선택할 수 없습니다.
+
+주로, Prospects에서 Qualified가 되었을 때, Pipeline의 첫 단계로 이동시켜 그곳에서 영업을 계속할 수 있도록 하기 위해 사용합니다.
+
 #### Custom fields
 해당 프로세스에만 적용되는 커스텀 필드를 생성하고 관리하는 곳입니다. 예를 들어, 아웃바운드를 진행할 때만 필요한 정보가 있다면, 아웃바운드용 프로세스에 커스텀 필드를 설정하여 관리할 수 있습니다.
 

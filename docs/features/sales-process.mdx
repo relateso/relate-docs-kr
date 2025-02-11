@@ -17,7 +17,7 @@ sidebarTitle: "세일즈 프로세스"
 Prospects/Pipeline 두 섹션으로 나뉘어 구성되며, Prospects에서 Prospect status를 통해 잠재 고객을 관리하고, Pipeline에서 실제로 영업 기회를 얻은 고객들을 관리합니다.
 또한, 두 개의 프로세스 모두 Contact을 커스텀 필드로 제공하여 각 영업 과정에서 필요한 연락처를 분리하여 지정할 수 있습니다.
 
-각 프로세스는 별도로 관리할 수 있을 뿐만 아니라 서로 연결하여 사용 가능합니다. 연결 방법은 아래의 [Prospects와 Pipeline 연결하기](/features/sales-processes#prospects-pipeline)에서 확인하실 수 있습니다.
+템플릿을 통해 생성한 두 프로세스는 기본적으로 서로 연결되어져 있습니다. 따라서, Prospects와 Pipeline을 별도로 연결할 필요가 없으나, 필요시 수정이 가능합니다. 자세한 방법은 [Process 연결하기](/features/processes#process)에서 확인하실 수 있습니다.
 
 <Note>
     자세한 프로세스 사용 방법은 [프로세스 (Processes)](/features/processes) 에서 확인하실 수 있습니다.
@@ -91,8 +91,8 @@ Nurturing 상태에 있는 잠재 고객 중에서 상황이 바뀌어서 구매
 즉, Qualified 상태에 있는 잠재 고객들은 바로 매출을 일으킬 수 있는 잠재 고객들이고, 높은 우선순위를 두고 관리해야 합니다.
 
 ![sales 06](/images/features/sales-prospects-qualified.png)
-Prospect status를 Qualified로 바꾸면, 자동으로 파이프라인의 가장 첫 번째 단계로 이동할 수 있도록 프로세스를 연결할 수 있습니다.
-자세한 방법은 아래의 [Prospects와 Pipeline 연결하기](/features/sales-processes#prospects-pipeline)에서 확인하실 수 있습니다.
+세일즈 프로세스 템플릿에서는 Prospect status를 Qualified로 바꾸면, 자동으로 파이프라인의 가장 첫 번째 단계로 이동할 수 있도록 프로세스가 연결되어 있습니다.
+필요시 수정이 가능하며, 자세한 방법은 [Process 연결하기](/features/processes#process)에서 확인하실 수 있습니다.
 
 프로스펙팅 후 검증된 영업 기회만 Qualified로 상태 변경 및 파이프라인에서 관리하는 것이 영업 베스트 프렉티스입니다.
 아직 검증이 충분히 되지 않은 곳들은 Prospect에서, 검증이 된 확실한 영업 기회는 Pipeline에서 관리합니다.
@@ -138,13 +138,3 @@ Settings > Processes > Statuses로 이동하면 status 관리가 가능합니다
 
 대신, 세부적인 영업 활동은 Organization 페이지에서 추적이 가능합니다. 또한, Org 페이지에서 Task 기능을 활용할 수 있습니다.
 </Tip>
-
-### Prospects와 Pipeline 연결하기
-Prospects와 Pipeline은 Settings > Process > General > Connected lists에서 연결하고 관리할 수 있습니다.
-Connected lists는 현재 내가 들어와 있는 프로세스를 기준으로, 이곳에 연결하고자 하는 next lists를 설정하게 됩니다.
-![sales 08](/images/features/sales-connected-next.png)
-Next lists의 옆에 있는 `Add connection`을 누르면, 지금 내가 들어와 있는 프로세스의 어떤 status에서 어느 다른 프로세스의 status로 보낼지 선택할 수 있습니다.
-
-또한, 하나의 프로세스에 여러 개의 프로세스를 연결할 수 있습니다. 단, 이미 다른 곳에 연결되어 있는 status를 시작점으로 하거나, 이미 연결된 status를 도착점으로 선택할 수 없습니다.
-
-주로, Prospects에서 Qualified가 되었을 때, Pipeline의 첫 단계로 이동시켜 그곳에서 영업을 계속할 수 있도록 하기 위해 사용합니다.
