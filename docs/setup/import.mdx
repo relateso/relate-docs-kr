@@ -21,11 +21,11 @@ Relate에 갖고 계신 기존 고객데이터를 쉽고 간편하게 import 할
 
 **1-point guide**
 
-[Admin 페이지](https://admin.relate.so/) 왼쪽 메뉴에서 Import Data를 클릭한 뒤, Import Organizations 또는 Import Deals 버튼을 클릭합니다.
+[Admin 페이지](https://admin.relate.so/) 왼쪽 메뉴에서 Import를 클릭한 뒤, Import Organizations/Deals/Lists/Processes 중 하나를 선택합니다.
 
 ![Relate Data](/images/setup/import_menu1.png)
 
-Relate에 고객 정보를 Import 할 때는 Organization과 People은 Import Organizations에서, Deal은 Import Deals에서 할 수 있습니다.
+Relate에 고객 정보를 Import 할 때는 Organization과 People은 Import Organizations/Lists에서, Deal은 Import Deals에서 할 수 있습니다.
 
 </Check>
 
@@ -43,7 +43,7 @@ Relate의 고객 정보는 3가지로 나눠집니다.
 
 <Info>
 
-Relate 내에서 고객 정보를 분류할 때 Orgnization이 가장 기본이 되며, Person과 Deal은 Organization내에 속하게 되어 있습니다.
+Relate 내에서 고객 정보를 분류할 때 Organization이 가장 기본이 되며, Person과 Deal은 Organization내에 속하게 되어 있습니다.
 
 </Info>
 
@@ -75,7 +75,7 @@ Organization, Person, Deal를 생성할 때 필수 입력 정보와 디폴트 �
 
 ## 임포트(Import) 하기
 
-먼저 Relate의 [관리자 페이지](https://admin.relate.so/)로 이동한 후 왼쪽 메뉴 바에서 `Import Data`를 선택하고, 그 다음 `Import Organizations` 이나 `Import Deals`를 선택하세요.
+먼저 Relate의 [Admin 페이지](https://admin.relate.so/)로 이동한 후 왼쪽 메뉴 바에서 `Import`를 선택하고, 그 다음 임포트를 원하는 종류 (Organizations, Lists, Deals, Processes)를 선택합니다.
 
 ![Relate Data](/images/setup/import_menu1.png)
 
@@ -125,6 +125,25 @@ Relate은 텍스트를 자동으로 매칭함으로 업로드하는 CSV파일내
 `Import Data` 버튼을 클릭하면 확인 메시지가 표시됩니다. 임포트를 확인하면 아래 화면이 표시됩니다.
 
 ![successful Relate Data](/images/setup/import_menu7.png)
+
+## List에서 임포트하기
+![list import 1](/images/setup/import-list-csv.png)
+Contact list의 경우, Admin 페이지를 거치지 않더라도 미리 만들어둔 contact list에서 바로 CSV 파일을 임포트할 수 있습니다.
+Contact list로 들어가 `+Contact` 버튼 > Import from CSV 를 선택합니다.
+
+![list import 2](/images/setup/import-list-options.png)
+이때, Import options라는 모달이 뜨며 다음과 같은 사항을 선택할 수 있습니다. (현재는 필수이며, 추후 선택으로 바뀔 예정입니다.)
+1. **Link to an existing organization with the email domain**: Contact의 이메일 도메인을 확인하여 현재 존재하는 organization의 도메인과 일치한다면 해당 organization에 연결시킵니다.
+2. **Create an organization with the email domain**: Contact의 이메일 도메인과 맞는 organization이 없다면 이메일 도메인에 맞춰 organization을 생성합니다.
+
+이후 과정은 기존 임포트와 동일하므로 [Step 1](/setup/import#step-1-getting-started)부터 동일하게 진행하시면 됩니다.
+
+<Tip>
+List 임포트 과정에서 알아두어야 할 점이 2가지 있습니다.
+1. .CSV 파일에 있는 새로운 organization과 contact은 바로 생성이 완료됩니다.
+2. 기존 organization과 contact이 임포트한 .CSV 파일에 있다면 기존 데이터를 찾아 리스트에 추가하여 중복 생성을 하지 않습니다.
+이때, **기존 데이터에 정보를 업데이트 해서 .CSV 파일을 임포트 하여도 새로 작성한 정보로 자동 업데이트되지 않습니다.**
+</Tip>
 
 ## 링크드인(LinkedIn) 데이터 임포트하기
 현재는 링크드인 API 환경상 자동으로 연락처 데이터를 이관하거나 연동하는 방법은 없습니다. 따라서 한 번 전체 연락처를 Export 한 후에 Relate에 Import한 다음, 이후 주기적으로 싱크를 해주는 방법을 사용할 수 있습니다.
