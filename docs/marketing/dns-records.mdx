@@ -85,3 +85,16 @@ Gsuite 레코드가 이미 Verify된 경우, [이 문서](https://support.google
 레코드 설정 확인은 최대 1시간까지 소요될 수 있습니다.
 
 설정 확인이 완료되면 각 레코드 섹션 옆에 녹색으로 `Verified`가 표시됩니다.
+
+### SPF and DMARC records의 Partially verified 해결하기
+![campaign-record](/images/features/campaign-record-partially.png)
+위 Step을 따라서 레코드 설정을 진행했음에도 불구하고 SPF and DMARC records가 `Partially verified`로 표시되는 경우가 있습니다.
+이 경우 레코드 설정이 완료되지 않은 것이므로 아래와 같은 절차로 레코드 설정 확인 부탁드립니다.
+
+먼저, [DNS CHECKER](https://dnschecker.org/all-dns-records-of-domain.php?query=_dmarc.relate.so&rtype=TXT&dns=google) 사이트에서 **_dmarc.도메인** (e.g. _dmarc.relate.so)을 넣어 TXT type으로 확인합니다.
+
+이곳에서 제공하는 가이드 코드를 그대로 복사해서 Relate에 잘 넣었는지 확인 후, 가이드 코드와 다른 부분이 있다면 수정합니다.
+예를 들어, p=none; 이지만 세미콜론(;)을 넣지 않아 오류가 난 케이스도 있습니다.
+
+
+만약 이러한 방법으로 해결되지 않는다면, we@relate.so 혹은 앱 우측 하단의 문의하기 버튼을 통해 문의 부탁드립니다.
