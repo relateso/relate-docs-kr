@@ -168,7 +168,7 @@
       "group": "Processes",
       "pages": [
         "features/processes",
-        "features/default-processes",
+        "features/default-process",
         {
           "group": "세일즈 프로세스",
           "pages": [
