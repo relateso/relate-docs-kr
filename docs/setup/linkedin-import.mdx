@@ -1,0 +1,54 @@
+---
+title: "링크드인 임포트"
+description: "링크드인 데이터를 CSV 파일로 Relate에 임포트하기"
+sidebarTitle: "링크드인 임포트"
+"og:title": "링크드인 임포트 | Relate Product Guide"
+"og:description": "링크드인 데이터를 CSV 파일로 Relate에 임포트하기"
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/linkedin-import-main.png"
+"article:tag": "Setup"
+"twitter:title": "링크드인 임포트 | Relate Product Guide"
+"twitter:description": "링크드인 데이터를 CSV 파일로 Relate에 임포트하기"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/linkedin-import-main.png"
+---
+![linkedin import 0](/images/setup/linkedin-import-main.png)
+
+## Overview
+현재는 링크드인 API 환경상 자동으로 연락처 데이터를 이관하거나 연동하는 방법은 없습니다. 따라서 한 번 전체 연락처를 Export 한 후에 Relate에 Import한 다음, 이후 주기적으로 싱크를 해주는 방법을 사용할 수 있습니다.
+
+## 링크드인(LinkedIn) 데이터 임포트 하기
+### 1. 링크드인 데이터 익스포트 하기
+
+[이 링크](https://www.linkedin.com/help/recruiter/answer/a566336/export-connections-from-linkedin)에서 링크드인 공식 가이드를 확인하실 수 있습니다.
+
+1. **내 프로필 아이콘**을 누릅니다.
+2. **개인정보 설정** 메뉴를 누릅니다.
+3. 왼쪽 패널에 있는 **데이터 개인정보 설정**을 클릭합니다.
+4. LinkedIn의 개인 정보 이용 안내 메뉴에 있는 **데이터 다운로드**를 클릭합니다.
+5. **Want something in particular? Select the data files you’re most interested in**에 체크합니다.
+6. **Connections**를 체크합니다.
+7. **Request Archive** 버튼을 누릅니다.
+8. 비밀번호를 확인하는 경우, 비밀번호를 입력하고 **Done**을 누릅니다.
+9. 다운로드가 준비되면, **링크드인 계정 이메일 주소**로 **다운로드 링크**가 보내집니다.
+
+링크드인 데이터를 익스포트 할 때, 아래와 같은 몇 가지 주의사항을 확인하여 진행하시면 조금 더 쉽게 익스포트가 가능합니다.
+- 직접 다운로드를 진행해본 결과 연락처 데이터의 양에 따라 시간이 다소 걸립니다.(최소 15분)
+- **익스포트된 데이터에 일부 이메일 주소가 누락되어 있을 수 있습니다. 이는 연결된 사람들 중에서 본인의 이메일 주소를 볼 수 있도록 허용한 경우에만 이메일 주소를 확인할 수 있기 때문입니다.**
+- 단, 이후 Relate에 임포트시 Relate의 Data Enrichment 기능을 통해 높은 확률로 이메일 주소를 Match 할 수 있습니다.
+- CSV 및 vCard 형식은 모든 문자를 지원하지 않습니다. 따라서 확장된 문자 세트를 사용하는 언어(예: 중국어, 일본어, 히브리어)는 지원되지 않습니다.
+- 1촌 관계가 아닌 연락처는 익스포트가 불가능합니다.
+
+### 2. Relate에 링크드인 데이터 임포트하기
+
+링크드인이 보낸 익스포트 다운로드 링크를 통해 데이터 CSV 파일을 받으셨다면, 그 다음으로는 Relate에 데이터를 임포트하는 단계가 남아있습니다.
+
+### 3. 임포트하기
+
+<Warning>
+임포트를 진행할 때 임포트를 하려는 **워크스페이스를 꼭 확인해주세요.**
+</Warning>
+
+1. Relate의 어드민 세팅 페이지에 있는 [임포트 페이지](https://admin.relate.so/workspaces/relate/settings/import)로 갑니다.
+2. **Import Organizations**을 누릅니다.
+3. 각 필드 (e.g., First Name, Last Name, Company)를 Relate의 필드와 잘 매핑합니다.
+4. 임포트 단계를 완료합니다.
+5. Relate 앱에서 임포트가 완료된 것을 확인합니다.

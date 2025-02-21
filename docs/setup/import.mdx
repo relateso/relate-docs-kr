@@ -1,12 +1,12 @@
 ---
-title: "임포트(Import)"
+title: "임포트 하는 법"
 description: "CSV 파일을 Relate에 임포트하기"
-sidebarTitle: "임포트(Import)"
-"og:title": "임포트(Import) | Relate Product Guide"
+sidebarTitle: "임포트 하는 법"
+"og:title": "임포트 하는 법 | Relate Product Guide"
 "og:description": "CSV 파일을 Relate에 임포트하기"
 "og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/import.png"
 "article:tag": "Setup"
-"twitter:title": "임포트(Import) | Relate Product Guide"
+"twitter:title": "임포트 하는 법 | Relate Product Guide"
 "twitter:description": "CSV 파일을 Relate에 임포트하기"
 "twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/import.png"
 ---
@@ -15,80 +15,109 @@ sidebarTitle: "임포트(Import)"
 
 ## Overview
 
-Relate에 갖고 계신 기존 고객데이터를 쉽고 간편하게 import 할 수 있는 방법을 소개합니다.
+Relate에 갖고 계신 기존 고객데이터를 쉽고 간편하게 임포트 할 수 있는 방법을 소개합니다.
 
-<Check>
+<Note>
+  만약 갖고 계신 데이터 양이 많다면, 고객데이터 중 일부를 테스트로 먼저 임포트 해보는 것이 좋습니다.
+  
+  성공적으로 모든 데이터가 들어갔다면 나머지 데이터도 동일한 방식으로 임포트 합니다. 임포트에 실패한 데이터가 있다면 이유를 확인해 남은 고객데이터를 수정 후 다시 임포트를 시도합니다.
+</Note>
 
-**1-point guide**
+<Info>
+  Deal은 상반기 이내로 Process와 통합될 예정입니다. 따라서 임포트 가이드에서는 별도로 Deal 임포트 방법을 언급하지 않습니다. 기본적인 방법은 Process와 동일합니다.
+</Info>
 
-[Admin 페이지](https://admin.relate.so/) 왼쪽 메뉴에서 Import를 클릭한 뒤, Import Organizations/Deals/Lists/Processes 중 하나를 선택합니다.
+## 임포트 전에 알아야 할 것
+### 1. 임포트 데이터 종류
 
-![Relate Data](/images/setup/import_menu1.png)
-
-Relate에 고객 정보를 Import 할 때는 Organization과 People은 Import Organizations/Lists에서, Deal은 Import Deals에서 할 수 있습니다.
-
-</Check>
-
-
-## 임포트 전에 알아야 할 것 (Before Importing)
-
-### 고객 데이터 종류 (Data Types)
-
-Relate의 고객 정보는 3가지로 나눠집니다. 
+Relate에서 임포트할 수 있는 정보는 4가지로 나눠집니다. 
 - [Organization (회사)](https://www.relate.kr/docs/features/organizations)
-- [Person (회사 소속 이해관계자)](https://www.relate.kr/docs/features/people)
-- [Deal (영업 거래)](https://www.relate.kr/docs/features/deal-pipeline)
+- [People (회사 소속 이해관계자, contact)](https://www.relate.kr/docs/features/people)
+- [Process (영업 과정)](https://www.relate.kr/docs/features/processes)
+- [List (고객 목록)](https://www.relate.kr/docs/features/lists)
 
 ![Relate Data](/images/setup/org_person_deal.png)
 
-<Info>
+Relate 내에서 고객 정보를 분류할 때 **Organization이 가장 기본**이 되며, People은 Organization 내에 속하게 되어 있습니다.
+Process와 List는 Organization과 Contact을 활용해 만드는 일련의 딜 성사 과정 및 고객 목록입니다.
 
-Relate 내에서 고객 정보를 분류할 때 Organization이 가장 기본이 되며, Person과 Deal은 Organization내에 속하게 되어 있습니다.
+### 2. 데이터 필드 (Data fields)
+Organization, People, Process, List는 기본적으로 각자의 성격에 맞는 데이터 필드를 가지고 있습니다.
 
-</Info>
+이들이 가지고 있는 디폴트 필드 중 필수로 입력해야 하는 정보가 있습니다.
+1. Organization: Organization name을 반드시 입력해야 합니다.
+2. People: Contact name 또는 Contact Email 둘 중 하나를 반드시 입력해야 합니다.
+3. Process / List: 프로세스와 리스트의 [Entry](/features/processes#1-entry) type(Organization, Contact)을 확인해 1번 혹은 2번을 따릅니다.
 
-### 디폴트 데이터 필드 (Default Data Fields)
+이외에 어떤 디폴트 필드가 있는지 아래에서 간략히 확인하실 수 있습니다.
 
-Organization, Person, Deal를 생성할 때 필수 입력 정보와 디폴트 데이터 필드는 다음과 같습니다.
+<Accordion title="Organization">
+  - **Organization name (필수 입력 정보)**
+  - Domain (Website): 별도로 도메인을 작성하지 않아도 Organization에 속한 Contact이 있다면 해당 고객의 이메일 도메인을 참고해 자동으로 채워줍니다.
+  - Description
+  - Manager (팀 내 고객 담당자)
+</Accordion>
 
-**Organization:**
-- **Organization Name (필수 입력 정보)**
-- Website
-- Description
-- Assignee (팀 내 고객 담당자)
+<Accordion title="People">
+  - Contact name
+  - Email
+  - Title
+  - Phone number
+</Accordion>
 
-**Person:**
-- **Person Name (필수 입력 정보)**
-- Title
-- Email
-- Phone
+<Accordion title="Process">
+  기본적으로 프로세스의 디폴트 필드는 [Entry](/features/processes#1-entry) type이 Organization인지, Contact인지에 따라 디폴트 필드가 다릅니다.
+  
+  따라서, 프로세스 자체가 가지는 디폴트 필드를 소개합니다.
+  - Value
+  - Status
+  - Assignee
+  - Contact
+</Accordion>
 
-**Deal:**
-- **Organization (필수 입력 정보)**
-- Person
-- Value
-- Prospect Status (잠재 고객 상태)
-- Pipeline (2개 이상의 파이프라인을 사용할 경우만 해당)
-- Pipeline Stage
-- Assignee (팀 내 거래 담당자)
-- Notes
+<Accordion title="List">
+  리스트의 데이터 타입인 Organization과 Contact의 디폴트 필드 이외에 리스트가 별개로 가지는 디폴트 필드는 없습니다.
+</Accordion>
 
-## 임포트(Import) 하기
+### 3. 커스텀 필드 (Custom fields) 설정
+본격적으로 임포트를 시작하기 전 해야 하는 일은 커스텀 필드를 설정하고 확인하는 것입니다.
+기본적으로 Relate이 제공하는 디폴트 필드 이외에 임포트 하고 싶은 정보가 있다면, **임포트 이전에 커스텀 필드 만들기**가 선행되어야 합니다.
 
-먼저 Relate의 [Admin 페이지](https://admin.relate.so/)로 이동한 후 왼쪽 메뉴 바에서 `Import`를 선택하고, 그 다음 임포트를 원하는 종류 (Organizations, Lists, Deals, Processes)를 선택합니다.
+만약 필드가 없는 정보가 들어온다면, 해당 필드를 만들어서 정보를 임포트 해주지 않습니다. 따라서 커스텀 필드를 만들지 않고 임포트를 시도한다면, 해당 파일의 임포트는 실패합니다.
+
+[커스텀 필드 가이드](/features/custom-fields)에서 안내하는 방법에 따라 커스텀 필드를 먼저 생성한 다음 임포트 메뉴를 시작하시면 됩니다.
+
+## 임포트 (Import) 하기
+Relate [Admin 페이지](https://admin.relate.so/) > 왼쪽 메뉴 바의 `Import`를 선택하고, 그 다음 임포트를 원하는 종류(Organizations, Lists, Processes)를 선택합니다.
 
 ![Relate Data](/images/setup/import_menu1.png)
 
-### Step 1. Getting Started
-가져올 수 있는 .CSV 파일이 이미 준비되어 있다면 바로 [Step 2](/setup/import#step-2)로 건너뛸 수 있습니다.
+만약 Contact을 등록하고 싶다면, 아래 두 가지 중 하나의 방법을 선택할 수 있습니다.
+1. [Import Organizations](/setup/import#import-organizations-contact): **Organization과 Contact을 함께 등록**할 때 주로 사용할 수 있습니다. (Organization name 필수)
+2. [Import Lists](/setup/list-import): **Contact을 리스트 단위로 등록**하고 싶을 때 주로 사용할 수 있습니다. 단, 임포트하고자 하는 Contact list를 미리 Relate에 만들어 두어야 합니다. (Organization name 필수 아님)
 
-파일이 없는 경우 기본 필드와 샘플 .CSV 파일을 다운로드할 수 있습니다.
+### Step 1. .CSV 파일 만들기
+`Download example`을 통해 기본 필드와 샘플 .CSV 파일을 다운로드 받고, 이를 활용해 임포트 할 파일을 준비할 수 있습니다. 
+
+만약 이미 가져올 수 있는 .CSV 파일이 준비되어 있다면, 바로 [Step 2](/setup/import#step-2)부터 진행하시면 됩니다.
 
 <Warning>
-샘플 .CSV 파일에 포함되어 있는 샘플 커스텀 필드는 (예: Linkedin, Segment, Tools) 샘플일 뿐이라는 점에 유의하세요! 커스텀 필드를 가져오려면 커스텀 필드를 직접 만들어야 합니다.
+  샘플 .CSV 파일에 포함되어 있는 샘플 커스텀 필드는 (예: Linkedin, Segment, Tools) 샘플일 뿐이라는 점에 유의하세요!
+  커스텀 필드가 필요하다면 임포트 보다 먼저 직접 만들어야 합니다. ([커스텀 필드 가이드](/features/custom-fields))
 </Warning>
 
-가져올 .CSV 파일이 준비되면 Step 2로 진행합니다.
+#### Import Organizations으로 Contact을 함께 생성하기 위한 파일 만들기
+Organization을 가져오면서 해당 조직에 속한 Contact도 함께 임포트 하기 위한 방법을 소개합니다.
+![import](/images/setup/import-organizations-contact.png)
+
+1. 먼저, Organization에 넣을 데이터 필드들을 헤더에 작성합니다. 함께 넣고자 하는 Contact의 필드도 작성하며, 이름이나 이메일 둘 중 하나는 반드시 입력해야 합니다.
+2. 헤더를 제외한 가장 첫 번째 줄에 넣고자 하는 Organization의 모든 정보와 Contact의 정보를 입력합니다.
+3. 그 다음으로 해당 조직에 들어갈 Contact부터는 Organization name만 작성 후 Contact 정보를 입력합니다. 이때, Organization name이 이전에 작성한 이름과 정확히 일치해야만 동일 Organization으로 인식합니다.
+4. 계속해서 Organization name-Contact을 작성하다가, 또 다른 Organization과 그곳에 속한 Contact을 등록하고 싶다면 2-3번의 과정을 반복합니다. (사진 속 6번 줄 참고)
+
+이 과정에서 가장 중요한 것은 **임포트할 Organization의 정보는 최초로 1번만 모두 작성하면 된다는 것**과 **Organization에 작성한 두 번째 Contact부터는 Organization name만 작성**하면 된다는 점입니다.
+동일한 Organization 정보를 여러 개 작성해도, 최초에 작성한 Organization 데이터만 들어가기 때문입니다.
+
 
 ### Step 2. 파일 업로드
 .CSV 파일을 끌어다 놓거나 가운데를 클릭하여 불러올 .CSV 파일을 선택합니다.
@@ -102,7 +131,7 @@ Organization, Person, Deal를 생성할 때 필수 입력 정보와 디폴트 �
 </Tip>
 
 
-### Step 3. Match Columns
+### Step 3. 열 (Columns) 매칭하기
 이 단계에서는 .CSV 파일의 열을 Relate의 데이터 필드와 맵핑할 수 있습니다.
 
 ![import1](/images/setup/import.png)
@@ -112,7 +141,7 @@ Organization, Person, Deal를 생성할 때 필수 입력 정보와 디폴트 �
 #### 자동 스마트 퍼지(smart fuzzy) 매칭
 Relate은 텍스트를 자동으로 매칭함으로 업로드하는 CSV파일내의 칼럼들과 임포트하려는 필드를 예측해 매칭합니다.
 
-#### 명확한 에러 방지 프로세스 (Fix Validation Error)
+#### 명확한 에러 방지 프로세스
 수정이 필요한 필드가 있는 경우 가져오기 페이지에서 바로 스프레드시트를 편집하는 것처럼 필드를 편집할 수 있습니다. 로컬 Excel 파일로 돌아갈 필요가 없습니다.
 
 매칭 및 업로드 과정에서 문제가 발생하면 빨간색으로 오류가 표시됩니다.
@@ -121,77 +150,42 @@ Relate은 텍스트를 자동으로 매칭함으로 업로드하는 CSV파일내
 
 모든 열을 일치시키면 다음 단계로 진행합니다.
 
-### Step 4: Import data
+### Step 4: 데이터 임포트하기
 `Import Data` 버튼을 클릭하면 확인 메시지가 표시됩니다. 임포트를 확인하면 아래 화면이 표시됩니다.
 
 ![successful Relate Data](/images/setup/import_menu7.png)
 
-## List에서 임포트하기
-![list import 1](/images/setup/import-list-csv.png)
-Contact list의 경우, Admin 페이지를 거치지 않더라도 미리 만들어둔 contact list에서 바로 CSV 파일을 임포트할 수 있습니다.
-Contact list로 들어가 `+Contact` 버튼 > Import from CSV 를 선택합니다.
-
-![list import 2](/images/setup/import-list-options.png)
-이때, Import options라는 모달이 뜨며 다음과 같은 사항을 선택할 수 있습니다. (현재는 필수이며, 추후 선택으로 바뀔 예정입니다.)
-1. **Link to an existing organization with the email domain**: Contact의 이메일 도메인을 확인하여 현재 존재하는 organization의 도메인과 일치한다면 해당 organization에 연결시킵니다.
-2. **Create an organization with the email domain**: Contact의 이메일 도메인과 맞는 organization이 없다면 이메일 도메인에 맞춰 organization을 생성합니다.
-
-이후 과정은 기존 임포트와 동일하므로 [Step 1](/setup/import#step-1-getting-started)부터 동일하게 진행하시면 됩니다.
-
-<Tip>
-List 임포트 과정에서 알아두어야 할 점이 2가지 있습니다.
-1. .CSV 파일에 있는 새로운 organization과 contact은 바로 생성이 완료됩니다.
-2. 기존 organization과 contact이 임포트한 .CSV 파일에 있다면 기존 데이터를 찾아 리스트에 추가하여 중복 생성을 하지 않습니다.
-이때, **기존 데이터에 정보를 업데이트 해서 .CSV 파일을 임포트 하여도 새로 작성한 정보로 자동 업데이트되지 않습니다.**
-</Tip>
-
-## 링크드인(LinkedIn) 데이터 임포트하기
-현재는 링크드인 API 환경상 자동으로 연락처 데이터를 이관하거나 연동하는 방법은 없습니다. 따라서 한 번 전체 연락처를 Export 한 후에 Relate에 Import한 다음, 이후 주기적으로 싱크를 해주는 방법을 사용할 수 있습니다.
-
-### 1. 링크드인 데이터 익스포트하기
-
-[이 링크](https://www.linkedin.com/help/recruiter/answer/a566336/export-connections-from-linkedin)에서 링크드인 공식 가이드를 확인하실 수 있습니다.
-
-1. **내 프로필 아이콘**을 누릅니다.
-2. **개인정보 설정** 메뉴를 누릅니다.
-3. 왼쪽 패널에 있는 **데이터 개인정보 설정**을 클릭합니다.
-4. LinkedIn의 개인 정보 이용 안내 메뉴에 있는 **데이터 다운로드**를 클릭합니다.
-5. **Want something in particular? Select the data files you’re most interested in**에 체크합니다.
-6. **Connections**를 체크합니다.
-7. **Request Archive** 버튼을 누릅니다.
-8. 비밀번호를 확인하는 경우, 비밀번호를 입력하고 **Done**을 누릅니다.
-9. 다운로드가 준비되면, **링크드인 계정 이메일 주소**로 **다운로드 링크**가 보내집니다.
-
-**노트**
-- 직접 다운로드를 진행해본 결과 연락처 데이터의 양에 따라 시간이 다소 걸립니다.(최소 15분)
-- **익스포트된 데이터에 일부 이메일 주소가 누락되어 있을 수 있습니다. 이는 연결된 사람들 중에서 본인의 이메일 주소를 볼 수 있도록 허용한 경우에만 이메일 주소를 확인할 수 있기 때문입니다.**
-- 단, 이후 Relate에 임포트시 Relate의 Data Enrichment 기능을 통해 높은 확률로 이메일 주소를 Match 할 수 있습니다.
-- CSV 및 vCard 형식은 모든 문자를 지원하지 않습니다. 따라서 확장된 문자 세트를 사용하는 언어(예: 중국어, 일본어, 히브리어)는 지원되지 않습니다.
-- 1촌 관계가 아닌 연락처는 익스포트가 불가능합니다.
-
-### 2. Relate에 링크드인 데이터 임포트하기
-
-링크드인이 보낸 익스포트 다운로드 링크를 통해 데이터 CSV 파일을 받으셨다면, 그 다음으로는 Relate에 데이터를 임포트하는 단계가 남아있습니다.
-
-### 3. 임포트하기
-
-<Warning>
-임포트를 진행할 때 임포트를 하려는 **워크스페이스를 꼭 확인해주세요.**
-</Warning>
-
-1. Relate의 어드민 세팅 페이지에 있는 [임포트 페이지](https://admin.relate.so/workspaces/relate/settings/import)로 갑니다.
-2. **Import LinkedIn with CSV file**을 누릅니다.
-3. 각 필드 (e.g., First Name, Last Name, Company)를 Relate의 필드와 잘 매핑합니다.
-4. 임포트 단계를 완료합니다.
-5. Relate 앱에서 임포트가 완료된 것을 확인합니다.
-
-## 임포트 성공 여부 확인 (Validate successful import)
-이제 [워크스페이스](https://app.relate.so/)로 이동하여 가져오기에 성공했는지 확인하세요. 경우에 따라 되돌리기가 필요할 수 있습니다. 자체 되돌리기 기능은 없지만, 앱 왼쪽 하단에 있는 메신저를 통해 팀에 문의해주시면, 빠르게 도와드리겠습니다.
 
 ## 자주 묻는 질문 (FAQ)
-<Accordion title="Custom Field는 어떻게 임포트하나요?">
-  Custom Field를 사용하여 가져오려면, 임포트 하기전에 [Custom Field](https://www.relate.kr/docs/features/custom-fields) 필드를 미리 Relate에 추가해야 합니다.
+<Accordion title=".CSV 파일을 임포트하는데 한글이 깨집니다. 어떻게 해결할 수 있나요?">
+  파일을 열어 아래와 같은 방법으로 CSV가 아닌 XLSX로 저장 후 다시 임포트하시면 됩니다.
+  
+  1. Microsoft Excel의 Data 탭에서 Get Data (Power Query) 클릭
+  ![export1](/images/setup/export-issue-1.png)
+
+  2. Text/CSV 클릭 후 한글 깨짐 현상이 있는 파일 선택
+  ![export2](/images/setup/export-issue-2.png)
+
+  3. UTF8 선택 후 Load
+  ![export3](/images/setup/export-issue-3.png)
 </Accordion>
-<Accordion title="템플릿을 다운로드 받아서 임포트하는데 한글이 깨집니다. 어떻게 해결할 수 있나요?">
-  템플릿 다운로드 후 파일을 열어서 편집한 이후 저장할 때 CSV가 아닌 XLSX로 저장하면 됩니다. 
+
+<Accordion title="임포트에 실패한 이유를 확인하고 싶습니다. 어떻게 확인할 수 있나요?">
+  임포트 실패시, **Download .csv with rows that were not imported** 라는 문구를 확인할 수 있습니다.
+  ![rejected-row 1](/images/setup/import-reject.png)
+
+  이 문장을 누르면 reject 파일을 받아볼 수 있으며, 파일에는 reject 원인도 함께 적혀 있습니다. 해당 파일의 error 라는 열을 통해 확인이 가능합니다.
+  ![rejected-row 2](/images/setup/import-rejected-row.png)
+</Accordion>
+
+<Accordion title="임포트에 주로 실패하는 이유가 무엇이고, 어떻게 해결할 수 있나요?">
+  임포트에 실패하는 주요 이유에는 두 가지가 있습니다.
+
+  첫째, **고유한 값을 가지는 필드가 중복**된 경우입니다. Relate에서는 Organization name, Contact email, Domain은 경우 서로 중복되는 값을 가질 수 없습니다.
+  
+  예를 들어, 서로 다른 두 조직인 Relate(@example.so)과 Pixelic(@example.so)의 도메인이 같다면 중복 임포트 불가로 임포트에 실패하게 됩니다.
+  특히, **도메인의 경우, 입력하지 않아도 이메일 기반으로 자동 생성**되기 때문에 주의가 필요합니다.
+  
+  둘째, **유효하지 않은 이메일을 임포트**한 경우입니다. 이메일에 @ 이외의 특수문자가 포함되었거나, 유효하지 않은 이메일 계정인 경우 등이 이에 해당합니다.
+
 </Accordion>

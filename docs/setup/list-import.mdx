@@ -1,0 +1,40 @@
+---
+title: "리스트/프로세스 임포트"
+description: "CSV 파일을 Relate의 리스트와 프로세스에 임포트하기"
+sidebarTitle: "리스트/프로세스 임포트"
+"og:title": "리스트/프로세스 임포트 | Relate Product Guide"
+"og:description": "CSV 파일을 Relate의 리스트와 프로세스에 임포트하기"
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/list-import-main.png"
+"article:tag": "Setup"
+"twitter:title": "리스트/프로세스 임포트 | Relate Product Guide"
+"twitter:description": "CSV 파일을 Relate의 리스트와 프로세스에 임포트하기"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/list-import-main.png"
+---
+![list import 0](/images/setup/list-import-main.png)
+
+## Overview
+갖고 계신 기존 고객데이터를 리스트(List)와 프로세스(Process)에 임포트하는 방법을 소개합니다.
+
+Admin 페이지에서 진행하는 기본적인 임포트 방법은 [임포트 가이드](/setup/import)에서 확인하실 수 있습니다.
+리스트/프로세스의 경우, Relate 웹/앱 내에서도 진행할 수 있기 때문에 아래에서 그 방법을 소개합니다.
+
+## 리스트/프로세스에서 임포트하기
+리스트와 프로세스의 경우, 웹/앱 내에서 임포트를 진행하는 방식이 동일하며, 현재는 Contact list만 웹/앱 내 임포트를 지원하고 있습니다.
+
+![list import 1](/images/setup/import-list-csv.png)
+Contact list의 경우, Admin 페이지를 거치지 않더라도 미리 만들어둔 contact list에서 바로 CSV 파일을 임포트할 수 있습니다.
+Contact list로 들어가 `+Contact` 버튼 > Import from CSV 를 선택합니다.
+
+![list import 2](/images/setup/import-list-options.png)
+이때, Import options라는 모달이 뜨며 다음과 같은 사항을 선택할 수 있습니다. (현재는 필수이며, 추후 선택으로 바뀔 예정입니다.)
+1. **Link to an existing organization with the email domain**: Contact의 이메일 도메인을 확인하여 현재 존재하는 organization의 도메인과 일치한다면 해당 organization에 연결시킵니다.
+2. **Create an organization with the email domain**: Contact의 이메일 도메인과 맞는 organization이 없다면 이메일 도메인에 맞춰 organization을 생성합니다.
+
+이후 과정은 기존 임포트와 동일하므로 [임포트 가이드 > 임포트 하기](/setup/import#import)부터 동일하게 진행하시면 됩니다.
+
+<Tip>
+List 임포트 과정에서 알아두어야 할 점이 2가지 있습니다.
+1. .CSV 파일에 있는 새로운 organization과 contact은 바로 생성이 완료됩니다.
+2. 기존 organization과 contact이 임포트한 .CSV 파일에 있다면 기존 데이터를 찾아 리스트에 추가하여 중복 생성을 하지 않습니다.
+이때, **기존 데이터에 정보를 업데이트 해서 .CSV 파일을 임포트 하여도 새로 작성한 정보로 자동 업데이트되지 않습니다.**
+</Tip>
