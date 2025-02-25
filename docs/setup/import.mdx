@@ -17,6 +17,27 @@ sidebarTitle: "임포트 하는 법"
 
 Relate에 갖고 계신 기존 고객데이터를 쉽고 간편하게 임포트 할 수 있는 방법을 소개합니다.
 
+**기본적인 임포트 방법은 현재 보고 계신 가이드를 통해 확인하실 수 있습니다.**
+리스트/프로세스(List/Process)와 링크드인(Linkedin) 임포트 방법은 아래 카드를 통해 이동하여 확인 부탁 드립니다.
+
+<CardGroup cols={2}>
+      <Card
+            title="리스트/프로세스 임포트"
+            icon="list"
+            iconType="duotone"
+            href="/setup/list-import"
+            color="#3B82F6"
+      >
+      </Card>
+      <Card
+            title="링크드인 임포트"
+            icon="download"
+            color="#3B82F6"
+            iconType="duotone"
+            href="/setup/linkedin-import">
+      </Card>
+</CardGroup>
+
 <Note>
   만약 갖고 계신 데이터 양이 많다면, 고객데이터 중 일부를 테스트로 먼저 임포트 해보는 것이 좋습니다.
   
@@ -31,12 +52,12 @@ Relate에 갖고 계신 기존 고객데이터를 쉽고 간편하게 임포트 
 ### 1. 임포트 데이터 종류
 
 Relate에서 임포트할 수 있는 정보는 4가지로 나눠집니다. 
-- [Organization (회사)](https://www.relate.kr/docs/features/organizations)
-- [People (회사 소속 이해관계자, contact)](https://www.relate.kr/docs/features/people)
-- [Process (영업 과정)](https://www.relate.kr/docs/features/processes)
-- [List (고객 목록)](https://www.relate.kr/docs/features/lists)
+- [Organization (회사)](/features/organizations)
+- [People (회사 소속 이해관계자, Contact)](/features/people)
+- [Process (영업 과정)](/features/processes)
+- [List (고객 목록)](/features/lists)
 
-![Relate Data](/images/setup/org_person_deal.png)
+![Relate Data](/images/setup/list-import-org.png)
 
 Relate 내에서 고객 정보를 분류할 때 **Organization이 가장 기본**이 되며, People은 Organization 내에 속하게 되어 있습니다.
 Process와 List는 Organization과 Contact을 활용해 만드는 일련의 딜 성사 과정 및 고객 목록입니다.
@@ -80,6 +101,7 @@ Organization, People, Process, List는 기본적으로 각자의 성격에 맞�
 </Accordion>
 
 ### 3. 커스텀 필드 (Custom fields) 설정
+![import-custom](/images/setup/import-custom-field.png)
 본격적으로 임포트를 시작하기 전 해야 하는 일은 커스텀 필드를 설정하고 확인하는 것입니다.
 기본적으로 Relate이 제공하는 디폴트 필드 이외에 임포트 하고 싶은 정보가 있다면, **임포트 이전에 커스텀 필드 만들기**가 선행되어야 합니다.
 
@@ -187,5 +209,4 @@ Relate은 텍스트를 자동으로 매칭함으로 업로드하는 CSV파일내
   특히, **도메인의 경우, 입력하지 않아도 이메일 기반으로 자동 생성**되기 때문에 주의가 필요합니다.
   
   둘째, **유효하지 않은 이메일을 임포트**한 경우입니다. 이메일에 @ 이외의 특수문자가 포함되었거나, 유효하지 않은 이메일 계정인 경우 등이 이에 해당합니다.
-
 </Accordion>
