@@ -1,0 +1,93 @@
+---
+title: "Relate Engage"
+description: "맞춤형 이메일 시퀀스를 활용해서 효과적으로 잠재 고객과의 연결 이어가기"
+sidebarTitle: "Relate Engage"
+"og:title": "Relate Engage 베타 | Relate Product Guide"
+"og:description": "맞춤형 이메일 시퀀스를 활용해서 효과적으로 잠재 고객과의 연결 이어가기"
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs/main/docs/images/features/relate-sequence.png"
+"article:tag": "Product Guide"
+"twitter:title": "Relate Engage 베타 | Relate Product Guide"
+"twitter:description": "맞춤형 이메일 시퀀스를 활용해서 효과적으로 잠재 고객과의 연결 이어가기"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs/main/docs/images/features/relate-sequence.png"
+---
+
+![relate-sequence](/images/features/relate-sequence.png)
+
+## Overview
+
+Relate Engage는 B2B 스타트업을 위한 간편한 이메일 자동화 툴입니다. 고객이나 잠재 고객의 특성에 따라 맞춤형 이메일 시퀀스를 구성하여 정해진 기간이 지나면 자동으로 다음 스텝의 이메일을 보내도록 할 수 있죠. 현재 모든 Relate 사용자에게 베타 버전이 오픈되어 있으며, 유료 사용자는 더 많은 시퀀스를 추가하여 다양한 고객들과 효과적으로 소통하고 팔로업할 수 있습니다.
+
+## Relate Engage 베타
+
+Relate Engage 베타 버전은 [타겟팅을 통한 아웃바운드](https://www.relate.kr/blog/highly-targeted-outbound/) 세일즈와 마케팅에 특화된 기능으로 다음과 같은 이메일을 보내는 경우 유용합니다.
+
+- 진행 중인 딜의 고객에게 보내는 팔로업 이메일
+- 인바운드 문의를 한 잠재 고객과 일정을 조율하는 팔로업 이메일
+
+
+## 이메일 시퀀스 구성하기
+
+1. 왼쪽 패널에서 **Engage (beta)** 탭을 클릭하세요.
+
+   ![relate-sequence-menu](/images/features/relate-sequence-menu.png)
+
+2. `+Sequence` 버튼을 클릭하고 Sequence name과 Timezone을 추가한 후 `Create` 버튼을 클릭하세요.
+3. `Add a step` 버튼을 클릭해서 새 이메일을 구성하세요. 다음 설정을 활용하면 더 효과적인 구성이 가능합니다.
+   - 이메일 보낼 담당자 지정
+   - 미리 만들어놓은 템플릿 사용
+   - [Contact](../features/people#person) 추가 후 첫 이메일 보낼 시점 설정
+
+   ![add-a-step](/images/features/engage-modal.png)
+
+4. 팔로업 이메일을 추가하세요. 두 번째 스텝부터는 직전 스텝과의 인터벌을 지정해서 직전 이메일이 발송되고 일정 기간이 지난 후 자동으로 다음 이메일이 발송되도록 설정할 수 있어요.
+
+    <Note>
+    - 이메일의 제목을 입력하지 않으면  이전 이메일의 스레드로 연결되며, 제목 앞에 "Re:"가 자동으로 추가됩니다.
+    - 이메일의 제목을 입력하면 새로운 스레드로 발송됩니다.
+    </Note>
+
+### Variables 사용하기
+
+Variables(메일 머지 변수)를 사용하면 다양한 항목을 변수로 지정하여 활용할 수 있습니다.
+
+![mail-merge](/images/features/mail-merge.png)
+
+- `{{full_name}}`: 이름(향후 성, 이름 변수 분리 예정)
+- `{{title}}`: 직책
+- `{{email}}`: 담당자 이메일
+- `{{phone}}`: 담당자 전화번호
+- `{{organization}}`: 회사명
+- `{{domain}}`: 회사의 URL 주소
+- `{{sender_name}}`: 보내는 사람 이름
+- `{{sender_email}}`: 보내는 사람 이메일
+- `{{now_day}}`: 오늘 날짜(예: 11/15일인 경우 "15")
+- `{{now_month}}`: 현재 월(예: November)
+- `{{now_year}}`: 현재 연도(예: 2025)
+- `{{now_weekday}}`: 요일(예: Wednesday)
+- `{{number_of_contacts}`: 조직 내 저장된 연락처 수
+
+### 이메일 발송 결과 확인하기
+수신자가 추가된 이메일 시퀀스의 발송 결과는 **Sequence** 리스트에서 Open, Click, Reply, Bounce 비율 등을 확인할 수 있으며, 수신자별 자세한 내용은 **Recipients** 탭에서 확인할 수 있습니다.
+
+다음과 같은 경우에는 시퀀스의 수신자로 포함되어도 이메일이 발송되지 않습니다. 송 실패 사유를 확인하고 필요 시 수신자 정보를 수정하세요.
+
+- 수신자가 구독을 취소한 경우
+- 이메일이 반송(bounce)된 경우
+   - 소프트 바운스: 받은 편지함이 가득 차거나 이메일 서버 다운 등의 일시적인 문제로 인한 반송
+   - 하드 바운스: 이메일 주소가 존재하지 않는 등의 영구적인 문제로 인한 반송
+
+   ![engage-recipients](/images/features/engage-recipients.png)
+
+## 추가 업데이트 계획
+
+다음 기능이 향후 업데이트될 예정입니다:
+- Organization 및 People 페이지에서 다양한 필터를 적용하여 리스트를 만든 후, 쉽게 시퀀스에 추가하기
+- 발송 예정 이메일 미리보기
+- 수신자의 이메일 오픈 및 클릭 횟수를 개별적으로 확인하기
+
+## Relate Engage로 효과적인 아웃바운드 전략 만들기
+
+Relate Engage의 이메일 시퀀스를 활용해서 더 효과적인 아웃바운드 이메일 캠페인을 운영하고 싶다면, 아래 블로그 포스트를 참고하세요:
+
+- [콜드 이메일 시퀀스 베스트 프랙티스](https://www.relate.kr/blog/how-to-run-cold-email-campaign/)
+- [콜드 이메일을 위한 테크니컬 셋업 가이드](https://www.relate.kr/blog/cold-email-techinical-set-up-guide/)
