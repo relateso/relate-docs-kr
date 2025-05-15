@@ -77,6 +77,50 @@ Gsuite 레코드가 이미 Verify된 경우, [이 문서](https://support.google
 ![relate-namecheap](/images/features/namecheap-relate.png)
 
 </Accordion>
+<Accordion title="가비아">
+호스트 Name에서 @는 메인 도메인을 의미하는 것으로, gmail 등을 연결합니다.
+
+메인 도메인 설정에 영향을 주지 않기 위해서는 기존 레코드를 수정하지 않고 서브 도메인 TXT 레코드를 추가해야합니다.
+
+아래 방법에 따라 envelope 서브 도메인 SPF 레코드를 추가해주세요.
+
+### SPF 레코드 추가하는 방법
+
+- 호스트 : envelope.domain (ex.envelope.relate.so)
+- Type : TXT
+- Content : v=spf1 include:amazonses.com ~all (""는 자동으로 붙으니 추가하지 않으셔도 됩니다.)
+
+![relate-gabia](/images/features/relate-gabia.png)
+
+</Accordion>
+<Accordion title="아임웹">
+다른 도메인 구매 사이트에서 도메인을 구매 하셔도 네임서버를 아임웹으로 사용하고 계신다면 아임웹에서 레코드 설정을 해주셔야 합니다.
+
+호스트 Name에서 @는 메인 도메인을 의미하는 것으로, gmail 등을 연결합니다.
+- 메인 도메인 설정에 영향을 주지 않기 위해서는 서브 도메인 MX, SPF(TXT) 레코드를 envelope 레코드를 포함해 추가해야합니다. 
+- 제공하는 레코드를 복사해서 그대로 세팅해주시면 되고 아래 내용에 유의해서 세팅해주세요.
+
+![relate-imweb](/images/features/relate-imweb.png)
+
+### MX 레코드 추가하는 방법
+
+- 이름 : envelope.domain (ex.envelope.relate.so)
+- 이름에 envelope을 추가해도 도메인 키(relate.so)만 보이니 참고해주세요. 
+
+### SPF 레코드 추가하는 방법
+
+- 이름 : envelope.domain (ex.envelope.relate.so)
+- 타입 : TXT
+- Content : v=spf1 include:amazonses.com ~all (""는 자동으로 붙으니 추가하지 않으셔도 됩니다.)
+
+추가하실 때 envelope 은 추가할 수 없는 단어로 나오기 때문에 envelope 뒤에 도메인을 추가해서 넣어주셔야 합니다.
+
+### CNAME 레코드 추가하는 방법
+
+- 이름 : 제공해드리는 도메인키 + 도메인 주소를 붙여서 넣으시면 됩니다.
+- 예: 728ytdjcoe65183hdiw.relate.so
+
+</Accordion>
 
 ## Step 3: 레코드 설정 확인하기
 
