@@ -196,7 +196,8 @@
       "pages": [
         "marketing/marketing",
         "marketing/dns-records",
-        "marketing/forms"
+        "marketing/forms",
+        "marketing/triggered-campaigns"
       ]
     },
     {
