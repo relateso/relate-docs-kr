@@ -180,9 +180,11 @@
           ]
     },
     {
-      "group": "Engage",
+      "group": "Relate 시퀀스",
       "pages": [
-        "engage/relate-engage"
+        "engage/sequence-understanding",
+        "engage/sequence-building",
+        "engage/sequence-using"
       ]
     },
     {
