@@ -242,7 +242,6 @@
           "group": "임포트 (Import)",
           "pages": [
             "setup/import",
-            "setup/list-import",
             "setup/linkedin-import"
           ]
         },
