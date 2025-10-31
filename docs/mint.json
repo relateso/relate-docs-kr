@@ -208,13 +208,6 @@
       ]
     },
     {
-      "group": "Data",
-      "pages": [
-        "data/api",
-        "data/warehouse-sync"
-      ]
-    },
-    {
       "group": "Reporting",
       "pages": [
           "features/reporting"
