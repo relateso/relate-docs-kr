@@ -194,9 +194,7 @@
     {
       "group": "Marketing",
       "pages": [
-        "marketing/marketing",
-        "marketing/triggered-campaigns",
-        "marketing/dns-records",
+        "marketing/spread",
         "marketing/forms"
       ]
     },
