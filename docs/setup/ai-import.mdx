@@ -187,23 +187,17 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
   />
   
   <Tip>
-    <div style={{ margin: "0", display: "grid", rowGap: "4px", lineHeight: "1.4" }}>
-      <div style={{ margin: "0" }}>
-        Field type은 Contact Field와 Organization Field 두 가지로 구분됩니다.
+    Field type은 Contact Field와 Organization Field 두 가지로 구분됩니다.
+    <div style={{ display: "grid", gap: "4px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <img src="/images/setup/contact_icon.png" alt="Contact Field" width="30" />
+        <span style={{ fontWeight: 600 }}>Contact Field:</span>
+        <span>Contact Field로 선택한 컬럼은 **연락처**로 임포트됩니다.</span>
       </div>
-      <div style={{ display: "grid", rowGap: "0", margin: "0" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", margin: "0" }}>
-          <img src="/images/setup/contact_icon.png" alt="Contact Field" width="30" />
-          <span style={{ fontWeight: 600 }}>Contact Field:</span>
-          <span>Contact Field로 선택한 컬럼은 **연락처**로 임포트됩니다.</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", margin: "0" }}>
-          <img src="/images/setup/Org_icon.png" alt="Organization Field" width="30" />
-          <span style={{ fontWeight: 600 }}>Organization Field:</span>
-          <span>Organization Field로 선택한 컬럼은 **조직**로 임포트됩니다.</span>
-        </div>
-      </div>
-      <div style={{ margin: "0" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <img src="/images/setup/Org_icon.png" alt="Organization Field" width="30" />
+        <span style={{ fontWeight: 600 }}>Organization Field:</span>
+        <span>Organization Field로 선택한 컬럼은 **조직**로 임포트됩니다.</span>
       </div>
     </div>
   </Tip>
@@ -262,7 +256,7 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
 
 - Organizations found: Import 과정에서 인식된 조직 수
 
-- **created**: 새로 생성된 Organization 수
+- **created**: 새로 생성된 조직 수
 
 <Note>
   **연락처 임포트 과정에서 파일에 조직 정보가 함께 포함된 경우**
@@ -309,8 +303,7 @@ Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만
 
 <br />
 <br />
-## 임포트 결과를 보고 꼭 확인하세요
-임포트가 정상적으로 완료되었더라도, 아래 사항은 반드시 한 번 더 확인하는 것을 권장합니다.
+## 임포트 시 주의사항
 
 - **AI 자동 매핑 결과 확인**: 임포트 실행 전 또는 결과 페이지에서 AI가 자동으로 매핑한 필드가 의도한 대로 반영되었는지 확인해 주세요.
 
@@ -326,14 +319,14 @@ Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만
 <Accordion title=".CSV 파일을 임포트하는데 한글이 깨집니다. 어떻게 해결할 수 있나요?">
   파일을 열어 아래와 같은 방법으로 CSV가 아닌 XLSX로 저장 후 다시 임포트하시면 됩니다.
   
-  1. Microsoft Excel의 Data 탭에서 Get Data (Power Query) 클릭
-  ![export1](/images/setup/export-issue-1.png)
+  **1. Microsoft Excel의 Data 탭에서 Get Data (Power Query) 클릭**
+  <img src="/images/setup/export-issue-1.png" alt="export1" width="360" />
+    
+  **2. Text/CSV 클릭 후 한글 깨짐 현상이 있는 파일 선택**
+  <img src="/images/setup/export-issue-2.png" alt="export2" width="360" />
 
-  2. Text/CSV 클릭 후 한글 깨짐 현상이 있는 파일 선택
-  ![export2](/images/setup/export-issue-2.png)
-
-  3. UTF8 선택 후 Load
-  ![export3](/images/setup/export-issue-3.png)
+  **3. UTF8 선택 후 Loa**
+  <img src="/images/setup/export-issue-3.png" alt="export3" width="360" />
 </Accordion>
 
 <Accordion title="임포트에 주로 실패하는 이유가 무엇이고, 어떻게 해결할 수 있나요?">
