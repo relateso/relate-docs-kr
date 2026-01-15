@@ -12,8 +12,9 @@ sidebarTitle: "AI 임포트(Import)"
 ---
 ## Overview
 
-AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 의미를 이해해 연락처/조직을 자동으로 추가하거나 업데이트하는 임포트 방식입니다. 
+AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 의미를 이해해 연락처/조직을 자동으로 추가하거나 업데이트하는 임포트 방식입니다. 
 유저는 컬럼을 직접 매핑하거나, 사전에 필드를 설정할 필요가 없습니다.
+
 
 
 ## 임포트 전에 알아야 할 것
@@ -42,9 +43,9 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
 
   <Accordion title="조직">
     - **Organization name (필수 입력 정보)**
-    - Domain (Website): 별도로 도메인을 작성하지 않아도 Organization에 속한 Contact이 있다면 해당 고객의 이메일 도메인을 참고해 자동으로 채워줍니다.
+    - Domain (Website): 별도로 도메인을 작성하지 않아도 조직에 속한 연락처가 있다면 해당 고객의 이메일 도메인을 참고해 자동으로 채워줍니다.
     - Description
-    - Manager (팀 내 고객 담당자)
+    - Manager : 팀 내 고객 담당자
   </Accordion>
 
   <Accordion title="연락처">
@@ -60,7 +61,7 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
     따라서, 프로세스 자체가 가지는 디폴트 필드를 소개합니다.
     - Value
     - Status
-    - Assignee (담당자 이메일 필수)
+    - Assignee : 담당자 이메일 필수
     - Contact
   </Accordion>
 
@@ -89,20 +90,25 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
 ## AI 임포트 실행 가이드 (Step-by-Step)
   ### Step 1. 임포트 시작 및 파일 업로드
 
-  <img
-    src="/images/setup/2.png"
-    alt="2"
-    style={{
-      display: "block",
-      margin: "12px auto 0",
-      boxShadow: "0 6px 18px rgba(0, 0, 0, 0.16)",
-      borderRadius: "8px"
-    }}
-  />
+  - Relate 앱 화면에서 좌측 상단을 클릭하여 `워크스페이스 설정`을 선택합니다.
+  <img src="/images/setup/ws-select.png" alt="워크스페이스 선택" width="300" style={{ display: "block", margin: "4px 0 12px 32px", boxShadow: "0 6px 18px rgba(0, 0, 0, 0.16)", borderRadius: "8px" }} />
 
-  - Relate [**Admin 페이지**](https://admin.relate.so/) 좌측 상단에서 `워크스페이스 설정`을 선택합니다.
-  - 왼쪽 메뉴 바의 `연락처 파일 업로드(2)`를 선택합니다.
-  - 우측 상단의 `Select file`를 클릭하여 CSV/Excel 파일을 업로드합니다.
+  <span style={{ display: "block", height: "6px" }} />
+  - 좌측 사이드바의 `연락처 파일 업로드(2)`를 선택합니다.
+    <img
+      src="/images/setup/2.png"
+      alt="2"
+      style={{
+        display: "block",
+        margin: "12px auto 0",
+        boxShadow: "0 6px 18px rgba(0, 0, 0, 0.16)",
+        borderRadius: "8px"
+      }}
+    />
+    
+  - `Select file`을 클릭하여 CSV/Excel 파일을 업로드합니다.
+
+
 
   ### Step 2. 중복 데이터 처리 옵션 선택
   파일을 업로드한 후, 중복 데이터를 어떻게 처리할지 선택하게 됩니다.
@@ -197,7 +203,7 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
       <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
         <img src="/images/setup/org_icon.png" alt="Organization Field" width="30" />
         <span style={{ fontWeight: 600 }}>Organization Field:</span>
-        <span>Organization Field로 선택한 컬럼은 **조직**로 임포트됩니다.</span>
+        <span>Organization Field로 선택한 컬럼은 **조직**으로 임포트됩니다.</span>
       </div>
     </div>
   </Tip>
@@ -249,12 +255,12 @@ AI 임포트(Import)는 CSV/Excel 파일을 업로드하면,  Relate AI가 데�
 
 - **updated**: 기존 연락처 중 업데이트된 수
 
-- **failed**: Import에 실패한 연락처의 수
+- **failed**: 임포트에 실패한 연락처의 수
 <span style={{ display: "block", height: "6px" }} />
 > #### 조직 임포트 결과
 결과 페이지 상단의 우측에서는 조직 임포트 결과를 요약해서 보여줍니다.
 
-- Organizations found: Import 과정에서 인식된 조직 수
+- Organizations found: 임포트 과정에서 인식된 조직 수
 
 - **created**: 새로 생성된 조직 수
 
@@ -346,7 +352,7 @@ Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만
 <Accordion title="기존 임포트 방식과 어떤 차이가 있나요?">
   기존 임포트 방식에서는 임포트 이전에 수동으로 커스텀 필드를 생성해둔 후 CSV 구조에 맞춰 사용자가 직접 컬럼을 매핑하여 임포트를 해야 했습니다.
 
-  AI 임포트는 파일을 업로드하면 Relate AI가 컬럼의 의미를 자동으로 이해해 매핑하며, 사전의 별도의 필드 설정 없이도 임포트를 진행할 수 있다는 점이 가장 큰 차이입니다.
+  AI 임포트는 파일을 업로드하면 **Relate AI가 컬럼의 의미를 자동으로 이해해 매핑하며, 사전에 별도의 필드 설정 없이도 임포트를 진행**할 수 있다는 점이 가장 큰 차이입니다.
 </Accordion>
 
 <Accordion title="연락처만 임포트했는데 조직도 함께 생성되었어요. 왜 그런가요?">
