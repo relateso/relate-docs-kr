@@ -27,7 +27,8 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
 
   ![Relate Data](/images/setup/list-import-org.png)
 
-  Relate 내에서 고객 정보를 분류할 때 **조직(Organization)이 가장 기본**이 되며, 연락처(Contact)는 조직 내에 속하게 되어 있습니다.
+  Relate 내에서 고객 정보를 분류할 때 **조직이 가장 기본**이 되며, 연락처는 조직 내에 속하게 되어 있습니다.
+    
   프로세스와 리스트는 조직과 연락처를 활용해 만드는 일련의 딜 성사 과정 및 고객 목록입니다.
 </Accordion>
 
@@ -37,7 +38,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
   이들이 가지고 있는 디폴트 필드 중 필수로 입력해야 하는 정보가 있습니다.
   1. 조직: **조직명(Organization name)** 을 반드시 입력해야 합니다.
   2. 연락처: **Contact name** 또는 **Email** 둘 중 하나를 반드시 입력해야 합니다.
-  3. 프로세스 / 리스트 : 프로세스와 리스트의 [Entry](/features/processes#1-entry) type(조직, 연락처)을 확인해 1번 혹은 2번을 따릅니다.
+  3. 프로세스 / 리스트 : 프로세스와 리스트의 [Entry](/features/processes#1-entry) 타입(조직 혹은 연락처)을 확인해 1번 혹은 2번을 따릅니다.
 
   이외에 어떤 디폴트 필드가 있는지 아래에서 간략히 확인하실 수 있습니다.
 
@@ -56,7 +57,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
   </Accordion>
 
   <Accordion title="프로세스">
-    기본적으로 프로세스의 디폴트 필드는 [Entry](/features/processes#1-entry) type이 조직인지, 연락처인지에 따라 디폴트 필드가 다릅니다.
+    기본적으로 프로세스의 디폴트 필드는 [Entry](/features/processes#1-entry) type이 조직인지 연락처인지에 따라 디폴트 필드가 다릅니다.
     
     따라서, 프로세스 자체가 가지는 디폴트 필드를 소개합니다.
     - Value
@@ -75,7 +76,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
 
   커스텀 필드란 Relate에서 기본으로 제공하는 디폴트 필드 외에, 각 팀이나 비즈니스 상황에 맞게 **추가로 정의해 사용하는 필드**를 의미합니다. 
 
-  업로드한 파일의 컬럼을 AI가 자동으로 해석하여, **기존 데이터 필드로 매핑할 수 없는 정보가 있는 경우 필요한 커스텀 필드를 자동으로 생성하여 매핑**합니다. 
+  업로드한 파일의 컬럼을 AI가 자동으로 해석하여, **기존 데이터 필드로 매핑할 수 없는 정보가 있는 경우에는 필요한 커스텀 필드를 자동으로 생성하여 매핑**합니다. 
 
   따라서 임포트 전에 커스텀 필드를 미리 만들어 둘 필요가 없으며, 파일에 포함된 데이터 구조에 맞춰 임포트 과정 중에 자연스럽게 처리됩니다.
   <Note>
@@ -93,8 +94,8 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
   - Relate 앱 화면에서 좌측 상단을 클릭하여 `워크스페이스 설정`을 선택합니다.
   <img src="/images/setup/ws-select.png" alt="워크스페이스 선택" width="300" style={{ display: "block", margin: "4px 0 12px 32px", boxShadow: "0 6px 18px rgba(0, 0, 0, 0.16)", borderRadius: "8px" }} />
 
-  <span style={{ display: "block", height: "6px" }} />
-  - 좌측 사이드바의 `연락처 파일 업로드(2)`를 선택합니다.
+    <span style={{ display: "block", height: "14px" }} />
+  - 좌측 사이드바의 `연락처 파일 업로드(2)`를 선택한 후, 우측 상단의 `Import contacts`를 클릭합니다.
     <img
       src="/images/setup/2.png"
       alt="2"
@@ -256,7 +257,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
 - **updated**: 기존 연락처 중 업데이트된 수
 
 - **failed**: 임포트에 실패한 연락처의 수
-<span style={{ display: "block", height: "6px" }} />
+    <span style={{ display: "block", height: "14px" }} />
 > #### 조직 임포트 결과
 결과 페이지 상단의 우측에서는 조직 임포트 결과를 요약해서 보여줍니다.
 
@@ -306,6 +307,55 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
 Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만 포함된 CSV 파일을 다운로드할 수 있습니다.
 
 해당 파일에서 오류를 수정한 후, 다시 AI 임포트를 실행하여 누락된 데이터를 추가할 수 있습니다.
+
+
+<br />
+<br />
+## 프로세스/리스트에 바로 임포트하기
+
+연락처와 조직 데이터를 임포트하면서 특정 프로세스 또는 리스트에 바로 추가하고 싶다면, 해당 프로세스/리스트에서 CSV 임포트를 진행할 수 있습니다.
+
+  ##### **Step 1. 프로세스/리스트 선택 또는 생성**
+
+    기존에 존재하는 프로세스/리스트를 선택하거나, 새로 생성합니다.
+
+    <img
+      src="/images/setup/makeprocess.png"
+      alt="make process"
+      width="300"
+      style={{
+        boxShadow: "0 10px 28px rgba(0, 0, 0, 0.18)",
+        borderRadius: "8px",
+        display: "block",
+        margin: "12px auto",
+      }}
+    />
+
+    각 프로세스/리스트는 Contact(연락처) 또는 Organization(조직) 중 하나의 **엔트리 타입**을 가지며, 임포트할 데이터 유형에 맞는 프로세스/리스트를 선택합니다.
+
+  ##### **Step 2. CSV 임포트 선택**
+    
+    임포트하고자 하는 프로세스/리스트 상단의 `+ New contact` 혹은 `+ New organization` 버튼을 클릭합니다.
+    <img
+      src="/images/setup/process-imp.png"
+      alt="process import"
+      width="360"
+      style={{
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)",
+        borderRadius: "8px",
+        display: "block",
+        margin: "12px auto",
+      }}
+    />
+
+    `CSV에서 가져오기`를 선택하면 AI 임포트 화면으로 이동합니다.
+
+
+  ##### **Step 3. 임포트 진행**
+    이후 과정은 앞서 안내한 임포트 방법과 동일하게 진행되며, 임포트가 완료되면 각 행이 하나의 엔트리로 생성되어 프로세스/리스트에 바로 추가됩니다.
+
+
+
 
 <br />
 <br />
