@@ -229,9 +229,8 @@
         "setup/admin",
         "setup/manage-members",
         {
-          "group": "임포트 (Import)",
+          "group": "임포트(Import)",
           "pages": [
-            "setup/import",
             "setup/ai-import",
             "setup/linkedin-import"
           ]

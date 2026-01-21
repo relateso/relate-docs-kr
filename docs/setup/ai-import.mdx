@@ -1,18 +1,17 @@
 ---
-title: "AI 임포트(Import)"
-description: "AI 임포트로 데이터를 빠르게 가져오는 방법"
-sidebarTitle: "AI 임포트(Import)"
-"og:title": "AI 임포트(Import) | Relate Product Guide"
-"og:description": "AI 임포트로 데이터를 가져오는 방법"
+title: "임포트 하는 법"
+description: "AI로 데이터를 빠르게 가져오는 방법"
+sidebarTitle: "임포트 하는 법"
+"og:title": "임포트 하는 법 | Relate Product Guide"
+"og:description": "AI로 데이터를 가져오는 방법"
 "og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/import-main.png"
 "article:tag": "Setup"
-"twitter:title": "AI 임포트(Import) | Relate Product Guide"
-"twitter:description": "AI 임포트로 데이터를 가져오는 방법"
+"twitter:title": "임포트 하는 법 | Relate Product Guide"
+"twitter:description": "AI로 데이터를 가져오는 방법"
 "twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/import-main.png"
 ---
 ## Overview
-
-AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 의미를 이해해 연락처/조직을 자동으로 추가하거나 업데이트하는 임포트 방식입니다. 
+CSV/Excel 파일을 업로드하면 Relate AI가 데이터의 의미를 자동으로 이해해, 기존 고객 데이터를 Relate에 쉽고 간편하게 임포트할 수 있습니다.
 유저는 컬럼을 직접 매핑하거나, 사전에 필드를 설정할 필요가 없습니다.
 
 
@@ -38,7 +37,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
   이들이 가지고 있는 디폴트 필드 중 필수로 입력해야 하는 정보가 있습니다.
   1. 조직: **조직명(Organization name)** 을 반드시 입력해야 합니다.
   2. 연락처: **Contact name** 또는 **Email** 둘 중 하나를 반드시 입력해야 합니다.
-  3. 프로세스 / 리스트 : 프로세스와 리스트의 [Entry](/features/processes#1-entry) 타입(조직 혹은 연락처)을 확인해 1번 혹은 2번을 따릅니다.
+  3. 프로세스 / 리스트 : 프로세스와 리스트의 [엔트리(Entry)](/features/processes#1-entry) 타입(조직 혹은 연락처)을 확인해 1번 혹은 2번을 따릅니다.
 
   이외에 어떤 디폴트 필드가 있는지 아래에서 간략히 확인하실 수 있습니다.
 
@@ -88,7 +87,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
 
 
 <br />
-## AI 임포트 실행 가이드 (Step-by-Step)
+## 임포트 실행 가이드 (Step-by-Step)
   ### Step 1. 임포트 시작 및 파일 업로드
 
   - Relate 앱 화면에서 좌측 상단을 클릭하여 `워크스페이스 설정`을 선택합니다.
@@ -306,7 +305,7 @@ AI 임포트는 CSV/Excel 파일을 업로드하면,  Relate AI가 데이터의 
 
 Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만 포함된 CSV 파일을 다운로드할 수 있습니다.
 
-해당 파일에서 오류를 수정한 후, 다시 AI 임포트를 실행하여 누락된 데이터를 추가할 수 있습니다.
+해당 파일에서 오류를 수정한 후, 다시 임포트를 실행하여 누락된 데이터를 추가할 수 있습니다.
 
 
 <br />
@@ -348,7 +347,7 @@ Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만
       }}
     />
 
-    `CSV에서 가져오기`를 선택하면 AI 임포트 화면으로 이동합니다.
+    `CSV에서 가져오기`를 선택하면 임포트 화면으로 이동합니다.
 
 
   ##### **Step 3. 임포트 진행**
@@ -402,7 +401,7 @@ Failed Records 섹션 우측의 `Download CSV`을 클릭하면, 실패한 행만
 <Accordion title="기존 임포트 방식과 어떤 차이가 있나요?">
   기존 임포트 방식에서는 임포트 이전에 수동으로 커스텀 필드를 생성해둔 후 CSV 구조에 맞춰 사용자가 직접 컬럼을 매핑하여 임포트를 해야 했습니다.
 
-  AI 임포트는 파일을 업로드하면 **Relate AI가 컬럼의 의미를 자동으로 이해해 매핑하며, 사전에 별도의 필드 설정 없이도 임포트를 진행**할 수 있다는 점이 가장 큰 차이입니다.
+   이제는 파일을 업로드하면 **Relate AI가 컬럼의 의미를 자동으로 이해해 매핑하며, 사전에 별도의 필드 설정 없이도 임포트를 완료할 수 있습니다.**
 </Accordion>
 
 <Accordion title="연락처만 임포트했는데 조직도 함께 생성되었어요. 왜 그런가요?">
