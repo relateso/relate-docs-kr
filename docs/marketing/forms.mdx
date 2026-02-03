@@ -9,52 +9,96 @@ sidebarTitle: "Forms"
 "twitter:description": "Relate Forms로 리드를 실질적인 성과로 전환하는 인바운드 세일즈 엔진 만들기"
 ---
 
-## 개요
+## Overview
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/full.png"
+    alt="Full form"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 
-Relate의 Forms 기능을 사용하면 쉽게 리드를 캡처하고 검증하여 세일즈와 마케팅 워크플로우에 효과적으로 연결할 수 있습니다. [인바운드 세일즈 엔진](https://www.relate.kr/blog/inbound-sales-engine/)을 만들거나 마케팅 활동을 계획할 때 보다 효율적이고 효과적인 프로세스로 일을 진행할 수 있죠.
+Relate의 Forms 기능을 사용하면 쉽게 리드를 캡처하고 검증하여 세일즈와 마케팅 워크플로우에 효과적으로 연결할 수 있습니다. [인바운드 세일즈 엔진](https://www.relate.kr/blog/inbound-sales-engine/)을 만들거나 마케팅 활동을 계획할 때 보다 효율적이고 효과적인 프로세스로 일을 진행할 수 있습니다.
 
-## Basics
-
-Forms를 구성하는 다음 요소들은 수집된 리드를 효과적으로 검증하고 관리할 수 있도록 도와줍니다.
-
-### Builder
-
-**Builder** 탭에서는 필요에 맞게 폼을 디자인하고 구성할 수 있습니다. 폼을 통해 적절한 정보를 수집하면, 최종적으로 구매 결정을 내릴 가능성이 높은 잠재 고객([Sales Qualified Lead, SQL](https://www.relate.kr/docs/wiki/sql#sales-qualified-lead-sql))을 가려낼 수 있고, [파이프라인](https://www.relate.kr/docs/features/pipelines)의 다음 단계로 넘어가 최종 구매까지 영업 활동을 진행하는 것이 훨씬 수월해집니다.
-
-![Builder](/images/features/forms1.png)
-
-
-빌더에서는 다음 내용을 설정할 수 있습니다.
-
-- 블록을 추가하거나 삭제하기.
-- 블록 레이블 편집하기. 적절한 질문을 사용하면 필요한 정보를 수집하는 데 도움이 됩니다.
-- 플레이스홀더 텍스트로 답변 예시 작성하기.
-- 블록을 필수/선택 필드로 설정하기.
-- 다양한 포맷의 블록 활용하기. Settings의 [Custom fields](https://www.relate.kr/docs/features/custom-fields) 페이지에서 필드를 편집하여 활용할 수 있어요.
-
-<Note> 폼을 통해 수집된 리드의 데이터는 Contact, [Organizations](https://www.relate.kr/docs/features/organizations)에도 자동으로 저장됩니다.</Note>
-
-### Routing
-
-**Routing** 탭에서는 잠재 고객이 폼을 통해 응답을 제출한 후, 어떤 페이지를 보여줄지 설정할 수 있습니다. 설정에 따라 사용자는 폼 제출 후 캘린더, 문서, 혹은 특정 페이지의 URL로 이동하여 다음 액션을 이어갈 수 있습니다.
-
-![Routing](/images/features/forms2.png)
-
-- **URL**: 사용자를 특정 페이지로 안내하여 추가 참여를 유도합니다.
-- **Meeting**: 영업/마케팅 팀과의 미팅을 [Relate Cal](https://www.relate.kr/docs/features/calendar)로 예약할 수 있도록 안내합니다.
-- **Document**: 화이트페이퍼, 가이드 등의 마케팅 자료를 [Relate Docs](https://www.relate.kr/docs/docs/relate-docs) 기능으로 공유합니다.
-
-응답 내용에 따라 다른 페이지로 연결되게 할 수도 있습니다. 사용자의 응답을 조건으로 설정하여 각 상황에 따라 가장 효과적인 다음 단계로 안내하세요.
-
-### Responses
-
-폼으로 제출된 응답 내용은 자동으로 **Responses** 탭에 저장되어 한눈에 응답 리스트를 확인하고 진행 상황을 모니터링할 수 있습니다.
-
-![Responses](/images/features/forms3.png)
+폼을 통해 적절한 정보를 수집하면, 최종적으로 구매 결정을 내릴 가능성이 높은 잠재 고객([Sales Qualified Lead, SQL](https://www.relate.kr/docs/wiki/sql#sales-qualified-lead-sql))을 가려낼 수 있고, [파이프라인](https://www.relate.kr/docs/features/pipelines)의 다음 단계로 넘어가 최종 구매까지 영업 활동을 진행하는 것이 훨씬 수월해집니다.
 
 
-## Form 응답 내역을 다운로드하기
-Relate에서는 Form을 이용해 리드 검증에 필요한 정보를 수집하고, 응답한 연락처(Contact) 및 응답 내용을 CSV 또는 이미지 형태로 추출할 수 있습니다.
+<br/>
+## 폼 생성 및 관리하기
+Relate 앱의 좌측 사이드바에서 `폼`을 선택한 후 , 상단의 `+ 새 폼` 버튼을 클릭하여 폼을 생성합니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/makeform.png"
+    alt="Make form"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+폼을 생성하면 상단의 4개의 탭을 통해 폼 구성부터 응답 관리, 라우팅, 자동화까지 한 화면에서 설정할 수 있습니다.
+
+### 1. 폼 수정하기
+
+폼이 생성되면, 해당 폼을 클릭한 후 상단의 `폼 수정` 탭에서 필요에 맞게 폼을 구성할 수 있습니다.  
+먼저 우측 상단의 `+ 블록 추가` 버튼을 클릭하여 목적에 맞게 블록을 생성합니다.
+- 폼에 사용되는 블록 유형 
+    - 제목, 부제목, 텍스트
+    - 연락처(Contact) 및 조직(Organization)의 기본 데이터 필드
+    - 커스텀 필드(Custom fields)
+<Note> 
+  폼에는 연락처 및 조직의 기본 데이터 필드뿐 아니라, 커스텀 필드도 함께 사용할 수 있습니다.  
+  
+  커스텀 필드는 `워크스페이스 설정`의  `사용자 정의 필드` 페이지에서 미리 생성하거나, [임포트](/ai-import)를 통해 자동으로 생성된 필드를 활용할 수 있습니다.
+    <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+      <img
+        src="/images/forms/makecf.png"
+        alt="Custom fields settings"
+        style={{ width: "60%", maxWidth: "420px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+      />
+    </div>
+  이때 추가된 커스텀 필드의 Data type을 통해 해당 질문의 응답 형식을 설정할 수 있습니다.  
+  - Text / 여러 줄 텍스트: 자유 입력 텍스트 응답  
+  - Select: 객관식 선택 응답  
+  - Number: 숫자 입력
+  - Date / Datetime: 날짜 또는 날짜·시간 입력
+  -	URL: 링크 입력
+  -	User / Contact: 사용자 또는 연락처 선택
+    
+</Note>
+
+블록을 추가한 뒤에는 각 블록의 `편집` 버튼을 클릭하여 세부 설정을 추가할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/block2.png"
+    alt="Blocks"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+- 블록 라벨 (Label) 편집하기 : 적절한 질문을 사용하면 필요한 정보를 수집하는 데 도움이 됩니다.
+- 플레이스홀더 (Placeholder) : 답변 예시를 입력하여 응답을 유도할 수 있습니다.
+- 도움말 (Help) : 질문에 대한 추가 설명을 입력하여 응답자가 이해하기 쉽게 안내할 수 있습니다.
+- 블록을 필수 또는 선택 항목으로 설정하기
+- 블록 위치 변경하기 : 꾹 눌러 드래그하여 블록 순서를 자유롭게 조정할 수 있습니다.
+
+
+### 2. 응답 관리
+폼으로 제출된 응답은 상단의 `응답 관리` 탭에 자동으로 저장됩니다.
+이곳에서 리드별 제출 시간과 응답 내용을 한눈에 확인하고, 이후 액션으로 바로 연결할 수 있습니다.
+<Note> 
+    폼을 통해 수집된 리드의 데이터는 연락처, 조직 정보에 자동으로 저장됩니다.
+</Note>
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/response2.jpeg"
+    alt="Responses"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+체크박스를 클릭하여 하나 또는 여러 리드를 선택할 수 있습니다. 선택한 리드는 시퀀스에 추가하거나, 새로운 리스트 또는 기존 리스트에 추가할 수 있습니다.
+
+<Accordion title="Form 응답 내역을 다운로드하기">
+    Relate에서는 Form을 이용해 리드 검증에 필요한 정보를 수집하고, 응답한 연락처(Contact) 및 응답 내용을 CSV 또는 이미지 형태로 추출할 수 있습니다.
     1. 화면 좌측 상단 로고 > 리포팅 > Add View를 클릭합니다.
     ![Import1](/images/features/Export-add-view.png)
     
@@ -73,20 +117,88 @@ Relate에서는 Form을 이용해 리드 검증에 필요한 정보를 수집하
 
     4. 대시보드 우측 상단 삼점바 > Download > Visible data set을 클릭합니다. 파일이 손상되지 않도록 Excel(.xlsx) 형식으로 다운하는 것을 권장드립니다.
     ![Import5](/images/features/Export-download.png)
+</Accordion>
 
 
-## 새 폼 설정하기
 
-1. **Forms** 페이지로 이동합니다.
-2. `+ Form` 또는 `+ Add Form` 버튼을 클릭하여 새 폼을 생성합니다.
-3. 리드로부터 수집하고자 하는 정보를 바탕으로 **Builder**에서 폼을 구성합니다.
-    <Warning>**Builder** 탭을 닫기 전에 `Save changes`를 클릭해서 설정을 저장하세요.</Warning>
-4. **Routing**을 설정합니다(선택 사항). 사용자가 응답을 제출한 후, 이어서 보여주고 싶은 페이지를 설정하세요.
-    <Note> Routing을 설정하지 않으면 사용자들은 기본적으로 Thank you 페이지로 이동합니다.</Note>
-5. `Publish` 버튼을 클릭한 후, 생성된 링크를 웹사이트, 이메일 캠페인, 소셜 미디어 등에 삽입해 활용합니다.
-6. **Responses** 탭에서 진행 상황을 추적하고, 필요한 경우 폼을 수정하여 사용합니다.
+### 3. 라우팅 (Routing) 설정
+상단의 `라우팅 설정` 탭에서는 리드가 폼을 통해 응답을 제출했을 때 어떤 페이지를 보여줄지 설정할 수 있습니다. 
+설정에 따라 리드는 폼 제출 후 캘린더, 문서, 혹은 특정 페이지의 URL로 이동하여 다음 액션을 이어갈 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/routing.png"
+    alt="Routing"
+    style={{ width: "80%", maxWidth: "900px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+#### 라우팅 추가하기
+
+우측 `+ 라우팅 추가` 버튼을 클릭하면,
+리드의 응답 내용에 따라 제출 후 이동할 페이지를 아래처럼 조건별로 설정할 수 있습니다.
+
+- **Field**
+    - 라우팅 조건의 기준이 되는 폼 응답 필드(블록)를 선택합니다.
+	- (예) 회사명, 이메일, 선택형 질문, 커스텀 질문 등
+- **Operator**
+	- 선택한 필드를 어떤 조건으로 비교할지 설정합니다.
+	- contains, does not contain, is, is not, is empty, is not empty 등의 조건을 사용할 수 있습니다.
+- **Value**
+	- 조건에 사용할 값을 입력합니다.
+	- (예) Organization name contains “Relate”
+- **Type**
+	- 조건이 만족될 경우 이동할 페이지 유형을 선택합니다.
+        - Thank you: 기본 감사 페이지
+        - URL: 특정 외부 또는 내부 페이지로 안내하여 추가 참여를 유도합니다.
+        - Documents: [문서](/docs) 페이지로 안내하여 추가 자료를 공유합니다.
+        - Meetings: [미팅 스케줄러](/meetings) 페이지로 안내하여 미팅을 예약할 수 있도록 유도합니다.
+
+라우팅 조건이 충족되면, 리드는 폼 제출 후 설정된 페이지로 자동 이동하여
+문서 열람, 미팅 예약 등 다음 액션을 자연스럽게 이어갈 수 있습니다.
+
+<Note> Routing을 설정하지 않으면 사용자들은 기본적으로 "감사합니다." 페이지로 이동합니다.</Note>
+
+<a id="forms-162"></a>
+### 4. 자동화 
+상단의 `자동화` 탭에서는 폼 응답자 중 특정 조건을 만족하는 리드를 자동으로 리스트에 추가할 수 있습니다.
+이를 통해 폼 제출 이후의 후속 액션을 자동화할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/addtolist.png"
+    alt="Add to list"
+    style={{ width: "70%", maxWidth: "640px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+`+ 대상리스트 추가` 버튼을 클릭하면, 폼 응답 데이터를 기준으로 조건을 설정할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/forms/addtolist2.png"
+    alt="Add to list"
+    style={{ width: "70%", maxWidth: "640px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+ - 폼 응답이 특정 조건을 만족하는 경우에만 리스트에 추가되도록 설정할 수 있습니다.
+    - (예) 제출 일자(Submitted At)가 특정 날짜 이후인 경우
+    - (예) 특정 응답 값이 비어 있지 않은 경우
+    - (예) 조건을 설정하지 않으면, 폼 응답자 전체가 대상이 됩니다.
+
+- 조건을 만족한 리드는 선택한 리스트에 자동으로 추가됩니다.
+- 이 대상 리스트는 이후 자동화 캠페인 또는 시퀀스의 시작 리스트로 활용할 수 있습니다.
+
+즉, **폼 응답 → 조건 필터링 → 대상 리스트 추가 → 자동화 캠페인/시퀀스 실행**이라는 흐름을 자동으로 구성하여,
+반응이 있는 리드만 선별하여 후속 커뮤니케이션을 자동화할 수 있습니다.
 
 
+폼 자동화와 리스트 기반 이메일 발송에 대해 더 자세히 알고 싶다면,
+아래 가이드를 참고해 주세요.  
+👉 [Spread | Emma 자동화 가이드 보러가기](https://docs.spread.so/emma-features)
+
+<br/>
+폼을 생성한 후에는 생성된 링크를 웹사이트, 이메일, 소셜 미디어 등에 공유하여 리드를 수집할 수 있습니다.
+
+
+<br/>
+---
 ## Forms로 세일즈와 마케팅 레벨업하기
 
 - **리드 캡처 및 검증**: Forms를 사용하면 리드의 핵심 정보를 수집하고, 잠재 고객과 소통하며, 자동으로 영업 검증 리드(SQL)를 가려낼수 있어요.
@@ -95,4 +207,4 @@ Relate에서는 Form을 이용해 리드 검증에 필요한 정보를 수집하
 - **애셋 공유**: 화이트페이퍼, 보고서 등의 마케팅 리소스를 폼 제출 후 공유하거나 다운로드하게 할 수 있어요.
 - **캠페인 참여 유도**: 각 팀의 프로세스에 맞게 구성한 폼을 이메일 캠페인, 소셜 미디어 게시물, 랜딩 페이지에 삽입하여 더 많은 리드를 확보하고 참여를 유도하세요.
 
-[**Relate Forms**](https://www.relate.so/forms/k2cz1d1a1wbdi166?ref=relate.kr)는 리드 캡처, 검증, 라우팅의 주요 단계를 자동화하여 인바운드 세일즈와 마케팅을 간소화합니다. 지금 바로 Forms를 사용하여 효율적인 워크플로우를 구축하세요.
+Relate의 폼(Forms) 기능은 리드 캡처, 검증, 라우팅의 주요 단계를 자동화하여 인바운드 세일즈와 마케팅을 간소화합니다. 지금 바로 Forms를 사용하여 효율적인 워크플로우를 구축하세요.

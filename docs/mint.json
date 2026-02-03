@@ -205,6 +205,12 @@
       ]
     },
     {
+      "group": "Pulse",
+      "pages": [
+        "features/pulse"
+      ]
+    },
+    {
       "group": "Reporting",
       "pages": [
           "features/reporting"

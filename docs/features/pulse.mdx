@@ -1,0 +1,175 @@
+---
+title: "펄스 (Pulse)"
+description: "팀과 파이프라인의 상태를 빠르게 파악할 수 있는 Pulse 화면을 소개합니다."
+sidebarTitle: "펄스 (Pulse)"
+"og:title": "펄스 (Pulse) | Relate CRM 가이드"
+"og:description": "팀과 파이프라인의 상태를 빠르게 파악할 수 있는 Pulse 화면을 소개합니다."
+"article:tag": "Product Guide"
+"twitter:title": "펄스 (Pulse) | Relate CRM 가이드"
+"twitter:description": "팀과 파이프라인의 상태를 빠르게 파악할 수 있는 Pulse 화면을 소개합니다."
+---
+
+
+## 펄스(Pulse)란?
+펄스는 리드와 고객의 **모든 행동(Activity)을 하나의 타임라인으로 수집하고 연결해 보여주는 기능**입니다.  
+이메일, 문서, 미팅, 폼, 웹페이지 등 다양한 접점에서 발생한 행동을 한눈에 확인할 수 있습니다.
+
+<img
+  src="/images/pulse/fulll.png"
+  alt="Pulse 전체 화면"
+  style={{ display: "block", margin: "16px 0", boxShadow: "0 6px 18px rgba(0, 0, 0, 0.16)", borderRadius: "8px" }}
+/>
+이 기능을 통해 다음과 같은 정보를 한눈에 확인할 수 있습니다.  
+- 누가 어떤 이메일을 열었는지, 어떤 링크를 클릭했는지
+- 어떤 문서나 폼을 조회했고, 얼마나 머물렀는지
+- 미팅 스케줄러를 방문했는지, 실제 예약으로 이어졌는지
+- 익명 방문자가 이후 실명 컨택으로 전환되었는지. 
+  
+  
+이를 통해 **리드의 관심 신호를 놓치지 않고, 적절한 타이밍에 액션으로 연결**할 수 있습니다.
+
+---
+## 펄스가 수집하는 사용자 행동의 출처  
+펄스는 다음과 같은 경로에서 발생한 사용자 행동을 수집합니다.
+
+### 1. [문서(Documents)](/docs) 열람
+다음과 같은 문서 행동이 추적됩니다.
+- 어떤 문서를 열람했는지
+- 몇 페이지(슬라이드)를 조회했는지
+- 문서 및 페이지별 체류 시간
+- 문서 내 링크 클릭
+- 문서 열람 후 이메일 제출 
+
+이를 통해 단순 열람 여부를 넘어, 문서를 얼마나 깊이 읽었는지를 파악할 수 있습니다.
+
+
+#### 익명 문서 트래킹  
+- 이메일을 입력하지 않은 방문자는 익명 방문자(Anonymous)로 기록됩니다.
+- 동일한 환경에서 발생한 문서 열람 행동은 하나의 익명 방문자 기준으로 누적 관리됩니다.
+- 이후 이메일 제출, 클릭 등 신원을 확인할 수 있는 행동이 발생하면, 해당 익명 방문자의 기록은 실명 연락처의 활동 이력으로 자동 연결됩니다.
+
+
+
+<br/>
+### 2. Relate / Spread 에서 발송한 이메일 열람 및 링크 클릭  
+#### 2.1  캠페인, 자동화 캠페인, 시퀀스
+
+이메일 발송 이후, 수신자의 반응에 따라 다음과 같은 이메일 행동이 추적됩니다.
+
+- `opened` : 이메일 열람
+- `clicked` : 이메일 내 링크 클릭
+- `bounced` : 이메일 반송
+- `rejected` : 수신 거부
+- `unsubscribed` : 구독 해지
+
+이벤트 상태에 대한 자세한 설명은 [상태(Status)](/metrics#상태status-종류와-의미) 가이드에서 확인할 수 있습니다.
+
+이때, 아이콘을 통해 어떤 유형의 이메일에서 발생한 행동인지를 쉽게 구분할 수 있습니다.
+<table style={{ borderCollapse: "collapse", width: "auto" }}>
+  <thead>
+    <tr>
+      <th style={{ padding: "6px 14px 6px 6px", textAlign: "left", verticalAlign: "middle", lineHeight: "1.4", backgroundColor: "rgba(0, 0, 0, 0.04)" }}>아이콘</th>
+      <th style={{ padding: "6px 6px 6px 14px", textAlign: "left", verticalAlign: "middle", lineHeight: "1.4", backgroundColor: "rgba(0, 0, 0, 0.04)" }}>유형</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: "6px 14px 6px 6px", verticalAlign: "middle", lineHeight: "1.4" }}>
+        <img src="/images/pulse/icon_cam.png" alt="캠페인 아이콘" width="20" style={{ verticalAlign: "middle", boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", borderRadius: "6px" }} />
+      </td>
+      <td style={{ padding: "6px 6px 6px 14px", verticalAlign: "middle", lineHeight: "1.4" }}>캠페인</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "6px 14px 6px 6px", verticalAlign: "middle", lineHeight: "1.4" }}>
+        <img src="/images/pulse/icon_trig.png" alt="자동화 캠페인 아이콘" width="20" style={{ verticalAlign: "middle", boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", borderRadius: "6px" }} />
+      </td>
+      <td style={{ padding: "6px 6px 6px 14px", verticalAlign: "middle", lineHeight: "1.4" }}>자동화 캠페인</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "6px 14px 6px 6px", verticalAlign: "middle", lineHeight: "1.4" }}>
+        <img src="/images/pulse/icon_sq.png" alt="시퀀스 아이콘" width="20" style={{ verticalAlign: "middle", boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", borderRadius: "6px" }} />
+      </td>
+      <td style={{ padding: "6px 6px 6px 14px", verticalAlign: "middle", lineHeight: "1.4" }}>시퀀스</td>
+    </tr>
+  </tbody>
+</table>
+
+
+#### 2.2 Relate 내에서 발송한 1:1 이메일
+
+다음은 1:1 이메일에 대한 반응이 추적되는 기준입니다.
+- 일반 1:1 이메일은 `to / cc / bcc`를 포함해 **수신자가 1명인 경우에만** 트래킹됩니다.
+- Gmail integration 사용 시, 각 수신자별 개별 트래킹이 가능합니다.
+
+
+<br/>
+### 3. [미팅 스케줄러](/meetings) 페이지 방문
+미팅 스케줄러 페이지에서 발생한 다음과 같은 행동이 추적됩니다.
+- `viewed meeting scheduler` : 미팅 스케줄 페이지 방문
+- 미팅 페이지 체류 시간
+- `scheduled meeting` : 미팅 예약 완료
+
+이를 통해 단순 방문과 실제 미팅 전환을 구분할 수 있습니다.
+
+
+<br/>
+### 4. [폼(Forms)](/forms) 페이지 방문
+폼 페이지 방문 및 제출 과정에서 다음과 같은 행동이 추적됩니다. 
+- `viewed form` : 폼 페이지 방문
+- 폼 페이지 체류 시간
+- `submitted form` : 폼 제출 완료
+
+폼 제출 이벤트는 리드 전환이 발생한 핵심 시점으로 활용할 수 있습니다.
+
+
+<br/>
+### 5. 웹페이지 방문
+웹사이트 또는 랜딩 페이지에 트래커 코드를 설치하면, 해당 페이지 방문 기록도 펄스에서 확인할 수 있습니다.
+예를 들어,
+- 문의하기 폼 제출 전에 어떤 페이지를 방문했는지
+- 전환 직전에 어떤 콘텐츠를 확인했는지
+
+와 같은 흐름을 추적할 수 있습니다.
+
+
+---
+## 개별 리드 기준으로 펄스 확인하기
+
+<img
+  src="/images/pulse/contactpulse.png"
+  alt="Pulse 연락처 타임라인"
+  style={{ display: "block", margin: "16px 0", boxShadow: "0 6px 18px rgba(0, 0, 0, 0.16)", borderRadius: "8px" }}
+/>
+펄스는 전체 타임라인뿐 아니라, **개별 리드(연락처) 기준으로 모든 행동을 모아 확인**할 수도 있습니다.
+
+펄스 페이지에서 특정 리드를 클릭하면, 해당 리드의 연락처 페이지로 이동하며 그 리드와 관련된 모든 액티비티가 **시간순으로 정리된** `펄스`탭에서 표시됩니다.
+
+이 화면에서는 다음과 같은 정보를 한눈에 확인할 수 있습니다.
+
+- 어떤 이메일을 언제, 몇 번 열람했는지
+- 어떤 링크를 클릭했는지
+- 문서, 폼, 미팅 페이지를 방문했는지
+- 어떤 행동이 가장 최근에 발생했는지
+
+이를 통해 개별 리드가 어떤 콘텐츠에 반복적으로 반응하고 있는지, 지금 어떤 단계에 있는지를 빠르게 파악할 수 있습니다.
+
+---
+## 펄스로 할 수 있는 일
+
+펄스에 기록된 각 사용자 행동은 **자동화와 후속 액션의 기준**으로 활용할 수 있습니다.  
+이를 통해 리드의 관심 신호를 실제 전환으로 빠르게 연결할 수 있습니다.
+
+### 활용 예시 (Use cases)  
+- 특정 문서를 여러 번 열람한 리드를 선별하여 후속 캠페인 또는 시퀀스로 연결
+- 이메일을 열었지만 회신하지 않은 리드를 대상으로 팔로업 진행
+- 페이지 체류 시간이 긴 콘텐츠를 파악하여 전환율이 높은 자료 식별
+- 익명 방문자가 언제 실명 컨택으로 전환되는지 추적
+
+이러한 행동 데이터를 기준으로 다음과 같은 액션을 실행할 수 있습니다.
+
+- 각 행동을 트리거로 [Spread | Emma](https://docs.spread.so/spread-emma) 자동화 실행
+- 반응이 있는 리드를 즉시 리스트에 추가
+- 전환 가능성이 높은 리드를 빠르게 식별
+
+이를 통해 관심이 발생한 순간을 놓치지 않고 리드로 전환할 수 있으며,
+전환된 리드의 행동 흐름을 분석해 전환율이 높은 경로와 콘텐츠를 지속적으로 개선할 수 있습니다.
