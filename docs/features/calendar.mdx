@@ -1,150 +1,313 @@
 ---
-title: "Relate Meetings"
+title: "회의 (Meetings)"
 description: "Relate Meetings를 통해 잠재고객과 고객들이 쉽고 빠르게 미팅 일정을 잡을 수 있습니다."
-sidebarTitle: "미팅 스케줄러"
-"og:title": "Relate Meetings | Relate Product Guide"
+sidebarTitle: "회의 (Meetings)"
+"og:title": "회의 (Meetings)| Relate Product Guide"
 "og:description": "Relate Meetings를 통해 잠재고객과 고객들이 쉽고 빠르게 미팅 일정을 잡을 수 있습니다."
 "og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/products/cal/c1.png"
 "article:tag": "Product Guide"
-"twitter:title": "Relate Meetings | Relate Product Guide"
+"twitter:title": "회의 (Meetings) | Relate Product Guide"
 "twitter:description": "Relate Meetings를 통해 잠재고객과 고객들이 쉽고 빠르게 미팅 일정을 잡을 수 있습니다."
 "twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/products/cal/c1.png"
 ---
-
+## Overview
+Relate의 회의(Meetings) 기능은 캘린들리(Calendly)와 같은 미팅 스케줄링용 캘린더 제품으로,
+캘린더와 연동된 예약 링크를 통해 고객이 직접 가능한 시간에 미팅을 예약할 수 있도록 도와주는 스케줄링 기능입니다.
 ![cal1](/images/products/cal/c1.png)
 
-## Overview
-Relate Meetings는 캘린들리(Calendly), 되는시간과 같은 미팅 스케줄링용 캘린더 제품으로, 이를 활용해 잠재고객과 고객이 쉽고 빠르게 미팅 일정을 잡을 수 있습니다.
 
-## Relate Meetings 시작하기
+<br/>
+## Relate 회의 (Meetings) 시작하기 [Step-by-Step]
 
-### 1. 캘린더 연동
-Relate Meetings를 사용하려면 **Google, Outlook, 또는 Apple 캘린더 중 하나와 연동**되어 있어야 합니다.  
-연동된 캘린더를 기준으로 **사전 일정이 없는 시간만 자동으로 보여주기 때문에,** 일정 충돌 걱정 없이 미팅을 열어둘 수 있습니다.  
+### Step 1. 캘린더 연동하기
+Relate Meetings를 사용하려면 **Google, Outlook, 또는 Apple 캘린더 중 하나와 연동**되어 있어야 합니다. 
+연동된 캘린더를 기준으로 사전 일정이 없는 시간만 자동으로 보여주기 때문에, 일정 충돌 걱정 없이 미팅을 열어둘 수 있습니다.
 
-연동 방법은 다음과 같습니다:  
-1. 화면 왼쪽 상단의 워크스페이스 이름 > 설정으로 이동합니다(단축키 cmd + , 또는 ctrl + 로도 이동 가능).
-2. 좌측 사이드바 맨 아래의 Meetings > Calendars를 클릭합니다.  
-3. `+ Add` 버튼을 눌러 연동할 캘린더(Google, Outlook, Apple 등)를 선택합니다.  
-4. 캘린더 계정을 선택하고, Cal.com의 액세스를 허용합니다. Cal.com은 외부 사용자와 자동으로 일정을 조율하는 플랫폼으로, Relate에 내장되어 있어 별도의 가입 없이 바로 사용할 수 있습니다.
-![cal-intg](/images/products/cal/calendar-intg-access.png)![cal-intg](/images/products/cal/calendar-intg-account.png)
-   
-   연동이 완료되면, 아래 이미지와 같이 연결된 캘린더 계정이 표시됩니다.
-   ![cal-intg](/images/products/cal/calendar-intg-done.png)
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/first.png"
+    alt="meetings-first"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+캘린더 연동 방법은 다음과 같습니다:  
+1. Relate 앱 화면 왼쪽 상단의 `워크스페이스 설정`으로 이동합니다.
+2. 좌측 사이드바의 `미팅`을 클릭합니다.  
+3. `+ Add` 버튼을 눌러 연동할 캘린더(Google, Outlook, Apple Calender)를 선택합니다.  
+4. 캘린더 계정을 선택하고, Cal.com의 액세스를 허용합니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/chooseacc.png"
+    alt="meetings-chooseacc"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/access.png"
+    alt="meetings-access"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+   Cal.com은 외부 사용자와 자동으로 일정을 조율하는 플랫폼으로, Relate에 내장되어 있어 별도의 가입 없이 바로 사용할 수 있습니다.
+
+   연동이 완료되면, 아래 스크린샷과 같이 연결된 캘린더 계정이 표시됩니다.
+   <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/meetings.png"
+    alt="meetings-main"
+    style={{ width: "80%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+  
+`Add events to`를 통해 미팅 예약 시 누구의 캘린더에 일정을 추가할지 선택할 수 있습니다. 예를 들어 본인의 Google Calendar나 팀원의 캘린더를 지정할 수 있으며, 선택한 계정에 예약된 미팅이 자동으로 반영됩니다.
+
+<Accordion title="캘린더가 정상적으로 연동되지 않는 경우">
+   캘린더 계정이 정상적으로 표시되지 않는다면, 아래 항목을 확인해 주세요.
+	1. `워크스페이스 설정`의 `외부 서비스 연동` 페이지에서 Google 계정이 연결되어 있는지 확인합니다.
+   <div style={{ display: "flex", justifyContent: "center", marginTop: "2px" }}>
+      <img
+         src="/images/meetings/google.png"
+         alt="meetings-google"
+         style={{ width: "80%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+      />
+   </div>
 
 
-### 2. Relate Meetings 기본 설정하기
-캘린더 연동 후 앱내 설정 페이지(cmd + , 또는 ctrl + ,)로 이동해서 왼쪽 하단에 있는 Meetings로 들어갑니다. 
+	2. Google 연동이 되어 있지 않다면, `연동` 버튼을 클릭해 Google 계정을 연결해 주세요.
+   <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+   <img
+      src="/images/meetings/google3.png"
+      alt="meetings-google3"
+      style={{ width: "80%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+   />
+   </div>
+	3. Google 계정 연결 시, **캘린더 접근 권한**을 허용해야 합니다.
+   4. 연동이 완료되면, 연결된 Google 캘린더 계정이 자동으로 선택 목록에 표시됩니다.
+</Accordion>
 
-#### 2-1. Calendar 선택하기
-![cal-setting1](/images/products/cal/cal-settings1.png)
+<br/>
+### Step 2. Relate Meetings 기본 설정하기
+Step 1 설정을 완료한 후 페이지를 아래로 스크롤하면 Availability 설정 섹션과 Conferencing Apps 섹션을 확인할 수 있습니다.
+#### 2-1. Availability 설정하기
+Availability는 각 사용자(계정)별로 가능한 시간대를 설정하는 기능입니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/newavail.png"
+    alt="meetings-newavail"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+가능한 시간을 설정하기 위해 `+ Add Availability` 를 클릭합니다. 그 다음 스케줄명 혹은 캘린더명을 입력하면, 아래 스크린샷과 같이 시간을 설정할 수 있는 창이 뜹니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/availset.png"
+    alt="meetings-availset"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 
-연동한 캘린더 중에서 어떤 캘린더에 Relate Meetings를 통해 잡힌 일정을 추가할지 먼저 선택합니다. 
+- 토글 버튼을 이용해 요일별 미팅 가능 여부를 설정하고, 각 요일마다 미팅 가능한 시간대를 지정할 수 있습니다.
+- `+` 버튼으로 하루에 여러 시간대를 추가할 수 있고, `Timezone`에서 기준 시간대를 설정할 수 있습니다.
+- `Set to Default`를 활성화하면 해당 Availability가 기본값으로 적용됩니다.
 
-![cal-setting2](/images/products/cal/cal-settings2.png)
+설정이 완료되면 `Save`를 클릭해 저장하세요. 
 
-선택한 캘린더에서 중복 예약을 피하기 위해서 일정이 비어있는지 확인하기 위한 캘린더를 선택합니다. 
-
-#### 2-2. Availability 설정하기
-다음으로 Availability는 각 사용자(계정)별로 가능한 시간대를 설정하는 것입니다.
-가능한 시간을 설정하기 위해 + Availability 를 누릅니다. 그 다음 이름을 입력하면, 시간을 설정할 수 있는 창이 뜹니다.
-![cal-setting3](/images/products/cal/cal-availability-setting.png)
-토글 버튼을 이용해 요일별로 미팅을 허용할지 여부를 선택합니다. 토글 버튼을 켰다면, 해당 요일에서 미팅이 잡힐 시간의 범위를 설정합니다. 오른쪽 Timezone에서 도시별 시간대 설정 또한 가능합니다.
-
-모든 설정을 마쳤다면 Save를 눌러 저장합니다.
-이때, Set to Default 설정을 켜면, 해당 Availability가 디폴트로 설정되어 미팅 스케줄러 생성시 자동으로 배정되어 보여집니다.
-
-![cal-setting4](/images/products/cal/cal-settings3.png)
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/availability.png"
+    alt="meetings-availability"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 반드시 하나의 Availability만 존재하는 것은 아니며, 필요에 따라 여러 개의 Availability를 만들어 관리할 수 있습니다.
 미팅의 성격 등에 따라 각기 다른 Availability를 만든 후, 미팅 스케줄을 생성할 때 원하는 Availability를 선택하면 됩니다.
 
-#### 2-3. Conferencing Apps 설정하기
-![cal-setting5](/images/products/cal/cal-settings4.png)
 
-마지막으로 Conferencing Apps에서 화상 미팅을 진행할 경우 어떤 앱을 사용할지 선택하면 됩니다. 
-
+<div style={{ height: "6px" }} />
+#### 2-2. Conferencing Apps 설정하기
+기본 설정의 마지막 단계로, 화상 미팅에 사용할 앱을 선택합니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/conferen.png"
+    alt="meetings-conferen"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 Default 설정은 Cal.com의 화상 미팅 기능을 사용하게 되어 있고, Google Meet, Zoom, MS Teams Video를 연동해서 사용할 수 있습니다. 
 
-## Meeting scheduler 생성 
-이메일 연동 후, Relate 메뉴 왼쪽에 있는 Meetings 탭을 선택합니다. 
-다음, 상단의 `+ Meeting scheduler` 버튼을 클릭하면 아래와 같은 팝업창이 뜨게 됩니다.
 
-![cal2](/images/products/cal/c2.png)
 
-팝업창에서 입력하고 선택해야 할 항목입니다.
-1. Title: Relate 앱 내에서 보이는 미팅 스케줄러의 이름입니다. 
-2. Slug: 미팅 링크 가장 마지막에 추가되며, Title을 기반으로 자동으로 작성되지만 수정이 가능합니다. 
-3. Assignment: 미팅 스케줄러의 유형에 따라 알맞게 선택하면 됩니다.
 
-Assignment 유형은 아래와 같이 3가지입니다.
-- Collective: 선택된 모든 호스트들이 가능한 시간에만 미팅을 잡을 수 있게 하며, 일반적으로 그룹 콜을 위해 사용됩니다. 
-- Round Robin: 선택된 호스트들을 순환하며 일정한 비율로 일정을 배분하는 순환 배정 방식, 고객에게 가능한 시간대를 모두 보여줌으로서 최대한 많은 옵션을 제공할 수 있습니다. 
-- Managed Event: 1:1 미팅을 위한 개인 캘린더를 위해 사용할 수 있습니다.
 
-<Note>
-**Managed Event 선택시 주의사항**
+<br/>
+<br/>
+## 미팅 스케줄러 (Meeting scheduler) 생성하기 
+캘린더 연동 및 기본 설정 후, Relate 앱으로 돌아가 좌측 사이드바의 `회의` 탭을 선택합니다. 
+상단의 `+ Meeting scheduler` 버튼을 클릭하여 새 미팅 스케줄러를 생성합니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/createnew.png"
+    alt="meetings-createnew"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 
-Managed Event로 미팅 스케줄러를 생성했을 경우, assign된 모든 호스트의 미팅 링크를 보여줍니다.
-다른 팀원이 생성한 Managed Event 미팅 스케줄러의 링크를 또 다른 팀원이 복사하여 공유하면 유효하지 않은 URL이 되기 때문입니다.
-![cal-managed](/images/products/cal/cal-managed-event.png)
-예를 들어, Chris가 만든 Managed Event 미팅 스케줄러 링크는 Chris가 복사했을 때만 유효하며 Won이 복사한 경우 정상적으로 접근할 수 없습니다.
+### Basics
+생성된 미팅 스케줄러의 좌측 메뉴에서 Basics를 선택하면 아래와 같은 설정 화면이 표시됩니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/page_basic.png"
+    alt="meetings-page-basic"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+1. **Title**: Relate 앱 내에서 보이는 미팅 스케줄러의 이름입니다.
+2. **Description**: 미팅에 대한 간략한 설명을 작성할 수 있습니다.
+3. **Slug**: 미팅 링크 가장 마지막에 추가되며, Title을 기반으로 자동으로 작성되지만 수정이 가능합니다. 
+4. **Duration**: 미팅의 길이를 설정할 수 있습니다. (일정을 잡는 사람이 미팅의 길이를 설정하게 할 수도 있습니다.)
+5. **Location**:  미팅이 진행될 방식을 선택할 수 있습니다. 화상 미팅, 대면 미팅 또는 링크 미팅 등 미팅 장소 및 접속 링크를 설정할 수 있습니다.
 
-따라서, 하나의 Managed Event를 여러 명이 공유하고 싶다면, 공유하고자 하는 사람을 assign 후 해당 호스트의 링크를 복사해야 합니다.
-</Note>
+<br/>
+### Availability
+생성된 미팅 스케줄러의 좌측 메뉴에서 Availability를 선택하면 아래와 같은 설정 화면이 표시됩니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "3px" }}>
+  <img
+    src="/images/meetings/page_avail.png"
+    alt="meetings-page-avail"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+이 페이지에서는 앞 단계에서 설정한 Availability 중 하나를 선택할 수 있습니다. 
+기본적으로 Default로 지정된 Availability가 자동으로 적용되어 있으며, 필요에 따라 드롭다운 메뉴를 통해 다른 Availability로 변경할 수 있습니다.
 
-### Event Setup
-![cal-event-setup](/images/products/cal/cal-event-setup.png)
-
-Event Setup 페이지에서는 다음의 설정을 할 수 있습니다. 
-- 미팅의 제목, 설명, 슬러그를 설정
-- 미팅의 길이 (일정을 잡는 사람이 미팅의 길이를 설정하게 할 수도 있습니다.)
-- 미팅 장소 (화상 미팅, 대면 미팅, 전화 통화 등)
-
-### Availabilty
-![cal-availability](/images/products/cal/cal-availability.png)
-
-이 페이지에서는 세팅 페이지에서 설정했던 Availability 중 하나를 선택하면 됩니다.
-Default로 설정한 Availability가 기본으로 설정되어 있습니다. 변경을 희망한다면 드롭다운을 눌러 원하는 Availability를 선택합니다.   
-
+<br/>
 ### Assignment
-![cal-assignment](/images/products/cal/cal-assignment.png)
+생성된 미팅 스케줄러의 좌측 메뉴에서 Assignment를 선택하면, 미팅에 참여할 호스트를 어떻게 배정할지 설정할 수 있는 화면이 표시됩니다.
+이 페이지에서는 미팅 유형에 따라 호스트를 고정하거나, 여러 명의 팀원에게 자동으로 분배하도록 설정할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/page_assign.png"
+    alt="meetings-page-assign"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+Assignment에는 두 가지 배정 방식이 있습니다.  
+- `Collective`: 선택된 모든 호스트가 동시에 가능한 시간대에만 미팅이 예약되도록 설정하는 방식입니다.
+주로 다수의 참석자가 모두 참여해야 하는 그룹 미팅이나 내부 미팅에 적합합니다.
+- `Round Robin`: 선택된 호스트들에게 미팅을 순환 방식으로 자동 배정하는 방식입니다.
+각 호스트의 가능 시간대를 모두 고려하여 고객에게 더 많은 예약 옵션을 제공할 수 있으며, 영업 미팅이나 상담 미팅에 적합합니다.
 
-Assignment는 이 캘린더 이벤트의 호스트와 관련된 설정을 하는 페이지입니다. 
-1:1 미팅을 위한 개인 캘린더의 경우, 자신을 선택하면 됩니다. 
 
-Round Robin의 경우 다음의 설정을 할 수 있습니다. 
-- 분배 방식: 최대한 많은 미팅 슬롯을 제공하는 방식 (Maximize availability), 또는 일정 비율로 배분하는 방식 (Load balancing)
-- Fixed Hosts: 무조건 미팅에 참여해야하는 호스트
-- Round-Robin Hosts: 팀원들 중 해당 캘린더로 미팅 일정이 잡히게 할 호스트를 추가한 뒤, 우선순위 (Priority: 높을수록 더 미팅이 많이 잡힘) 및 비율 (Weights: 미팅 갯수의 비율, 같은 비율이면 똑같은 수의 미팅이 잡힘)
+`Round Robin`을 선택하면, 미팅 배정 방식을 세부적으로 설정할 수 있는 추가 옵션 영역이 표시됩니다.
+- `Maximize availability`: 가능한 호스트가 있는 모든 시간대를 노출하여, 미팅 예약 수를 최대화하는 방식입니다.
+호스트 간 미팅 수의 균형보다 예약 가능 시간의 폭이 중요한 경우에 적합합니다.
+- `Load balancing`: 각 호스트의 미팅 예약 수를 기준으로 비교하여, 특정 호스트에게 미팅이 과도하게 몰리지 않도록 자동으로 조정하는 방식입니다.
+팀원 간 미팅을 균등하게 분배하고 싶을 때 사용합니다.
+- No-show 포함 여부 : 아래 토글을 활성화하면, 노쇼(No-show)로 처리된 미팅도 라운드 로빈 계산에 포함되어 호스트 배정에 반영됩니다.
 
+
+`Fixed Hosts`는 반드시 해당 미팅에 참여해야 하는 호스트입니다. 여기에 추가된 호스트는 어떤 경우에도 미팅에 포함됩니다.
+
+
+<br/>
 ### Limits
-![cal-limits](/images/products/cal/cal-limits.png)
-
+Limits 페이지에서는 미팅이 예약되는 방식과 범위를 세밀하게 제어할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/page_limits.png"
+    alt="meetings-page-limits"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 Limits 페이지에서는 다음의 설정을 할 수 있습니다. 
-- 미팅 전후 버퍼 시간
-- 미팅을 잡을 수 있는 가장 빠른 시간
-- 미팅 일정을 잡을 수 있는 시간 슬롯의 간격 (5분, 10분, 15분 등)
-- 스케줄러로 잡힐 수 있는 최대 미팅 갯수
-- 각 요일 별로 가장 첫 번째 미팅 슬롯만 보여줄지 여부를
-- 스케줄러로 잡힐 수 있는 최대 미팅 시간
-- 스케줄러로 잡을 수 있는 가장 먼 미래 시점이 언제인지 
-- 예약 가능한 시간의 시작점을 조정하는 설정
 
+- Buffer time
+	- `Before event`: 미팅 시작 전에 자동으로 비워둘 버퍼 시간을 설정합니다.
+	- `After event`: 미팅 종료 후 다음 일정까지 확보할 버퍼 시간을 설정합니다.
+
+- `Minimum Notice`
+   - 미팅이 시작되기 최소 몇 시간 전까지 예약이 가능한지 설정합니다.
+   - (예) 2 Hours → 미팅 시작 2시간 전 이후에는 예약 불가
+
+- `Time-slot intervals`
+	- 예약 가능한 시간 슬롯의 간격을 설정합니다.
+	- 기본값은 이벤트 길이(event length)를 기준으로 슬롯이 생성됩니다. 필요에 따라 5분, 10분, 15분 등 특정 간격을 직접 선택할 수도 있습니다.
+
+- `Limit booking frequency`
+	- 이 이벤트가 전체적으로 몇 번까지 예약될 수 있는지 제한합니다.
+   - 일 / 주 / 월 / 연 단위로 예약 횟수 제한을 설정할 수 있습니다.
+
+
+- `Only show the first slot of each day as available`
+	- 하루 중 가장 이른 시간 슬롯 하나만 예약 가능하도록 설정합니다.
+	- 각 날짜마다 1개의 미팅만, 가장 빠른 시간에 배정됩니다.
+
+- `Limit total booking duration`
+	- 이 이벤트로 예약될 수 있는 전체 미팅 시간의 총합을 제한합니다.
+	- 일 / 주 / 월 / 연 단위로 누적 미팅 시간을 설정할 수 있습니다.
+   - (예) 60 minutes per day → 하루에 최대 60분까지만 예약 가능
+
+- `Booker active booking limit`
+	- 한 명의 예약자가 이 이벤트에 대해 동시에 가질 수 있는 활성 예약 수를 제한합니다.
+	- 동일 예약자의 중복 예약을 방지할 수 있습니다.
+   - `Offer to reschedule last active booking to chosen time slot` 옵션을 선택하면, 예약자가 활성 예약 한도에 도달한 상태에서 새 시간을 선택할 경우 기존 예약을 새 시간으로 변경하도록 안내합니다.
+
+- `Limit future bookings`
+	- 현재 시점 기준으로 얼마나 먼 미래까지 예약을 허용할지 설정합니다.
+   - 특정 기간까지 예약 허용
+	   - 예: 30 business days into the future → 오늘 기준으로 30 영업일 이후 일정은 예약 불가
+	- `Always 30 days available`
+	   - 언제나 항상 향후 30일치 일정만 예약 가능
+	- `Within a date range` 특정 날짜 범위 내에서만 예약 허용 
+      - 지정한 시작일과 종료일 사이의 일정만 예약 가능
+
+
+
+
+<br/>
 ### Advanced
-![cal-advanced](/images/products/cal/cal-advanced.png)
+Advanced 설정 페이지에서는 미팅 예약 과정 전반을 보다 세밀하게 제어할 수 있습니다.
+고객이 미팅을 예약할 때 입력해야 할 정보부터, 예약 확정 방식, 알림, 캘린더 표시 방식까지 다양한 고급 옵션을 설정할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/page_advan.png"
+    alt="meetings-page-advan"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+이 페이지에서 다음과 같은 설정을 할 수 있습니다.
+	- 예약 페이지에서 고객에게 받을 질문과 입력 항목 설정
+	- 미팅 예약 시 이메일 또는 전화번호로 확인을 받을지 선택
+	- 예약 후 수동 승인(confirmation) 여부 설정
+	- 캘린더에 표시되는 이벤트 정보 및 메모 노출 여부 제어
+	- 예약 완료 후 특정 URL로 리디렉션 설정
+	- 예약자 또는 주최자에게 발송되는 기본 이메일 알림 비활성화
+	- 예약 페이지의 타임존 고정, 이벤트 색상, 슬롯 최적화 등 추가 옵션 설정
 
-Advanced 설정 페이지에서는 고객이 미팅 일정을 잡을 때 어떤 정보를 입력하게 할 것인지 설정할 수 있습니다. 
+Advanced 설정을 활용하면 미팅 예약 흐름을 팀이나 비즈니스 운영 방식에 맞게 더욱 유연하게 구성할 수 있습니다.
 
-또한, gmail.com 같은 스탠다드 이메일로는 일정을 잡지 못하게 하거나, 일정을 잡기 위해 이메일 확인을 요구하는 등의 설정을 할 수 있습니다. 
+<br/>
+<br/>
+## 미팅 스케줄러 링크 공유하기
+모든 설정이 완료되면, 우측 상단에 표시된 예약 링크 아이콘을 클릭해 링크를 복사합니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/clicklink.png"
+    alt="meetings-clicklink"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+복사한 링크를 이메일, 메신저 등으로 고객에게 공유하세요.
 
-## Relate 팀과 미팅하기
-Relate Meetings 데모를 원하신다면, Relate 팀과 미팅을 잡아주세요. 원하는 시간 슬롯을 선택해주시면, 그때 Zoom을 통해 인사드리겠습니다.
+고객은 해당 링크에 접속해 아래 스크린샷과 같은 페이지에서
+원하는 날짜와 시간을 선택해 회의 일정을 직접 예약할 수 있습니다.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/meetings/linkfull.png"
+    alt="meetings-linkfull"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+예약이 완료되면, 일정은 자동으로 캘린더에 반영되며 확인 안내가 전송됩니다.
 
-<Card
-  title="Relate 팀과 미팅하기"
-  icon="calendar"
-  iconType="duotone"
-  href="https://relate.so/cal/workspaces/relate/teamkr"
->
-Relate 팀과 미팅하기
-</Card>
