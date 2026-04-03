@@ -201,7 +201,8 @@
     {
       "group": "Meeting Scheduler",
       "pages": [
-        "features/calendar"
+        "features/calendar",
+        "features/notetaker"
       ]
     },
     {

@@ -1,0 +1,92 @@
+---
+title: "Notetaker"
+description: "온라인 미팅 내용을 자동으로 기록하고, CRM에 즉시 연결해주는 기능입니다."
+sidebarTitle: "Notetaker"
+"og:title": "Notetaker | Relate Product Guide"
+"og:description": "온라인 미팅 내용을 자동으로 기록하고, CRM에 즉시 연결해주는 기능입니다."
+"article:tag": "Product Guide"
+"twitter:title": "Notetaker | Relate Product Guide"
+"twitter:description": "온라인 미팅 내용을 자동으로 기록하고, CRM에 즉시 연결해주는 기능입니다."
+---
+
+## Overview
+
+Relate Notetaker는 **Google Meet, Zoom 등 화상회의에 자동으로 참여하여 회의 내용을 기록**합니다.
+
+회의가 끝나면 **미팅 노트가 Relate의 액티비티 및 캘린더에 자동으로 저장**되어, 회의 후 노트 정리에 쏟던 시간을 영업에 집중하는 데 사용할 수 있습니다.
+
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/notetaker-overview.png"
+    alt="Notetaker Overview"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+## 신청 방법
+
+**현재 신청자에 한해 순차적으로 공개**하고 있습니다.
+
+<Card title="Notetaker 신청하기" icon="arrow-right" href="https://public.relate.so/p/forms/aottq1rcyvgn6x03">
+  Relate Notetaker Early Access를 신청하세요.
+</Card>
+
+<Note>
+**Relate Team Business 플랜을 이용 중인 경우 10시간 이용권이 제공**됩니다.
+
+이미 Team Business 플랜을 사용 중이라면 신청 후 바로 Notetaker 기능을 이용할 수 있습니다.
+</Note>
+
+<br />
+<br />
+
+## 동작 방식
+
+1. **캘린더 연동 (필수)**: Google Calendar 또는 Microsoft 365 캘린더 연동이 필요합니다. 연동 여부는 **워크스페이스 설정 → 외부 서비스 연동**에서 확인할 수 있습니다.
+
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/features/notetaker-calendar-integration.png"
+    alt="캘린더 연동"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+2. **캘린더 이벤트 감지**: 연동이 완료되면 Notetaker가 캘린더 이벤트를 자동으로 감지합니다. 연동이 정상적으로 되어 있다면 **고객 연락처 → 활동란에 캘린더 이벤트**가 표시됩니다.
+3. **자동 녹음 및 요약**: **Google Meet 또는 Zoom** 미팅에 bot이 자동 참여하여 녹음하고, 종료 후 요약된 미팅 노트를 활동란에 저장합니다.
+
+<br />
+<br />
+
+## 설정
+
+Relate 앱 좌측 상단의 워크스페이스 이름을 클릭한 후 **워크스페이스 설정 → AI 노트테이커**로 이동하여 설정할 수 있습니다.
+
+<Warning>
+[Notetaker 기능을 신청](https://public.relate.so/p/forms/aottq1rcyvgn6x03)하면 아래 설정 화면이 활성화됩니다. **신청 전에는 해당 메뉴가 표시되지 않습니다.**
+</Warning>
+
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/features/notetaker-settings-1.png"
+    alt="Notetaker 설정 진입"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/features/notetaker-settings-2.png"
+    alt="Notetaker 설정 화면"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+**Auto-Recording** — 회의 자동 녹화 방식을 설정합니다.
+- **Off**: 매 회의마다 수동으로 녹화를 활성화합니다.
+- **All meetings**: 캘린더에 화상회의 링크가 있는 모든 회의를 자동으로 녹화합니다.
+- **External only**: 외부 참석자(타 도메인)가 포함된 회의만 자동으로 녹화합니다. 내부 회의는 제외하고 고객 미팅만 녹화하고 싶을 때 유용합니다.
+
+**AI 노트 템플릿** — 회의 요약 방식을 선택합니다. 선택한 템플릿은 새로운 녹화에 적용됩니다.
+- **Default**: 주요 논의 내용과 액션 아이템을 정리합니다.
+- **BANT**: 예산(Budget), 의사결정자(Authority), 니즈(Need), 타임라인(Timeline) 기준으로 요약합니다.
+- **MEDDIC**: Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion, Action Items 기준으로 요약합니다.
