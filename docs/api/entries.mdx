@@ -1,0 +1,130 @@
+---
+title: "엔트리 (Entries)"
+description: "Relate API로 리스트/프로세스의 엔트리를 조회·생성·수정·삭제합니다."
+sidebarTitle: "리스트/프로세스 엔트리"
+"og:title": "엔트리 (Entries) | Relate API"
+"og:description": "Relate API로 리스트/프로세스의 엔트리를 조회·생성·수정·삭제합니다."
+"article:tag": "API"
+"twitter:title": "엔트리 (Entries) | Relate API"
+"twitter:description": "Relate API로 리스트/프로세스의 엔트리를 조회·생성·수정·삭제합니다."
+---
+
+**엔트리(Entry)**는 **리스트 또는 프로세스에 속한 개별 항목**입니다 ([리스트 / 프로세스](/api/lists) 참고). 모든 엔트리 엔드포인트는 해당 엔트리가 속한 리스트/프로세스의 ID인 `:list_id` 하위에 위치합니다.
+
+## 리스트의 모든 엔트리 조회
+
+```bash
+curl https://api.relate.so/v1/lists/:list_id/entries \
+  -H "Authorization: Bearer {api_key}"
+```
+
+일반 리스트 엔트리 응답:
+
+```json
+{
+    "data": [
+        {
+            "id": "gkhb8Y",
+            "key": null,
+            "list_id": "QbkUlo",
+            "entryable_id": "GEF751",
+            "entryable_type": "Organization",
+            "contact_id": null,
+            "list_fields": {
+                "vBASJR": { "name": "test field", "data_type": "text", "value": "test value" }
+            },
+            "created_at": "2025-04-29T22:53:34.396Z",
+            "updated_at": "2025-04-29T22:54:48.439Z"
+        }
+    ],
+    "pagination": { "end_cursor": 1, "has_next_page": false, "total_count": 1 }
+}
+```
+
+프로세스 엔트리 응답:
+
+```json
+{
+    "data": [
+        {
+            "id": "QrhZvA",
+            "key": "TEST PROCE-1",
+            "list_id": "Jm9UpJ",
+            "entryable_id": "GEF751",
+            "entryable_type": "Organization",
+            "status": "Started",
+            "assignee": null,
+            "contact_id": null,
+            "one_time_value_cents": 0,
+            "recurring_value_cents": 0,
+            "recurring_value_period": "annual",
+            "list_fields": {
+                "w9DSqo": { "name": "test field", "data_type": "text", "value": "test value" }
+            },
+            "closed_at": null,
+            "next_entry_id": null,
+            "created_at": "2025-04-29T22:52:52.818Z",
+            "updated_at": "2025-04-29T22:54:58.809Z"
+        }
+    ],
+    "pagination": { "end_cursor": 1, "has_next_page": false, "total_count": 1 }
+}
+```
+
+## 엔트리 단건 조회
+
+```bash
+curl https://api.relate.so/v1/lists/:list_id/entries/:id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+## 엔트리 생성
+
+```bash
+curl -X POST https://api.relate.so/v1/lists/:list_id/entries \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "entryable_id": "...",
+    "entryable_type": "Contact",
+    "status": "...",
+    "assignee_email": "...",
+    "one_time_value_cents": 0,
+    "recurring_value_cents": 0,
+    "recurring_value_period": "monthly",
+    "contact_id": "...",
+    "list_fields": [
+      { "name": "...", "value": "..." },
+      { "name": "...", "value": ["option1", "option2"] }
+    ]
+  }'
+```
+
+- `entryable_id` (필수): 연결할 리소스(`Contact` 또는 `Organization`)의 ID
+- `entryable_type` (필수): `"Contact"` 또는 `"Organization"`
+- `status` (프로세스에서만 필수): 부여할 상태 이름 (프로세스에 존재해야 함)
+- `assignee_email`: 엔트리를 할당할 사용자 이메일
+- `one_time_value_cents` (프로세스에서만 필수): 일회성 금액 (cents)
+- `recurring_value_cents` (프로세스에서만 필수): 반복 금액 (cents)
+- `recurring_value_period` (프로세스에서만 필수): `monthly`, `annual`, `one_time` 중 하나
+- `contact_id` (선택): 조직과 연결된 contact의 ID
+- `list_fields` (선택): 리스트에 정의된 커스텀 필드
+    - `name`: 필드 이름
+    - `value`: 단일 값 또는 배열(다중 값 허용 필드인 경우)
+
+## 엔트리 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/lists/:list_id/entries/:id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+- `entryable_id`과 `entryable_type`는 수정할 수 없습니다.
+
+## 엔트리 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/lists/:list_id/entries/:id \
+  -H "Authorization: Bearer {api_key}"
+```
+

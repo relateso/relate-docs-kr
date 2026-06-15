@@ -1,0 +1,70 @@
+---
+title: "SMS / LMS"
+description: "Relate API로 SMS·LMS 문자 메시지를 발송하고 조회합니다."
+sidebarTitle: "SMS / LMS"
+"og:title": "SMS / LMS | Relate API"
+"og:description": "Relate API로 SMS·LMS 문자 메시지를 발송하고 조회합니다."
+"article:tag": "API"
+"twitter:title": "SMS / LMS | Relate API"
+"twitter:description": "Relate API로 SMS·LMS 문자 메시지를 발송하고 조회합니다."
+---
+
+Relate API로 SMS·LMS 문자 메시지를 발송하고 조회합니다.
+
+- `POST /v1/sms_messages` — 단건 SMS/LMS 발송
+- `GET /v1/sms_messages/:id` — 단건 조회
+- `GET /v1/sms_messages` — 목록 조회 (페이지네이션)
+
+## SMS 발송
+
+```bash
+curl -X POST "https://api.relate.so/v1/sms_messages" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -d '{
+    "sender_number": "01012345678",
+    "receiver_number": "01098765432",
+    "body": "안녕하세요",
+    "type": "SMS"
+  }'
+```
+
+## LMS 발송 (제목 포함)
+
+```bash
+curl -X POST "https://api.relate.so/v1/sms_messages" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -d '{
+    "sender_number": "01012345678",
+    "receiver_number": "010-9876-5432",
+    "body": "장문 메시지 내용입니다",
+    "type": "LMS",
+    "title": "공지사항"
+  }'
+```
+
+## 메시지 단건 조회
+
+```bash
+curl -X GET "https://api.relate.so/v1/sms_messages/HASHID" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+## 메시지 목록 조회
+
+```bash
+curl -X GET "https://api.relate.so/v1/sms_messages?first=10&after=0" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+## 파라미터
+
+| Field | Type | 필수 | 설명 |
+| --- | --- | --- | --- |
+| sender_number | string | O | 발신 번호 (workspace에 등록된 번호) |
+| receiver_number | string | O | 수신 번호 (하이픈 허용) |
+| body | string | O | 메시지 본문 |
+| type | string | O | `SMS` 또는 `LMS` |
+| title | string | X | LMS 제목 (LMS일 때만 허용) |
+
