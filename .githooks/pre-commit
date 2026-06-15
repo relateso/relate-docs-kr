@@ -1,0 +1,23 @@
+#!/bin/sh
+# 공유 pre-commit 리마인더 — docs/updates.mdx(최근 업데이트) 동기화 유도.
+# 커밋을 막지 않고 안내만 출력합니다(exit 0).
+changed_docs=$(git diff --cached --name-only --diff-filter=ACM \
+  | grep -E '^docs/.*\.mdx$' | grep -v -E '^docs/updates\.mdx$')
+if [ -n "$changed_docs" ]; then
+  if ! git diff --cached --name-only | grep -q -E '^docs/updates\.mdx$'; then
+    printf '\033[33m'
+    echo "────────────────────────────────────────────────────────"
+    echo "📝  문서가 변경됐는데 docs/updates.mdx 는 그대로입니다."
+    echo "    의미 있는 추가/개선이면 업데이트 로그에 한 줄 남겨주세요:"
+    echo ""
+    echo "    <Update label=\"$(date +%Y-%m-%d)\" tags={[\"개선\"]}>"
+    echo "      ## 제목"
+    echo "      내용"
+    echo "    </Update>"
+    echo ""
+    echo "    (불필요하면 그냥 커밋 진행하면 됩니다 — 막지 않습니다)"
+    echo "────────────────────────────────────────────────────────"
+    printf '\033[0m'
+  fi
+fi
+exit 0
