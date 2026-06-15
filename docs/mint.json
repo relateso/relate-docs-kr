@@ -150,6 +150,12 @@
       ]
     },
     {
+      "group": "AI",
+      "pages": [
+        "ai/relate-mcp"
+      ]
+    },
+    {
       "group": "Contact & Organization",
       "pages": [
         "features/people",
