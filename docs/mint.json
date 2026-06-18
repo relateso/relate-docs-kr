@@ -127,6 +127,13 @@
       ]
     },
     {
+      "group": "연락처 가져오기",
+      "pages": [
+        "setup/google-contacts",
+        "setup/ai-import"
+      ]
+    },
+    {
       "group": "Platform",
       "pages": [
         {
