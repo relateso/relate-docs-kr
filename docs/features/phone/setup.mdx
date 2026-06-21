@@ -1,0 +1,87 @@
+---
+title: "Call to Follow-up 시작하기"
+description: "소프트폰(Linphone)으로 Call to Follow-up을 설정·테스트하고, 사용을 신청하는 방법을 안내합니다."
+sidebarTitle: "시작하기"
+"og:title": "Call to Follow-up 시작하기 (Beta) | Relate Product Guide"
+"og:description": "소프트폰(Linphone)으로 Call to Follow-up을 설정·테스트하고, 사용을 신청하는 방법을 안내합니다."
+"article:tag": "Integration"
+"twitter:title": "Call to Follow-up 시작하기 (Beta) | Relate Product Guide"
+"twitter:description": "소프트폰(Linphone)으로 Call to Follow-up을 설정·테스트하고, 사용을 신청하는 방법을 안내합니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/og-image-docs.png"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/og-image-docs.png"
+---
+
+## 연동 및 테스트
+
+소프트폰(Linphone)으로 Call to Follow-up을 테스트하는 순서입니다.
+
+### Step 1. Linphone 다운로드
+
+소프트폰 앱 **Linphone**을 [공식 다운로드 페이지](https://www.linphone.org/en/getting-started/)에서 받아 설치합니다. iOS·Android·macOS·Windows·Linux를 모두 지원합니다.
+
+![Linphone 다운로드 화면](/images/phone/linphone-download.png)
+
+### Step 2. 테스트용 전화번호 발급 신청
+
+Relate 팀에 테스트용 전화번호 발급을 신청합니다. [신청 폼](https://public.relate.so/p/forms/7i5k9xq20jzttzk9?utm_source=guidedoc)에서 신청해 주세요.
+
+### Step 3. 워크스페이스 설정에서 번호 할당
+
+`워크스페이스 설정` → `통화`로 이동합니다. 발급받은 번호가 `전체 번호`에 표시되며, 아직 번호가 없으면 `전화번호 발급 문의`로 요청할 수 있습니다.
+
+![워크스페이스 설정 > 통화 — 전체 번호](/images/phone/call-number.png)
+
+**관리자**가 번호를 **사용자에게 할당**합니다. 번호의 `편집`에서 사용자를 선택하고 `할당`을 누르면, 해당 사용자가 그 번호로 통화할 수 있게 됩니다.
+
+![번호를 사용자에게 할당](/images/phone/call-assign.png)
+
+### Step 4. Linphone에 연동 정보 입력
+
+Linphone을 실행한 뒤 로그인 화면에서 일반 로그인이 아니라 **`Third-party SIP account`**를 선택합니다.
+
+![Linphone — Third-party SIP account 선택](/images/phone/linphone-connection.png)
+
+이제 **Relate 관리자 페이지의 `소프트폰 연결` 정보를 Linphone 입력란에 그대로 옮겨** 입력합니다. 아래에서 **위 이미지가 Relate에서 확인하는 정보, 아래 이미지가 Linphone 입력란**입니다. **같은 항목끼리 그대로 복사**하면 됩니다.
+
+![Relate — 소프트폰 연결 정보(credential)](/images/phone/call-credentials.png)
+
+| Relate `소프트폰 연결` | → | Linphone `Third-party SIP account` |
+| --- | --- | --- |
+| Username (발신 번호) | → | Username |
+| Password | → | Password |
+| Domain | → | Domain |
+| Authentication ID | → | Authentication ID (if different) |
+| Registrar URI | → | Registrar URI |
+| Outbound SIP Proxy URI | → | Outbound SIP Proxy URI |
+| `transport=tls` (포트 `5061`) | → | Transport: `TLS` |
+
+![Linphone — Third-party SIP account 정보 입력란](/images/phone/linphone-sip-form.png)
+
+<Warning>
+  - **Password는 발급 시 1회만 표시**됩니다. 분실하면 Relate 관리자 페이지에서 `재발급` 후 다시 입력해야 합니다.
+  - **Username과 Authentication ID는 서로 다른 값**입니다. 헷갈리지 않도록 각각 정확히 입력하세요.
+</Warning>
+
+입력 후 `Connection`을 누르면 SIP 계정이 등록됩니다.
+
+### Step 5. 전화 걸기 / 받기
+
+등록이 완료되면 Linphone에서 **전화를 걸어** 봅니다. `New call`에서 번호를 직접 입력하거나, 저장된 연락처를 선택해 통화할 수 있습니다. (수신도 가능합니다.)
+
+![Linphone — 전화 걸기(다이얼)](/images/phone/linphone-dial.png)
+
+### Step 6. 녹음·요약 기록 확인
+
+통화가 끝나면 **수 분 내**에 해당 **연락처(Contact) 상세 페이지**에 **녹음 및 통화 요약**이 자동으로 기록됩니다. (매칭되는 연락처가 없으면 자동 생성됩니다.)
+
+![연락처 상세에 기록된 통화 녹음·요약](/images/phone/call-summary.png)
+
+## 사용 신청하기
+
+Call to Follow-up은 비공개 베타로, 아래 절차로 신청·발급이 진행됩니다.
+
+1. **신청 폼 제출** — [신청하기](https://public.relate.so/p/forms/7i5k9xq20jzttzk9?utm_source=guidedoc)
+2. **가입 링크 전달** — 신청 정보를 확인한 뒤, Relate 팀이 가입 가능한 링크를 전달해 드립니다.
+3. **번호 발급** — 전달받은 링크에서 정보를 입력하면 **10분 이내**에 번호가 발급됩니다.
+
+요금 체계는 [요금제](/features/phone/pricing)를 참고하세요.

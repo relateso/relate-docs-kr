@@ -223,6 +223,15 @@
       ]
     },
     {
+      "group": "Call to Follow-up (Beta)",
+      "pages": [
+        "features/phone/overview",
+        "features/phone/setup",
+        "features/phone/pricing",
+        "features/phone/faq"
+      ]
+    },
+    {
       "group": "Pulse",
       "pages": [
         "features/pulse"
