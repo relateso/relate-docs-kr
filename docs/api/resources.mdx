@@ -1,0 +1,761 @@
+---
+title: "리소스 (Resources)"
+description: "Relate API의 연락처·조직·노트·커스텀 필드·리스트·엔트리·SMS·캘린더·녹음 엔드포인트를 한 페이지에서 다룹니다."
+sidebarTitle: "리소스 (Resources)"
+"og:title": "리소스 (Resources) | Relate API"
+"og:description": "Relate API의 연락처·조직·노트·커스텀 필드·리스트·엔트리·SMS·캘린더·녹음 엔드포인트를 한 페이지에서 다룹니다."
+"article:tag": "API"
+"twitter:title": "리소스 (Resources) | Relate API"
+"twitter:description": "Relate API의 연락처·조직·노트·커스텀 필드·리스트·엔트리·SMS·캘린더·녹음 엔드포인트를 한 페이지에서 다룹니다."
+"og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/og-image-docs.png"
+"twitter:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/og-image-docs.png"
+---
+
+이 페이지는 Relate API의 모든 리소스 엔드포인트를 한곳에 모았습니다. 인증·Base URL·페이지네이션 등 공통 사항은 [소개](/api/introduction)를 참고하세요.
+
+- [연락처 (Contacts)](#contacts)
+- [조직 (Organizations)](#organizations)
+- [노트 (Notes)](#notes)
+- [커스텀 필드 (Custom Fields)](#custom-fields)
+- [리스트 / 프로세스 (Lists & Processes)](#lists)
+- [엔트리 (Entries)](#entries)
+- [SMS / LMS](#sms)
+- [캘린더 이벤트 (Calendar Events)](#calendar-events)
+- [녹음 (Recordings)](#recordings)
+
+<a id="contacts" />
+
+## 연락처 (Contacts)
+
+Relate API로 연락처(Contact)를 조회·생성·수정·삭제합니다.
+
+### 모든 연락처 조회
+
+```bash
+curl https://api.relate.so/v1/contacts \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 연락처 단건 조회
+
+```bash
+curl https://api.relate.so/v1/contacts/:contact_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+이메일로 연락처를 찾을 수도 있습니다.
+
+```bash
+curl -X GET "https://api.relate.so/v1/contacts?email=email@email.com" \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Accept: application/json"
+```
+
+핸드폰 번호로도 찾을 수 있습니다. 입력한 번호는 저장 시점과 동일하게 정규화되므로, `+821012345678`, `01012345678`, `010-1234-5678` 등 어떤 형식으로 보내도 같은 연락처에 매칭됩니다.
+
+```bash
+curl -X GET "https://api.relate.so/v1/contacts?phone_number=01012345678" \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Accept: application/json"
+```
+
+### 연락처 생성
+
+```bash
+curl https://api.relate.so/v1/contacts \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"organization_id":"...","first_name":"Paul","last_name":"Atreides","emails":["paul@atreid.es"]}'
+```
+
+- `first_name`, 또는 `emails`에 유효한 주소가 최소 1개 필요합니다.
+- `organization_id`를 `"auto"`로 전달하면, *이메일 도메인*과 일치하는 기존 조직에 매칭되며, 없으면 해당 도메인으로 새 조직이 생성됩니다.
+- `organization_id`를 지정하지 않으면 조직 없이 연락처가 생성됩니다.
+
+### 연락처 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/contacts/:contact_id \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"emails":["usul@arrak.is"],"custom_fields":[{"name":"House","value":"Atreides"}]}'
+```
+
+### 연락처 이메일 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/contacts/:contact_id/emails \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"emails":["usul@arrak.is"]}'
+```
+
+### 연락처 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/contacts/:contact_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+<a id="organizations" />
+
+## 조직 (Organizations)
+
+Relate API로 조직(Organization)을 조회·생성·수정·삭제합니다.
+
+### 모든 조직 조회
+
+```bash
+curl https://api.relate.so/v1/organizations \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 조직 단건 조회
+
+```bash
+curl https://api.relate.so/v1/organizations/:organization_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 조직 생성
+
+```bash
+curl https://api.relate.so/v1/organizations \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Relate","domains":["relate.so"]}'
+```
+
+- `name`, 또는 `domains`에 유효한 URL이 최소 1개 필요합니다.
+
+### 조직 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/organizations/:organization_id \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Relate","domains":["relate.so","relate.kr"],"custom_fields":[{"name":"Category","value":"Startup"}]}'
+```
+
+### 조직 도메인 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/organizations/:organization_id/domains \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"domains":["relate.kr"]}'
+```
+
+### 조직 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/organizations/:organization_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+<a id="notes" />
+
+## 노트 (Notes)
+
+Relate API로 노트(Note)를 조회·생성·수정·삭제합니다.
+
+### 모든 노트 조회
+
+```bash
+curl https://api.relate.so/v1/notes \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 노트 단건 조회
+
+```bash
+curl https://api.relate.so/v1/notes/:note_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 노트 생성
+
+```bash
+curl https://api.relate.so/v1/notes \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"organization_id":"...","deal_id":"...","body":"this is a note"}'
+```
+
+- `organization_id`와 `body`는 필수입니다.
+
+### 노트 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/notes/:note_id \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"body":"this is an edited note"}'
+```
+
+- `deal_id`와 `body`만 수정할 수 있습니다.
+
+### 노트 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/notes/:note_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+<a id="custom-fields" />
+
+## 커스텀 필드 (Custom Fields)
+
+Relate API로 커스텀 필드(Custom Field)를 조회·생성·수정·삭제합니다.
+
+### 모든 커스텀 필드 조회
+
+```bash
+curl https://api.relate.so/v1/custom_fields \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 커스텀 필드 단건 조회
+
+```bash
+curl https://api.relate.so/v1/custom_fields/:custom_field_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 커스텀 필드 생성
+
+```bash
+curl https://api.relate.so/v1/custom_fields \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"field","model":"organization","data_type":"select","options":["one","two"],"accepts_multiple_values":false}'
+```
+
+- `name`, `model`은 필수입니다.
+- `model`은 `"organization"`, `"contact"`, `"deal"` 중 하나여야 합니다.
+- `data_type`은 `"text"`, `"textarea"`, `"url"`, `"number"`, `"date"`, `"datetime"`, `"select"`, `"user"`, `"contact"` 중 하나여야 합니다. (생략 시 `"text"`)
+- `data_type`이 `"select"`면 `options`가 필수입니다.
+- `data_type`이 `"select"`, `"user"`, `"contact"` 중 하나면 `accepts_multiple_values`가 필수입니다.
+
+### 커스텀 필드 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/custom_fields/:custom_field_id \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"field2","options":["one","two","three"]}'
+```
+
+- `name`과 `options`만 수정할 수 있습니다.
+
+### 커스텀 필드 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/custom_fields/:custom_field_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+<a id="lists" />
+
+## 리스트 / 프로세스 (Lists & Processes)
+
+Relate API로 리스트(List)와 프로세스(Process)를 조회·생성·수정·삭제합니다. `process` 값으로 일반 리스트(`false`)와 프로세스(`true`)를 구분합니다.
+
+### 모든 리스트/프로세스 조회
+
+```bash
+curl https://api.relate.so/v1/lists \
+  -H "Authorization: Bearer {api_key}"
+```
+
+```json
+{
+    "data": [
+        {
+            "id": "QbkUlo",
+            "name": "test list",
+            "process": false,
+            "entry_type": "Organization",
+            "fields": [
+                { "name": "test field", "data_type": "text" }
+            ],
+            "created_at": "2025-04-29T22:47:39.635Z",
+            "updated_at": "2025-04-29T22:47:39.635Z",
+            "archived_at": null
+        },
+        {
+            "id": "Jm9UpJ",
+            "name": "test process",
+            "identifier": "TEST PROCE",
+            "process": true,
+            "duplicates_allowed": true,
+            "entry_type": "Organization",
+            "entry_label": "Organization",
+            "status_label": "Status",
+            "statuses": [
+                { "name": "Started", "type": "active" },
+                { "name": "In Progress", "type": "active" },
+                { "name": "Completed", "type": "won" },
+                { "name": "Canceled", "type": "lost" }
+            ],
+            "fields": [
+                { "name": "test field", "data_type": "text" }
+            ],
+            "created_at": "2025-04-29T22:47:28.540Z",
+            "updated_at": "2025-04-29T22:47:28.540Z",
+            "archived_at": null
+        }
+    ],
+    "pagination": { "end_cursor": 2, "has_next_page": false, "total_count": 2 }
+}
+```
+
+### 리스트/프로세스 단건 조회
+
+```bash
+curl https://api.relate.so/v1/lists/:list_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+일반 리스트 응답:
+
+```json
+{
+    "id": "QbkUlo",
+    "name": "test list",
+    "process": false,
+    "entry_type": "Organization",
+    "fields": [ { "name": "test field", "data_type": "text" } ],
+    "created_at": "2025-04-29T22:47:39.635Z",
+    "updated_at": "2025-04-29T22:47:39.635Z",
+    "archived_at": null
+}
+```
+
+프로세스 응답:
+
+```json
+{
+    "id": "Jm9UpJ",
+    "name": "test process",
+    "identifier": "TEST PROCE",
+    "process": true,
+    "duplicates_allowed": true,
+    "entry_type": "Organization",
+    "entry_label": "Organization",
+    "status_label": "Status",
+    "statuses": [
+        { "name": "Started", "type": "active" },
+        { "name": "In Progress", "type": "active" },
+        { "name": "Completed", "type": "won" },
+        { "name": "Canceled", "type": "lost" }
+    ],
+    "fields": [ { "name": "test field", "data_type": "text" } ],
+    "created_at": "2025-04-29T22:47:28.540Z",
+    "updated_at": "2025-04-29T22:47:28.540Z",
+    "archived_at": null
+}
+```
+
+### 리스트 생성
+
+```bash
+curl -X POST https://api.relate.so/v1/lists \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "...",
+    "process": false,
+    "entry_type": "Contact",
+    "fields": [
+      { "name": "...", "data_type": "select", "accepts_multiple_values": false, "options": ["option1", "option2", "option3"] },
+      { "name": "...", "data_type": "textarea" }
+    ]
+  }'
+```
+
+- `name` (필수): 리스트 이름
+- `process` (필수): 프로세스 여부 (`true`=프로세스, `false`=일반 리스트)
+- `entry_type` (필수): 엔트리 유형. `"Contact"` 또는 `"Organization"`
+- `fields` (선택): 엔트리에 대한 커스텀 필드 정의 배열
+    - `name` (필수): 필드 이름
+    - `data_type` (필수): `text`, `textarea`, `url`, `number`, `date`, `datetime`, `select`, `user`, `contact` 중 하나
+    - `accepts_multiple_values` (`select`/`user`/`contact`일 때 필수): 다중 값 허용 여부
+    - `options` (`select`일 때 필수): 선택 옵션 배열
+
+### 프로세스 생성
+
+```bash
+curl -X POST https://api.relate.so/v1/lists \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "...",
+    "process": true,
+    "entry_type": "Contact",
+    "identifier": "...",
+    "duplicates_allowed": false,
+    "entry_label": "...",
+    "status_label": "...",
+    "statuses": [
+      { "name": "...", "type": "active" },
+      { "name": "...", "type": "active" },
+      { "name": "...", "type": "done" }
+    ],
+    "fields": [
+      { "name": "...", "data_type": "select", "accepts_multiple_values": false, "options": ["option1", "option2", "option3"] },
+      { "name": "...", "data_type": "date" }
+    ]
+  }'
+```
+
+- `name` (필수): 프로세스 이름
+- `process` (필수): 프로세스임을 나타내기 위해 `true`로 설정
+- `entry_type` (필수): 엔트리 유형. `"Contact"` 또는 `"Organization"`
+- `identifier` (필수): 엔트리를 고유하게 식별하는 값 (예: `"DEAL"`)
+- `duplicates_allowed` (필수): 동일 식별자를 가진 엔트리 중복 허용 여부
+- `statuses` (선택): 상태 단계 배열. 각 항목은 다음을 포함
+    - `name` (필수): 단계 라벨 (예: `"Onboarding"`)
+    - `type` (필수): `active`, `won`, `lost` 중 하나
+- `entry_label` (선택): 개별 엔트리 라벨 (예: `"Lead"`, `"Candidate"`)
+- `status_label` (선택): 상태 필드 라벨 (예: `"Stage"`, `"Status"`)
+- `fields` (선택): 추가 커스텀 필드 배열 (리스트 생성과 동일한 형식)
+
+### 리스트/프로세스 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/lists/:list_id \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "...",
+    "identifier": "...",
+    "duplicates_allowed": false,
+    "entry_label": "...",
+    "status_label": "...",
+    "statuses": [
+      { "name": "...", "type": "active" },
+      { "name": "...", "type": "done" }
+    ],
+    "fields": [
+      { "name": "...", "data_type": "date" }
+    ]
+  }'
+```
+
+- `entry_type`과 `process`는 수정할 수 없습니다.
+
+### 리스트/프로세스 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/lists/:list_id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+<a id="entries" />
+
+## 엔트리 (Entries)
+
+**엔트리(Entry)**는 **리스트 또는 프로세스에 속한 개별 항목**입니다 ([리스트 / 프로세스](#lists) 참고). 모든 엔트리 엔드포인트는 해당 엔트리가 속한 리스트/프로세스의 ID인 `:list_id` 하위에 위치합니다.
+
+### 리스트의 모든 엔트리 조회
+
+```bash
+curl https://api.relate.so/v1/lists/:list_id/entries \
+  -H "Authorization: Bearer {api_key}"
+```
+
+일반 리스트 엔트리 응답:
+
+```json
+{
+    "data": [
+        {
+            "id": "gkhb8Y",
+            "key": null,
+            "list_id": "QbkUlo",
+            "entryable_id": "GEF751",
+            "entryable_type": "Organization",
+            "contact_id": null,
+            "list_fields": {
+                "vBASJR": { "name": "test field", "data_type": "text", "value": "test value" }
+            },
+            "created_at": "2025-04-29T22:53:34.396Z",
+            "updated_at": "2025-04-29T22:54:48.439Z"
+        }
+    ],
+    "pagination": { "end_cursor": 1, "has_next_page": false, "total_count": 1 }
+}
+```
+
+프로세스 엔트리 응답:
+
+```json
+{
+    "data": [
+        {
+            "id": "QrhZvA",
+            "key": "TEST PROCE-1",
+            "list_id": "Jm9UpJ",
+            "entryable_id": "GEF751",
+            "entryable_type": "Organization",
+            "status": "Started",
+            "assignee": null,
+            "contact_id": null,
+            "one_time_value_cents": 0,
+            "recurring_value_cents": 0,
+            "recurring_value_period": "annual",
+            "list_fields": {
+                "w9DSqo": { "name": "test field", "data_type": "text", "value": "test value" }
+            },
+            "closed_at": null,
+            "next_entry_id": null,
+            "created_at": "2025-04-29T22:52:52.818Z",
+            "updated_at": "2025-04-29T22:54:58.809Z"
+        }
+    ],
+    "pagination": { "end_cursor": 1, "has_next_page": false, "total_count": 1 }
+}
+```
+
+### 엔트리 단건 조회
+
+```bash
+curl https://api.relate.so/v1/lists/:list_id/entries/:id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+### 엔트리 생성
+
+```bash
+curl -X POST https://api.relate.so/v1/lists/:list_id/entries \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "entryable_id": "...",
+    "entryable_type": "Contact",
+    "status": "...",
+    "assignee_email": "...",
+    "one_time_value_cents": 0,
+    "recurring_value_cents": 0,
+    "recurring_value_period": "monthly",
+    "contact_id": "...",
+    "list_fields": [
+      { "name": "...", "value": "..." },
+      { "name": "...", "value": ["option1", "option2"] }
+    ]
+  }'
+```
+
+- `entryable_id` (필수): 연결할 리소스(`Contact` 또는 `Organization`)의 ID
+- `entryable_type` (필수): `"Contact"` 또는 `"Organization"`
+- `status` (프로세스에서만 필수): 부여할 상태 이름 (프로세스에 존재해야 함)
+- `assignee_email`: 엔트리를 할당할 사용자 이메일
+- `one_time_value_cents` (프로세스에서만 필수): 일회성 금액 (cents)
+- `recurring_value_cents` (프로세스에서만 필수): 반복 금액 (cents)
+- `recurring_value_period` (프로세스에서만 필수): `monthly`, `annual`, `one_time` 중 하나
+- `contact_id` (선택): 조직과 연결된 contact의 ID
+- `list_fields` (선택): 리스트에 정의된 커스텀 필드
+    - `name`: 필드 이름
+    - `value`: 단일 값 또는 배열(다중 값 허용 필드인 경우)
+
+### 엔트리 수정
+
+```bash
+curl -X PATCH https://api.relate.so/v1/lists/:list_id/entries/:id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+- `entryable_id`과 `entryable_type`는 수정할 수 없습니다.
+
+### 엔트리 삭제
+
+```bash
+curl -X DELETE https://api.relate.so/v1/lists/:list_id/entries/:id \
+  -H "Authorization: Bearer {api_key}"
+```
+
+<a id="sms" />
+
+## SMS / LMS
+
+Relate API로 SMS·LMS 문자 메시지를 발송하고 조회합니다.
+
+- `POST /v1/sms_messages` — 단건 SMS/LMS 발송
+- `GET /v1/sms_messages/:id` — 단건 조회
+- `GET /v1/sms_messages` — 목록 조회 (페이지네이션)
+
+### SMS 발송
+
+```bash
+curl -X POST "https://api.relate.so/v1/sms_messages" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -d '{
+    "sender_number": "01012345678",
+    "receiver_number": "01098765432",
+    "body": "안녕하세요",
+    "type": "SMS"
+  }'
+```
+
+### LMS 발송 (제목 포함)
+
+```bash
+curl -X POST "https://api.relate.so/v1/sms_messages" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -d '{
+    "sender_number": "01012345678",
+    "receiver_number": "010-9876-5432",
+    "body": "장문 메시지 내용입니다",
+    "type": "LMS",
+    "title": "공지사항"
+  }'
+```
+
+### 메시지 단건 조회
+
+```bash
+curl -X GET "https://api.relate.so/v1/sms_messages/HASHID" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+### 메시지 목록 조회
+
+```bash
+curl -X GET "https://api.relate.so/v1/sms_messages?first=10&after=0" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+### 파라미터
+
+| Field | Type | 필수 | 설명 |
+| --- | --- | --- | --- |
+| sender_number | string | O | 발신 번호 (workspace에 등록된 번호) |
+| receiver_number | string | O | 수신 번호 (하이픈 허용) |
+| body | string | O | 메시지 본문 |
+| type | string | O | `SMS` 또는 `LMS` |
+| title | string | X | LMS 제목 (LMS일 때만 허용) |
+
+<a id="calendar-events" />
+
+## 캘린더 이벤트 (Calendar Events)
+
+캘린더 이벤트는 Google / Outlook 캘린더에서 동기화됩니다. 본 엔드포인트들은 **read-only**이며, 녹음(recording)이 1건 이상 완료된 회의만 노출됩니다.
+
+### 모든 캘린더 이벤트 조회
+
+```bash
+curl "https://api.relate.so/v1/calendar_events" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+```json
+{
+  "data": [
+    {
+      "id": "DoASO0",
+      "title": "Sample Meeting",
+      "start_at": "2026-05-16T11:00:00.000+09:00",
+      "end_at": "2026-05-16T12:00:00.000+09:00",
+      "conference_link": "https://us02web.zoom.us/j/0000000000",
+      "conference_type": "Zoom",
+      "attendees": [
+        { "email": "alice@example.com" },
+        { "email": "bob@example.com" }
+      ],
+      "recordings": [
+        {
+          "id": "K3xQzR",
+          "status": "done",
+          "started_at": "2026-05-16T02:00:00.000Z",
+          "ended_at": "2026-05-16T03:00:00.000Z",
+          "audio_duration": null
+        }
+      ],
+      "created_at": "2026-05-10T00:00:00.000Z",
+      "updated_at": "2026-05-16T03:00:00.000Z"
+    }
+  ],
+  "pagination": { "end_cursor": 25, "has_next_page": true, "total_count": 134 }
+}
+```
+
+회의 시작 시각이 늦은 순(최신순)으로 정렬되어 반환됩니다.
+
+- `first` (선택): 페이지 크기, 기본값 25
+- `after` (선택): offset. 이전 응답의 `pagination.end_cursor` 값을 그대로 전달
+- `updated_after` (선택): unix timestamp. 해당 시점 이후 업데이트된 회의만
+- `starts_after` (선택): unix timestamp. 회의 시작 시각이 이 값 이상
+- `starts_before` (선택): unix timestamp. 회의 시작 시각이 이 값 미만
+- `contact_id` (선택): contact hashid. 해당 contact가 참석자로 포함된 회의만
+- `organization_id` (선택): organization hashid. 해당 조직 소속 contact가 참석자로 포함된 회의만
+
+### 캘린더 이벤트 단건 조회
+
+```bash
+curl "https://api.relate.so/v1/calendar_events/HASHID" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+상세 응답에는 첨부된 recording의 요약 정보(`recordings` 배열)가 포함됩니다. summary / transcript 등 상세 필드는 [녹음 단건 조회](#recordings) API로 별도 호출합니다.
+
+<a id="recordings" />
+
+## 녹음 (Recordings)
+
+Recording은 Relate 노트테이커가 회의에 참여해 자동으로 생성합니다. 본 엔드포인트는 **read-only**이며, 목록 엔드포인트는 제공하지 않습니다 (recording 목록은 [캘린더 이벤트](#calendar-events) 응답의 `recordings` 배열로 노출됩니다).
+
+### 녹음 단건 조회
+
+```bash
+curl "https://api.relate.so/v1/recordings/HASHID" \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+```json
+{
+  "data": {
+    "id": "K3xQzR",
+    "calendar_event_id": "DoASO0",
+    "status": "done",
+    "started_at": "2026-05-16T02:00:00.000Z",
+    "ended_at": "2026-05-16T03:00:00.000Z",
+    "audio_duration": null,
+    "summary": {
+      "summary": "회의 전체 내용에 대한 짧은 요약 텍스트.",
+      "topics": [
+        { "title": "주제 제목 1", "content": "해당 주제에 대한 상세 내용." },
+        { "title": "주제 제목 2", "content": "해당 주제에 대한 상세 내용." }
+      ],
+      "action_items": [
+        "담당자 A: 후속 작업 1",
+        "담당자 B: 후속 작업 2"
+      ],
+      "detected_language": "ko"
+    },
+    "transcript": [
+      {
+        "participant": { "name": "Alice" },
+        "words": [
+          {
+            "text": "안녕하세요, 오늘 회의 시작하겠습니다.",
+            "start_timestamp": { "relative": 0.0 },
+            "end_timestamp": { "relative": 3.2 }
+          }
+        ],
+        "language_code": "ko"
+      }
+    ],
+    "created_at": "2026-05-16T02:00:00.000Z",
+    "updated_at": "2026-05-16T03:05:00.000Z"
+  }
+}
+```
+
+`status`가 `done`이 아니면 `summary`와 `transcript`가 `null`로 반환됩니다. 처리가 완료되면 위와 같이 채워집니다.
+
+<Note>
+  `summary` 객체의 키 구성은 워크스페이스의 summary 설정에 따라 다를 수 있습니다 (예시는 기본값 기준).
+</Note>

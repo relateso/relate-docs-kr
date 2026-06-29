@@ -287,20 +287,7 @@
       "group": "API",
       "pages": [
         "api/introduction",
-        {
-          "group": "리소스 (Resources)",
-          "pages": [
-            "api/contacts",
-            "api/organizations",
-            "api/notes",
-            "api/custom-fields",
-            "api/lists",
-            "api/entries",
-            "api/sms",
-            "api/calendar-events",
-            "api/recordings"
-          ]
-        }
+        "api/resources"
       ]
     },
     {
