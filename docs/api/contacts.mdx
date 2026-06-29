@@ -35,6 +35,14 @@ curl -X GET "https://api.relate.so/v1/contacts?email=email@email.com" \
   -H "Accept: application/json"
 ```
 
+핸드폰 번호로도 찾을 수 있습니다. 입력한 번호는 저장 시점과 동일하게 정규화되므로, `+821012345678`, `01012345678`, `010-1234-5678` 등 어떤 형식으로 보내도 같은 연락처에 매칭됩니다.
+
+```bash
+curl -X GET "https://api.relate.so/v1/contacts?phone_number=01012345678" \
+  -H "Authorization: Bearer {api_key}" \
+  -H "Accept: application/json"
+```
+
 ## 연락처 생성
 
 ```bash
