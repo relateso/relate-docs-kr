@@ -1,7 +1,7 @@
 ---
 title: "이메일(Email) 연동"
 description: "이메일 연동을 통해 고객과 주고 받은 모든 이메일을 자동으로 싱크할 수 있습니다."
-sidebarTitle: "Email"
+sidebarTitle: "이메일(Email)"
 "og:title": "Email sync | Relate CRM 가이드"
 "og:description": "이메일 연동을 통해 고객과 주고 받은 모든 이메일을 자동으로 싱크할 수 있습니다."
 "og:image": "https://raw.githubusercontent.com/relateso/relate-docs-kr/main/docs/images/setup/og-image-docs.png"
@@ -12,125 +12,212 @@ sidebarTitle: "Email"
 ---
 
 ## Overview
-Relate은 이메일 서비스(예: Google 메일, Outlook 등)와 Relate간의 완전한 양방향 이메일 동기화를 지원합니다.
-즉, Relate에서 직접 이메일을 주고받을 수 있으며, 이메일 서비스에서 주고받은 모든 이메일이 Relate에 동기화됩니다.
 
-## Get started
+Relate은 이메일 서비스(Google 메일, Outlook 등)와 Relate 간의 **완전한 양방향 이메일 동기화**를 지원합니다. 즉, Relate에서 직접 이메일을 주고받을 수 있으며, 이메일 서비스에서 주고받은 모든 이메일이 Relate에 동기화됩니다.
 
-### 1. 이메일 연결하기
-이메일 서비스를 Relate에 연결하려면 관리자 페이지의 [Integrations](https://admin.relate.so/services) 로 이동합니다.
+## 연동 방식 선택하기
 
-![Connect email](/images/setup/integrations-admin.png)
+모든 이메일 연동은 관리자 페이지의 [외부 서비스 연동 (Integrations)](https://admin.relate.so/services) 에서 시작합니다. 사용 중인 이메일 서비스에 따라 **Google · MS(Outlook) · IMAP** 중 하나를 선택해 연결합니다.
 
-이곳에서 `Email`을 클릭합니다. 연결할 이메일 주소를 입력하고 사용 중인 이메일 서비스(예: 구글, Office365, 아웃룩 익스체인지 등)를 선택합니다.
+![외부 서비스 연동 페이지](/images/setup/integrations-services.png)
+
+<CardGroup cols={3}>
+  <Card title="Gmail" icon="google" href="#gmail-연결">
+    Google / Google Workspace 계정을 OAuth로 간편하게 연결합니다.
+  </Card>
+  <Card title="Outlook" icon="microsoft" href="#outlook-연결">
+    Outlook / Office365 계정을 연결합니다. (관리자 승인이 필요할 수 있음)
+  </Card>
+  <Card title="IMAP / SMTP" icon="envelope" href="#imap-연결">
+    그 외 모든 이메일 서비스(네이버웍스·다우오피스·야후 등)를 IMAP/SMTP로 연결합니다.
+  </Card>
+</CardGroup>
 
 <Info>
-**1. 구글 워크스페이스를 사용하는 경우 이메일 서비스를 선택하지 않아도 구글 이메일 링크 페이지로 이동합니다. (아래 스크린샷 참조)**
-
-**2. 기타(예: 야후 등)를 선택한 경우 IMAP/SMTP 연결 절차를 따르세요.**
+  연결 방식과 무관하게, 연결이 완료되면 마지막에 **[워크스페이스에 연결하기](#워크스페이스에-연결하기)** 단계를 반드시 진행해야 실제 워크스페이스에서 이메일이 동기화됩니다.
 </Info>
 
-이제 페이지에 안내된 절차에 따라 완료하세요. 그런 다음 [3. 컨넥션 생성하기](/integrations/email#3)를 따르세요.
-
-![googleauth](/images/setup/google-auth.png)
-
-### 2. IMAP/SMTP Connection
-
-<Warning>
-  이미 Google과 Outlook을 통해 이메일을 연결한 경우, 이 단계를 건너뛰고 [3. 컨넥션 생성하기](/integrations/email#3)로 이동하세요.
-</Warning>
-
-#### 2.1 이메일 주소/비밀번호 입력하기
-
-아래와 같이 이메일 주소와 비밀번호를 입력하여 연결하세요.
-
-![Sign in](/images/setup/sign-in.png)
-
-#### 2.2 IMAP/SMTP 정보 입력하기
-IMAP 및 SMPT 호스트 주소와 포트/SSL 번호는 사용하는 이메일 서비스마다 고유한 값을 가집니다. 이 정보는 일반적으로 관리자 페이지 또는 이메일 서비스 고객센터/지원 문서에 나와 있습니다.
-
-![IMAP/SMTP](/images/setup/imap-smtp-info.png)
-
-정보를 입력한 후, **Sign in** 버튼을 눌러서 연결을 완료합니다.
-
-Relate 페이지에서 **Connected** 로 변경이 되어 있으면, 이메일 연동에 성공한 것입니다. 이제, 각 워크스페이스에 이메일을 연결할 수 있도록 Connection 을 생성해주셔야 합니다.[3.  컨넥션 생성하기](/integrations/email#3)로 이동해주세요.
-
 <Tip>
-현재 이메일 계정에 Two-factor Authentication (2FA 혹은 MFA)이 설정되어
-있으신 경우 일시로 해제하시고 해당 절차를 완료해주세요.
+  현재 이메일 계정에 2단계 인증(2FA/MFA)이 설정되어 있는 경우, 연동 전 일시 해제하거나 앱 비밀번호(App Password)를 사용하세요. 자세한 내용은 아래 [자주 묻는 질문](#자주-묻는-질문)을 참고하세요.
 </Tip>
 
-## 3. 컨넥션 생성하기
+## Gmail 연결
 
-이제 연결한 이메일을 워크스페이스와도 연결해야 합니다.
+관리자 페이지의 [외부 서비스 연동 (Integrations)](https://admin.relate.so/services) 에서 **Google** 카드를 선택합니다.
 
-![Connect](/images/setup/integrations-connect.png)
-연결하고자 하는 워크스페이스의 [Admin](https://admin.relate.so/) 페이지로 접속합니다.
-이후, [Integrations](https://admin.relate.so/workspaces/integrations) > [Email](https://admin.relate.so/workspaces/integrations/email) 로 이동해 `Connect to workspace` 버튼을 누릅니다.
+안내에 따라 Google 계정으로 로그인하고 권한을 허용하면 연결이 완료됩니다.
 
-## Advanced
+![Google auth](/images/setup/google-auth.png)
 
-### 1. 이메일 비밀번호를 변경하면 이메일 연동 상태가 해제됩니다.
-이메일 계정의 비밀번호를 변경하면, 이메일 연동이 해지됩니다. 이러한 경우, 위 단계에 따라 다시 이메일을 연동해야 합니다.
+연결이 완료되면 아래와 같이 **연동된 계정**에 표시되며, **이메일 · 연락처 · 캘린더** 동기화 항목을 개별적으로 켜고 끌 수 있습니다.
 
-### 2. 2FA/MFA와 Relate 함께 사용하기
-2단계 인증(2FA/MFA)이 설정되어 있는 경우, Relate에 연결하기 전에 일시적으로 2단계 인증을 비활성화한 다음 다시 연결해야 합니다.
+![연동된 Google 계정](/images/setup/email-connected.png)
 
-이메일 서비스(예: Outlook, O365, iCloud, Yahoo! 등)에서 앱 비밀번호(App Password)를 만들 수 있는 경우 기존 비밀번호 대신 앱 비밀번호를 사용할 수 있습니다.
+이제 [워크스페이스에 연결하기](#워크스페이스에-연결하기)로 이동하세요.
 
-각 이메일 서비스에 대한 앱 비밀번호 설정 링크는 다음과 같습니다.
-- [Microsoft](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944)
-- [Yahoo!](https://help.yahoo.com/kb/learn-generate-password-sln15241.html)
-- [iCloud](https://support.apple.com/en-us/HT204397)
+## Outlook 연결
 
-### 3. Office365 연동 중 관리자 승인이 필요한 경우
-Office365 계정을 Relate에 연동할 때, 관리자 승인이 필요한 경우가 있습니다. Office365를 관리하는 회사 관리자의 앱 승인이 필요하므로, 아래의 절차에 따라 진행하시면 됩니다.
-1. 관리자 계정으로 [Office365](http://www.microsoft.com/) 홈페이지에 로그인 합니다.
-2. 왼쪽 상단의 '더보기 > 관리 > 모두 표시 > 설정 > 조직 설정' 순서로 접속합니다.
-3. **앱에 대한 사용자 동의**를 선택한 후 활성화 여부를 체크합니다. 해당 값이 비활성화 되어 있다면, 활성화 후 저장합니다.
-4. Office365 연동을 다시 시도하면 **요청된 권한** 화면이 보여집니다. 이때, `동의함`을 선택하여 연동을 완료합니다. 
+관리자 페이지의 [외부 서비스 연동 (Integrations)](https://admin.relate.so/services) 에서 **MS (Outlook)** 카드를 선택합니다.
 
-## Frequently Asked Questions (FAQs)
+안내에 따라 Microsoft(Office365 / Outlook) 계정으로 로그인하고 권한을 허용하면 연결이 완료됩니다.
+
+연결이 완료되면 [워크스페이스에 연결하기](#워크스페이스에-연결하기)로 이동하세요.
+
 <AccordionGroup>
-<Accordion title="이메일을 연결했지만 앱에 이메일이 표시되지 않습니다.">
-먼저 Cmd+Shift+R(Windows의 경우 Ctrl+Shift+R)을 사용하여 앱을 새로 고쳐 보세요. 한 번에 동기화되는 이메일의 양에 따라 이 프로세스는 5분에서 최대 8시간까지 걸릴 수 있습니다.
-</Accordion>
+  <Accordion title="Office365 연동 중 관리자 승인이 필요한 경우" icon="user-shield">
+    Office365 계정을 연동할 때, 조직 관리자의 앱 승인이 필요한 경우가 있습니다. 아래 절차에 따라 진행하세요.
+
+    1. 관리자 계정으로 [Office365](http://www.microsoft.com/) 홈페이지에 로그인합니다.
+    2. 왼쪽 상단의 **더보기 > 관리 > 모두 표시 > 설정 > 조직 설정** 순서로 접속합니다.
+    3. **앱에 대한 사용자 동의**를 선택한 후 활성화 여부를 확인합니다. 비활성화되어 있다면 활성화 후 저장합니다.
+    4. Office365 연동을 다시 시도하면 **요청된 권한** 화면이 나타납니다. `동의함`을 선택하여 연동을 완료합니다.
+  </Accordion>
 </AccordionGroup>
 
-## 네이버웍스(Naverworks/Lineworks) 연결
-네이버웍스는 앞선 이메일 연동하기 절차를 따르기 전에 네이버웍스에서 IMAP/SMTP를 활성화 하는 작업이 필요합니다.
-아래 내용에 따라 활성화 후 이메일 연동 절차를 진행해주시면 됩니다.
+## IMAP 연결
 
-### 1. 네이버웍스 IMAP/SMTP 활성화 확인하기
+Gmail·Outlook 외의 이메일 서비스(네이버웍스, 다우오피스, 야후 등)는 IMAP/SMTP로 직접 연결합니다.
 
-네이버웍스의 [설정 페이지](https://mail.worksmobile.com/settings/) (로그인 필요)로 이동하셔서 **메일 > 고급 설정**에 접근하신 다음, IMAP/SMTP 탭이 보이는지 확인해주세요. (보이지 않는다면, IMAP/SMTP가 활성화 되지 않은 것이므로 2번으로 넘어가주세요)
+<Warning>
+  이미 Google 또는 Outlook으로 연결한 경우, 이 단계를 건너뛰고 [워크스페이스에 연결하기](#워크스페이스에-연결하기)로 이동하세요.
+</Warning>
 
-![Naverworks IMAP/SMTP 활성화 확인하기](/images/setup/naverworks-lineworks/naverworks-imap.png)
+### 1. IMAP 연동 시작하기
 
-탭을 눌러서 접근하시면 아래와 같은 정보를 확인하실 수 있습니다. **여기까지 확인하셨으면, 사전 준비가 완료되었습니다.**
+관리자 페이지의 [외부 서비스 연동 (Integrations)](https://admin.relate.so/services) 에서 **IMAP** 카드를 선택한 뒤, **`연동하기`** 버튼을 누릅니다.
 
-![Naverworks 정보](/images/setup/naverworks-lineworks/naverworks-imap-info.png)
+![IMAP 연동하기](/images/setup/imap-connect.png)
 
-위에 나와있는 정보를 기억해주세요.
+### 2. 제공자 선택하기
 
-IMAP: `imap.worksmobile.com` / IMAP 포트: 993, SSL 연결 필요
+로그인 화면이 나타나면, 하단의 **`View all providers`** 를 눌러 제공자 목록에서 **IMAP** 을 선택합니다.
 
-SMTP: `smtp.worksmobile.com` / SMTP 포트: 587, SSL 연결 필요
+![제공자 선택](/images/setup/email-provider-select.png)
 
-### 2. 네이버웍스 IMAP/SMTP 활성화 하기
+![제공자 목록에서 IMAP 선택](/images/setup/email-provider-list.png)
 
-**팀내 네이버웍스 담당자(Admin) 만이 아래 설정을 확인하실 수 있습니다.**
+### 3. 이메일·비밀번호와 IMAP/SMTP 정보 입력하기
 
-네이버웍스의 [관리자 페이지](https://admin.worksmobile.com/)로 이동해 로그인 해주세요.
-좌측에 있는 **보안 > 서비스 권한** 페이지로 접근하신 뒤, 권한 설정 탭 아래 있는 서비스 이용 권한 페이지로 접근해주세요.
+IMAP 로그인 화면에서 **이메일 주소와 비밀번호**를 입력합니다. 이어서 **`Server Information`** 을 펼쳐 **IMAP Host / SMTP Host** 와 각 **Port**(기본값 IMAP `993`, SMTP `587`)를 입력한 뒤 **`Next`** 를 누릅니다.
 
-![Naverworks Admin Portal](/images/setup/naverworks-lineworks/naverworks-admin.png)
+![IMAP/SMTP 정보 입력](/images/setup/imap-smtp-form.png)
 
-이 페이지에서 `IMAP/SMTP` 가 **사용**으로 되어 있는지 확인해주세요. 만약 사용하고 있지 않다면 이 페이지에서 우측에 있는 **권한 수정** 버튼을 눌러 `IMAP/SMTP` 에 체크하신 후, 저장하셔서 `IMAP/SMTP 사용` 이 될 수 있게 해주세요.
+<Tip>
+  이메일 주소를 입력한 뒤 **`Autodetect Settings`** 를 누르면 서버 정보가 자동으로 채워질 수 있습니다. 자동 감지가 실패하거나 값이 맞지 않으면, 서버 값을 직접 입력하세요. 발신에 별도 계정 정보를 쓰는 경우 **`Different SMTP credentials`** 를 체크합니다.
+</Tip>
 
-![Naverworks IMAP in-use](/images/setup/naverworks-lineworks/imap-in-use.png)
+IMAP·SMTP 호스트 주소와 포트/SSL 값은 이메일 서비스마다 다릅니다. 이 정보는 보통 **이메일 서비스의 관리자 페이지 또는 고객센터/지원 문서**에 안내되어 있습니다. 사용하는 서비스에 따라 추가 설정이 필요할 수 있으니, 아래 [서비스별 추가 설정](#서비스별-추가-설정)을 확인하세요.
 
-<Note>
-  💡 만일 계정에 SSO나 2FA를 사용하고 계신다면, 일시적으로 해지를 해주시고,
-  Relate 연동 후에 다시 연결해주시면 됩니다.
-</Note>
+연결이 완료되어 Relate 페이지에서 상태가 **Connected**(연동된 계정) 로 바뀌면 성공한 것입니다. 이제 [워크스페이스에 연결하기](#워크스페이스에-연결하기)로 이동하세요.
+
+<Tip>
+  이메일 계정에 2단계 인증(2FA/MFA)이 설정되어 있는 경우, 일시 해제한 뒤 절차를 완료해주세요.
+</Tip>
+
+### 서비스별 추가 설정
+
+대부분의 IMAP 서비스는 위 공통 절차만으로 연결됩니다. 다만 일부 서비스는 **관리자 설정에서 IMAP/SMTP를 먼저 활성화**해야 하거나 **서버 주소·포트가 서비스마다 다릅니다.** 사용하는 서비스가 아래에 있으면 세부 사항을 확인하세요. (목록에 없다면 해당 서비스의 관리자 페이지 또는 고객센터 문서에서 IMAP/SMTP 정보를 확인하세요.)
+
+<AccordionGroup>
+  <Accordion title="네이버웍스 (Naverworks / Lineworks)" icon="envelope">
+    네이버웍스는 연동 전에 네이버웍스에서 **IMAP/SMTP를 먼저 활성화**해야 합니다. 아래에 따라 활성화한 뒤 위 [IMAP 연결](#imap-연결) 절차를 진행하세요.
+
+    **연결 정보**
+
+    - IMAP: `imap.worksmobile.com` / 포트 993, SSL 연결 필요
+    - SMTP: `smtp.worksmobile.com` / 포트 587, SSL 연결 필요
+
+    **1. IMAP/SMTP 활성화 확인하기**
+
+    네이버웍스의 [설정 페이지](https://mail.worksmobile.com/settings/) (로그인 필요)로 이동해 **메일 > 고급 설정**에 접근한 뒤, IMAP/SMTP 탭이 보이는지 확인하세요. (보이지 않으면 IMAP/SMTP가 활성화되지 않은 것이므로 아래 2번으로 넘어가세요.)
+
+    ![Naverworks IMAP/SMTP 활성화 확인하기](/images/setup/naverworks-lineworks/naverworks-imap.png)
+
+    탭을 눌러 접근하면 아래와 같은 정보를 확인할 수 있습니다. **여기까지 확인되면 사전 준비가 완료된 것입니다.**
+
+    ![Naverworks 정보](/images/setup/naverworks-lineworks/naverworks-imap-info.png)
+
+    **2. IMAP/SMTP 활성화하기**
+
+    <Note>
+      팀 내 네이버웍스 담당자(Admin)만 아래 설정을 변경할 수 있습니다.
+    </Note>
+
+    네이버웍스의 [관리자 페이지](https://admin.worksmobile.com/)로 이동해 로그인한 뒤, 좌측 **보안 > 서비스 권한** 페이지의 **서비스 이용 권한**으로 접근하세요.
+
+    ![Naverworks Admin Portal](/images/setup/naverworks-lineworks/naverworks-admin.png)
+
+    이 페이지에서 `IMAP/SMTP` 가 **사용**으로 되어 있는지 확인하세요. 사용하고 있지 않다면 우측 **권한 수정** 버튼을 눌러 `IMAP/SMTP` 에 체크한 후 저장하여 `IMAP/SMTP 사용` 상태로 만들어주세요.
+
+    ![Naverworks IMAP in-use](/images/setup/naverworks-lineworks/imap-in-use.png)
+
+    <Note>
+      💡 계정에 SSO나 2FA를 사용 중이라면 일시적으로 해제한 뒤, Relate 연동 후 다시 연결해주세요.
+    </Note>
+  </Accordion>
+
+  <Accordion title="다우오피스 (Daou Office)" icon="building">
+    다우오피스는 IMAP/SMTP 연동을 지원합니다. 아래 정보를 위 [IMAP 연결](#imap-연결) 절차의 **이메일·비밀번호와 IMAP/SMTP 정보 입력하기** 단계에서 그대로 입력하세요.
+
+    <Note>
+      팀에 따라 다우오피스 관리자 설정에서 **IMAP/SMTP 사용**이 꺼져 있을 수 있습니다. 연동이 되지 않으면 다우오피스 관리자 또는 서비스운영팀에 IMAP/SMTP 사용 가능 여부를 먼저 확인해주세요.
+    </Note>
+
+    **연결 정보**
+
+    | 항목 | 값 |
+    | --- | --- |
+    | 이메일 주소 / 로그인 아이디 | `아이디@도메인` (예: `hong@yourcompany.com`) |
+    | 비밀번호 | 다우오피스 웹메일 로그인 비밀번호 |
+    | 받는 메일 서버 (IMAP) | **다우오피스 개별 접속 주소** (예: `yourcompany.daouoffice.com`) / 포트 993, SSL 연결 필요 |
+    | 보내는 메일 서버 (SMTP) | `outbound.daouoffice.com` / 포트 465, SSL 연결 필요 |
+
+    <Note>
+      **개별 접속 주소**는 평소 다우오피스 웹메일에 접속할 때 사용하는 주소입니다 (예: `yourcompany.daouoffice.com`). 주소를 모르는 경우 다우오피스 관리자에게 문의해주세요.
+    </Note>
+
+    다우오피스 공식 가이드의 서버 정보 입력 화면입니다. 각 필드에 어떤 값을 넣는지 참고하세요. (**받는 메일 서버** = 개별 접속 주소, **보내는 메일 서버** = `outbound.daouoffice.com`)
+
+    <Frame caption="다우오피스 서버 정보 입력 예시 (출처: 다우오피스 IMAP 설정 가이드)">
+      ![다우오피스 IMAP/SMTP 서버 정보 입력 화면](/images/setup/daouoffice/daou-outlook-settings.png)
+    </Frame>
+
+    <Warning>
+      **포트/SSL 값은 확인이 필요합니다.** 위 화면에는 포트가 표시되지 않으며, 포트는 `기타 설정 > 고급` 탭에서 확인·입력합니다. 문서에 기재한 포트(IMAP 993 / SMTP 465, SSL)는 다우오피스 표준 설정 기준입니다. 연동이 실패하면 [다우오피스 IMAP 설정 가이드](https://daouoffice.com/cloud_guide/mail/outlook_IMAP.pdf) 또는 다우오피스 관리자·서비스운영팀을 통해 정확한 포트/SSL 값을 확인해주세요.
+    </Warning>
+
+    SMTP는 IMAP과 동일한 이메일·비밀번호로 인증되므로, Relate 입력 화면의 **`Different SMTP credentials`** 는 체크하지 않아도 됩니다. (별도 발신 계정을 쓰는 경우에만 체크)
+  </Accordion>
+</AccordionGroup>
+
+## 워크스페이스에 연결하기
+
+이메일 연결을 마쳤다면, 이제 연결한 이메일을 워크스페이스와 연결해야 실제로 동기화가 시작됩니다.
+
+![Connect](/images/setup/integrations-connect.png)
+
+연결하고자 하는 워크스페이스의 [Admin](https://admin.relate.so/) 페이지로 접속한 뒤, [외부 서비스 연동 (Integrations)](https://admin.relate.so/workspaces/integrations) > [이메일 (Email)](https://admin.relate.so/workspaces/integrations/email) 로 이동해 `Connect to workspace` 버튼을 누릅니다.
+
+## 자주 묻는 질문
+
+<AccordionGroup>
+  <Accordion title="이메일을 연결했지만 앱에 이메일이 표시되지 않습니다.">
+    먼저 Cmd+Shift+R(Windows의 경우 Ctrl+Shift+R)을 사용하여 앱을 새로 고쳐 보세요. 한 번에 동기화되는 이메일의 양에 따라 이 프로세스는 5분에서 최대 8시간까지 걸릴 수 있습니다.
+  </Accordion>
+
+  <Accordion title="이메일 비밀번호를 변경했더니 연동이 해제되었습니다.">
+    이메일 계정의 비밀번호를 변경하면 이메일 연동이 해지됩니다. 이 경우 위 연결 단계에 따라 다시 이메일을 연동해주세요.
+  </Accordion>
+
+  <Accordion title="2단계 인증(2FA/MFA)을 사용 중인데 어떻게 연동하나요?">
+    2단계 인증(2FA/MFA)이 설정되어 있는 경우, Relate에 연결하기 전에 일시적으로 2단계 인증을 비활성화한 다음 다시 연결해야 합니다.
+
+    이메일 서비스(예: Outlook, O365, iCloud, Yahoo! 등)에서 앱 비밀번호(App Password)를 만들 수 있는 경우, 기존 비밀번호 대신 앱 비밀번호를 사용할 수 있습니다.
+
+    각 이메일 서비스의 앱 비밀번호 설정 링크는 다음과 같습니다.
+
+    - [Microsoft](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944)
+    - [Yahoo!](https://help.yahoo.com/kb/learn-generate-password-sln15241.html)
+    - [iCloud](https://support.apple.com/en-us/HT204397)
+  </Accordion>
+</AccordionGroup>
